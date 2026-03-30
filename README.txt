@@ -1,1 +1,1 @@
-Adapted version of the uploaded site, reworked for The Carpet Cleaning Company using the current public site details.
+Open index.html to view the site locally. This rebuild is focused on Ludlow and Shrewsbury only.
