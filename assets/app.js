@@ -1,9 +1,8 @@
-
 const toggle = document.querySelector('.mobile-toggle');
-const menu = document.querySelector('.nav-links');
-if (toggle && menu) {
+const menuWrap = document.querySelector('.nav-bottom');
+if (toggle && menuWrap) {
   toggle.addEventListener('click', () => {
-    const open = menu.classList.toggle('open');
+    const open = menuWrap.classList.toggle('open');
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
 }
