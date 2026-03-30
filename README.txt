@@ -1,1 +1,1 @@
-Rebuilt static site for The Carpet Cleaning Company. Open index.html or upload the full folder to hosting.
+Adapted version of the uploaded site, reworked for The Carpet Cleaning Company using the current public site details.
