@@ -1,1 +1,1 @@
-Open index.html to view the site locally. Upload the full folder contents to your hosting/GitHub Pages setup. Main files are index.html, assets/style.css, assets/app.js and the pages folder.
+Open index.html to view the site locally. This rebuild is focused on Ludlow and Shrewsbury only.
