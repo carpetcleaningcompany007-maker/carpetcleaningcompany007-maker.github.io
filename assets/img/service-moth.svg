@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+    <defs>
+      <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+        <stop offset="0%" stop-color="#0b1a33"/>
+        <stop offset="100%" stop-color="#123b7a"/>
+      </linearGradient>
+      <linearGradient id="a" x1="0" x2="1">
+        <stop offset="0%" stop-color="#4ea0ff"/>
+        <stop offset="100%" stop-color="#1a5fe8"/>
+      </linearGradient>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#g)"/>
+    <circle cx="1290" cy="130" r="180" fill="#ffffff" opacity=".05"/>
+    <circle cx="150" cy="760" r="220" fill="#ffffff" opacity=".04"/>
+    
+        <rect x="180" y="500" width="1240" height="150" rx="28" fill="#e8edf6"/>
+        <path d="M800 330
+                 c120 -140 250 -120 300 -30
+                 c-80 25 -130 80 -150 150
+                 c-60 -20 -110 -55 -150 -120
+                 c-40 65 -90 100 -150 120
+                 c-20 -70 -70 -125 -150 -150
+                 c50 -90 180 -110 300 30z"
+              fill="#d2a86b"/>
+        <circle cx="800" cy="350" r="38" fill="#704b2d"/>
+        <path d="M800 390 v110" stroke="#704b2d" stroke-width="20" stroke-linecap="round"/>
+        
+    <text x="150" y="145" font-family="Inter,Arial,sans-serif" font-size="86" font-weight="800" fill="white">Moth Treatment</text>
+    <text x="150" y="220" font-family="Inter,Arial,sans-serif" font-size="34" font-weight="500" fill="#d7e6ff">Licensed insecticide treatment for carpet moth activity</text>
+    </svg>

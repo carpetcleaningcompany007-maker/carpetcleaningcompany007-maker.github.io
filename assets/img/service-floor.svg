@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+    <defs>
+      <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+        <stop offset="0%" stop-color="#0b1a33"/>
+        <stop offset="100%" stop-color="#123b7a"/>
+      </linearGradient>
+      <linearGradient id="a" x1="0" x2="1">
+        <stop offset="0%" stop-color="#4ea0ff"/>
+        <stop offset="100%" stop-color="#1a5fe8"/>
+      </linearGradient>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#g)"/>
+    <circle cx="1290" cy="130" r="180" fill="#ffffff" opacity=".05"/>
+    <circle cx="150" cy="760" r="220" fill="#ffffff" opacity=".04"/>
+    
+        <rect x="170" y="480" width="1240" height="180" rx="26" fill="#d9e2ef"/>
+        <path d="M230 520 h1120 M230 580 h1120" stroke="#9eb5cf" stroke-width="10"/>
+        <path d="M520 220 l120 200" stroke="#d7dde8" stroke-width="28" stroke-linecap="round"/>
+        <rect x="420" y="380" width="260" height="90" rx="22" fill="#d7dde8"/>
+        <path d="M660 450 q120 70 260 70" stroke="#fff" opacity=".5" stroke-width="22" fill="none" stroke-linecap="round"/>
+        
+    <text x="150" y="145" font-family="Inter,Arial,sans-serif" font-size="86" font-weight="800" fill="white">Hard Floor Cleaning</text>
+    <text x="150" y="220" font-family="Inter,Arial,sans-serif" font-size="34" font-weight="500" fill="#d7e6ff">Tile, stone and grout cleaning for homes and commercial sites</text>
+    </svg>
