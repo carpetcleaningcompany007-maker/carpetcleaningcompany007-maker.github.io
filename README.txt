@@ -1,1 +1,0 @@
-Open index.html to view the site locally. This rebuild is focused on Ludlow and Shrewsbury only.
