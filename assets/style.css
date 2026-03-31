@@ -371,3 +371,8 @@ footer .footer-links .small{font-size:14px;color:#93a8bf}
   .nav-links .has-dropdown > a::after{content:''}
   .service-grid-4,.map-grid{grid-template-columns:1fr}
 }
+
+@media (max-width:760px){
+  .nav-links .has-dropdown .dropdown{display:none;padding-left:12px}
+  .nav-links .has-dropdown.open .dropdown{display:block}
+}

@@ -35,3 +35,19 @@ document.querySelectorAll('.faq-item button').forEach(btn => {
     item.classList.toggle('open');
   });
 });
+
+
+if (window.matchMedia('(max-width: 760px)').matches) {
+  document.querySelectorAll('.has-dropdown > a').forEach(link => {
+    link.addEventListener('click', e => {
+      const parent = link.parentElement;
+      if (!parent.classList.contains('open')) {
+        e.preventDefault();
+        document.querySelectorAll('.has-dropdown.open').forEach(el => {
+          if (el !== parent) el.classList.remove('open');
+        });
+        parent.classList.add('open');
+      }
+    });
+  });
+}
