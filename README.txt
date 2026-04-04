@@ -1,1 +1,1 @@
-Open index.html to preview the VKA Carpet & Upholstery Cleaning site. Upload the full folder to hosting or GitHub Pages. This build uses local hero, upholstery and rug images plus a few remote stock photos for supporting sections.
+Open index.html to preview the site locally, or upload the full folder to hosting or GitHub Pages. This cleaned build is focused on The Carpet Cleaning Company with Ludlow, Shrewsbury and surrounding UK service areas only.
