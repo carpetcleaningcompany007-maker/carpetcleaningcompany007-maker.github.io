@@ -3,44 +3,42 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Carpet Cleaning Ludlow & Shrewsbury | Fast Quote | The Carpet Cleaning Company</title>
-  <meta name="description" content="Get a fast carpet cleaning quote in Ludlow, Shrewsbury and nearby areas. Professional carpet and upholstery cleaning with clear options and quick replies by phone or WhatsApp.">
+  <title>Carpet Cleaning Quote | Ludlow & Shrewsbury | The Carpet Cleaning Company</title>
+  <meta name="description" content="Get a fast carpet cleaning quote in Ludlow, Shrewsbury and nearby areas. Proper deep cleaning, stain treatment and clear package options from The Carpet Cleaning Company.">
   <link rel="canonical" href="https://www.thecarpetcleaningcrew.co.uk/carpet-cleaning-quote.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/style.css">
   <style>
-    .lp-header{position:sticky;top:0;z-index:60;background:rgba(7,17,31,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08)}
+    .lp-header{position:sticky;top:0;z-index:60;background:rgba(7,17,31,.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08)}
     .lp-nav{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 0}
     .lp-actions{display:flex;gap:10px;flex-wrap:wrap}
-    .lp-hero{background:linear-gradient(90deg, rgba(4,16,30,.9) 0%, rgba(4,16,30,.76) 44%, rgba(4,16,30,.44) 100%), url('./assets/img/truckmount-hero.webp') center/cover no-repeat;color:#fff;padding:112px 0 88px;position:relative;overflow:hidden}
-    .lp-hero::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at top right, rgba(255,255,255,.12), transparent 34%);pointer-events:none}
-    .lp-hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.08fr .92fr;gap:34px;align-items:center}
+    .lp-hero{background:linear-gradient(90deg, rgba(4,16,30,.88) 0%, rgba(4,16,30,.66) 46%, rgba(4,16,30,.28) 100%), url('./assets/img/truckmount-hero.webp') center/cover no-repeat;color:#fff;padding:120px 0 100px;position:relative;overflow:hidden}
+    .lp-hero::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at top right, rgba(255,255,255,.12), transparent 35%);pointer-events:none}
+    .lp-hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:center}
+    .lp-proof{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:30px}
+    .lp-proof .stat{background:rgba(255,255,255,.1)}
     .lp-panel{background:rgba(255,255,255,.98);color:var(--text);padding:28px;border-radius:28px;box-shadow:0 30px 70px rgba(0,0,0,.22)}
-    .lp-points,.quote-list,.package-list{display:grid;gap:12px;margin:18px 0 0;padding:0;list-style:none}
-    .lp-points li,.quote-list li,.package-list li{display:flex;gap:10px;align-items:flex-start}
-    .lp-points li::before,.quote-list li::before{content:'✓';color:var(--accent);font-weight:800}
+    .quote-list{display:grid;gap:12px;margin:18px 0 24px;padding:0;list-style:none}
+    .quote-list li{display:flex;gap:10px;align-items:flex-start;color:var(--text)}
+    .quote-list li::before{content:'✓';color:var(--accent);font-weight:800}
+    .trust-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+    .trust-card,.mini-card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:22px;box-shadow:var(--shadow)}
+    .trust-card strong,.mini-card strong{display:block;font-size:18px;line-height:1.1;margin-bottom:8px}
+    .trust-card span,.mini-card span{color:var(--muted)}
+    .package-list{list-style:none;padding:0;margin:16px 0 0;display:grid;gap:10px}
+    .package-list li{display:flex;gap:10px;align-items:flex-start;color:var(--muted)}
     .package-list li::before{content:'•';color:var(--brand);font-weight:900}
-    .lp-proof{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:28px}
-    .lp-proof .stat,.trust-card,.mini-card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:22px;box-shadow:var(--shadow)}
-    .lp-proof .stat strong,.trust-card strong,.mini-card strong{display:block;font-size:18px;line-height:1.1;margin-bottom:8px}
-    .lp-proof .stat span,.trust-card span,.mini-card span{color:var(--muted)}
-    .trust-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
     .featured-package{border:2px solid rgba(15,98,254,.18);transform:translateY(-6px)}
     .process-grid .card-body p:last-child{margin-bottom:0}
     .callout{background:linear-gradient(135deg,#0b1930,#0f2748);color:#fff;border-radius:34px;padding:38px;box-shadow:var(--shadow)}
     .callout p{color:#dce8f4}
     .two-up{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
     .faq-shell{max-width:980px;margin:0 auto}
-    .review-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:28px}
-    .review-quote{background:#fff;border:1px solid var(--line);border-radius:24px;padding:22px;box-shadow:var(--shadow)}
-    .review-quote p{margin:0 0 12px;color:var(--text)}
-    .review-quote strong{display:block;font-size:14px}
-    .review-link{display:inline-flex;align-items:center;gap:8px;margin-top:16px;font-weight:700}
     .lp-footer-note{font-size:14px;color:#93a8bf}
-    @media (max-width:980px){.lp-hero-grid,.lp-proof,.trust-row,.review-strip,.two-up{grid-template-columns:1fr 1fr}.featured-package{transform:none}}
-    @media (max-width:760px){.lp-nav{flex-wrap:wrap}.lp-actions{width:100%}.lp-actions .btn{flex:1 1 180px}.lp-hero{padding:98px 0 76px}.lp-hero-grid,.lp-proof,.trust-row,.review-strip,.two-up{grid-template-columns:1fr}.lp-panel{padding:22px}}
+    @media (max-width:980px){.lp-hero-grid,.trust-row,.lp-proof,.two-up{grid-template-columns:1fr 1fr}.featured-package{transform:none}}
+    @media (max-width:760px){.lp-nav{flex-wrap:wrap}.lp-actions{width:100%}.lp-actions .btn{flex:1 1 220px}.lp-hero{padding:105px 0 84px}.lp-hero-grid,.trust-row,.lp-proof,.two-up{grid-template-columns:1fr}.lp-panel{padding:22px}}
   </style>
 </head>
 <body>
@@ -48,11 +46,12 @@
   <div class="container lp-nav">
     <a class="brand" href="./index.html">
       <img class="brand-logo" src="./assets/img/logo.webp" alt="The Carpet Cleaning Company logo">
-      <div class="brand-text"><strong>The Carpet Cleaning Company</strong><span>Ludlow and Shrewsbury carpet cleaning quotes</span></div>
+      <div class="brand-text"><strong>The Carpet Cleaning Company</strong><span>Trusted local carpet and upholstery specialists</span></div>
     </a>
     <div class="lp-actions">
       <a class="btn btn-call" href="tel:07802563213">Call 07802 563213</a>
-      <a class="btn btn-secondary" href="https://wa.me/447802563213?text=Hi%2C%20I%E2%80%99d%20like%20a%20quote%20please.%20I%E2%80%99m%20in%20____.%20What%20needs%20cleaning%3A%20____" target="_blank" rel="noreferrer">Send photos on WhatsApp</a>
+      <a class="btn btn-secondary" href="https://wa.me/447802563213" target="_blank" rel="noreferrer">WhatsApp</a>
+      <a class="btn btn-ghost" href="./index.html">Main site</a>
     </div>
   </div>
 </header>
@@ -61,25 +60,19 @@
   <div class="container lp-hero-grid">
     <div class="reveal">
       <span class="kicker">Carpet cleaning quotes for Ludlow, Shrewsbury and nearby areas</span>
-      <h1>Professional carpet cleaning that gets proper results.</h1>
-      <p>For carpets and upholstery that need more than a quick rinse. We deal with embedded dirt, dull traffic lanes, general flatness, odours and many everyday marks, with clear options depending on the level of clean you want.</p>
-      <ul class="lp-points">
-        <li>Fast quotes by phone or WhatsApp</li>
-        <li>Clear advice before you book</li>
-        <li>Deep clean options for homes and businesses</li>
-        <li>Trusted local service based in Ludlow</li>
-      </ul>
-      <div class="hero-actions" style="margin-top:22px">
+      <h1>Professional carpet cleaning that actually gets results.</h1>
+      <p>Deep cleaning for carpets that need more than a quick rinse. We deal with embedded dirt, general dullness, traffic lane soiling, odours and many common marks, with clear options depending on the level of clean you want.</p>
+      <div class="hero-actions">
         <a class="btn btn-call" href="tel:07802563213">Call now</a>
-        <a class="btn btn-secondary" href="https://wa.me/447802563213?text=Hi%2C%20I%E2%80%99d%20like%20a%20quote%20please.%20I%E2%80%99m%20in%20____.%20What%20needs%20cleaning%3A%20____" target="_blank" rel="noreferrer">Send photos now</a>
+        <a class="btn btn-secondary" href="https://wa.me/447802563213" target="_blank" rel="noreferrer">Send photos on WhatsApp</a>
       </div>
       <div class="lp-proof">
-        <div class="stat"><strong>Fast</strong><span>quotes without the back and forth</span></div>
-        <div class="stat"><strong>Proper</strong><span>deep clean packages available</span></div>
-        <div class="stat"><strong>Clear</strong><span>honest guidance before booking</span></div>
+        <div class="stat"><strong>Fast</strong><span>quotes by phone or WhatsApp</span></div>
+        <div class="stat"><strong>Proper</strong><span>deep clean options available</span></div>
+        <div class="stat"><strong>Local</strong><span>service based in Ludlow</span></div>
+        <div class="stat"><strong>Clear</strong><span>honest advice before booking</span></div>
       </div>
     </div>
-
     <aside class="lp-panel reveal">
       <div class="detail-brand"><img class="detail-logo" src="./assets/img/logo.webp" alt="The Carpet Cleaning Company logo"><div><strong>The Carpet Cleaning Company</strong><span>Fast quote options</span></div></div>
       <h2 style="margin:0 0 12px;font-size:30px;line-height:1.08">Get a fast quote without the back and forth.</h2>
@@ -89,28 +82,45 @@
         <li>Mention any stains, odours or pet issues</li>
         <li>Tell us whether you want a freshen up or the best clean possible</li>
       </ul>
-      <div class="hero-actions" style="margin-top:18px">
-        <a class="btn btn-primary" href="https://wa.me/447802563213?text=Hi%2C%20I%E2%80%99d%20like%20a%20quote%20please.%20I%E2%80%99m%20in%20____.%20What%20needs%20cleaning%3A%20____" target="_blank" rel="noreferrer">Send photos now</a>
-        <a class="btn btn-secondary" href="./pages/contact.html">Use contact form</a>
+      <div class="hero-actions" style="margin-top:8px">
+        <a class="btn btn-primary" href="https://wa.me/447802563213" target="_blank" rel="noreferrer">Send photos now</a>
+        <a class="btn btn-secondary" href="./pages/contact.html">Use contact page</a>
       </div>
-      <p style="margin:16px 0 0;color:var(--muted);font-size:14px">Prefer to talk first? Call 07802 563213 and we will talk you through the best option.</p>
     </aside>
   </div>
 </section>
 
 <section class="section">
   <div class="container trust-row reveal">
-    <div class="trust-card"><strong>Not a cheap splash and dash clean</strong><span>This page is aimed at people who want the carpets properly cleaned and the room looking noticeably better when the job is finished.</span></div>
+    <div class="trust-card"><strong>Not a cheap splash and dash clean</strong><span>We are aimed at customers who want the carpets properly cleaned and the room looking better when the job is finished.</span></div>
     <div class="trust-card"><strong>Professional equipment</strong><span>Hot water extraction, agitation and the right chemistry depending on the carpet and the level of soiling.</span></div>
     <div class="trust-card"><strong>Homes and commercial work</strong><span>Domestic rooms, rentals, offices, hotels, guest accommodation and end of tenancy jobs.</span></div>
+    <div class="trust-card"><strong>Clear package options</strong><span>From a lighter refresh to a proper premium deep clean with optional protection.</span></div>
   </div>
 </section>
 
-<section class="section alt center">
+<section class="section alt">
+  <div class="container split">
+    <div class="reveal">
+      <span class="kicker" style="background:var(--brand-soft);color:var(--brand2)">Why people book us</span>
+      <h2>Built for people who want the carpets looking properly clean.</h2>
+      <p class="lead">Some enquiries are only about the cheapest possible price. Others are about results. The carpets are flat, the traffic lanes stand out, the room feels dull and they want a proper improvement. That is the type of job this service is built around.</p>
+      <ul class="list-checks">
+        <li>Clear advice on the best level of clean for the job</li>
+        <li>Spot and stain treatment where suitable before the main clean</li>
+        <li>Professional extraction for a fresher, cleaner finish</li>
+        <li>Honest guidance if a mark is permanent or heavily set</li>
+      </ul>
+    </div>
+    <div class="photo-frame reveal"><img src="./assets/img/airflex.webp" alt="Professional carpet cleaning machine setup"></div>
+  </div>
+</section>
+
+<section class="section center">
   <div class="container">
     <span class="kicker" style="background:var(--brand-soft);color:var(--brand2)">Cleaning options</span>
     <h2>Choose the level of clean that suits the job.</h2>
-    <p class="lead" style="margin-inline:auto;max-width:760px">Not every carpet needs the same treatment. Some are lightly soiled and just need a tidy up. Others need a much more thorough deep clean to bring them back properly.</p>
+    <p class="lead" style="margin-inline:auto;max-width:760px">Not every carpet needs the same treatment. Some are lightly soiled and just need a tidy up. Others need a full deep clean to bring them back properly.</p>
     <div class="grid grid-3" style="margin-top:34px">
       <article class="card reveal">
         <div class="card-body">
@@ -164,8 +174,8 @@
   </div>
 </section>
 
-<section class="section center">
-  <div class="container">
+<section class="section">
+  <div class="container center">
     <span class="kicker" style="background:var(--brand-soft);color:var(--brand2)">How it works</span>
     <h2>A simple process from quote to clean.</h2>
     <div class="grid grid-3 process process-grid" style="margin-top:34px">
@@ -173,19 +183,6 @@
       <article class="card reveal"><div class="card-body"><h3>Choose the right option</h3><p>We talk you through the most suitable level of clean depending on the carpet, the soil level and the result you want.</p></div></article>
       <article class="card reveal"><div class="card-body"><h3>Book the job</h3><p>Once you are happy, we arrange the clean and carry out the work using the proper method for the job.</p></div></article>
     </div>
-  </div>
-</section>
-
-<section class="section alt center">
-  <div class="container">
-    <span class="kicker" style="background:var(--brand-soft);color:var(--brand2)">What customers notice</span>
-    <h2>Why people are happy they booked.</h2>
-    <div class="review-strip reveal">
-      <div class="review-quote"><p>Carpets look fresher, the room feels brighter and the whole place feels cleaner.</p><strong>Better overall presentation</strong></div>
-      <div class="review-quote"><p>Good communication, clear advice and a straightforward booking process make the whole job easier.</p><strong>Simple and professional</strong></div>
-      <div class="review-quote"><p>Customers wanting a proper result usually choose the deep clean option because the difference is easier to see.</p><strong>Results led service</strong></div>
-    </div>
-    <a class="review-link" href="./pages/reviews.html">Read the full reviews page →</a>
   </div>
 </section>
 
@@ -210,7 +207,7 @@
       <p style="max-width:760px;margin:0 auto 22px">The fastest route is WhatsApp. If you would rather call, that works too. We cover Ludlow, Shrewsbury and nearby towns for carpet cleaning, upholstery cleaning, stain removal, rug cleaning, hard floor cleaning and commercial work.</p>
       <div class="hero-actions" style="justify-content:center">
         <a class="btn btn-call" href="tel:07802563213">Call 07802 563213</a>
-        <a class="btn btn-secondary" href="https://wa.me/447802563213?text=Hi%2C%20I%E2%80%99d%20like%20a%20quote%20please.%20I%E2%80%99m%20in%20____.%20What%20needs%20cleaning%3A%20____" target="_blank" rel="noreferrer">Send photos now</a>
+        <a class="btn btn-secondary" href="https://wa.me/447802563213" target="_blank" rel="noreferrer">Send photos now</a>
         <a class="btn btn-ghost" href="./pages/contact.html">Open contact page</a>
       </div>
     </div>
@@ -240,7 +237,7 @@
       <h3>Contact</h3>
       <div class="footer-links">
         <a href="tel:07802563213">07802 563213</a>
-        <a href="https://wa.me/447802563213?text=Hi%2C%20I%E2%80%99d%20like%20a%20quote%20please.%20I%E2%80%99m%20in%20____.%20What%20needs%20cleaning%3A%20____" target="_blank" rel="noreferrer">WhatsApp</a>
+        <a href="https://wa.me/447802563213" target="_blank" rel="noreferrer">WhatsApp</a>
         <div>Ludlow, Shropshire</div>
         <div class="lp-footer-note">Fast quotes by phone or WhatsApp</div>
       </div>
@@ -250,7 +247,7 @@
 </footer>
 <div class="mobile-cta-bar">
   <a class="mobile-cta-call" href="tel:07802563213">Call now</a>
-  <a class="mobile-cta-wa" href="https://wa.me/447802563213?text=Hi%2C%20I%E2%80%99d%20like%20a%20quote%20please.%20I%E2%80%99m%20in%20____.%20What%20needs%20cleaning%3A%20____" target="_blank" rel="noreferrer">WhatsApp</a>
+  <a class="mobile-cta-wa" href="https://wa.me/447802563213" target="_blank" rel="noreferrer">WhatsApp</a>
 </div>
 <script src="./assets/app.js"></script>
 </body>
