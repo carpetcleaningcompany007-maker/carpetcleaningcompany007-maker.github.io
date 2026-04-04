@@ -4,59 +4,328 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pricing Section | Carpet Cleaning Ludlow & Shrewsbury</title>
-  <meta name="description" content="Clear carpet cleaning pricing in Ludlow and Shrewsbury. Compare our Light Clean, Deep Clean and Deep Clean with Protection options, with honest advice and proper quotation help.">
+  <meta name="description" content="Compare our Light Clean, Deep Clean and Deep Clean with Protection packages in Ludlow and Shrewsbury. Clear prices, clear benefits, honest options and flexible payment.">
   <link rel="canonical" href="https://www.thecarpetcleaningcrew.co.uk/pages/pricing.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/style.css">
+
   <style>
-    .pricing-form-panel{position:relative;background:rgba(255,255,255,.98)}
-    .pricing-form-panel h3{font-size:26px;line-height:1.08;margin:0 0 8px}
-    .pricing-form-panel p{margin:0 0 16px;color:#52667d}
-    .pricing-form-panel .form-grid{margin-top:14px}
-    .pricing-form-panel .btn{width:100%}
-    .pricing-form-panel .mini-contact{display:grid;gap:10px;margin-top:16px;padding-top:16px;border-top:1px solid rgba(15,34,56,.10)}
-    .pricing-form-panel .mini-contact a,.pricing-form-panel .mini-contact div{display:flex;align-items:center;gap:10px;color:#123250;font-weight:600}
-    .pricing-grid{align-items:stretch}
-    .pricing-tier{position:relative;overflow:visible}
-    .pricing-tier .card-body{height:100%;display:flex;flex-direction:column}
-    .pricing-tier h3{font-size:30px}
-    .pricing-tier-basic .price-line,.pricing-tier-protect .price-line,.pricing-tier-deep .price-line{font-size:44px;font-weight:800;line-height:1;letter-spacing:-.04em;margin:12px 0 6px}
-    .pricing-tier .price-line span{font-size:16px;font-weight:700;letter-spacing:0;color:#54708d}
-    .sub-price{color:#49627d;font-weight:700;margin-bottom:12px}
-    .tier-intro{font-size:16px;margin-bottom:6px}
-    .tier-note{margin-top:auto;padding:14px 16px;border-radius:16px;background:#f4f8fc;color:#17314c;font-weight:700}
-    .package-tag{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:#e9f1ff;color:#0c48ae;font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:800}
-    .pricing-tier.featured{border:2px solid rgba(15,98,254,.20);box-shadow:0 28px 70px rgba(15,98,254,.14);transform:translateY(-8px)}
-    .pricing-tier.featured .package-tag{background:linear-gradient(135deg,#0f62fe,#0a42aa);color:#fff}
-    .hall-free-banner{display:inline-flex;align-items:center;gap:8px;margin:12px 0 10px;padding:10px 14px;border-radius:14px;background:linear-gradient(135deg,#0ea5e9,#2563eb);color:#fff;font-weight:800;box-shadow:0 14px 30px rgba(37,99,235,.22)}
-    .hall-free-banner small{display:block;font-size:12px;font-weight:700;opacity:.92}
-    .hot-offer-sticker{position:absolute;top:-18px;right:18px;background:linear-gradient(135deg,#ff3b30,#ff8a00);color:#fff;padding:14px 16px;border-radius:18px;box-shadow:0 20px 40px rgba(255,102,0,.30);transform:rotate(7deg);text-align:center;z-index:3}
-    .hot-offer-sticker strong{display:block;font-size:14px;letter-spacing:.08em;text-transform:uppercase}
-    .hot-offer-sticker span{display:block;font-size:20px;font-weight:800;line-height:1.05;margin-top:4px}
-    .hot-offer-sticker small{display:block;font-size:12px;font-weight:700;opacity:.96;margin-top:3px}
-    .protect-price-line{display:flex;align-items:flex-end;gap:10px;flex-wrap:wrap;margin:12px 0 6px}
-    .protect-price-line .now{font-size:46px;font-weight:800;line-height:1;letter-spacing:-.04em}
-    .protect-price-line .now span{font-size:16px;font-weight:700;color:#54708d;letter-spacing:0}
-    .protect-price-line .was{font-size:18px;font-weight:700;color:#8a5d33;text-decoration:line-through;text-decoration-thickness:2px}
-    .honesty-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:24px;margin-top:26px}
-    .honesty-card{background:#fff;border:1px solid rgba(15,34,56,.10);border-radius:24px;padding:24px;box-shadow:0 20px 50px rgba(7,17,31,.08)}
-    .honesty-card h3{margin:0 0 12px;font-size:24px}
-    .honesty-card ul{list-style:none;padding:0;margin:0;display:grid;gap:12px}
-    .honesty-card li{display:flex;gap:12px;align-items:flex-start;color:#30475f}
-    .honesty-card li::before{content:'✓';font-weight:800;color:#12a389}
-    .quote-strip{margin-top:28px;background:linear-gradient(135deg,#0b1930,#143b61);color:#fff;border-radius:28px;padding:28px 30px;box-shadow:0 28px 60px rgba(7,17,31,.18)}
-    .quote-strip h2{color:#fff;margin-bottom:10px}
-    .quote-strip p{color:#d6e4f3;margin:0 0 18px}
-    .quote-strip .hero-actions{justify-content:flex-start}
-    .quote-strip .contact-inline{display:flex;gap:14px;flex-wrap:wrap;margin-top:12px;color:#eaf3ff;font-weight:700}
-    .quote-strip .contact-inline a{color:#fff}
-    .pro-quote-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:20px}
-    .pro-quote-form .full{grid-column:1 / -1}
-    .pricing-micro{font-size:14px;color:#68829c;margin-top:8px}
-    @media (max-width:980px){.honesty-grid,.pro-quote-form{grid-template-columns:1fr}.pricing-tier.featured{transform:none}}
-    @media (max-width:760px){.hot-offer-sticker{position:static;transform:none;margin-bottom:14px;display:inline-block}.pricing-tier h3{font-size:28px}.pricing-tier-basic .price-line,.pricing-tier-protect .price-line,.pricing-tier-deep .price-line,.protect-price-line .now{font-size:38px}.hero .badge-row{display:none}}
+    .nav-cta .btn{
+      border-radius:14px !important;
+      padding:12px 18px !important;
+      font-weight:800;
+      box-shadow:0 10px 24px rgba(10,28,48,.10);
+    }
+
+    .hero-clean{
+      padding-bottom:48px;
+    }
+
+    .hero-clean .hero-copy{
+      max-width:820px;
+    }
+
+    .hero-clean .hero-actions{
+      margin-top:18px;
+    }
+
+    .hero-clean .hero-actions .btn{
+      border-radius:14px !important;
+      padding:13px 18px !important;
+      font-weight:800;
+    }
+
+    .pricing-grid .package-card{
+      position:relative;
+      overflow:visible;
+    }
+
+    .package-card .card-body{
+      position:relative;
+    }
+
+    .price-badge-hot{
+      position:absolute;
+      top:-18px;
+      right:-14px;
+      background:linear-gradient(135deg,#ff2d2d,#ff7a00);
+      color:#fff;
+      font-weight:900;
+      font-size:.92rem;
+      line-height:1.05;
+      padding:12px 14px;
+      border-radius:16px;
+      box-shadow:0 16px 34px rgba(0,0,0,.24);
+      transform:rotate(6deg);
+      z-index:4;
+      text-align:center;
+    }
+
+    .price-badge-hot span{
+      display:block;
+      font-size:.76rem;
+      font-weight:700;
+      opacity:.96;
+      margin-top:4px;
+    }
+
+    .bonus-banner{
+      display:inline-block;
+      margin:10px 0 0;
+      background:linear-gradient(135deg,#0ea5e9,#2563eb);
+      color:#fff;
+      padding:9px 13px;
+      border-radius:12px;
+      font-weight:800;
+      font-size:.88rem;
+      box-shadow:0 12px 28px rgba(37,99,235,.18);
+    }
+
+    .klarna-badge{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      margin-top:14px;
+      background:linear-gradient(135deg,#fdf2ff,#f5e7ff);
+      color:#4b145f;
+      border:1px solid rgba(129,47,168,.14);
+      padding:10px 14px;
+      border-radius:14px;
+      font-weight:800;
+      box-shadow:0 10px 24px rgba(96,32,132,.08);
+    }
+
+    .klarna-badge::before{
+      content:"£";
+      width:28px;
+      height:28px;
+      border-radius:999px;
+      background:#7c3aed;
+      color:#fff;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:900;
+      font-size:.95rem;
+      flex:none;
+    }
+
+    .package-tag{
+      margin-bottom:8px;
+    }
+
+    .light-warning{
+      margin-top:14px;
+      padding:14px 15px;
+      border-radius:14px;
+      background:#fff7ed;
+      border:1px solid rgba(194,65,12,.14);
+      color:#7c2d12;
+      font-size:.96rem;
+      line-height:1.55;
+    }
+
+    .choice-panel{
+      margin-top:28px;
+      background:#fff;
+      border:1px solid rgba(13,45,78,.09);
+      border-radius:22px;
+      box-shadow:0 18px 40px rgba(8,29,49,.08);
+      padding:26px;
+    }
+
+    .choice-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:14px;
+      margin-top:18px;
+    }
+
+    .choice-btn{
+      border:1px solid rgba(13,45,78,.12);
+      background:#f8fbff;
+      border-radius:16px;
+      padding:16px 14px;
+      font-weight:800;
+      color:#10314d;
+      cursor:pointer;
+      transition:.22s ease;
+      text-align:center;
+    }
+
+    .choice-btn:hover,
+    .choice-btn.active{
+      background:#10314d;
+      color:#fff;
+      transform:translateY(-2px);
+      box-shadow:0 14px 28px rgba(16,49,77,.18);
+    }
+
+    .enquiry-form-wrap{
+      margin-top:18px;
+      display:none;
+    }
+
+    .enquiry-form-wrap.show{
+      display:block;
+    }
+
+    .enquiry-note{
+      margin-top:10px;
+      color:#526579;
+    }
+
+    .form-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:14px;
+      margin-top:16px;
+    }
+
+    .form-grid .full{
+      grid-column:1 / -1;
+    }
+
+    .form-grid input,
+    .form-grid select,
+    .form-grid textarea{
+      width:100%;
+      border:1px solid rgba(13,45,78,.14);
+      border-radius:14px;
+      padding:14px 14px;
+      font:inherit;
+      background:#fff;
+      color:#10283d;
+      outline:none;
+    }
+
+    .form-grid input:focus,
+    .form-grid select:focus,
+    .form-grid textarea:focus{
+      border-color:#2563eb;
+      box-shadow:0 0 0 4px rgba(37,99,235,.10);
+    }
+
+    .form-grid textarea{
+      min-height:132px;
+      resize:vertical;
+    }
+
+    .form-submit-row{
+      margin-top:14px;
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+
+    .form-submit-row .btn{
+      border-radius:14px !important;
+      padding:13px 18px !important;
+      font-weight:800;
+    }
+
+    .truth-block{
+      margin-top:18px;
+      padding:20px 22px;
+      border-radius:18px;
+      background:linear-gradient(180deg,#fff 0%, #f8fbff 100%);
+      border:1px solid rgba(13,45,78,.10);
+      box-shadow:0 14px 30px rgba(7,27,46,.05);
+    }
+
+    .truth-block h3{
+      margin-top:0;
+      margin-bottom:10px;
+    }
+
+    .truth-block ul{
+      margin:10px 0 0;
+      padding-left:18px;
+    }
+
+    .truth-block li{
+      margin:8px 0;
+    }
+
+    .review-note{
+      margin-top:20px;
+      padding:18px 20px;
+      border-radius:18px;
+      background:#eef6ff;
+      border:1px solid rgba(37,99,235,.12);
+    }
+
+    .cta-strip{
+      margin-top:26px;
+      display:flex;
+      justify-content:center;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+
+    .cta-strip .btn{
+      border-radius:14px !important;
+      padding:13px 18px !important;
+      font-weight:800;
+    }
+
+    .floating-contact{
+      position:fixed;
+      right:18px;
+      bottom:20px;
+      z-index:999;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+
+    .floating-contact a{
+      width:58px;
+      height:58px;
+      border-radius:999px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-decoration:none;
+      color:#fff;
+      font-size:1.08rem;
+      font-weight:900;
+      box-shadow:0 16px 34px rgba(0,0,0,.18);
+    }
+
+    .floating-call{
+      background:linear-gradient(135deg,#0f3d63,#2563eb);
+    }
+
+    .floating-wa{
+      background:linear-gradient(135deg,#12b76a,#16a34a);
+    }
+
+    @media (max-width: 980px){
+      .choice-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+      .form-grid{
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media (max-width: 640px){
+      .choice-grid{
+        grid-template-columns:1fr;
+      }
+      .floating-contact{
+        right:12px;
+        bottom:90px;
+      }
+      .floating-contact a{
+        width:54px;
+        height:54px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -102,49 +371,20 @@
     <div class="nav-cta">
       <a class="btn btn-call" href="tel:07802563213">Call 07802 563213</a>
       <a class="btn btn-secondary" href="https://wa.me/447802563213" target="_blank" rel="noreferrer">WhatsApp</a>
-      <a class="btn btn-secondary" href="#proper-quote">Get a Quote</a>
+      <a class="btn btn-secondary" href="#pricing-form">Get a Quote</a>
     </div>
   </div>
 </header>
 
-<section class="hero inner-hero premium-hero" style="background-image:linear-gradient(90deg, rgba(4,16,30,.9) 0%, rgba(4,16,30,.66) 46%, rgba(4,16,30,.24) 100%), url('../assets/img/truckmount-hero.webp')">
+<section class="hero inner-hero premium-hero hero-clean" style="background-image:linear-gradient(90deg, rgba(4,16,30,.9) 0%, rgba(4,16,30,.66) 46%, rgba(4,16,30,.24) 100%), url('../assets/img/truckmount-hero.webp')">
   <div class="container hero-grid">
     <div class="hero-copy reveal">
       <span class="kicker">Pricing Section</span>
       <h1>What’s more important to you, the cheapest possible quote or the best possible job?</h1>
-      <p>Some people want the lowest possible price. Others want the most complete professional clean. This page is here so you can see the difference clearly and choose what suits your home, your carpets and your budget.</p>
+      <p>This page is designed so you can clearly see exactly what you get for your money. Some customers want the cheapest possible quote. Others want the most professional clean possible. With us, you can choose either, and we tell you in advance exactly what is included so there are no hidden surprises.</p>
       <div class="hero-actions">
         <a class="btn btn-call" href="tel:07802563213">Call 07802 563213</a>
         <a class="btn btn-secondary" href="https://wa.me/447802563213" target="_blank" rel="noreferrer">Send carpet photos</a>
-      </div>
-    </div>
-
-    <div class="contact-panel reveal premium-panel pricing-form-panel form-glow">
-      <div class="detail-brand">
-        <img class="detail-logo" src="../assets/img/logo.webp" alt="The Carpet Cleaning Company logo">
-        <div><strong>The Carpet Cleaning Company</strong><span>Ludlow and Shrewsbury carpet cleaning</span></div>
-      </div>
-      <h3>Get a proper quotation</h3>
-      <p>Send your details over and we can have a chat about your carpets, what needs cleaning, and which option is best for you.</p>
-      <form class="form-grid" action="../thank-you.html" method="get">
-        <input class="input" type="text" name="name" placeholder="Your name" required>
-        <input class="input" type="tel" name="phone" placeholder="Phone number" required>
-        <input class="input" type="text" name="area" placeholder="Your town or area">
-        <select class="select" name="service">
-          <option value="">Service needed</option>
-          <option>Light Clean</option>
-          <option>Deep Clean</option>
-          <option>Deep Clean with Protection</option>
-          <option>Not sure yet</option>
-        </select>
-        <textarea class="textarea" name="details" placeholder="Tell us what needs cleaning, how many rooms, any stairs, stains, odours or anything else that helps us quote."></textarea>
-        <button class="btn btn-primary" type="submit">Request Proper Quote</button>
-      </form>
-      <div class="pricing-micro">Prefer to speak first? Call or WhatsApp and we can talk it through.</div>
-      <div class="mini-contact">
-        <a href="tel:07802563213">07802 563213</a>
-        <a href="https://wa.me/447802563213" target="_blank" rel="noreferrer">WhatsApp us photos</a>
-        <div>We cover Ludlow, Shrewsbury and nearby areas</div>
       </div>
     </div>
   </div>
@@ -154,7 +394,7 @@
   <div class="container center">
     <span class="kicker" style="background:var(--brand-soft);color:var(--brand2)">Three clear choices</span>
     <h2>See exactly what you get for the price.</h2>
-    <p class="lead" style="margin-inline:auto;max-width:960px">Not every carpet clean is the same. A low priced clean can improve surface appearance, but it is not the same process or the same result as a full deep clean with better equipment, more agitation, stronger heat and optional fibre protection.</p>
+    <p class="lead" style="margin-inline:auto;max-width:980px">Not every carpet clean is the same. A low priced clean can improve the look of the surface, but it is not the same process or the same result as a full deep clean with specialist equipment, targeted pre spray, agitation, heat and fibre protection.</p>
 
     <div class="grid grid-3 package-grid pricing-grid" style="margin-top:34px">
       <article class="card package-card pricing-tier reveal pricing-tier-basic">
@@ -165,13 +405,17 @@
           <div class="sub-price">Minimum of 3 rooms</div>
           <p class="tier-intro">A basic in tank detergent clean for customers who want the lowest possible price.</p>
           <ul class="list-checks">
-            <li>Hoovering first</li>
-            <li>Detergent straight from the tank</li>
-            <li>Rinse only with high pressure hot water extraction</li>
+            <li>Customer to hoover first</li>
+            <li>Detergent added straight into the tank</li>
+            <li>Used as the rinse through the clean</li>
             <li>Carried out using the Airflex Mini</li>
-            <li>Ideal where carpets only need a lighter refresh</li>
-            <li>You are hiring both the operative and the professional equipment</li>
+            <li>Suitable where carpets only need a lighter refresh</li>
+            <li>No targeted pre spray</li>
+            <li>No enzyme or bacteria breakdown stage like the deep clean</li>
           </ul>
+          <div class="light-warning">
+            Please be aware that with this option the detergent is added to the tank and used as the rinse. The idea of this type of clean is that detergent remains in the carpet. This is very different to our deep clean, where the cleaning stage is targeted first and then fully extracted out.
+          </div>
           <div class="tier-note">No Klarna available on this package</div>
         </div>
       </article>
@@ -182,11 +426,13 @@
           <h3>Deep Clean</h3>
           <div class="price-line">On average £55 <span>per room</span></div>
           <div class="sub-price">£75 first room and £45 each additional room</div>
-          <div class="hall-free-banner">Hall and landing free with stairs<small>Get your stairs cleaned and the hall and landing are free</small></div>
+          <div class="bonus-banner">Hall and landing free with stairs cleaned</div>
           <p class="tier-intro">This is our professional clean using our top tier equipment.</p>
           <ul class="list-checks">
-            <li>Hoovering first</li>
-            <li>Hall and landing cleaned free when you have your stairs cleaned</li>
+            <li>Targeted pre spray applied to the carpet first</li>
+            <li>Pre spray dwells into the fibres for much better soil removal</li>
+            <li>Helps break down bacteria and contamination in the carpet</li>
+            <li>Everything is then fully extracted out</li>
             <li>Our top tier equipment including the Enforcer 400</li>
             <li>Fusion Heat for high pressure hot water extraction</li>
             <li>Up to 180 degrees of steam cleaning</li>
@@ -195,20 +441,17 @@
             <li>Better appearance, better feel, and a more complete clean</li>
             <li>You are hiring over £12,500 worth of professional equipment on this package</li>
           </ul>
-          <div class="tier-note">Klarna available on this package. Options to spread the cost or buy now pay later.</div>
+          <div class="klarna-badge">Buy now, pay later or spread the cost over 3 months with Klarna</div>
         </div>
       </article>
 
       <article class="card package-card pricing-tier reveal pricing-tier-protect">
         <div class="card-body">
-          <div class="hot-offer-sticker"><strong>Half price</strong><span>Was £30</span><small>Now £15 per room</small></div>
+          <div class="price-badge-hot">HALF PRICE<span>Was £30 now £15</span></div>
           <span class="package-tag">Option 3</span>
           <h3>Deep Clean with Protection</h3>
-          <div class="protect-price-line">
-            <div class="now">£15 <span>per room</span></div>
-            <div class="was">Was £30</div>
-          </div>
-          <div class="sub-price">Add this onto your Deep Clean package</div>
+          <div class="price-line">+ £15 <span>per room protection</span></div>
+          <div class="sub-price">Was £30 per room. Now £15 half price.</div>
           <p class="tier-intro">Our premium option for customers who want the full deep clean plus long lasting fibre protection.</p>
           <ul class="list-checks">
             <li>Everything included in the Deep Clean</li>
@@ -218,7 +461,7 @@
             <li>Keeps carpets and upholstery cleaner for longer</li>
             <li>Makes vacuuming easier and more effective</li>
           </ul>
-          <div class="tier-note">Big current offer. Protection was £30 per room and is now £15 per room at the moment.</div>
+          <div class="klarna-badge">Buy now, pay later or spread the cost over 3 months with Klarna</div>
         </div>
       </article>
     </div>
@@ -229,74 +472,93 @@
   <div class="container split premium-split">
     <div class="reveal seo-copy">
       <span class="kicker" style="background:var(--brand-soft);color:var(--brand2)">Why the prices are different</span>
-      <h2>Going cheaper is not always the best option, but we offer it anyway.</h2>
-      <p>If you can’t beat them, join them. The low priced option is there for customers who want the cheapest possible quote and understand that it is a lighter clean with a more basic process.</p>
-      <p>The Deep Clean is very different. It uses our top tier setup, more heat, more agitation, more time and a more complete process. That is why it reaches deeper into the carpet and gives a noticeably better result.</p>
-      <p>Adding protection helps that result last longer. It puts a protective coating around the fibres so everyday dirt and spills are easier to deal with and regular vacuuming becomes more effective.</p>
-      <div class="notice" style="margin-top:22px"><strong>Simple truth:</strong> the cheaper option is there if you want it. But when carpets need proper work, the Deep Clean gives you more value, a better finish and a more complete result.</div>
+      <h2>Going cheaper is not always the best option, but we offer it anyway. If you can’t beat them, join them.</h2>
+      <p>There are many companies on the internet offering three rooms for £99, or around £29.99 to £30 per room. Many customers are simply unaware that there are major differences between the cleans being offered.</p>
+      <p>Sometimes companies advertising these types of prices will often try to upsell once they get to the door. We will not do that. That is why we are telling you now in advance exactly what you are paying for, so everything is clear before we arrive.</p>
+      <p>The Light Clean is there if you want the lowest entry price. The Deep Clean is there if you want a far more professional result with a much more serious cleaning process and much better soil removal.</p>
+
+      <div class="truth-block">
+        <h3>With us</h3>
+        <ul>
+          <li>We will not ask for extra money when we turn up</li>
+          <li>We will not turn up with low powered equipment or a shop bought machine</li>
+          <li>We provide a fixed agreed price</li>
+          <li>We are insured</li>
+          <li>We can provide an invoice</li>
+          <li>We stand behind our work</li>
+        </ul>
+      </div>
+
+      <div class="review-note">
+        <strong>Please read my lowest Google reviews.</strong> There is a button you can click to view the lowest reviews first. This gives you an idea of what I am like as a company, and you should do this with everybody before you invite them into your house. We pride ourselves on having excellent Google reviews because we make it perfectly clear what the customer is going to get, so there are no hidden surprises.
+      </div>
+
+      <div class="truth-block">
+        <h3>Important stain note</h3>
+        <p>We can never guarantee to remove every stain from every carpet. Some stains such as red wine, makeup, dye stains, and other specialist marks may need advanced stain removal at extra cost. That is separate from a normal clean.</p>
+      </div>
     </div>
     <div class="photo-frame reveal equipment-frame pricing-machine-frame"><img src="../assets/img/machine-transparent.webp" alt="Professional carpet cleaning machine"></div>
   </div>
-
-  <div class="container honesty-grid">
-    <div class="honesty-card reveal">
-      <h3>What makes us different</h3>
-      <ul>
-        <li>We will not ask for extra money when we turn up</li>
-        <li>We will not turn up with low powered equipment or a shop bought style machine</li>
-        <li>We provide a fixed agreed price</li>
-        <li>We are insured</li>
-        <li>We can provide an invoice</li>
-        <li>If you are genuinely not happy, we will not charge you</li>
-      </ul>
-    </div>
-    <div class="honesty-card reveal">
-      <h3>Questions worth asking any company</h3>
-      <ul>
-        <li>What equipment are you using?</li>
-        <li>Is the price fixed?</li>
-        <li>Will I get an invoice?</li>
-        <li>Are you insured?</li>
-        <li>Will you guarantee the work?</li>
-        <li>Always check the lowest Google reviews as well as the best ones</li>
-      </ul>
-    </div>
-  </div>
 </section>
 
-<section class="section dark-band">
-  <div class="container split split-reverse">
-    <div class="photo-frame reveal"><img src="../assets/img/upholstery-cleaning.webp" alt="Freshly cleaned carpet and upholstery"></div>
-    <div class="reveal seo-copy seo-copy-light">
-      <span class="kicker">Protection explained</span>
-      <h2>Why customers add fibre protection after a deep clean.</h2>
-      <p>Once your carpet or upholstery has been cleaned properly, applying protection helps keep it that way. The Teflon polycarbonate treatment coats the fibres and creates a slippery barrier that helps repel dry soil and slows down re soiling.</p>
-      <p>Think of it like the non stick effect on a frying pan. Dirt has a harder time sticking to the fibres, routine vacuuming becomes more effective, and the clean look lasts longer.</p>
-      <div class="badge-row">
-        <span class="badge">Was £30 now £15 per room</span>
-        <span class="badge">Ideal for carpets and upholstery</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="proper-quote">
+<section class="section" id="pricing-form">
   <div class="container">
-    <div class="quote-strip reveal">
-      <span class="kicker" style="background:rgba(255,255,255,.12);color:#fff">Contact us</span>
-      <h2>Get in touch for a proper quotation.</h2>
-      <p>Send us the basics and we can discuss your carpets, what condition they are in, and which option is best for you. If you would rather talk it through first, call us or send photos on WhatsApp.</p>
-      <form class="pro-quote-form" action="../thank-you.html" method="get">
-        <input class="input" type="text" name="name" placeholder="Your name" required>
-        <input class="input" type="tel" name="phone" placeholder="Phone number" required>
-        <input class="input" type="text" name="area" placeholder="Town or area">
-        <input class="input" type="text" name="rooms" placeholder="How many rooms or what needs cleaning">
-        <textarea class="textarea full" name="message" placeholder="Tell us about your carpets, stairs, hall and landing, stains, pets, odours, or anything else that will help us guide you properly."></textarea>
-        <button class="btn btn-primary full" type="submit">Request Proper Quote</button>
-      </form>
-      <div class="contact-inline">
-        <a href="tel:07802563213">Call 07802 563213</a>
-        <a href="https://wa.me/447802563213" target="_blank" rel="noreferrer">WhatsApp us</a>
+    <div class="choice-panel reveal">
+      <span class="kicker" style="background:var(--brand-soft);color:var(--brand2)">Get a proper quotation</span>
+      <h2 style="margin-top:12px">Choose an option or ask about the cleans</h2>
+      <p>Pick the option you are most interested in, or choose the question option if you want to talk through what would suit your carpets best.</p>
+
+      <div class="choice-grid">
+        <button type="button" class="choice-btn" data-choice="Light Clean">Light Clean</button>
+        <button type="button" class="choice-btn" data-choice="Deep Clean">Deep Clean</button>
+        <button type="button" class="choice-btn" data-choice="Deep Clean with Protection">Deep Clean with Protection</button>
+        <button type="button" class="choice-btn" data-choice="Ask about the cleans">Ask me some questions</button>
+      </div>
+
+      <div class="enquiry-form-wrap" id="enquiryFormWrap">
+        <p class="enquiry-note">Get in touch for a proper quotation and we can have a chat about your carpets and which option is best for you.</p>
+
+        <form action="../thank-you.html" method="get">
+          <div class="form-grid">
+            <div>
+              <input type="text" name="name" placeholder="Your name" required>
+            </div>
+            <div>
+              <input type="tel" name="phone" placeholder="Phone number" required>
+            </div>
+            <div>
+              <input type="email" name="email" placeholder="Email address">
+            </div>
+            <div>
+              <input type="text" name="postcode" placeholder="Postcode / area">
+            </div>
+            <div class="full">
+              <select name="service_choice" id="service_choice" required>
+                <option value="">Choose your option</option>
+                <option value="Light Clean">Light Clean</option>
+                <option value="Deep Clean">Deep Clean</option>
+                <option value="Deep Clean with Protection">Deep Clean with Protection</option>
+                <option value="Ask about the cleans">Ask about the cleans</option>
+              </select>
+            </div>
+            <div class="full">
+              <textarea name="message" placeholder="Tell us what rooms you want cleaned, or ask any questions about the options"></textarea>
+            </div>
+          </div>
+
+          <div class="form-submit-row">
+            <button class="btn btn-call" type="submit">Request quotation</button>
+            <a class="btn btn-secondary" href="tel:07802563213">Call 07802 563213</a>
+            <a class="btn btn-secondary" href="https://wa.me/447802563213" target="_blank" rel="noreferrer">WhatsApp us</a>
+          </div>
+        </form>
+      </div>
+
+      <div class="cta-strip">
+        <a class="btn btn-call" href="tel:07802563213">Call 07802 563213</a>
+        <a class="btn btn-secondary" href="https://wa.me/447802563213" target="_blank" rel="noreferrer">WhatsApp</a>
+        <a class="btn btn-secondary" href="../pages/reviews.html">Read Reviews</a>
       </div>
     </div>
   </div>
@@ -339,6 +601,30 @@
   <a class="mobile-cta-wa" href="https://wa.me/447802563213" target="_blank" rel="noreferrer">WhatsApp</a>
 </div>
 
+<div class="floating-contact">
+  <a class="floating-call" href="tel:07802563213" aria-label="Call">Call</a>
+  <a class="floating-wa" href="https://wa.me/447802563213" target="_blank" rel="noreferrer" aria-label="WhatsApp">WA</a>
+</div>
+
 <script src="../assets/app.js"></script>
+<script>
+  (function(){
+    const buttons = document.querySelectorAll('.choice-btn');
+    const wrap = document.getElementById('enquiryFormWrap');
+    const select = document.getElementById('service_choice');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', function(){
+        buttons.forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        if (select) select.value = this.getAttribute('data-choice');
+        if (wrap) {
+          wrap.classList.add('show');
+          wrap.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      });
+    });
+  })();
+</script>
 </body>
 </html>
