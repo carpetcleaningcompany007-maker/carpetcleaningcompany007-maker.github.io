@@ -137,6 +137,19 @@
     .hero.inner-hero{
       padding-top:52px;
       padding-bottom:52px;
+      background-image:url('../assets/img/truckmount-hero.webp');
+      background-size:cover;
+      background-position:center;
+      background-repeat:no-repeat;
+      position:relative;
+    }
+
+    .hero.inner-hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:rgba(7,18,33,.22);
+      pointer-events:none;
     }
 
     .pricing-hero{
@@ -144,16 +157,16 @@
       overflow:hidden;
       border-radius:30px;
       box-shadow:var(--shadow);
-      background:
-        radial-gradient(circle at top right, rgba(58,125,255,.22), transparent 28%),
-        linear-gradient(135deg,#0b2240 0%, #0e2f53 54%, #143d66 100%);
+      background:transparent;
+      border:1px solid rgba(255,255,255,.12);
+      backdrop-filter:blur(2px);
     }
 
     .pricing-hero::before{
       content:"";
       position:absolute;
       inset:0;
-      background:linear-gradient(90deg, rgba(6,19,35,.72) 0%, rgba(6,19,35,.38) 48%, rgba(6,19,35,.18) 100%);
+      background:linear-gradient(90deg, rgba(6,19,35,.58) 0%, rgba(6,19,35,.28) 45%, rgba(6,19,35,.12) 100%);
       pointer-events:none;
     }
 
@@ -174,20 +187,22 @@
       line-height:1.02;
       margin-bottom:18px;
       max-width:900px;
+      text-shadow:0 10px 24px rgba(0,0,0,.24);
     }
 
     .pricing-hero .hero-copy p{
-      color:rgba(255,255,255,.9);
+      color:rgba(255,255,255,.94);
       font-size:1.04rem;
       max-width:760px;
       margin-bottom:0;
+      text-shadow:0 4px 14px rgba(0,0,0,.22);
     }
 
     .pricing-hero .kicker{
-      background:rgba(255,255,255,.12);
+      background:rgba(255,255,255,.10);
       color:#fff;
-      border:1px solid rgba(255,255,255,.18);
-      backdrop-filter:blur(6px);
+      border:1px solid rgba(255,255,255,.2);
+      backdrop-filter:blur(10px);
     }
 
     .hero-actions{
@@ -229,9 +244,10 @@
 
     .hero-note{
       margin-top:18px;
-      color:rgba(255,255,255,.86);
+      color:rgba(255,255,255,.88);
       max-width:760px;
       font-weight:500;
+      text-shadow:0 4px 14px rgba(0,0,0,.22);
     }
 
     .section{
