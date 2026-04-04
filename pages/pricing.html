@@ -1,43 +1,81 @@
 <!doctype html>
 <html lang="en-GB">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pricing Section | Carpet Cleaning Ludlow & Shrewsbury</title>
-  <link rel="stylesheet" href="../assets/style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <style>
-  .comparison-grid{
-    width:100%;
-    margin-top:30px;
-    border-radius:12px;
-    overflow:hidden;
-    border:1px solid #e5e7eb;
-  }
-  .comparison-row{
-    display:grid;
-    grid-template-columns:2fr 1fr 1fr 1fr;
-    padding:14px 18px;
-    border-bottom:1px solid #eee;
-    align-items:center;
-  }
-  .comparison-row.header{
-    background:#0b1f33;
-    color:#fff;
-    font-weight:600;
-  }
-  .comparison-row div{text-align:center;}
-  .comparison-row div:first-child{
-    text-align:left;
-    font-weight:600;
-  }
-  .highlight{
-    background:#f1f8ff;
-    font-weight:700;
-  }
-  .yes{color:#16a34a;font-weight:700;}
-  .no{color:#dc2626;font-weight:700;}
-  </style>
+<title>Carpet Cleaning Prices Ludlow & Shrewsbury | Clear Options</title>
+<meta name="description" content="Simple carpet cleaning pricing. Choose between a basic clean or a full professional deep clean. Clear pricing and honest options.">
+
+<link rel="stylesheet" href="../assets/style.css">
+
+<style>
+
+/* === PRICE STICKER === */
+.price-badge-hot{
+  position:absolute;
+  top:-14px;
+  right:-14px;
+  background:linear-gradient(135deg,#ff2d2d,#ff7a00);
+  color:#fff;
+  font-weight:800;
+  font-size:.9rem;
+  padding:10px 14px;
+  border-radius:14px;
+  box-shadow:0 12px 30px rgba(0,0,0,.25);
+  transform:rotate(6deg);
+  z-index:3;
+}
+.price-badge-hot span{
+  display:block;
+  font-size:.75rem;
+}
+
+/* === BONUS TAG === */
+.bonus-banner{
+  margin-top:10px;
+  background:linear-gradient(135deg,#0ea5e9,#2563eb);
+  color:#fff;
+  padding:8px 12px;
+  border-radius:10px;
+  font-weight:700;
+  font-size:.85rem;
+  display:inline-block;
+}
+
+/* === COMPARISON === */
+.comparison-grid{
+  display:grid;
+  grid-template-columns: 1.2fr 1fr 1fr 1fr;
+  gap:10px;
+  margin-top:30px;
+}
+.comparison-row{
+  display:contents;
+}
+.comparison-grid div{
+  padding:14px;
+  background:#fff;
+  border-radius:10px;
+  box-shadow:0 5px 15px rgba(0,0,0,.05);
+}
+.header-row div{
+  font-weight:700;
+  background:#0f172a;
+  color:#fff;
+}
+.feature-col{
+  font-weight:600;
+}
+.featured-col{
+  background:#eef6ff !important;
+  border:2px solid #2563eb;
+}
+.icon-yes{color:green;font-weight:700;}
+.icon-no{color:red;font-weight:700;}
+
+</style>
+
 </head>
 
 <body>
@@ -46,61 +84,133 @@
 <div class="container center">
 
 <h1>What’s more important to you, the cheapest possible quote or the best possible job?</h1>
-
-<p>This page is designed so you can clearly see exactly what you get for your money.</p>
+<p>You can choose exactly what suits your budget and your expectations.</p>
 
 <div class="grid grid-3" style="margin-top:40px">
 
 <!-- LIGHT CLEAN -->
-<div class="card">
-<h2>Light Clean</h2>
-<p><strong>£29.99 per room</strong></p>
-<p>Minimum of 3 rooms</p>
+<article class="card">
+<div class="card-body">
+<h3>Light Clean</h3>
+<div class="price-line">£29.99 <span>per room</span></div>
+
+<p>A basic freshen up using detergent from the tank.</p>
 
 <ul>
-<li>Hoovering first</li>
-<li>Detergent from tank only</li>
-<li>Hot water extraction rinse</li>
+<li>Detergent clean</li>
+<li>Hot water rinse</li>
 <li>Airflex Mini machine</li>
+<li>Suitable for lighter carpets</li>
+<li>Minimum of 3 rooms</li>
 </ul>
 
-<p>No Klarna on this package</p>
 </div>
+</article>
 
 <!-- DEEP CLEAN -->
-<div class="card" style="border:2px solid #0b1f33">
-<h2>Deluxe Deep Clean</h2>
-<p><strong>On average £55 per room</strong></p>
-<p>£75 first room · £45 after</p>
+<article class="card featured">
+<div class="card-body">
 
-<p><strong>MOST POPULAR</strong></p>
+<h3>Deluxe Deep Clean</h3>
+<div class="price-line">On average £55 <span>per room</span></div>
 
-<ul>
-<li>Hoovering first</li>
-<li>Enforcer 400 + Fusion Heat</li>
-<li>Up to 180° steam</li>
-<li>CRB agitation</li>
-<li>Deep dirt removal</li>
-<li>Better look and feel</li>
-</ul>
-
-<p>Klarna available</p>
+<div class="bonus-banner">
+Hall and landing FREE with stairs
 </div>
 
+<p>Our professional clean using top tier equipment.</p>
+
+<ul>
+<li><strong>Hall and landing cleaned free when you have your stairs cleaned</strong></li>
+<li>Enforcer 400 machine</li>
+<li>High pressure hot water extraction</li>
+<li>Up to 180 degree heat</li>
+<li>Counter rotating brush</li>
+<li>Deep dirt removal</li>
+<li>Better appearance and feel</li>
+</ul>
+
+</div>
+</article>
+
 <!-- PROTECTION -->
-<div class="card">
-<h2>Deep Clean + Protection</h2>
-<p><strong>+ £15 per room</strong></p>
-<p>50% off (normally £30)</p>
+<article class="card" style="position:relative;">
+<div class="card-body">
+
+<div class="price-badge-hot">
+HALF PRICE
+<span>Was £30 now £15</span>
+</div>
+
+<h3>Deep Clean with Protection</h3>
+
+<div class="price-line">+ £15 <span>per room</span></div>
+
+<p>Full deep clean plus fibre protection.</p>
 
 <ul>
 <li>Everything in deep clean</li>
-<li>Teflon fibre protection</li>
-<li>Repels dirt</li>
+<li>Stain guard protection</li>
 <li>Keeps carpets cleaner longer</li>
+<li>Easier to vacuum</li>
 </ul>
 
-<p>Klarna available</p>
+</div>
+</article>
+
+</div>
+
+</div>
+</section>
+
+
+<section class="section">
+<div class="container">
+
+<h2 style="text-align:center;">What changes from one package to the next?</h2>
+
+<div class="comparison-grid">
+
+<div class="comparison-row header-row">
+<div>Feature</div>
+<div>Light Clean</div>
+<div>Deep Clean</div>
+<div>With Protection</div>
+</div>
+
+<div class="comparison-row">
+<div class="feature-col">Price</div>
+<div>£29.99</div>
+<div class="featured-col">£55 average</div>
+<div>+ £15</div>
+</div>
+
+<div class="comparison-row">
+<div class="feature-col">Machine</div>
+<div>Airflex Mini</div>
+<div class="featured-col">Enforcer 400</div>
+<div>Enforcer 400</div>
+</div>
+
+<div class="comparison-row">
+<div class="feature-col">Deep clean</div>
+<div><span class="icon-no">✖</span></div>
+<div class="featured-col"><span class="icon-yes">✔</span></div>
+<div><span class="icon-yes">✔</span></div>
+</div>
+
+<div class="comparison-row">
+<div class="feature-col">Agitation</div>
+<div><span class="icon-no">✖</span></div>
+<div class="featured-col"><span class="icon-yes">✔</span></div>
+<div><span class="icon-yes">✔</span></div>
+</div>
+
+<div class="comparison-row">
+<div class="feature-col">Protection</div>
+<div><span class="icon-no">✖</span></div>
+<div class="featured-col"><span class="icon-no">✖</span></div>
+<div><span class="icon-yes">✔</span></div>
 </div>
 
 </div>
@@ -108,77 +218,20 @@
 </div>
 </section>
 
-<section class="section">
+<section class="section center">
 <div class="container">
 
-<h2 style="text-align:center">What changes from one package to the next?</h2>
+<h2>We are completely upfront</h2>
 
-<div class="comparison-grid">
+<ul style="max-width:700px;margin:auto;text-align:left;">
+<li>We will not ask for extra money when we arrive</li>
+<li>We do not use low powered machines</li>
+<li>We do not use fake reviews</li>
+<li>Check lowest Google reviews before choosing any company</li>
+<li>If you're not happy, you do not pay</li>
+</ul>
 
-<div class="comparison-row header">
-<div></div>
-<div>Light</div>
-<div class="highlight">Deep</div>
-<div>Deep + Protect</div>
-</div>
-
-<div class="comparison-row">
-<div>Price</div>
-<div>£29.99</div>
-<div class="highlight">£55 avg</div>
-<div>+£15</div>
-</div>
-
-<div class="comparison-row">
-<div>Machine</div>
-<div>Airflex Mini</div>
-<div class="highlight">Enforcer 400</div>
-<div>Enforcer 400</div>
-</div>
-
-<div class="comparison-row">
-<div>Steam Cleaning</div>
-<div class="no">✖</div>
-<div class="yes highlight">✔</div>
-<div class="yes">✔</div>
-</div>
-
-<div class="comparison-row">
-<div>Deep Agitation</div>
-<div class="no">✖</div>
-<div class="yes highlight">✔</div>
-<div class="yes">✔</div>
-</div>
-
-<div class="comparison-row">
-<div>Deep Dirt Removal</div>
-<div>Limited</div>
-<div class="highlight">✔ Full</div>
-<div>✔ Full</div>
-</div>
-
-<div class="comparison-row">
-<div>Pile Rejuvenation</div>
-<div>Basic</div>
-<div class="highlight">✔</div>
-<div>✔</div>
-</div>
-
-<div class="comparison-row">
-<div>Protection</div>
-<div class="no">✖</div>
-<div class="no highlight">✖</div>
-<div class="yes">✔</div>
-</div>
-
-<div class="comparison-row">
-<div>Klarna</div>
-<div class="no">✖</div>
-<div class="yes highlight">✔</div>
-<div class="yes">✔</div>
-</div>
-
-</div>
+<p style="margin-top:20px;">We can never guarantee to remove every stain, but we do offer advanced stain removal for tougher issues.</p>
 
 </div>
 </section>
