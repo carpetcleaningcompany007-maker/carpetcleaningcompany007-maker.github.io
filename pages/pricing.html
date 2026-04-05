@@ -250,6 +250,18 @@
       text-shadow:0 4px 14px rgba(0,0,0,.22);
     }
 
+    .small-link-row{
+      margin-top:18px;
+    }
+
+    .small-link-row a{
+      color:#fff;
+      font-weight:700;
+      text-decoration:underline;
+      text-underline-offset:3px;
+      opacity:.95;
+    }
+
     .section{
       padding-top:72px;
       padding-bottom:72px;
@@ -363,6 +375,58 @@
       line-height:1.5;
     }
 
+    .feature-grid{
+      margin-top:18px;
+      display:grid;
+      gap:10px;
+    }
+
+    .feature-row{
+      display:grid;
+      grid-template-columns:1.15fr auto;
+      gap:12px;
+      align-items:center;
+      background:#f8fbff;
+      border:1px solid rgba(12,31,51,.06);
+      border-radius:14px;
+      padding:12px 14px;
+    }
+
+    .feature-row strong{
+      color:#123250;
+      font-size:.95rem;
+    }
+
+    .feature-badge{
+      min-width:110px;
+      min-height:34px;
+      border-radius:999px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:0 12px;
+      font-size:.84rem;
+      font-weight:800;
+      letter-spacing:.01em;
+      text-transform:uppercase;
+    }
+
+    .feature-badge.yes{
+      background:#e9f7ee;
+      color:#10823d;
+    }
+
+    .feature-badge.no{
+      background:#fff1f1;
+      color:#b42318;
+    }
+
+    .feature-badge.neutral{
+      background:#eef5fb;
+      color:#214a78;
+      text-transform:none;
+    }
+
     .pricing-tier-basic{
       background:linear-gradient(180deg,#fff 0%, #fbfdff 100%);
     }
@@ -454,6 +518,39 @@
       color:#5d4060;
       font-weight:700;
       line-height:1.45;
+    }
+
+    .review-strip{
+      margin-top:28px;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+
+    .review-card{
+      background:#fff;
+      border:1px solid rgba(12,31,51,.08);
+      border-radius:20px;
+      padding:20px;
+      box-shadow:var(--shadow-soft);
+      text-align:left;
+    }
+
+    .review-stars{
+      font-size:1rem;
+      letter-spacing:.08em;
+      color:#f59e0b;
+      margin-bottom:10px;
+    }
+
+    .review-card p{
+      margin:0 0 10px;
+      color:#344b61;
+      line-height:1.7;
+    }
+
+    .review-card strong{
+      color:#102844;
     }
 
     .notice{
@@ -681,7 +778,8 @@
     }
 
     @media (max-width: 1080px){
-      .bottom-form-wrap{
+      .bottom-form-wrap,
+      .review-strip{
         grid-template-columns:1fr;
       }
 
@@ -726,6 +824,10 @@
 
       .bottom-form-wrap{
         gap:18px;
+      }
+
+      .feature-row{
+        grid-template-columns:1fr;
       }
     }
 
@@ -919,7 +1021,7 @@
       <div class="hero-copy reveal">
         <span class="kicker">Pricing Section</span>
         <h1>What’s more important to you, the cheapest possible quote or the best possible job?</h1>
-        <p>This page is designed so you can see exactly what you get for your money. Some customers want the lowest possible price. Others want the most professional clean possible. With us, you can choose either.</p>
+        <p>We give you both options. A lower priced light clean for a quick freshen up, or our full professional deep clean using top tier equipment for the best possible result.</p>
 
         <div class="hero-actions">
           <a class="hero-action call" href="tel:07802563213">
@@ -936,7 +1038,11 @@
           </a>
         </div>
 
-        <p class="hero-note">Choose the cheaper option if price matters most, or choose the Deep Clean if you want the better result. Either way, we explain it clearly.</p>
+        <p class="hero-note">Most customers choose the Deep Clean once they see the difference.</p>
+
+        <div class="small-link-row">
+          <a href="#contact-form">Get a proper quotation below</a>
+        </div>
       </div>
     </div>
   </div>
@@ -955,13 +1061,31 @@
           <h3>Light Clean</h3>
           <div class="price-line">£29.99 <span>per room</span></div>
           <p class="tier-intro">A lower priced clean for customers who want a simpler process and a lighter refresh.</p>
-          <ul class="list-checks">
+
+          <div class="feature-grid">
+            <div class="feature-row">
+              <strong>Pre-vac</strong>
+              <span class="feature-badge no">No</span>
+            </div>
+            <div class="feature-row">
+              <strong>Pre-spray on carpet</strong>
+              <span class="feature-badge no">No</span>
+            </div>
+            <div class="feature-row">
+              <strong>In-tank detergent</strong>
+              <span class="feature-badge yes">Yes</span>
+            </div>
+          </div>
+
+          <ul class="list-checks" style="margin-top:18px;">
             <li>You are hiring both us and the equipment we use</li>
             <li>Lighter machine setup than our Deep Clean package</li>
+            <li>The customer does the hoovering first on this option</li>
             <li>High pressure hot water extraction rinse</li>
-            <li>Suitable where carpets need a lighter clean rather than a full restoration</li>
-            <li>Good for customers mainly focused on price</li>
+            <li>Designed as a light freshen up rather than a full deep clean</li>
+            <li>Best suited to carpets that are already fairly clean and just need brightening up</li>
           </ul>
+
           <div class="tier-note">This is the cheaper option. It is there if you want it.</div>
         </div>
       </article>
@@ -972,16 +1096,42 @@
           <h3>Deep Clean</h3>
           <div class="price-line">On average £55 <span>per room</span></div>
           <div class="sub-price">£75 first room and £45 each additional room</div>
-          <div class="bonus-banner">Hall and landing free with stairs cleaned</div>
-          <p class="tier-intro">Our professional clean using our top tier equipment for customers who want the best possible result.</p>
-          <ul class="list-checks">
+          <div class="bonus-banner">Stairs cleaned? Your hall and landing are included free.</div>
+          <p class="tier-intro">This is our professional clean and the option most customers choose.</p>
+
+          <div class="feature-grid">
+            <div class="feature-row">
+              <strong>Pre-vac</strong>
+              <span class="feature-badge yes">Yes</span>
+            </div>
+            <div class="feature-row">
+              <strong>Targeted pre-spray on carpet</strong>
+              <span class="feature-badge yes">Yes</span>
+            </div>
+            <div class="feature-row">
+              <strong>In-tank detergent</strong>
+              <span class="feature-badge no">No</span>
+            </div>
+            <div class="feature-row">
+              <strong>Counter rotating brush</strong>
+              <span class="feature-badge neutral">If there is room</span>
+            </div>
+          </div>
+
+          <ul class="list-checks" style="margin-top:18px;">
             <li>You are hiring both us and our top tier equipment</li>
             <li>Enforcer 400 and Fusion Heat setup</li>
+            <li>More powerful equipment, more heat, and deeper agitation into the fibres</li>
             <li>Up to 180 degrees of steam cleaning</li>
-            <li>Counter rotating brush agitation to rejuvenate the pile</li>
-            <li>Works deeper into embedded dirt and grit at the base of the carpet</li>
-            <li>Better appearance, better feel, and a more complete clean</li>
+            <li>The pre-spray is applied directly onto the carpet, not mixed in the tank</li>
+            <li>If there is room, the counter rotating brush scrubs the pre-spray deep into the carpet, lifts dirt, and rejuvenates the pile</li>
+            <li>This is the part that actually does the clean</li>
+            <li>Hot water extraction then flushes out loosened soil and residues</li>
+            <li>Includes an in-tank antibacterial carpet deodoriser</li>
+            <li>Leaves carpets looking and feeling properly clean</li>
           </ul>
+
+          <div class="tier-note">You’re not just hiring me, you’re hiring the equipment, and that’s what makes the difference.</div>
 
           <div class="klarna-box">
             <div class="klarna-badge">Klarna</div>
@@ -998,7 +1148,23 @@
           <div class="price-line">+ £15 <span>per room</span></div>
           <div class="sub-price">Was £30 per room, now £15 half price</div>
           <p class="tier-intro">Our premium option for customers who want the full Deep Clean plus lasting fibre protection.</p>
-          <ul class="list-checks">
+
+          <div class="feature-grid">
+            <div class="feature-row">
+              <strong>Pre-vac</strong>
+              <span class="feature-badge yes">Yes</span>
+            </div>
+            <div class="feature-row">
+              <strong>Targeted pre-spray on carpet</strong>
+              <span class="feature-badge yes">Yes</span>
+            </div>
+            <div class="feature-row">
+              <strong>Protection applied after cleaning</strong>
+              <span class="feature-badge yes">Yes</span>
+            </div>
+          </div>
+
+          <ul class="list-checks" style="margin-top:18px;">
             <li>Everything included in the Deep Clean package</li>
             <li>Teflon style fibre protection added after cleaning</li>
             <li>Helps repel dirt and spills</li>
@@ -1014,6 +1180,24 @@
         </div>
       </article>
     </div>
+
+    <div class="review-strip">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p>Really pleased with the result. The carpets came up far better than expected and the whole job felt professional from start to finish.</p>
+        <strong>Local customer</strong>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p>Clear pricing, no messing about, and a much better result than cheaper cleans we’ve had before.</p>
+        <strong>Happy client</strong>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p>Friendly, honest, and the carpets looked and felt properly clean afterwards. Would definitely use again.</p>
+        <strong>Repeat customer</strong>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -1022,19 +1206,18 @@
     <div class="reveal seo-copy">
       <span class="kicker" style="background:var(--soft);color:#1a4d9c">Why the prices are different</span>
       <h2>Going cheaper is not always the best option, but we offer it anyway.</h2>
+      <p>We used to lose customers to cheaper quotes until we decided to offer that option as well.</p>
       <p>If you cannot beat them, join them. That is exactly why the Light Clean is there. Some customers are shopping mainly on price, so we give them that option as well.</p>
-      <p>The difference is that we are upfront about what is included. The cheaper option uses a lighter setup. The Deep Clean uses different equipment, more heat, more agitation, more time, and a far more complete process.</p>
-      <p>That way you can choose what matters more to you. The cheapest possible quote, or the best possible job.</p>
+      <p>The difference is that we are completely upfront about what you get. The cheaper option uses a lighter setup. The Deep Clean uses different equipment, more heat, more agitation, more time, and a far more complete process.</p>
 
       <div class="notice" style="margin-top:22px">
         <strong>With us:</strong>
         <ul>
-          <li>We will not ask for extra money when we turn up</li>
-          <li>We will not turn up with low powered shop type equipment and pretend it is the same as a professional setup</li>
-          <li>We provide a fixed agreed price</li>
-          <li>We are insured</li>
-          <li>We can provide an invoice</li>
-          <li>We stand behind our work</li>
+          <li>We will not add extra costs when we arrive</li>
+          <li>We use professional equipment, not shop bought machines</li>
+          <li>All prices are agreed before we start</li>
+          <li>We are fully insured</li>
+          <li>If you’re not happy, you don’t pay</li>
         </ul>
       </div>
 
@@ -1050,11 +1233,6 @@
       </div>
 
       <div class="notice" style="margin-top:22px">
-        <strong>Satisfaction promise:</strong>
-        If you are genuinely not happy with the clean, we will not charge you. We are confident in the service we provide.
-      </div>
-
-      <div class="notice" style="margin-top:22px">
         <strong>Important stain note:</strong>
         No cleaner can guarantee to remove every single stain from every carpet. Some stains such as red wine, makeup, dye stains, and other specialist marks may need advanced stain removal at extra cost.
       </div>
@@ -1066,16 +1244,16 @@
   </div>
 </section>
 
-<section class="section">
+<section class="section" id="contact-form">
   <div class="container">
     <div class="pricing-contact-band reveal">
-      <h2>Need a proper quotation or want to talk through the options?</h2>
-      <p>Send us the details below and we can discuss your carpets, what condition they are in, and which option makes the most sense for you. If you are not sure what to choose, we will talk you through it honestly.</p>
+      <h2>Not sure which option is right for you?</h2>
+      <p>Send us a couple of photos on WhatsApp or use the form below and we’ll give you honest advice based on your carpets, the condition they are in, and the result you want.</p>
 
       <div class="bottom-form-wrap">
         <div class="bottom-form-card">
-          <h3>Get in touch</h3>
-          <p>Choose an option below or simply ask a question. You can tell us how many rooms there are, whether stairs are included, and anything else that helps us guide you properly.</p>
+          <h3>Get in touch for a proper quotation</h3>
+          <p>Choose an option below or simply ask a question. Tell us how many rooms there are, whether stairs are included, and anything else that helps us guide you properly.</p>
 
           <form class="pricing-form" action="../thank-you.html" method="get">
             <div class="form-row">
@@ -1103,7 +1281,7 @@
 
           <div class="contact-points">
             <div class="contact-point">Light Clean, Deep Clean, or Deep Clean with Protection</div>
-            <div class="contact-point">Hall and landing free with stairs on the Deep Clean option</div>
+            <div class="contact-point">Stairs cleaned? Your hall and landing are included free on the Deep Clean option</div>
             <div class="contact-point">Protection was £30 per room and is now £15 half price</div>
           </div>
 
