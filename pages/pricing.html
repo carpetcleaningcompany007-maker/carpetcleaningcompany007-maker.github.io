@@ -329,11 +329,11 @@
     }
 
     .old-price-big{
-      font-size:2.05rem;
+      font-size:2.2rem;
       color:#9aa7b5;
       text-decoration:line-through;
       text-decoration-thickness:3px;
-      text-decoration-color:var(--danger);
+      text-decoration-color:#e53935;
       line-height:1;
     }
 
@@ -396,7 +396,7 @@
       padding:0;
       margin:18px 0 0;
       display:grid;
-      gap:12px;
+      gap:10px;
     }
 
     .compare-list li{
@@ -404,23 +404,29 @@
       align-items:center;
       justify-content:space-between;
       gap:14px;
-      background:#f8fbff;
-      border:1px solid rgba(12,31,51,.06);
-      border-radius:14px;
-      padding:14px 16px;
+      background:#ffffff;
+      border:1px solid #e3ebf3;
+      border-radius:16px;
+      padding:16px 18px;
       font-weight:700;
       color:#123250;
+      box-shadow:0 4px 14px rgba(12,31,51,.04);
+    }
+
+    .compare-list li span:first-child{
+      font-size:1rem;
+      line-height:1.35;
     }
 
     .compare-icon{
-      width:28px;
-      height:28px;
-      flex:0 0 28px;
+      width:34px;
+      height:34px;
+      flex:0 0 34px;
       border-radius:999px;
       display:flex;
       align-items:center;
       justify-content:center;
-      font-size:1rem;
+      font-size:1.05rem;
       font-weight:900;
     }
 
@@ -431,16 +437,18 @@
 
     .compare-icon.no{
       background:#fff1f1;
-      color:#b42318;
+      color:#c62828;
     }
 
     .compare-icon.note{
       width:auto;
-      min-width:110px;
-      padding:0 12px;
+      min-width:132px;
+      height:34px;
+      padding:0 14px;
       background:#eef5fb;
       color:#214a78;
       font-size:.82rem;
+      font-weight:800;
     }
 
     .pricing-tier-basic{
@@ -465,38 +473,28 @@
     }
 
     .offer-banner{
-      margin-bottom:15px;
-      padding:12px 14px;
-      font-weight:800;
+      margin-bottom:14px;
+      padding:14px 16px;
+      font-weight:900;
       text-align:center;
-      border-radius:14px;
-      font-size:.92rem;
-      line-height:1.35;
-      box-shadow:0 10px 24px rgba(0,0,0,.06);
+      border-radius:16px;
+      font-size:1rem;
+      line-height:1.3;
+      box-shadow:0 12px 26px rgba(0,0,0,.08);
+      letter-spacing:.01em;
     }
 
     .offer-banner.blue{
-      background:linear-gradient(135deg,#eaf4ff,#dcebff);
-      color:#1557d8;
-      border:1px solid #cfe2ff;
+      background:linear-gradient(135deg,#eaf4ff,#d8eaff);
+      color:#1456d3;
+      border:1px solid #bfd8ff;
     }
 
     .offer-banner.red{
       background:linear-gradient(135deg,#ff4d4d,#e53935);
       color:#fff;
-      border:1px solid rgba(255,255,255,.16);
-      font-size:1rem;
-    }
-
-    .tag-popular{
-      display:inline-block;
-      background:#1f6fff;
-      color:#fff;
-      padding:6px 10px;
-      font-size:12px;
-      border-radius:20px;
-      margin-bottom:10px;
-      font-weight:700;
+      border:1px solid rgba(255,255,255,.18);
+      font-size:1.05rem;
     }
 
     .note-box{
@@ -856,7 +854,7 @@
       }
 
       .compare-list li{
-        padding:13px 14px;
+        padding:14px 14px;
       }
     }
 
@@ -905,7 +903,7 @@
       }
 
       .offer-banner{
-        font-size:.86rem;
+        font-size:.9rem;
       }
 
       .klarna-box{
@@ -1105,8 +1103,14 @@
       <article class="card pricing-tier pricing-tier-deep reveal">
         <div class="card-body">
           <span class="package-tag">Most Popular • Recommended</span>
-          <div class="offer-banner blue">Free hall and landing when you have your stairs cleaned.</div>
-          <div class="offer-banner blue">Prices start from £45 per room on larger jobs.</div>
+
+          <div class="offer-banner blue">
+            FREE HALL AND LANDING WHEN YOU HAVE YOUR STAIRS CLEANED
+          </div>
+
+          <div class="offer-banner blue">
+            PRICES START FROM £45 PER ROOM
+          </div>
 
           <h3>Deep Clean</h3>
           <div class="price-line">On average £55 <span>per room</span></div>
@@ -1152,7 +1156,9 @@
 
       <article class="card pricing-tier pricing-tier-protect reveal">
         <div class="card-body">
-          <div class="offer-banner red">HALF PRICE • LIMITED TIME ONLY</div>
+          <div class="offer-banner red">
+            HALF PRICE • LIMITED TIME ONLY
+          </div>
 
           <span class="package-tag">Option 3</span>
           <h3>Added Stain Guard Protection</h3>
