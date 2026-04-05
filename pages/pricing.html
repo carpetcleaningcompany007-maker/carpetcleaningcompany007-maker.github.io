@@ -352,7 +352,7 @@
     .list-checks{
       list-style:none;
       padding:0;
-      margin:0;
+      margin:16px 0 0;
       display:grid;
       gap:12px;
     }
@@ -391,58 +391,56 @@
       line-height:1.5;
     }
 
-    .feature-grid{
-      margin-top:18px;
+    .compare-list{
+      list-style:none;
+      padding:0;
+      margin:18px 0 0;
       display:grid;
-      gap:10px;
+      gap:12px;
     }
 
-    .feature-row{
-      display:grid;
-      grid-template-columns:1.15fr auto;
-      gap:12px;
+    .compare-list li{
+      display:flex;
       align-items:center;
+      justify-content:space-between;
+      gap:14px;
       background:#f8fbff;
       border:1px solid rgba(12,31,51,.06);
       border-radius:14px;
-      padding:12px 14px;
-    }
-
-    .feature-row strong{
+      padding:14px 16px;
+      font-weight:700;
       color:#123250;
-      font-size:.95rem;
     }
 
-    .feature-badge{
-      min-width:46px;
-      min-height:34px;
+    .compare-icon{
+      width:28px;
+      height:28px;
+      flex:0 0 28px;
       border-radius:999px;
-      display:inline-flex;
+      display:flex;
       align-items:center;
       justify-content:center;
-      padding:0 12px;
       font-size:1rem;
       font-weight:900;
-      letter-spacing:.01em;
     }
 
-    .feature-badge.yes{
+    .compare-icon.yes{
       background:#e9f7ee;
       color:#10823d;
     }
 
-    .feature-badge.no{
+    .compare-icon.no{
       background:#fff1f1;
       color:#b42318;
     }
 
-    .feature-badge.neutral{
+    .compare-icon.note{
+      width:auto;
+      min-width:110px;
+      padding:0 12px;
       background:#eef5fb;
       color:#214a78;
       font-size:.82rem;
-      min-width:120px;
-      text-transform:none;
-      font-weight:800;
     }
 
     .pricing-tier-basic{
@@ -487,6 +485,7 @@
       background:linear-gradient(135deg,#ff4d4d,#e53935);
       color:#fff;
       border:1px solid rgba(255,255,255,.16);
+      font-size:1rem;
     }
 
     .tag-popular{
@@ -856,8 +855,8 @@
         gap:18px;
       }
 
-      .feature-row{
-        grid-template-columns:1fr;
+      .compare-list li{
+        padding:13px 14px;
       }
     }
 
@@ -907,14 +906,6 @@
 
       .offer-banner{
         font-size:.86rem;
-      }
-
-      .bonus-banner{
-        width:100%;
-        justify-content:center;
-        text-align:center;
-        min-height:44px;
-        padding:10px 14px;
       }
 
       .klarna-box{
@@ -1089,22 +1080,13 @@
           <div class="price-line">£29.99 <span>per room</span></div>
           <p class="tier-intro">A lower priced clean for customers who want a simpler process and a lighter refresh.</p>
 
-          <div class="feature-grid">
-            <div class="feature-row">
-              <strong>Pre-vac</strong>
-              <span class="feature-badge no">✕</span>
-            </div>
-            <div class="feature-row">
-              <strong>Pre-spray on carpet</strong>
-              <span class="feature-badge no">✕</span>
-            </div>
-            <div class="feature-row">
-              <strong>In-tank detergent</strong>
-              <span class="feature-badge yes">✓</span>
-            </div>
-          </div>
+          <ul class="compare-list">
+            <li><span>Pre-vac</span><span class="compare-icon no">✕</span></li>
+            <li><span>Pre-spray on carpet</span><span class="compare-icon no">✕</span></li>
+            <li><span>In-tank detergent</span><span class="compare-icon yes">✓</span></li>
+          </ul>
 
-          <ul class="list-checks" style="margin-top:18px;">
+          <ul class="list-checks">
             <li>You are hiring both us and the equipment we use</li>
             <li>Lighter machine setup than our Deep Clean package</li>
             <li>High pressure hot water extraction rinse</li>
@@ -1123,7 +1105,8 @@
       <article class="card pricing-tier pricing-tier-deep reveal">
         <div class="card-body">
           <span class="package-tag">Most Popular • Recommended</span>
-          <div class="offer-banner blue">Stairs cleaned? Your hall and landing are included free of charge.</div>
+          <div class="offer-banner blue">Free hall and landing when you have your stairs cleaned.</div>
+          <div class="offer-banner blue">Prices start from £45 per room on larger jobs.</div>
 
           <h3>Deep Clean</h3>
           <div class="price-line">On average £55 <span>per room</span></div>
@@ -1131,26 +1114,14 @@
 
           <p class="tier-intro">This is our professional clean and the option most customers choose.</p>
 
-          <div class="feature-grid">
-            <div class="feature-row">
-              <strong>Pre-vac</strong>
-              <span class="feature-badge yes">✓</span>
-            </div>
-            <div class="feature-row">
-              <strong>Pre-spray on carpet</strong>
-              <span class="feature-badge yes">✓</span>
-            </div>
-            <div class="feature-row">
-              <strong>In-tank detergent</strong>
-              <span class="feature-badge no">✕</span>
-            </div>
-            <div class="feature-row">
-              <strong>Counter rotating brush</strong>
-              <span class="feature-badge neutral">If there is room</span>
-            </div>
-          </div>
+          <ul class="compare-list">
+            <li><span>Pre-vac</span><span class="compare-icon yes">✓</span></li>
+            <li><span>Pre-spray on carpet</span><span class="compare-icon yes">✓</span></li>
+            <li><span>In-tank detergent</span><span class="compare-icon no">✕</span></li>
+            <li><span>Counter rotating brush</span><span class="compare-icon note">If there is room</span></li>
+          </ul>
 
-          <ul class="list-checks" style="margin-top:18px;">
+          <ul class="list-checks">
             <li>You are hiring both us and our top tier equipment</li>
             <li>Enforcer 400 and Fusion Heat setup</li>
             <li>More powerful equipment, more heat, and deeper agitation into the fibres</li>
@@ -1195,22 +1166,13 @@
 
           <p class="tier-intro">Add stain guard protection after your Deep Clean to help carpets stay cleaner for longer.</p>
 
-          <div class="feature-grid">
-            <div class="feature-row">
-              <strong>Applied after deep clean</strong>
-              <span class="feature-badge yes">✓</span>
-            </div>
-            <div class="feature-row">
-              <strong>Protects carpet fibres</strong>
-              <span class="feature-badge yes">✓</span>
-            </div>
-            <div class="feature-row">
-              <strong>Repels dirt and spills</strong>
-              <span class="feature-badge yes">✓</span>
-            </div>
-          </div>
+          <ul class="compare-list">
+            <li><span>Applied after deep clean</span><span class="compare-icon yes">✓</span></li>
+            <li><span>Protects carpet fibres</span><span class="compare-icon yes">✓</span></li>
+            <li><span>Repels dirt and spills</span><span class="compare-icon yes">✓</span></li>
+          </ul>
 
-          <ul class="list-checks" style="margin-top:18px;">
+          <ul class="list-checks">
             <li>Everything included in the Deep Clean package</li>
             <li>Teflon style stain guard protection added after cleaning</li>
             <li>Helps repel dirt and spills</li>
