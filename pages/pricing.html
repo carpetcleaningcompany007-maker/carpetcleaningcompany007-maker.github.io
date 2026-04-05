@@ -8,7 +8,7 @@
   <link rel="canonical" href="https://www.thecarpetcleaningcrew.co.uk/pages/pricing.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/style.css">
 
   <style>
@@ -26,15 +26,9 @@
       --white:#ffffff;
       --shadow:0 18px 45px rgba(12,31,51,.12);
       --shadow-soft:0 10px 28px rgba(12,31,51,.08);
-      --danger:#d62f2f;
+      --danger:#e53935;
       --warning:#ff9800;
       --pink:#ffb3da;
-      --gold-1:#fff5c7;
-      --gold-2:#e0b54f;
-      --gold-3:#8b6a1d;
-      --silver-1:#fafafa;
-      --silver-2:#d9d9d9;
-      --silver-3:#8f8f8f;
     }
 
     body{
@@ -281,21 +275,25 @@
     }
 
     .pricing-grid{
-      gap:24px;
-      align-items:stretch;
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:28px;
+      align-items:start;
+      margin-top:34px;
     }
 
     .pricing-tier{
       position:relative;
-      overflow:visible;
+      overflow:hidden;
       border-radius:24px;
       border:1px solid rgba(12,31,51,.08);
-      box-shadow:var(--shadow-soft);
+      box-shadow:0 18px 36px rgba(12,31,51,.08);
       background:#fff;
+      min-height:100%;
     }
 
     .pricing-tier .card-body{
-      padding:28px 26px;
+      padding:26px 24px 24px;
       position:relative;
     }
 
@@ -321,10 +319,27 @@
       color:#214a78;
     }
 
+    .pricing-tier-deep{
+      border:2px solid rgba(31,111,255,.2);
+      box-shadow:0 20px 46px rgba(31,111,255,.16);
+      background:linear-gradient(180deg,#ffffff 0%, #f8fbff 100%);
+      transform:translateY(-6px);
+    }
+
+    .pricing-tier-deep .package-tag{
+      background:linear-gradient(135deg,#1f6fff,#1658d8);
+      color:#fff;
+    }
+
+    .pricing-tier-protect{
+      background:linear-gradient(180deg,#fff 0%, #fffaf6 100%);
+      border:1px solid rgba(255,126,33,.18);
+    }
+
     .price-line{
       margin:8px 0 8px;
       font-size:2.45rem;
-      font-weight:800;
+      font-weight:900;
       line-height:1;
       color:#0f2741;
       display:flex;
@@ -360,6 +375,62 @@
       margin-bottom:16px;
     }
 
+    .feature-stack{
+      list-style:none;
+      padding:0;
+      margin:18px 0 0;
+      display:grid;
+      gap:10px;
+    }
+
+    .feature-stack li{
+      display:flex;
+      align-items:center;
+      justify-content:flex-start;
+      gap:14px;
+      background:#ffffff;
+      border:1px solid #e3ebf3;
+      border-radius:16px;
+      padding:16px 18px;
+      font-weight:700;
+      color:#123250;
+      box-shadow:0 4px 14px rgba(12,31,51,.04);
+      line-height:1.35;
+    }
+
+    .feature-bubble{
+      width:34px;
+      height:34px;
+      flex:0 0 34px;
+      border-radius:999px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:1.05rem;
+      font-weight:900;
+    }
+
+    .feature-bubble.yes{
+      background:#e9f7ee;
+      color:#10823d;
+    }
+
+    .feature-bubble.no{
+      background:#fff1f1;
+      color:#c62828;
+    }
+
+    .feature-bubble.note{
+      width:auto;
+      min-width:132px;
+      height:34px;
+      padding:0 14px;
+      background:#eef5fb;
+      color:#214a78;
+      font-size:.82rem;
+      font-weight:800;
+    }
+
     .list-checks{
       list-style:none;
       padding:0;
@@ -392,93 +463,6 @@
       font-weight:900;
     }
 
-    .tier-note{
-      margin-top:18px;
-      padding:14px 16px;
-      border-radius:16px;
-      background:#f5f9fe;
-      color:#173a63;
-      font-weight:700;
-      line-height:1.5;
-    }
-
-    .feature-stack{
-      list-style:none !important;
-      padding:0 !important;
-      margin:18px 0 0 !important;
-      display:grid !important;
-      gap:10px !important;
-    }
-
-    .feature-stack li{
-      display:flex !important;
-      align-items:center !important;
-      justify-content:flex-start !important;
-      gap:14px !important;
-      background:#ffffff !important;
-      border:1px solid #e3ebf3 !important;
-      border-radius:16px !important;
-      padding:16px 18px !important;
-      font-weight:700 !important;
-      color:#123250 !important;
-      box-shadow:0 4px 14px rgba(12,31,51,.04) !important;
-      line-height:1.35 !important;
-    }
-
-    .feature-bubble{
-      width:34px !important;
-      height:34px !important;
-      flex:0 0 34px !important;
-      border-radius:999px !important;
-      display:flex !important;
-      align-items:center !important;
-      justify-content:center !important;
-      font-size:1.05rem !important;
-      font-weight:900 !important;
-    }
-
-    .feature-bubble.yes{
-      background:#e9f7ee !important;
-      color:#10823d !important;
-    }
-
-    .feature-bubble.no{
-      background:#fff1f1 !important;
-      color:#c62828 !important;
-    }
-
-    .feature-bubble.note{
-      width:auto !important;
-      min-width:132px !important;
-      height:34px !important;
-      padding:0 14px !important;
-      background:#eef5fb !important;
-      color:#214a78 !important;
-      font-size:.82rem !important;
-      font-weight:800 !important;
-    }
-
-    .pricing-tier-basic{
-      background:linear-gradient(180deg,#fff 0%, #fbfdff 100%);
-    }
-
-    .pricing-tier-deep{
-      border:2px solid rgba(31,111,255,.2);
-      box-shadow:0 20px 46px rgba(31,111,255,.16);
-      background:linear-gradient(180deg,#ffffff 0%, #f8fbff 100%);
-      transform:translateY(-6px);
-    }
-
-    .pricing-tier-deep .package-tag{
-      background:linear-gradient(135deg,#1f6fff,#1658d8);
-      color:#fff;
-    }
-
-    .pricing-tier-protect{
-      background:linear-gradient(180deg,#fff 0%, #fffaf6 100%);
-      border:1px solid rgba(255,126,33,.18);
-    }
-
     .note-box{
       margin-top:15px;
       padding:12px 14px;
@@ -499,6 +483,16 @@
       margin-top:12px;
       font-size:14px;
       color:#444;
+      line-height:1.5;
+    }
+
+    .tier-note{
+      margin-top:18px;
+      padding:14px 16px;
+      border-radius:16px;
+      background:#f5f9fe;
+      color:#173a63;
+      font-weight:700;
       line-height:1.5;
     }
 
@@ -535,72 +529,47 @@
       line-height:1.45;
     }
 
-    .metal-badge{
+    .sale-tag{
       position:absolute;
-      right:-14px;
-      top:-18px;
-      width:118px;
-      height:118px;
-      border-radius:999px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      padding:14px;
-      font-weight:900;
-      line-height:1.05;
-      letter-spacing:.02em;
-      box-shadow:
-        0 18px 30px rgba(0,0,0,.18),
-        inset 0 2px 3px rgba(255,255,255,.7),
-        inset 0 -4px 10px rgba(0,0,0,.18);
-      z-index:5;
-      transform:rotate(11deg);
-    }
-
-    .metal-badge.silver{
-      background:radial-gradient(circle at 30% 25%, #ffffff 0%, var(--silver-1) 18%, var(--silver-2) 56%, var(--silver-3) 100%);
-      color:#103458;
-      border:3px solid rgba(255,255,255,.7);
-    }
-
-    .metal-badge.gold{
-      background:radial-gradient(circle at 30% 25%, #fffef1 0%, var(--gold-1) 16%, var(--gold-2) 58%, var(--gold-3) 100%);
-      color:#6b2800;
-      border:3px solid rgba(255,255,255,.6);
-    }
-
-    .metal-badge small{
-      display:block;
-      font-size:.62rem;
-      font-weight:900;
-      letter-spacing:.06em;
-      margin-top:4px;
-    }
-
-    .banner-strip{
-      margin:0 0 14px;
-      padding:14px 16px;
-      font-weight:900;
-      text-align:center;
-      border-radius:16px;
-      font-size:1rem;
-      line-height:1.3;
-      box-shadow:0 12px 26px rgba(0,0,0,.08);
-      letter-spacing:.01em;
-    }
-
-    .banner-strip.blue{
-      background:linear-gradient(135deg,#eaf4ff,#d8eaff);
-      color:#1456d3;
-      border:1px solid #bfd8ff;
-    }
-
-    .banner-strip.red{
-      background:linear-gradient(135deg,#ff4d4d,#e53935);
+      top:18px;
+      right:-40px;
+      background:#e53935;
       color:#fff;
-      border:1px solid rgba(255,255,255,.18);
-      font-size:1.05rem;
+      font-weight:900;
+      padding:10px 60px;
+      font-size:14px;
+      letter-spacing:.05em;
+      transform:rotate(35deg);
+      box-shadow:0 8px 18px rgba(0,0,0,.25);
+      z-index:5;
+    }
+
+    .sale-tag.small{
+      font-size:12px;
+      padding:8px 50px;
+      background:#1f6fff;
+    }
+
+    .blue-banner{
+      margin:12px 0;
+      padding:12px;
+      border-radius:12px;
+      background:#e8f1ff;
+      color:#0d47a1;
+      font-weight:800;
+      text-align:center;
+      border:1px solid #cfe0ff;
+    }
+
+    .green-banner{
+      margin:12px 0;
+      padding:12px;
+      border-radius:12px;
+      background:#e8fff2;
+      color:#1b7f4a;
+      font-weight:800;
+      text-align:center;
+      border:1px solid #bfeccf;
     }
 
     .review-strip{
@@ -860,7 +829,8 @@
       display:none;
     }
 
-    @media (max-width: 1080px){
+    @media (max-width: 1100px){
+      .pricing-grid,
       .bottom-form-wrap,
       .review-strip{
         grid-template-columns:1fr;
@@ -868,6 +838,10 @@
 
       .pricing-tier-deep{
         transform:none;
+      }
+
+      .sale-tag{
+        right:-32px;
       }
     }
 
@@ -879,10 +853,6 @@
 
       .nav-cta .btn{
         flex:0 1 auto;
-      }
-
-      .pricing-grid{
-        grid-template-columns:1fr;
       }
     }
 
@@ -904,7 +874,7 @@
       }
 
       .feature-stack li{
-        padding:14px 14px !important;
+        padding:14px 14px;
       }
     }
 
@@ -942,7 +912,7 @@
       }
 
       .pricing-tier .card-body{
-        padding:22px 20px;
+        padding:22px 20px 24px;
       }
 
       .pricing-tier h3{
@@ -953,21 +923,11 @@
         font-size:1.95rem;
       }
 
-      .banner-strip{
-        font-size:.9rem;
-      }
-
-      .metal-badge{
-        width:98px;
-        height:98px;
-        right:-8px;
-        top:-14px;
-        font-size:.9rem;
-      }
-
-      .klarna-box{
-        flex-direction:column;
-        align-items:flex-start;
+      .sale-tag{
+        top:14px;
+        right:-42px;
+        padding:8px 52px;
+        font-size:12px;
       }
 
       .stack-buttons a,
@@ -1107,338 +1067,4 @@
           </a>
           <a class="hero-action wa" href="https://wa.me/447802563213" target="_blank" rel="noreferrer">
             <span class="btn-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M20.52 3.48A11.86 11.86 0 0 0 12.06 0C5.52 0 .18 5.34.18 11.88c0 2.09.55 4.14 1.59 5.95L0 24l6.36-1.66a11.85 11.85 0 0 0 5.69 1.45h.01c6.54 0 11.88-5.34 11.88-11.88 0-3.17-1.24-6.14-3.42-8.43zM12.06 21.8h-.01a9.93 9.93 0 0 1-5.05-1.38l-.36-.21-3.77.98 1.01-3.67-.24-.38a9.9 9.9 0 0 1-1.52-5.26c0-5.48 4.46-9.94 9.95-9.94 2.65 0 5.14 1.03 7.01 2.91a9.86 9.86 0 0 1 2.91 7c0 5.49-4.46 9.95-9.93 9.95zm5.45-7.43c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.08-.3-.15-1.28-.47-2.44-1.5-.9-.8-1.5-1.79-1.68-2.09-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.08-.8.37-.27.3-1.05 1.03-1.05 2.5s1.08 2.9 1.23 3.1c.15.2 2.11 3.22 5.12 4.51.72.31 1.29.5 1.73.64.73.23 1.39.2 1.91.12.58-.09 1.77-.72 2.02-1.41.25-.69.25-1.28.17-1.4-.07-.12-.27-.2-.57-.35z"/></svg>
-            </span>
-            WhatsApp
-          </a>
-        </div>
-
-        <p class="hero-note">Most customers choose the Deep Clean once they see the difference.</p>
-
-        <div class="small-link-row">
-          <a href="#contact-form">Get a proper quotation below</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="pricing-wrap center">
-      <span class="kicker" style="background:var(--soft);color:#1a4d9c">Three clear choices</span>
-      <h2>See exactly what you get for the price.</h2>
-      <p class="lead" style="margin-inline:auto;max-width:980px">The equipment and process change from one option to the next. You are not only hiring us, you are also hiring the equipment we bring with us. The Light Clean uses a lighter setup. The Deep Clean uses our top tier equipment and a much more complete process.</p>
-
-      <div class="grid grid-3 pricing-grid" style="margin-top:34px">
-        <article class="card pricing-tier pricing-tier-basic reveal">
-          <div class="card-body">
-            <span class="package-tag">Option 1</span>
-            <h3>Light Clean</h3>
-            <div class="price-line">£29.99 <span>per room</span></div>
-            <p class="tier-intro">A lower priced clean for customers who want a simpler process and a lighter refresh.</p>
-
-            <ul class="feature-stack">
-              <li><span class="feature-bubble no">✕</span><span>Pre-vac</span></li>
-              <li><span class="feature-bubble no">✕</span><span>Pre-spray on carpet</span></li>
-              <li><span class="feature-bubble yes">✓</span><span>In-tank detergent</span></li>
-            </ul>
-
-            <ul class="list-checks">
-              <li>You are hiring both us and the equipment we use</li>
-              <li>Lighter machine setup than our Deep Clean package</li>
-              <li>High pressure hot water extraction rinse</li>
-              <li>Designed as a light freshen up rather than a full deep clean</li>
-              <li>Best suited to carpets that are already fairly clean and just need brightening up</li>
-            </ul>
-
-            <div class="note-box">
-              Customer is required to pre-vac the area before cleaning.
-            </div>
-
-            <div class="tier-note">This is the cheaper option. It is there if you want it.</div>
-          </div>
-        </article>
-
-        <article class="card pricing-tier pricing-tier-deep reveal">
-          <div class="card-body">
-            <div class="metal-badge silver">
-              FREE
-              <small>HALL & LANDING</small>
-            </div>
-
-            <span class="package-tag">Most Popular • Recommended</span>
-
-            <div class="banner-strip blue">FREE HALL AND LANDING WHEN YOU HAVE YOUR STAIRS CLEANED</div>
-            <div class="banner-strip blue">PRICES START FROM £45 PER ROOM</div>
-
-            <h3>Deep Clean</h3>
-            <div class="price-line">On average £55 <span>per room</span></div>
-            <div class="sub-price">£75 first room and £45 each additional room</div>
-
-            <p class="tier-intro">This is our professional clean and the option most customers choose.</p>
-
-            <ul class="feature-stack">
-              <li><span class="feature-bubble yes">✓</span><span>Pre-vac</span></li>
-              <li><span class="feature-bubble yes">✓</span><span>Pre-spray on carpet</span></li>
-              <li><span class="feature-bubble no">✕</span><span>In-tank detergent</span></li>
-              <li><span class="feature-bubble note">If there is room</span><span>Counter rotating brush</span></li>
-            </ul>
-
-            <ul class="list-checks">
-              <li>You are hiring both us and our top tier equipment</li>
-              <li>Enforcer 400 and Fusion Heat setup</li>
-              <li>More powerful equipment, more heat, and deeper agitation into the fibres</li>
-              <li>Up to 180 degrees of steam cleaning</li>
-              <li>The pre-spray is applied directly onto the carpet, not mixed in the tank</li>
-              <li>If there is room, the counter rotating brush scrubs the pre-spray deep into the carpet, lifts dirt, rejuvenates the pile, and does the real cleaning work</li>
-              <li>Hot water extraction then flushes out loosened soil and residues</li>
-              <li>Includes an in-tank antibacterial carpet deodoriser</li>
-              <li>Leaves carpets looking and feeling properly clean</li>
-            </ul>
-
-            <div class="note-box blue">
-              This clean typically takes around 3x longer than a light clean. There is significantly more work involved to achieve a deeper, longer lasting result.
-            </div>
-
-            <div class="trust-line">
-              Not all carpet cleans are the same. Many lower priced services skip key steps like pre-spray and deep agitation.
-            </div>
-
-            <div class="tier-note">You’re not just hiring me, you’re hiring the equipment, and that’s what makes the difference.</div>
-
-            <div class="klarna-box">
-              <div class="klarna-badge">Klarna</div>
-              <p>Available on this package. Spread the cost over time if you want the better clean without paying it all at once.</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="card pricing-tier pricing-tier-protect reveal">
-          <div class="card-body">
-            <div class="metal-badge gold">
-              HALF
-              <small>PRICE</small>
-            </div>
-
-            <div class="banner-strip red">HALF PRICE • LIMITED TIME ONLY</div>
-
-            <span class="package-tag">Option 3</span>
-            <h3>Added Stain Guard Protection</h3>
-
-            <div class="price-line">
-              <span class="old-price-big">£30</span>
-              £15 <span>per room</span>
-            </div>
-
-            <div class="sub-price">Usually £30 per room. Currently half price at £15.</div>
-
-            <p class="tier-intro">Add stain guard protection after your Deep Clean to help carpets stay cleaner for longer.</p>
-
-            <ul class="feature-stack">
-              <li><span class="feature-bubble yes">✓</span><span>Applied after deep clean</span></li>
-              <li><span class="feature-bubble yes">✓</span><span>Protects carpet fibres</span></li>
-              <li><span class="feature-bubble yes">✓</span><span>Repels dirt and spills</span></li>
-            </ul>
-
-            <ul class="list-checks">
-              <li>Everything included in the Deep Clean package</li>
-              <li>Teflon style stain guard protection added after cleaning</li>
-              <li>Helps repel dirt and spills</li>
-              <li>Keeps carpets cleaner for longer</li>
-              <li>Makes routine vacuuming easier and more effective</li>
-              <li>Ideal for freshly cleaned carpets you want to protect</li>
-            </ul>
-
-            <div class="klarna-box">
-              <div class="klarna-badge">Klarna</div>
-              <p>Available on this package too. A good option if you want the best clean and the protection on top.</p>
-            </div>
-          </div>
-        </article>
-      </div>
-
-      <div class="review-strip">
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p>Really pleased with the result. The carpets came up far better than expected and the whole job felt professional from start to finish.</p>
-          <strong>Local customer</strong>
-        </div>
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p>Clear pricing, no messing about, and a much better result than cheaper cleans we’ve had before.</p>
-          <strong>Happy client</strong>
-        </div>
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p>Friendly, honest, and the carpets looked and felt properly clean afterwards. Would definitely use again.</p>
-          <strong>Repeat customer</strong>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section alt">
-  <div class="container split premium-split">
-    <div class="reveal seo-copy">
-      <span class="kicker" style="background:var(--soft);color:#1a4d9c">Why the prices are different</span>
-      <h2>Going cheaper is not always the best option, but we offer it anyway.</h2>
-      <p>We used to lose customers to cheaper quotes until we decided to offer that option as well.</p>
-      <p>If you cannot beat them, join them. That is exactly why the Light Clean is there. Some customers are shopping mainly on price, so we give them that option as well.</p>
-      <p>The difference is that we are completely upfront about what you get. The cheaper option uses a lighter setup. The Deep Clean uses different equipment, more heat, more agitation, more time, and a far more complete process.</p>
-
-      <div class="notice" style="margin-top:22px">
-        <strong>With us:</strong>
-        <ul>
-          <li>We will not add extra costs when we arrive</li>
-          <li>We use professional equipment, not shop bought machines</li>
-          <li>All prices are agreed before we start</li>
-          <li>We are fully insured</li>
-          <li>If you’re not happy, you don’t pay</li>
-        </ul>
-      </div>
-
-      <div class="notice" style="margin-top:22px">
-        <strong>Before choosing any company, including us, ask these questions:</strong>
-        <ul>
-          <li>What equipment are you using?</li>
-          <li>Is the price fixed?</li>
-          <li>Will I get an invoice?</li>
-          <li>Are you insured?</li>
-          <li>Will you guarantee the work?</li>
-        </ul>
-      </div>
-
-      <div class="notice" style="margin-top:22px">
-        <strong>Important stain note:</strong>
-        No cleaner can guarantee to remove every single stain from every carpet. Some stains such as red wine, makeup, dye stains, and other specialist marks may need advanced stain removal at extra cost.
-      </div>
-    </div>
-
-    <div class="photo-frame reveal equipment-frame pricing-machine-frame">
-      <img src="../assets/img/machine-transparent.webp" alt="Professional carpet cleaning machine">
-    </div>
-  </div>
-</section>
-
-<section class="section" id="contact-form">
-  <div class="container">
-    <div class="pricing-contact-band reveal">
-      <h2>Not sure which option is right for you?</h2>
-      <p>Send us a couple of photos on WhatsApp or use the form below and we’ll give you honest advice based on your carpets, the condition they are in, and the result you want.</p>
-
-      <div class="bottom-form-wrap">
-        <div class="bottom-form-card">
-          <h3>Get in touch for a proper quotation</h3>
-          <p>Choose an option below or simply ask a question. Tell us how many rooms there are, whether stairs are included, and anything else that helps us guide you properly.</p>
-
-          <form class="pricing-form" action="../thank-you.html" method="get">
-            <div class="form-row">
-              <input type="text" name="name" placeholder="Your name">
-              <input type="tel" name="phone" placeholder="Phone number">
-            </div>
-            <div class="form-row">
-              <input type="text" name="area" placeholder="Town or area">
-              <select name="option">
-                <option value="">Choose an option</option>
-                <option>Light Clean</option>
-                <option>Deep Clean</option>
-                <option>Added Stain Guard Protection</option>
-                <option>Contact us or ask a question</option>
-              </select>
-            </div>
-            <textarea name="message" placeholder="Tell us what needs cleaning, how many rooms, whether stairs are included, or ask any question"></textarea>
-            <button class="submit-btn" type="submit">Send for a proper quotation</button>
-          </form>
-        </div>
-
-        <aside class="contact-side-panel">
-          <h3>Prefer to call or message us?</h3>
-          <p>You can send over photos, ask a quick question, or call us for a chat about the best option for your carpets.</p>
-
-          <div class="contact-points">
-            <div class="contact-point">Light Clean, Deep Clean, or Added Stain Guard Protection</div>
-            <div class="contact-point">Stairs cleaned? Your hall and landing are included free on the Deep Clean option</div>
-            <div class="contact-point">Stain Guard Protection was £30 per room and is now £15 half price</div>
-          </div>
-
-          <div class="stack-buttons">
-            <a class="call" href="tel:07802563213">
-              <span class="btn-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.3 21 3 13.7 3 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.24.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-              </span>
-              Call 07802 563213
-            </a>
-            <a class="wa" href="https://wa.me/447802563213" target="_blank" rel="noreferrer">
-              <span class="btn-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M20.52 3.48A11.86 11.86 0 0 0 12.06 0C5.52 0 .18 5.34.18 11.88c0 2.09.55 4.14 1.59 5.95L0 24l6.36-1.66a11.85 11.85 0 0 0 5.69 1.45h.01c6.54 0 11.88-5.34 11.88-11.88 0-3.17-1.24-6.14-3.42-8.43zM12.06 21.8h-.01a9.93 9.93 0 0 1-5.05-1.38l-.36-.21-3.77.98 1.01-3.67-.24-.38a9.9 9.9 0 0 1-1.52-5.26c0-5.48 4.46-9.94 9.95-9.94 2.65 0 5.14 1.03 7.01 2.91a9.86 9.86 0 0 1 2.91 7c0 5.49-4.46 9.95-9.93 9.95zm5.45-7.43c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.08-.3-.15-1.28-.47-2.44-1.5-.9-.8-1.5-1.79-1.68-2.09-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.08-.8.37-.27.3-1.05 1.03-1.05 2.5s1.08 2.9 1.23 3.1c.15.2 2.11 3.22 5.12 4.51.72.31 1.29.5 1.73.64.73.23 1.39.2 1.91.12.58-.09 1.77-.72 2.02-1.41.25-.69.25-1.28.17-1.4-.07-.12-.27-.2-.57-.35z"/></svg>
-              </span>
-              WhatsApp us
-            </a>
-            <a class="quote" href="../carpet-cleaning-quote.html">
-              <span class="btn-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-2 .9-2 2v16l4-4h10c1.1 0 2-.9 2-2V8l-6-6zm1 7V3.5L18.5 9H15z"/></svg>
-              </span>
-              Instant Quote Page
-            </a>
-          </div>
-        </aside>
-      </div>
-    </div>
-  </div>
-</section>
-
-<footer class="footer">
-  <div class="container footer-grid">
-    <div class="footer-brand">
-      <a class="brand" href="../index.html">
-        <img class="brand-logo" src="../assets/img/logo.webp" alt="The Carpet Cleaning Company logo">
-        <div class="brand-text">
-          <strong>The Carpet Cleaning Company</strong>
-          <span>Carpet, upholstery and floor cleaning</span>
-        </div>
-      </a>
-      <p>Professional carpet cleaning across Ludlow, Shrewsbury and nearby areas with honest advice and powerful results.</p>
-    </div>
-    <div>
-      <h3>Popular pages</h3>
-      <div class="footer-links">
-        <a href="../index.html">Home</a>
-        <a href="../pages/pricing.html">Pricing Section</a>
-        <a href="../pages/carpet-cleaning.html">Carpet Cleaning</a>
-        <a href="../pages/upholstery-cleaning.html">Upholstery Cleaning</a>
-        <a href="../pages/reviews.html">Reviews</a>
-      </div>
-    </div>
-    <div>
-      <h3>Contact</h3>
-      <div class="footer-links">
-        <a href="tel:07802563213">07802 563213</a>
-        <a href="https://wa.me/447802563213" target="_blank" rel="noreferrer">WhatsApp</a>
-        <a href="../pages/contact.html">Contact Page</a>
-        <a href="../carpet-cleaning-quote.html">Instant Quote</a>
-      </div>
-    </div>
-  </div>
-  <div class="container copy">© The Carpet Cleaning Company. All rights reserved.</div>
-</footer>
-
-<div class="mobile-cta-bar">
-  <a class="mobile-cta-call" href="tel:07802563213">
-    <span class="btn-icon" aria-hidden="true">
-      <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.3 21 3 13.7 3 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.24.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-    </span>
-    Call
-  </a>
-  <a class="mobile-cta-wa" href="https://wa.me/447802563213" target="_blank" rel="noreferrer">
-    <span class="btn-icon" aria-hidden="true">
-      <svg viewBox="0 0 24 24"><path d="M20.52 3.48A11.86 11.86 0 0 0 12.06 0C5.52 0 .18 5.34.18 11.88c0 2.09.55 4.14 1.59 5.95L0 24l6.36-1.66a11.85 11.85 0 0 0 5.69 1.45h.01c6.54 0 11.88-5.34 11.88-11.88 0-3.17-1.24-6.14-3.42-8.43zM12.06 21.8h-.01a9.93 9.93 0 0 1-5.05-1.38l-.36-.21-3.77.98 1.01-3.67-.24-.38a9.9 9.9 0 0 1-1.52-5.26c0-5.48 4.46-9.94 9.95-9.94 2.65 0 5.14 1.03 7.01 2.91a9.86 9.86 0 0 1 2.91 7c0 5.49-4.46 9.95-9.93 9.95zm5.45-7.43c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.08-.3-.15-1.28-.47-2.44-1.5-.9-.8-1.5-1.79-1.68-2.09-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.08-.8.37-.27.3-1.05 1.03-1.05 2.5s1.08 2.9 1.23 3.1c.15.2 2.11 3.22 5.12 4.51.72.31 1.29.5 1.73.64.73.23 1.39.2 1.91.12.58-.09 1.77-.72 2.02-1.41.25-.69.25-1.28.17-1.4-.07-.12-.27-.2-.57-.35z"/></svg>
-    </span>
-    WhatsApp
-  </a>
-</div>
-
-<script src="../assets/app.js"></script>
-</body>
-</html>
+              <svg viewBox="0 0 24 24"><path d="M20.52 3.48A11.86 11.86 0 0 0 12.06 0C5.52 0 .18 5.34.18 11.88c0 2.09.55 4.14 1.59 5.95L0 24l6.36-1.66a11.85 11.85 0 0 0 5.69 1.45h.01c6.54 0 11.88-5.34 11.88-11.88 0-3.17-1.24-6.14-3.
