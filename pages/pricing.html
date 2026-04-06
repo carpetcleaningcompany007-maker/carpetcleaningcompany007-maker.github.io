@@ -982,6 +982,93 @@
     }
     /* === END PRICING_CLEANUP_V4 === */
     
+  
+    /* === PRICING_MOBILE_HERO_TIDY_V1 === */
+    .pricing-hero{
+      border:none !important;
+      box-shadow:none !important;
+      border-radius:0 !important;
+      overflow:hidden !important;
+    }
+
+    .pricing-hero .hero-copy,
+    .pricing-hero .hero-copy.reveal,
+    .pricing-hero .hero-copy::before,
+    .pricing-hero .hero-copy::after{
+      background:none !important;
+      box-shadow:none !important;
+      border:none !important;
+      backdrop-filter:none !important;
+      -webkit-backdrop-filter:none !important;
+    }
+
+    @media (max-width: 760px){
+      .hero.inner-hero{
+        padding-top:22px !important;
+        padding-bottom:28px !important;
+      }
+
+      .pricing-hero{
+        min-height:350px !important;
+      }
+
+      .pricing-hero::before{
+        background:linear-gradient(180deg, rgba(8,18,32,.34) 0%, rgba(8,18,32,.18) 50%, rgba(8,18,32,.10) 100%) !important;
+      }
+
+      .pricing-hero .hero-grid{
+        padding:18px 18px 20px !important;
+      }
+
+      .pricing-hero .hero-copy{
+        max-width:300px !important;
+      }
+
+      .pricing-hero .kicker{
+        min-height:30px !important;
+        padding:0 12px !important;
+        font-size:.74rem !important;
+      }
+
+      .pricing-hero .hero-copy h1{
+        font-size:1.58rem !important;
+        line-height:.98 !important;
+        margin:10px 0 !important;
+        max-width:280px !important;
+      }
+
+      .pricing-hero .hero-copy p{
+        font-size:.94rem !important;
+        line-height:1.42 !important;
+        max-width:280px !important;
+      }
+
+      .hero-actions{
+        margin-top:14px !important;
+        gap:10px !important;
+      }
+
+      .hero-action{
+        min-height:46px !important;
+        font-size:.95rem !important;
+      }
+
+      .hero-note{
+        margin-top:12px !important;
+        font-size:.92rem !important;
+        max-width:280px !important;
+      }
+
+      .small-link-row{
+        margin-top:12px !important;
+      }
+
+      .small-link-row a{
+        font-size:.96rem !important;
+      }
+    }
+    /* === END PRICING_MOBILE_HERO_TIDY_V1 === */
+
   </style>
 </head>
 <body>
