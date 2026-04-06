@@ -1,283 +1,486 @@
 <!doctype html>
-<html lang="en-GB">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Professional Carpet Cleaning Ludlow & Shrewsbury | The Carpet Cleaning Company</title>
-  <meta name="description" content="Professional carpet cleaning, upholstery cleaning, rug cleaning, stain removal, moth treatment and commercial carpet cleaning in Ludlow, Shrewsbury and nearby towns. Fast quotes and proper deep cleaning packages.">
-  <link rel="canonical" href="https://www.thecarpetcleaningcrew.co.uk/">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>The Carpet Cleaning Company | Carpet Cleaning, Upholstery Cleaning, Rug Cleaning, Moth Treatment and Commercial Carpet Cleaning</title>
+  <meta name="description" content="Professional carpet cleaning, upholstery cleaning, rug cleaning, stain removal, certified moth treatment and commercial carpet cleaning across Ludlow, Shrewsbury, Hereford, Worcester and surrounding areas." />
+  <meta property="og:title" content="The Carpet Cleaning Company | Carpet Cleaning, Upholstery Cleaning, Rug Cleaning, Moth Treatment and Commercial Carpet Cleaning" />
+  <meta property="og:description" content="Professional carpet cleaning, upholstery cleaning, rug cleaning, stain removal, certified moth treatment and commercial carpet cleaning across Ludlow, Shrewsbury, Hereford, Worcester and surrounding areas." />
+  <meta property="og:type" content="website" />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://www.thecarpetcleaningcrew.co.uk/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50:"#ecfdf5",
+              100:"#d1fae5",
+              400:"#34d399",
+              500:"#10b981",
+              600:"#059669",
+              700:"#047857",
+              900:"#064e3b"
+            },
+            ink: {
+              900:"#08111f",
+              800:"#0b1627",
+              700:"#132238"
+            }
+          },
+          boxShadow: {
+            soft:"0 14px 36px rgba(2,6,23,0.12)",
+            card:"0 24px 70px rgba(2,6,23,0.28)"
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    body { font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif; }
+    html, body { width: 100%; max-width: 100%; overflow-x: clip; background:#08111f; }
+    * { min-width: 0; }
+    img, video, svg { max-width: 100%; height: auto; }
+    :root { scroll-padding-top: 84px; }
+    .glass { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+    input, select, textarea { font-size: 16px; }
+    .lift { transition: transform .18s ease, box-shadow .18s ease; }
+    .lift:hover { transform: translateY(-2px); }
+    .premium-field:focus { outline: none; box-shadow: 0 0 0 4px rgba(52,211,153,.18); border-color: rgba(16,185,129,.9); }
+    .shimmer { position: relative; overflow: hidden; }
+    .shimmer:after{content:"";position:absolute;inset:-40% -60%;transform: rotate(20deg);background: linear-gradient(90deg, transparent, rgba(255,255,255,.25), transparent);animation: shimmer 3.5s infinite;pointer-events:none;}
+    @keyframes shimmer {0% { transform: translateX(-40%) rotate(20deg); opacity:0; }10% { opacity:1; }50% { transform: translateX(40%) rotate(20deg); opacity:0; }100% { opacity:0; }}
+    @keyframes fadeUp {0% { opacity:0; transform: translateY(16px); }100% { opacity:1; transform: translateY(0); }}
+    [data-anim] { opacity: 0; transform: translateY(14px); }
+    .is-ready [data-anim="hero-title"] { animation: fadeUp 800ms ease-out forwards; }
+    .is-ready [data-anim="hero-copy"]  { animation: fadeUp 820ms ease-out 120ms forwards; }
+    .is-ready [data-anim="hero-points"]{ animation: fadeUp 860ms ease-out 180ms forwards; }
+    .is-ready [data-anim="hero-cta"]   { animation: fadeUp 880ms ease-out 240ms forwards; }
+    .is-ready [data-anim="hero-card"]  { animation: fadeUp 900ms ease-out 200ms forwards; }
+    .in-view[data-anim="reveal"] { animation: fadeUp 750ms ease-out forwards; }
+
+    .copy p{margin:0 0 16px;line-height:1.85;color:#334155}
+    .copy h2,.copy h3{margin:0 0 14px}
+    .copy ul{margin:0 0 16px;padding-left:18px;color:#334155}
+    .copy li{margin:0 0 8px}
+
+    .dropdown-menu{
+      display:none;
+      position:absolute;
+      top:100%;
+      left:0;
+      min-width:280px;
+      background:rgba(7,11,20,.98);
+      border:1px solid rgba(255,255,255,.1);
+      border-radius:18px;
+      padding:14px;
+      box-shadow:0 24px 70px rgba(2,6,23,.45)
+    }
+    .dropdown:hover .dropdown-menu,.dropdown:focus-within .dropdown-menu{display:grid;grid-template-columns:1fr;gap:8px}
+    .dropdown.open .dropdown-menu{display:grid;grid-template-columns:1fr;gap:8px}
+    .dropdown-menu a{padding:10px 12px;border-radius:12px;color:#e2e8f0;font-size:14px;text-decoration:none}
+    .dropdown-menu a:hover{background:rgba(255,255,255,.08)}
+    .nav-link{display:inline-flex;align-items:center;gap:6px;color:#e5e7eb;font-weight:600;font-size:14px;text-decoration:none}
+    .hero-town-image{border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.06);border-radius:24px;overflow:hidden;box-shadow:0 24px 70px rgba(2,6,23,.38)}
+    .town-photo{width:100%;height:260px;object-fit:cover}
+    .gallery-card{overflow:hidden;border-radius:24px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.05)}
+    .gallery-card img{width:100%;height:280px;object-fit:cover;display:block;transition:transform .25s ease}
+    .gallery-card:hover img{transform:scale(1.04)}
+    .quick-grid a{display:block;padding:14px 16px;border-radius:16px;background:#fff;border:1px solid #d1fae5;font-weight:700;color:#0f172a;box-shadow:0 12px 30px rgba(2,6,23,0.08);text-decoration:none}
+    .quick-grid a:hover{transform:translateY(-2px)}
+    .town-cta{background:linear-gradient(135deg, rgba(16,185,129,.15), rgba(16,185,129,.05));border:1px solid rgba(16,185,129,.25)}
+    .service-list a{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid rgba(15,23,42,.08);color:#0f172a;font-weight:700;text-decoration:none}
+    .service-list a span:last-child{color:#059669;font-weight:800}
+    .subtle-card{background:rgba(255,255,255,.72);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.4)}
+
+    @media (max-width:1023px){.desktop-nav{display:none}}
+    @media (min-width:1024px){.mobile-nav{display:none}}
+
+    @media (max-width: 640px){
+      .hero-card-tight{padding:1.1rem}
+    }
+  </style>
 </head>
-<body>
-<header class="site-header">
-  <div class="container nav">
-    <a class="brand" href="./index.html">
-      <img class="brand-logo" src="./assets/img/logo.webp" alt="The Carpet Cleaning Company logo">
-      <div class="brand-text"><strong>The Carpet Cleaning Company</strong><span>Trusted local carpet and upholstery specialists</span></div>
-    </a>
-    <button class="mobile-toggle" aria-expanded="false">Menu</button>
-    <nav class="nav-links">
-      <a href="./index.html">Home</a>
-      <div class="nav-item"><a href="./pages/carpet-cleaning.html">Services</a>
-        <div class="dropdown">
-          <a href="./pages/carpet-cleaning.html">Carpet Cleaning</a>
-          <a href="./pages/pricing.html">Pricing Section</a>
-          <a href="./pages/upholstery-cleaning.html">Upholstery Cleaning</a>
-          <a href="./pages/stain-removal.html">Stain Removal</a>
-          <a href="./pages/rug-cleaning.html">Rug Cleaning</a>
-          <a href="./pages/hard-floor-cleaning.html">Hard Floor Cleaning</a>
-          <a href="./pages/moth-treatment.html">Moth Treatment</a>
-          <a href="./pages/commercial-carpet-cleaning.html">Hotel, Office & Commercial</a>
+<body class="bg-ink-900 text-slate-100 overflow-x-hidden">
+  <div class="pointer-events-none fixed inset-0 z-[1] opacity-[0.06] mix-blend-overlay" style="background-image:url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22400%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%222%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22400%22 height=%22400%22 filter=%22url(%23n)%22 opacity=%220.25%22/%3E%3C/svg%3E');"></div>
+
+  <header class="fixed top-0 left-0 right-0 z-50 bg-emerald-900/90 glass border-b border-emerald-800/35">
+    <div class="mx-auto max-w-6xl px-4 py-2 flex items-center justify-between gap-4">
+      <div class="flex items-center gap-3 min-w-0">
+        <img src="assets/img/logo.webp" class="h-14 sm:h-16 w-auto object-contain shrink-0 rounded-2xl bg-white/95 p-1.5 shadow-soft" alt="The Carpet Cleaning Company" />
+        <div class="leading-tight min-w-0">
+          <div class="font-extrabold text-base sm:text-lg truncate">The Carpet Cleaning Company</div>
+          <div class="text-[11px] sm:text-xs text-emerald-100/90">Carpet and upholstery cleaning for homes and businesses</div>
         </div>
       </div>
-      <div class="nav-item"><a href="./pages/service-areas.html">Areas</a>
-        <div class="dropdown">
-          <a href="./pages/local/ludlow.html">Ludlow</a>
-          <a href="./pages/local/shrewsbury.html">Shrewsbury</a>
-          <a href="./pages/local/craven-arms.html">Craven Arms</a>
-          <a href="./pages/local/tenbury-wells.html">Tenbury Wells</a>
-          <a href="./pages/local/leominster.html">Leominster</a>
-          <a href="./pages/local/church-stretton.html">Church Stretton</a>
-          <a href="./pages/local/bayston-hill.html">Bayston Hill</a>
-          <a href="./pages/local/baschurch.html">Baschurch</a>
-          <a href="./pages/local/pontesbury.html">Pontesbury</a>
+
+      <nav class="desktop-nav flex items-center gap-5 relative">
+        <a class="nav-link" href="index.html">Home</a>
+
+        <div class="dropdown relative">
+          <button type="button" class="nav-link" data-nav-toggle>Services <span>▾</span></button>
+          <div class="dropdown-menu">
+            <a href="pages/carpet-cleaning.html">Carpet Cleaning</a>
+            <a href="pages/upholstery-cleaning.html">Upholstery Cleaning</a>
+            <a href="pages/rug-cleaning.html">Rug Cleaning</a>
+            <a href="pages/stain-removal.html">Stain Removal</a>
+            <a href="pages/moth-treatment.html">Moth Treatment</a>
+            <a href="pages/commercial-carpet-cleaning.html">Commercial Cleaning</a>
+            <a href="pages/pricing.html">Pricing</a>
+          </div>
+        </div>
+
+        <div class="dropdown relative">
+          <button type="button" class="nav-link" data-nav-toggle>Areas <span>▾</span></button>
+          <div class="dropdown-menu">
+            <a href="pages/local/ludlow.html">Ludlow</a>
+            <a href="pages/local/shrewsbury.html">Shrewsbury</a>
+            <a href="pages/local/tenbury-wells.html">Tenbury Wells</a>
+            <a href="pages/local/church-stretton.html">Church Stretton</a>
+            <a href="pages/local/leominster.html">Leominster</a>
+            <a href="pages/local/craven-arms.html">Craven Arms</a>
+            <a href="pages/service-areas.html">Browse all areas</a>
+          </div>
+        </div>
+
+        <a class="nav-link" href="pages/reviews.html">Reviews</a>
+        <a class="nav-link" href="pages/contact.html">Contact</a>
+        <a href="carpet-cleaning-quote.html" class="inline-flex items-center justify-center rounded-full bg-emerald-400 hover:bg-emerald-300 text-emerald-950 px-5 py-2.5 text-sm font-extrabold shadow-soft lift">Get a Quote</a>
+      </nav>
+
+      <div class="mobile-nav dropdown relative">
+        <button type="button" class="inline-flex items-center gap-2 rounded-full bg-white/10 border border-white/15 px-4 py-2 text-sm font-semibold" data-nav-toggle>Menu ▾</button>
+        <div class="dropdown-menu right-0 left-auto min-w-[280px]">
+          <a href="index.html">Home</a>
+          <a href="pages/carpet-cleaning.html">Carpet Cleaning</a>
+          <a href="pages/upholstery-cleaning.html">Upholstery Cleaning</a>
+          <a href="pages/rug-cleaning.html">Rug Cleaning</a>
+          <a href="pages/stain-removal.html">Stain Removal</a>
+          <a href="pages/moth-treatment.html">Moth Treatment</a>
+          <a href="pages/commercial-carpet-cleaning.html">Commercial Cleaning</a>
+          <a href="pages/pricing.html">Pricing</a>
+          <a href="pages/local/ludlow.html">Ludlow</a>
+          <a href="pages/local/shrewsbury.html">Shrewsbury</a>
+          <a href="pages/service-areas.html">Areas</a>
+          <a href="pages/reviews.html">Reviews</a>
+          <a href="pages/contact.html">Contact</a>
         </div>
       </div>
-      <a href="./pages/about.html">About</a>
-      <a href="./pages/reviews.html">Reviews</a>
-      <a href="./pages/contact.html">Contact</a>
-        <a href="carpet-cleaning-quote.html">Instant Quote</a>
-    </nav>
-    <div class="nav-cta">
-      <a class="btn btn-call" href="tel:07802563213">Call 07802 563213</a>
-      <a class="btn btn-secondary" href="https://wa.me/447802563213" target="_blank" rel="noreferrer">WhatsApp</a>
-      <a class="btn btn-secondary" href="carpet-cleaning-quote.html">Get a Quote</a>
     </div>
-  </div>
-</header>
+  </header>
 
-<section class="hero premium-hero" style="background-image:linear-gradient(90deg, rgba(4,16,30,.88) 0%, rgba(4,16,30,.64) 46%, rgba(4,16,30,.26) 100%), url('./assets/img/hero-carpet-cleaning.png')">
-  <div class="container hero-grid">
-    <div class="hero-copy reveal">
-      <span class="kicker">Ludlow, Shrewsbury and surrounding towns</span>
-      <h1>Carpet cleaning in Ludlow & Shrewsbury for carpets, upholstery, rugs and stain removal.</h1>
-      <p>Professional carpet cleaning, upholstery cleaning, rug cleaning, stain removal, hard floor cleaning and licensed moth treatment across Ludlow, Shrewsbury and nearby towns. Clear options, proper equipment and honest advice.</p>
-      <div class="hero-actions">
-        <a class="btn btn-call" href="tel:07802563213">Call 07802 563213</a>
-        <a class="btn btn-secondary" href="https://wa.me/447802563213" target="_blank" rel="noreferrer">Send photos on WhatsApp</a>
-      </div>
-      <div class="hero-stats premium-stats">
-        <div class="stat"><strong>3</strong><span>service levels to suit the job</span></div>
-        <div class="stat"><strong>Local</strong><span>trusted service based in Ludlow</span></div>
-        <div class="stat"><strong>Fast</strong><span>quotes by call, form or WhatsApp</span></div>
-      </div>
+  <section class="relative pt-24 md:pt-28 pb-14 md:pb-20 overflow-hidden overflow-x-clip isolate">
+    <div class="absolute inset-0">
+      <video id="heroVideo" class="absolute inset-0 w-full h-full object-cover opacity-55" autoplay muted loop playsinline preload="metadata" poster="assets/img/hero-carpet-cleaning.png">
+        <source src="assets/img/hero-video.mp4" type="video/mp4" />
+      </video>
+      <div class="absolute inset-0 bg-gradient-to-b from-ink-900/40 via-ink-900/70 to-ink-900"></div>
+      <div class="absolute inset-0" style="background:radial-gradient(1200px 700px at 25% 20%, rgba(34,197,94,0.14), transparent 60%)"></div>
     </div>
-    <div class="hero-card form-glow premium-panel reveal">
-      <div class="detail-brand"><img class="detail-logo" src="./assets/img/logo.webp" alt="The Carpet Cleaning Company logo"><div><strong>The Carpet Cleaning Company</strong><span>Trusted local carpet and upholstery specialists</span></div></div>
-      <h2>Professional carpet cleaning with clear options and proper equipment.</h2>
-      <p class="muted-strong">Choose a light clean, a full deep clean, or added protection depending on the result you want and the condition of the carpet.</p>
-      <ul class="quote-points">
-        <li>Light clean for a lower priced freshen up</li>
-        <li>Deep clean for the best overall result</li>
-        <li>Fast quotes by call, form or WhatsApp</li>
-      </ul>
-      <a class="btn btn-primary" href="carpet-cleaning-quote.html">See pricing and get a quote</a>
-    </div>
-  </div>
-</section>
 
-<section class="section trust-strip-wrap">
-  <div class="container trust-strip reveal">
-    <div><strong>Proper equipment</strong><span>Airflex, Enforcer 400, Fusion heat system and power wand setup</span></div>
-    <div><strong>Clear options</strong><span>From a freshen up to a full deep clean</span></div>
-    <div><strong>Work we handle</strong><span>Homes, rentals, estate agents, hotels, offices and guest accommodation</span></div>
-  </div>
-</section>
+    <div class="relative mx-auto max-w-6xl px-4">
+      <div class="grid lg:grid-cols-2 gap-10 items-start">
+        <div class="pt-2">
+          <h1 data-anim="hero-title" class="mt-4 text-4xl md:text-5xl font-extrabold leading-tight">Carpet cleaning, upholstery cleaning and rug cleaning across Shropshire, Herefordshire and Worcestershire<span class="block text-slate-200 mt-2">Fast quotes. Proper deep cleaning. Guaranteed results.</span></h1>
 
-<section class="section">
-  <div class="container split premium-split">
-    <div class="reveal seo-copy">
-      <span class="kicker" style="background:var(--brand-soft);color:var(--brand2)">Why people book us</span>
-      <h2>A stronger service for customers who actually want the carpets looking right.</h2>
-      <p>Some customers just want the cheapest possible price. Others want the carpets properly cleaned, the pile lifted, the marks treated and the room looking fresher when the job is finished. That second customer is who this site should speak to, and that is the service we are built around.</p>
-      <p>Based in Ludlow, we cover Shrewsbury and surrounding towns for carpet cleaning, upholstery cleaning, stain removal, rug cleaning, hard floor cleaning and moth treatment. We also carry out hotel, guest house, office, estate agent and end of tenancy work.</p>
-      <div class="feature-list compact-features">
-        <div class="feature-item"><strong>More than a basic rinse</strong><span>We assess the job and choose the right level of cleaning rather than treating every carpet the same.</span></div>
-        <div class="feature-item"><strong>Better customer guidance</strong><span>We can quote around the result you want, not just square footage and guesswork.</span></div>
-        <div class="feature-item"><strong>Professional image</strong><span>Clear communication, premium presentation and a service that feels like a proper local specialist.</span></div>
-      </div>
-    </div>
-    <div class="photo-frame reveal"><img src="./assets/img/airflex.webp" alt="Professional carpet cleaning machine"></div>
-  </div>
-</section>
+          <p data-anim="hero-copy" class="mt-4 text-base md:text-lg text-slate-200 max-w-xl">The Carpet Cleaning Company provides residential carpet cleaning, sofa and upholstery cleaning, rug cleaning, specialist stain removal, certified moth treatment and commercial carpet cleaning across Ludlow, Shrewsbury, Hereford, Worcester and the surrounding towns we cover.</p>
 
-<section class="section alt">
-  <div class="container center">
-    <span class="kicker" style="background:var(--brand-soft);color:var(--brand2)">Packages</span>
-    <h2>Clear options instead of vague promises.</h2>
-    <p class="lead">The site needed a stronger sales structure, so the main packages are now easier to understand and easier to sell.</p>
-    <div class="grid grid-3 package-grid" style="margin-top:34px">
-      <article class="card package-card reveal">
-        <div class="card-body">
-          <span class="package-tag">Quick Refresh</span>
-          <h3>For lighter soiling</h3>
-          <p>A straightforward freshen up for carpets that do not need a full restoration style clean.</p>
-          <ul class="package-list"><li>Good for maintenance cleans</li><li>Best for lighter soil levels</li><li>Entry level option</li></ul>
+          <div data-anim="hero-points" class="mt-5 space-y-2 text-sm text-slate-200">
+            <div class="flex items-start gap-3"><span class="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full bg-emerald-400 text-emerald-950 font-extrabold">✓</span><span>CRB agitation lifts embedded soil before extraction</span></div>
+            <div class="flex items-start gap-3"><span class="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full bg-emerald-400 text-emerald-950 font-extrabold">✓</span><span>Hot water extraction for strong restorative cleaning</span></div>
+            <div class="flex items-start gap-3"><span class="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full bg-emerald-400 text-emerald-950 font-extrabold">✓</span><span>Certified moth treatment, stain removal and commercial care available</span></div>
+            <div class="flex items-start gap-3"><span class="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full bg-emerald-400 text-emerald-950 font-extrabold">✓</span><span>Fully insured, with clear pricing and a satisfaction guarantee</span></div>
+          </div>
+
+          <div data-anim="hero-cta" class="mt-6 flex flex-wrap gap-3">
+            <a href="#heroQuoteForm" class="inline-flex items-center justify-center rounded-full bg-emerald-400 hover:bg-emerald-300 text-emerald-950 px-6 py-3 text-sm font-extrabold shadow-soft lift shimmer">Get my quote</a>
+            <a href="#services" class="inline-flex items-center justify-center rounded-full bg-white/10 border border-white/15 hover:bg-white/15 px-6 py-3 text-sm font-semibold lift">Browse services</a>
+            <a href="#reviews" class="inline-flex items-center justify-center rounded-full bg-white/10 border border-white/15 hover:bg-white/15 px-6 py-3 text-sm font-semibold lift">Read reviews first</a>
+          </div>
+
+          <div class="mt-6 inline-flex items-center gap-3 rounded-full bg-white/10 border border-white/15 px-4 py-2 lift">
+            <span class="inline-flex items-center justify-center h-8 w-8 rounded-full bg-emerald-400 text-emerald-950 text-sm font-extrabold">✓</span>
+            <span class="text-sm font-semibold">100 percent satisfaction guarantee</span>
+          </div>
         </div>
-      </article>
-      <article class="card package-card featured reveal">
-        <div class="card-body">
-          <span class="package-tag">Deluxe Deep Clean</span>
-          <h3>The main premium service</h3>
-          <p>The better choice when customers want the carpet looking as clean as possible and the pile brought back to life.</p>
-          <ul class="package-list"><li>Pre treatment and agitation</li><li>Proper hot water extraction</li><li>Better overall finish</li></ul>
+
+        <div class="lg:pt-2">
+          <div data-anim="hero-card" class="hero-card-tight relative rounded-3xl bg-white text-slate-900 shadow-card border border-white/40 overflow-hidden lift max-w-full">
+            <div class="absolute inset-x-0 top-0 h-24 bg-gradient-to-r from-emerald-50 via-white to-emerald-50"></div>
+            <div class="absolute -top-24 -right-24 h-64 w-64 rounded-full bg-emerald-200 blur-3xl opacity-70"></div>
+            <div class="relative p-6 md:p-7">
+              <div class="flex items-start justify-between gap-4">
+                <div class="min-w-0">
+                  <div class="text-xl font-extrabold">Instant Quote Request</div>
+                  <p class="mt-1 text-sm text-slate-600">Fast fixed price quote and earliest available dates</p>
+                </div>
+                <div class="rounded-2xl bg-emerald-50 px-4 py-3 text-center border border-emerald-100">
+                  <div class="text-xs uppercase tracking-[.2em] text-emerald-700 font-bold">Trusted</div>
+                  <div class="mt-1 text-xl font-extrabold text-emerald-950">5★</div>
+                </div>
+              </div>
+
+              <form id="heroQuoteForm" class="mt-5" action="https://formspree.io/f/mblnzwpv" method="POST">
+                <input type="hidden" name="_subject" value="New Quote Request - The Carpet Cleaning Company" />
+                <input type="hidden" name="_format" value="plain" />
+
+                <div class="space-y-4">
+                  <div class="grid sm:grid-cols-2 gap-4">
+                    <label class="block">
+                      <span class="text-sm font-semibold text-slate-700">Postcode <span class="text-rose-500">*</span></span>
+                      <input required name="postcode" autocomplete="postal-code" class="premium-field mt-1 w-full rounded-xl border border-slate-300 px-3 py-2.5 text-sm" placeholder="e.g. SY8 1AA" />
+                    </label>
+                    <label class="block">
+                      <span class="text-sm font-semibold text-slate-700">Rooms or areas</span>
+                      <select name="areas" class="premium-field mt-1 w-full rounded-xl border border-slate-300 px-3 py-2.5 text-sm bg-white">
+                        <option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option>
+                      </select>
+                    </label>
+                  </div>
+
+                  <label class="block">
+                    <span class="text-sm font-semibold text-slate-700">What do you need <span class="text-rose-500">*</span></span>
+                    <select required name="service" class="premium-field mt-1 w-full rounded-xl border border-slate-300 px-3 py-2.5 text-sm bg-white">
+                      <option value="" selected disabled>Select a service</option>
+                      <option>Carpet cleaning</option>
+                      <option>Upholstery cleaning</option>
+                      <option>Rug cleaning</option>
+                      <option>Stain removal</option>
+                      <option>Moth treatment</option>
+                      <option>Commercial cleaning</option>
+                    </select>
+                  </label>
+
+                  <label class="block">
+                    <span class="text-sm font-semibold text-slate-700">Full name <span class="text-rose-500">*</span></span>
+                    <input required name="name" autocomplete="name" class="premium-field mt-1 w-full rounded-xl border border-slate-300 px-3 py-2.5 text-sm" placeholder="Your name" />
+                  </label>
+
+                  <div class="grid sm:grid-cols-2 gap-4">
+                    <label class="block">
+                      <span class="text-sm font-semibold text-slate-700">Phone <span class="text-rose-500">*</span></span>
+                      <input required name="phone" inputmode="tel" autocomplete="tel" class="premium-field mt-1 w-full rounded-xl border border-slate-300 px-3 py-2.5 text-sm" placeholder="07..." />
+                    </label>
+                    <label class="block">
+                      <span class="text-sm font-semibold text-slate-700">Email <span class="text-rose-500">*</span></span>
+                      <input required name="email" type="email" autocomplete="email" class="premium-field mt-1 w-full rounded-xl border border-slate-300 px-3 py-2.5 text-sm" placeholder="you@example.com" />
+                    </label>
+                  </div>
+
+                  <label class="block">
+                    <span class="text-sm font-semibold text-slate-700">Anything we should know</span>
+                    <textarea name="notes" rows="3" class="premium-field mt-1 w-full rounded-xl border border-slate-300 px-3 py-2.5 text-sm" placeholder="Stains, pets, parking, access, ideal days"></textarea>
+                  </label>
+
+                  <button type="submit" class="w-full rounded-2xl bg-emerald-400 hover:bg-emerald-300 text-emerald-950 px-4 py-3.5 text-sm font-extrabold shadow-soft lift shimmer">Get my quote</button>
+                  <p class="text-xs text-slate-500 text-center">We will contact you from 07802 563213. No obligation.</p>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
-      </article>
-      <article class="card package-card reveal">
-        <div class="card-body">
-          <span class="package-tag">Elite Stain Guard</span>
-          <h3>Deep clean plus protection</h3>
-          <p>Everything in the deep clean package with the added benefit of stain protection for longer lasting results.</p>
-          <ul class="package-list"><li>Helps future vacuuming</li><li>Adds fibre protection</li><li>Ideal for high value rooms</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-14 bg-white text-slate-900 copy">
+    <div class="mx-auto max-w-6xl px-4 grid lg:grid-cols-[1.15fr_.85fr] gap-10 items-start">
+      <div>
+        <h2 data-anim="reveal" class="text-3xl font-extrabold">Professional carpet and upholstery cleaning that is built around real results</h2>
+        <p data-anim="reveal" class="mt-4">The Carpet Cleaning Company provides professional carpet cleaning, upholstery cleaning, rug cleaning, stain removal, certified moth treatment and commercial carpet cleaning across Ludlow, Shrewsbury, Hereford, Worcester and the surrounding towns and villages we cover. We work in family homes, rental properties, holiday lets, offices, pubs, hotels, care settings and other premises where appearance, hygiene and proper results matter.</p>
+        <p data-anim="reveal">Our cleaning process is designed for people who want more than a quick rinse over. We begin with inspection and dry soil removal, apply a fibre safe pre treatment chosen for the carpet or upholstery, use counter rotating brush agitation where appropriate and then carry out hot water extraction to remove suspended soil, residues and odours. This helps restore the look and feel of the fibres and can often save carpets, rugs or suites that people assumed needed replacing.</p>
+        <p data-anim="reveal">Because customers search in different ways, the site is structured around both services and places. That means someone looking for carpet cleaning in Ludlow, upholstery cleaning in Shrewsbury, rug cleaning in Hereford, stain removal in Worcester or moth treatment near Tenbury Wells can land on a page that actually talks about that service in that area.</p>
+      </div>
+      <div class="hero-town-image overflow-hidden">
+        <img src="assets/img/hero-carpet-cleaning.png" alt="Professional carpet cleaning wand in use" class="town-photo" />
+        <div class="p-6 bg-slate-950/95 text-white">
+          <div class="text-xs uppercase tracking-[.28em] text-emerald-300">Our process</div>
+          <h3 class="text-2xl font-extrabold mt-2">CRB agitation, hot water extraction and a clean, residue free finish</h3>
+          <p class="mt-3 text-slate-300 text-sm">We use a proper multi stage process so the result looks better, feels cleaner and dries without sticky detergent left behind in the pile.</p>
         </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="results-panel reveal">
-      <div class="results-copy">
-        <span class="kicker">What customers care about</span>
-        <h2>Real outcomes. Not fluffy wording.</h2>
-        <p>Most bookings come down to the same few concerns. Will it look cleaner? Will the stains improve? Will it dry properly? Is it just going to be a cheap rinse that leaves the carpet flat and dull? This section answers those points clearly.</p>
-      </div>
-      <div class="results-grid">
-        <div class="result-card"><strong>Cleaner look</strong><span>Traffic lanes, general greying and dullness are targeted properly.</span></div>
-        <div class="result-card"><strong>Better feel</strong><span>Agitation and extraction can help lift and freshen the pile.</span></div>
-        <div class="result-card"><strong>Stain focus</strong><span>Spots are treated individually where suitable before the main clean.</span></div>
-        <div class="result-card"><strong>Proper advice</strong><span>You get honest guidance on likely results before the job starts.</span></div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section alt center">
-  <div class="container">
-    <span class="kicker" style="background:var(--brand-soft);color:var(--brand2)">Main services</span>
-    <h2>Service pages that now feel more focused.</h2>
-    <p class="lead">The site works best when each service has a clear purpose, a clear promise and a clear route to enquiry.</p>
-    <div class="grid grid-3" style="margin-top:34px">
-      <article class="card reveal"><img src="./assets/img/hero-carpet-cleaning.png" alt="Carpet Cleaning"><div class="card-body"><h3>Carpet Cleaning</h3><p>Deep carpet cleaning for homes, rentals, guest houses and commercial spaces using professional extraction equipment and tailored cleaning solutions.</p><a class="btn btn-primary" href="./pages/carpet-cleaning.html">Learn more</a></div></article>
-      <article class="card reveal"><img src="./assets/img/upholstery-cleaning.webp" alt="Upholstery Cleaning"><div class="card-body"><h3>Upholstery Cleaning</h3><p>Sofa, chair and fabric upholstery cleaning with fibre assessment, stain treatment and fast drying methods for domestic and commercial seating.</p><a class="btn btn-primary" href="./pages/upholstery-cleaning.html">Learn more</a></div></article>
-      <article class="card reveal"><img src="./assets/img/rug-cleaning.webp" alt="Rug Cleaning"><div class="card-body"><h3>Rug Cleaning</h3><p>Careful rug cleaning for modern rugs and delicate fibres using methods chosen for the material, the pile and the level of soiling.</p><a class="btn btn-primary" href="./pages/rug-cleaning.html">Learn more</a></div></article>
-      <article class="card reveal"><img src="./assets/img/upholstery-cleaning.webp" alt="Stain Removal"><div class="card-body"><h3>Stain Removal</h3><p>Targeted stain treatment for tea, coffee, wine, pet accidents and stubborn marks using the right product for the fibre and the stain.</p><a class="btn btn-primary" href="./pages/stain-removal.html">Learn more</a></div></article>
-      <article class="card reveal"><img src="./assets/img/tile-grout-cleaning.webp" alt="Hard Floor Cleaning"><div class="card-body"><h3>Hard Floor Cleaning</h3><p>Professional hard floor cleaning for tile, stone and grout to remove built up soil and improve overall presentation.</p><a class="btn btn-primary" href="./pages/hard-floor-cleaning.html">Learn more</a></div></article>
-      <article class="card reveal"><img src="./assets/img/hero-carpet-cleaning.png" alt="Commercial Carpet Cleaning"><div class="card-body"><h3>Commercial Cleaning</h3><p>Hotel, office, guest house and estate agent carpet cleaning with practical scheduling and property specific quoting.</p><a class="btn btn-primary" href="./pages/commercial-carpet-cleaning.html">Learn more</a></div></article>
-    </div>
-  </div>
-</section>
-
-<section class="section dark-band">
-  <div class="container split split-reverse">
-    <div class="photo-frame reveal"><img src="./assets/img/hero-carpet-cleaning.png" alt="Professional carpet cleaning in action"></div>
-    <div class="reveal seo-copy seo-copy-light">
-      <span class="kicker">Commercial and higher standard work</span>
-      <h2>Ideal for hotels, guest houses, offices, rentals and presentation critical jobs.</h2>
-      <p>Some sites only talk to domestic customers. Yours needed to show that you also handle commercial and presentation sensitive work where turnaround, standards and clear communication matter.</p>
-      <p>That includes guest accommodation, communal areas, office space, end of tenancy work, estate agent jobs and one off deep cleans where appearance really counts.</p>
-      <div class="hero-actions"><a class="btn btn-secondary" href="./pages/commercial-carpet-cleaning.html">View commercial page</a><a class="btn btn-ghost" href="carpet-cleaning-quote.html">Request a quote</a></div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="promo reveal">
-      <span class="kicker">Local coverage</span>
-      <h2 style="margin-top:10px">Local pages now tied back into the main sales journey.</h2>
-      <p>The area pages should support the main service pages, not sit on their own. These links now help local visitors move straight from the town page to the service they need.</p>
-      <div class="local-links">
-        <article class="card"><div class="card-body"><h3>Ludlow</h3><p>Carpet cleaning, upholstery cleaning and stain removal in Ludlow and nearby areas.</p><a class="btn btn-primary" href="./pages/local/ludlow.html">Open Ludlow page</a></div></article>
-        <article class="card"><div class="card-body"><h3>Shrewsbury</h3><p>Professional carpet cleaning in Shrewsbury for homes, rentals, hotels and offices.</p><a class="btn btn-primary" href="./pages/local/shrewsbury.html">Open Shrewsbury page</a></div></article>
-        <article class="card"><div class="card-body"><h3>Bridgnorth area</h3><p>Useful for nearby searches and local service relevance across south Shropshire.</p><a class="btn btn-primary" href="./pages/local/bridgnorth.html">Open page</a></div></article>
-        <article class="card"><div class="card-body"><h3>Church Stretton</h3><p>Targeted local page supporting both domestic and commercial enquiries.</p><a class="btn btn-primary" href="./pages/local/church-stretton.html">Open page</a></div></article>
+  <section id="services" class="py-14 bg-emerald-50 text-slate-900">
+    <div class="mx-auto max-w-6xl px-4">
+      <h2 data-anim="reveal" class="text-3xl font-extrabold">Our services</h2>
+      <p data-anim="reveal" class="mt-2 text-slate-600 max-w-3xl">Browse the core services below. Each page is written for customers and built around the actual service, not filler headings.</p>
+      <div class="mt-8 service-list">
+        <a href="pages/carpet-cleaning.html"><span>Carpet Cleaning</span><span>→</span></a>
+        <a href="pages/upholstery-cleaning.html"><span>Upholstery Cleaning</span><span>→</span></a>
+        <a href="pages/rug-cleaning.html"><span>Rug Cleaning</span><span>→</span></a>
+        <a href="pages/stain-removal.html"><span>Stain Removal</span><span>→</span></a>
+        <a href="pages/moth-treatment.html"><span>Moth Treatment</span><span>→</span></a>
+        <a href="pages/commercial-carpet-cleaning.html"><span>Commercial Carpet Cleaning</span><span>→</span></a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section alt center">
-  <div class="container faq-shell">
-    <span class="kicker" style="background:var(--brand-soft);color:var(--brand2)">FAQ</span>
-    <h2>Simple answers to the usual questions.</h2>
-    <div class="accordion" style="text-align:left;max-width:940px;margin:30px auto 0">
-      <div class="faq-item open"><button type="button"><span>Do you offer different levels of cleaning?</span><span>+</span></button><div class="faq-content"><p>Yes. Some carpets only need a lighter freshen up, while others need a full deep clean with stronger agitation and extraction. We can talk you through the right option.</p></div></div>
-      <div class="faq-item"><button type="button"><span>Can I send photos for a quicker quote?</span><span>+</span></button><div class="faq-content"><p>Yes. WhatsApp is often the quickest way to show the areas, the type of carpet and any stains you want us to look at.</p></div></div>
-      <div class="faq-item"><button type="button"><span>Do you handle commercial jobs as well?</span><span>+</span></button><div class="faq-content"><p>Yes. We work with hotels, offices, estate agents, guest accommodation and other commercial settings as well as domestic homes.</p></div></div>
-    </div>
-  </div>
-</section>
-
-
-<section class="section alt">
-  <div class="container">
-    <div class="promo reveal pricing-cta-block">
-      <div class="split" style="gap:26px;align-items:center">
+  <section class="py-14 bg-white text-slate-900">
+    <div class="mx-auto max-w-6xl px-4">
+      <div class="flex items-end justify-between gap-4 flex-wrap">
         <div>
-          <span class="kicker" style="background:rgba(255,255,255,.14);color:#fff">Pricing Section</span>
-          <h2 style="color:#fff;margin-top:12px">See our 3 carpet cleaning options clearly priced before you book.</h2>
-          <p>Compare the Light Clean at £29.99 per room, our Deluxe Deep Clean from £75, and Deep Clean with half price protection at £15 per room.</p>
+          <h2 data-anim="reveal" class="text-3xl font-extrabold">Areas we cover</h2>
+          <p data-anim="reveal" class="mt-2 text-slate-600 max-w-3xl">Browse the town pages for local carpet cleaning, upholstery cleaning, rug cleaning, stain removal, moth treatment and commercial cleaning coverage.</p>
         </div>
-        <div class="hero-actions" style="justify-content:flex-start">
-          <a class="btn btn-primary" href="./pages/pricing.html">View Pricing Section</a>
-          <a class="btn btn-secondary" href="./carpet-cleaning-quote.html">Instant Quote</a>
-        </div>
+        <a href="pages/service-areas.html" class="rounded-full bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-3 text-sm font-extrabold lift">Browse all areas</a>
       </div>
-    </div>
-  </div>
-</section>
 
-<footer class="footer">
-  <div class="container footer-grid">
-    <div>
-      <a class="brand footer-brand" href="./index.html">
-        <img class="brand-logo" src="./assets/img/logo.webp" alt="The Carpet Cleaning Company logo">
-        <div class="brand-text"><strong>The Carpet Cleaning Company</strong><span>Trusted local carpet and upholstery specialists</span></div>
-      </a>
-      <p>The Carpet Cleaning Company is based in Ludlow and covers Ludlow, Shrewsbury and nearby towns for carpet cleaning, upholstery cleaning, stain removal, rug cleaning, hard floor cleaning, licensed moth treatment and commercial work.</p>
-    </div>
-    <div>
-      <h3>Services</h3>
-      <div class="footer-links">
-        <a href="./pages/carpet-cleaning.html">Carpet Cleaning</a>
-        <a href="./pages/pricing.html">Pricing Section</a>
-        <a href="./pages/upholstery-cleaning.html">Upholstery Cleaning</a>
-        <a href="./pages/stain-removal.html">Stain Removal</a>
-        <a href="./pages/rug-cleaning.html">Rug Cleaning</a>
-        <a href="./pages/hard-floor-cleaning.html">Hard Floor Cleaning</a>
-        <a href="./pages/moth-treatment.html">Moth Treatment</a>
+      <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-4 quick-grid">
+        <a href="pages/local/ludlow.html">Ludlow</a>
+        <a href="pages/local/shrewsbury.html">Shrewsbury</a>
+        <a href="pages/local/tenbury-wells.html">Tenbury Wells</a>
+        <a href="pages/local/church-stretton.html">Church Stretton</a>
+        <a href="pages/local/craven-arms.html">Craven Arms</a>
+        <a href="pages/local/leominster.html">Leominster</a>
+        <a href="pages/local/bayston-hill.html">Bayston Hill</a>
+        <a href="pages/local/pontesbury.html">Pontesbury</a>
       </div>
     </div>
-    <div>
-      <h3>Contact</h3>
-      <div class="footer-links">
-        <a href="tel:07802563213">07802 563213</a>
-        <div>Ludlow, Shropshire</div>
-        <div>Klarna available on suitable jobs</div>
-        <a href="./pages/contact.html">Request a Quote</a>
+  </section>
+
+  <section id="gallery" class="py-14 bg-emerald-50 text-slate-900">
+    <div class="mx-auto max-w-6xl px-4">
+      <div class="flex items-end justify-between gap-4 flex-wrap">
+        <div>
+          <h2 data-anim="reveal" class="text-3xl font-extrabold">Before and after gallery</h2>
+          <p data-anim="reveal" class="mt-2 text-slate-600">A dedicated gallery page is built in so your photos can sit in one proper place instead of being scattered around the site.</p>
+        </div>
+        <a href="pages/gallery.html" class="rounded-full bg-slate-900 hover:bg-slate-800 text-white px-5 py-3 text-sm font-extrabold lift">Open gallery</a>
+      </div>
+
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <div class="gallery-card">
+          <img src="assets/img/hero-carpet-cleaning.png" alt="Professional carpet cleaning in action" />
+          <div class="p-5 bg-white">
+            <h3 class="text-lg font-extrabold">Mobile friendly gallery layout</h3>
+            <p class="mt-2 text-sm text-slate-600">Before and after images can be grouped by carpets, upholstery, rugs and commercial work.</p>
+          </div>
+        </div>
+
+        <div class="gallery-card">
+          <img src="assets/img/upholstery-cleaning.webp" alt="Upholstery cleaning" />
+          <div class="p-5 bg-white">
+            <h3 class="text-lg font-extrabold">Perfect for proof and trust</h3>
+            <p class="mt-2 text-sm text-slate-600">Before and after imagery is one of the strongest conversion tools a cleaning website can use.</p>
+          </div>
+        </div>
+
+        <div class="gallery-card">
+          <img src="assets/img/rug-cleaning.webp" alt="Rug cleaning" />
+          <div class="p-5 bg-white">
+            <h3 class="text-lg font-extrabold">Built to support SEO and conversions</h3>
+            <p class="mt-2 text-sm text-slate-600">The gallery links naturally from service pages and area pages so visitors can check your work before enquiring.</p>
+          </div>
+        </div>
       </div>
     </div>
+  </section>
+
+  <section id="reviews" class="py-14 bg-emerald-50 text-slate-900">
+    <div class="mx-auto max-w-6xl px-4">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+        <div>
+          <div class="inline-flex items-center gap-2 rounded-full bg-white border border-emerald-200 px-3 py-1 text-xs font-semibold text-emerald-800 lift">Google Reviews</div>
+          <h2 class="mt-3 text-3xl font-extrabold">Look at our amazing 5 star Google reviews</h2>
+          <p class="mt-2 text-sm md:text-base text-slate-700 max-w-2xl">Real reviews help customers trust the work before they enquire.</p>
+        </div>
+        <div class="rounded-3xl border border-emerald-200 bg-white px-5 py-4 shadow-soft w-full md:w-auto lift">
+          <div class="flex items-center gap-3">
+            <div class="text-3xl font-extrabold">5.0</div>
+            <div>
+              <div class="text-amber-500 text-sm leading-none">★★★★★</div>
+              <div class="text-xs text-slate-500 mt-1">30 plus Google reviews</div>
+            </div>
+          </div>
+          <div class="mt-3 flex flex-wrap gap-2">
+            <a href="#heroQuoteForm" class="inline-flex items-center justify-center rounded-full bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 text-xs font-extrabold lift shimmer">Get a quick quote</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8 grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+        <article class="rounded-3xl border border-emerald-200 bg-white shadow-soft p-6 lift"><div class="flex items-start justify-between gap-4"><div><div class="font-extrabold text-slate-900">Diana Roach</div><div class="text-xs text-slate-500 mt-0.5">Google review</div></div><div class="text-amber-500 text-sm">★★★★★</div></div><div class="mt-3 text-sm text-slate-700">From first contact through to completion Paul was highly professional and clear on pricing. He removed incredibly stubborn stains and saved us a fortune on replacement carpets.</div></article>
+        <article class="rounded-3xl border border-emerald-200 bg-white shadow-soft p-6 lift"><div class="flex items-start justify-between gap-4"><div><div class="font-extrabold text-slate-900">Carolyn Mills</div><div class="text-xs text-slate-500 mt-0.5">Google review</div></div><div class="text-amber-500 text-sm">★★★★★</div></div><div class="mt-3 text-sm text-slate-700">Very thorough, moved all the furniture and left no stone unturned. Pleasant, hard working and reasonably priced for the work involved.</div></article>
+        <article class="rounded-3xl border border-emerald-200 bg-white shadow-soft p-6 lift"><div class="flex items-start justify-between gap-4"><div><div class="font-extrabold text-slate-900">James Wilson</div><div class="text-xs text-slate-500 mt-0.5">Google review</div></div><div class="text-amber-500 text-sm">★★★★★</div></div><div class="mt-3 text-sm text-slate-700">I had my carpets cleaned in Shrewsbury and was really pleased with the results. Excellent job, very polite and professional throughout.</div></article>
+        <article class="rounded-3xl border border-emerald-200 bg-white shadow-soft p-6 lift"><div class="flex items-start justify-between gap-4"><div><div class="font-extrabold text-slate-900">Gourmet Vanilla</div><div class="text-xs text-slate-500 mt-0.5">Google review</div></div><div class="text-amber-500 text-sm">★★★★★</div></div><div class="mt-3 text-sm text-slate-700">Paul finished dry cleaning our big sofa and two armchairs in Ludlow and did a brilliant job. A pleasure to deal with.</div></article>
+        <article class="rounded-3xl border border-emerald-200 bg-white shadow-soft p-6 lift"><div class="flex items-start justify-between gap-4"><div><div class="font-extrabold text-slate-900">Anne Douthwaite</div><div class="text-xs text-slate-500 mt-0.5">Google review</div></div><div class="text-amber-500 text-sm">★★★★★</div></div><div class="mt-3 text-sm text-slate-700">Excellent service. Two rugs cleaned and they look brand new again. Very reasonably priced and we will definitely use again.</div></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="quote" class="py-14 bg-ink-900">
+    <div class="mx-auto max-w-6xl px-4">
+      <div data-anim="reveal" class="rounded-3xl town-cta p-6 md:p-8 lift">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <div>
+            <h2 class="text-2xl md:text-3xl font-extrabold">Need a fixed price quote</h2>
+            <p class="mt-1 text-slate-200 text-sm md:text-base">Use the form above and we will reply with a clear quote and next available dates.</p>
+          </div>
+          <div class="flex gap-3 flex-wrap">
+            <a href="#heroQuoteForm" class="rounded-full bg-emerald-400 hover:bg-emerald-300 text-emerald-950 px-6 py-3 text-sm font-extrabold shadow-soft lift shimmer">Get a fast quote</a>
+            <a href="tel:07802563213" class="rounded-full bg-white/10 border border-white/15 hover:bg-white/15 px-6 py-3 text-sm font-semibold lift">Call 07802 563213</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-10 bg-ink-900 border-t border-white/10">
+    <div class="mx-auto max-w-6xl px-4 flex flex-col md:flex-row items-center justify-between gap-3 text-sm">
+      <div class="text-slate-200">
+        <div class="font-semibold">The Carpet Cleaning Company</div>
+        <div class="text-xs text-slate-400">Carpet cleaning, upholstery cleaning, rug cleaning, stain removal, moth treatment and commercial carpet cleaning across Shropshire, Herefordshire and Worcestershire</div>
+      </div>
+      <div class="text-xs text-slate-500">© <span id="year"></span> The Carpet Cleaning Company. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <div class="fixed z-[90] flex flex-col gap-3" style="right:max(1rem, env(safe-area-inset-right)); bottom:max(1rem, env(safe-area-inset-bottom)); max-width:100vw;">
+    <a href="https://wa.me/447802563213?text=Hi%20Paul%2C%20I%E2%80%99d%20like%20a%20quote%20please." target="_blank" rel="noopener" class="h-14 w-14 rounded-full shadow-card bg-[#25D366] grid place-items-center text-white text-2xl lift" aria-label="WhatsApp">💬</a>
+    <a href="tel:07802563213" class="h-14 w-14 rounded-full shadow-card bg-emerald-400 grid place-items-center text-emerald-950 text-2xl lift" aria-label="Call">☎</a>
   </div>
-  <div class="container copy">© 2026 The Carpet Cleaning Company. All rights reserved.</div>
-</footer>
-<div class="mobile-cta-bar">
-  <a class="mobile-cta-call" href="tel:07802563213">Call now</a>
-  <a class="mobile-cta-wa" href="https://wa.me/447802563213" target="_blank" rel="noreferrer">WhatsApp</a>
-</div>
-<script src="./assets/app.js"></script>
-</body></html>
+
+  <script>
+    document.body.classList.add('is-ready');
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('in-view');
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('[data-anim="reveal"]').forEach(el => observer.observe(el));
+
+    document.querySelectorAll('[data-nav-toggle]').forEach(btn => {
+      btn.addEventListener('click', function(e){
+        const dropdown = this.closest('.dropdown');
+        if (!dropdown) return;
+        const isOpen = dropdown.classList.contains('open');
+        document.querySelectorAll('.dropdown.open').forEach(d => d.classList.remove('open'));
+        if (!isOpen) dropdown.classList.add('open');
+        e.stopPropagation();
+      });
+    });
+
+    document.addEventListener('click', function(){
+      document.querySelectorAll('.dropdown.open').forEach(d => d.classList.remove('open'));
+    });
+
+    const video = document.getElementById('heroVideo');
+    if (video) {
+      video.addEventListener('error', () => {
+        video.style.display = 'none';
+      });
+    }
+  </script>
+</body>
+</html>
