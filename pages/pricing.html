@@ -915,6 +915,158 @@
         max-width:270px;
       }
     }
+  
+    /* === PRICING PAGE HEADER + HERO FIX === */
+    .site-header .container.nav{
+      display:flex !important;
+      align-items:center !important;
+      justify-content:space-between !important;
+      gap:24px !important;
+      min-height:92px !important;
+      padding-top:16px !important;
+      padding-bottom:16px !important;
+      flex-wrap:nowrap !important;
+    }
+
+    .brand{
+      display:flex !important;
+      align-items:center !important;
+      gap:14px !important;
+      min-width:0 !important;
+      flex:0 0 auto !important;
+    }
+
+    .brand-logo{
+      width:62px !important;
+      height:62px !important;
+      flex:0 0 62px !important;
+      border-radius:16px !important;
+    }
+
+    .brand-text strong{
+      font-size:1rem !important;
+      line-height:1.08 !important;
+      margin-bottom:4px !important;
+      display:block !important;
+    }
+
+    .brand-text span{
+      font-size:.74rem !important;
+      letter-spacing:.12em !important;
+      line-height:1.22 !important;
+      display:block !important;
+    }
+
+    .nav-links{
+      display:flex !important;
+      flex-direction:row !important;
+      align-items:center !important;
+      justify-content:center !important;
+      flex-wrap:wrap !important;
+      gap:14px 20px !important;
+      flex:1 1 auto !important;
+      min-width:0 !important;
+    }
+
+    .nav-links a,
+    .nav-item > a{
+      font-size:.98rem !important;
+      line-height:1 !important;
+      white-space:nowrap !important;
+    }
+
+    .nav-item{
+      position:relative !important;
+    }
+
+    .nav-cta{
+      display:flex !important;
+      align-items:center !important;
+      justify-content:flex-end !important;
+      gap:12px !important;
+      flex:0 0 auto !important;
+      white-space:nowrap !important;
+    }
+
+    .nav-cta .btn{
+      min-height:50px !important;
+      padding:0 22px !important;
+      border-radius:999px !important;
+      font-size:1rem !important;
+      font-weight:800 !important;
+      box-shadow:0 10px 24px rgba(0,0,0,.12) !important;
+    }
+
+    .nav-cta .btn-call{
+      background:linear-gradient(135deg,#2d7cff,#1557d8) !important;
+      color:#fff !important;
+    }
+
+    .nav-cta .btn-wa,
+    .nav-cta .btn-quote{
+      background:#fff !important;
+      color:#1c2a3c !important;
+      border:1px solid rgba(18,38,58,.08) !important;
+    }
+
+    .pricing-hero{
+      border:none !important;
+      box-shadow:none !important;
+      border-radius:0 !important;
+      background:none !important;
+      min-height:500px !important;
+    }
+
+    .pricing-hero::after{
+      content:none !important;
+    }
+
+    .pricing-hero .hero-grid{
+      padding:40px 28px !important;
+    }
+
+    .pricing-hero .hero-copy{
+      max-width:620px !important;
+    }
+
+    @media (max-width: 1220px){
+      .site-header .container.nav{
+        gap:16px !important;
+      }
+      .brand-text span{
+        letter-spacing:.10em !important;
+      }
+      .nav-cta{
+        display:none !important;
+      }
+    }
+
+    @media (max-width: 760px){
+      .site-header .container.nav{
+        min-height:78px !important;
+        padding-top:10px !important;
+        padding-bottom:10px !important;
+      }
+      .brand-logo{
+        width:52px !important;
+        height:52px !important;
+        flex-basis:52px !important;
+      }
+      .brand-text strong{
+        font-size:.96rem !important;
+      }
+      .brand-text span{
+        font-size:.66rem !important;
+      }
+      .pricing-hero{
+        min-height:410px !important;
+      }
+      .pricing-hero .hero-grid{
+        padding:22px 18px 22px !important;
+      }
+    }
+    /* === END PRICING PAGE HEADER + HERO FIX === */
+
   </style>
 </head>
 <body>
