@@ -3,21 +3,31 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- =========================================================
+       PAGE TITLE + SEO
+       CHANGE THESE IF YOU WANT
+       ========================================================= -->
   <title>Pricing Section | The Carpet Cleaning Company</title>
   <meta name="description" content="Choose between our Light Clean, Deep Clean, and Stain Guard Protection options in Ludlow and Shrewsbury. Clear pricing, clear benefits, and honest carpet cleaning options.">
   <link rel="canonical" href="https://www.thecarpetcleaningcrew.co.uk/pages/pricing.html">
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Your main site CSS file -->
   <link rel="stylesheet" href="../assets/style.css">
 
   <style>
+    /* =========================================================
+       COLOURS
+       CHANGE THESE IF YOU WANT TO CHANGE THE LOOK
+       ========================================================= */
     :root{
       --blue:#1f6fff;
       --blue-2:#2d7cff;
-      --blue-3:#1557d8;
-      --navy:#0f2741;
-      --navy-2:#173a63;
       --green:#25d366;
       --green-2:#18b956;
       --text:#12263a;
@@ -34,6 +44,9 @@
       --gold-3:#8d6820;
     }
 
+    /* =========================================================
+       GENERAL PAGE STYLING
+       ========================================================= */
     body{
       font-family:"Inter",sans-serif;
       color:var(--text);
@@ -90,6 +103,11 @@
     .btn-icon{width:18px;height:18px;display:inline-block;flex:0 0 18px;}
     .btn-icon svg{width:100%;height:100%;display:block;fill:currentColor;}
 
+    /* =========================================================
+       HERO SECTION
+       TO CHANGE HERO IMAGE:
+       CHANGE THE URL BELOW
+       ========================================================= */
     .hero.inner-hero{
       padding-top:52px;
       padding-bottom:52px;
@@ -116,7 +134,6 @@
       border-radius:30px;
       box-shadow:var(--shadow);
       border:1px solid rgba(255,255,255,.12);
-      isolation:isolate;
     }
 
     .pricing-hero::before{
@@ -124,17 +141,6 @@
       position:absolute;
       inset:0;
       background:linear-gradient(90deg, rgba(6,19,35,.62) 0%, rgba(6,19,35,.34) 50%, rgba(6,19,35,.16) 100%);
-      pointer-events:none;
-    }
-
-    .pricing-hero::after{
-      content:"";
-      position:absolute;
-      inset:auto -15% -35% auto;
-      width:340px;
-      height:340px;
-      border-radius:50%;
-      background:radial-gradient(circle, rgba(31,111,255,.30) 0%, rgba(31,111,255,0) 70%);
       pointer-events:none;
     }
 
@@ -197,17 +203,22 @@
 
     .hero-action.call{background:linear-gradient(135deg,var(--blue-2),#1456d3);color:#fff;}
     .hero-action.wa{background:linear-gradient(135deg,#34df72,var(--green-2));color:#fff;}
+
     .hero-note{
       margin-top:18px;
       color:rgba(255,255,255,.88);
       max-width:760px;
       font-weight:700;
     }
+
     .small-link-row{margin-top:18px;}
     .small-link-row a{color:#fff;font-weight:700;text-decoration:underline;text-underline-offset:3px;}
 
     .section{padding-top:72px;padding-bottom:72px;}
 
+    /* =========================================================
+       PRICING WRAP
+       ========================================================= */
     .pricing-wrap{
       background:linear-gradient(180deg,#f8fbff 0%, #edf3f9 100%);
       border:1px solid #dbe6f1;
@@ -216,28 +227,6 @@
       box-shadow:var(--shadow-soft);
       position:relative;
       overflow:hidden;
-    }
-
-    .pricing-wrap::before{
-      content:"";
-      position:absolute;
-      inset:-90px auto auto -90px;
-      width:220px;
-      height:220px;
-      border-radius:50%;
-      background:radial-gradient(circle, rgba(31,111,255,.10) 0%, rgba(31,111,255,0) 72%);
-      pointer-events:none;
-    }
-
-    .pricing-wrap::after{
-      content:"";
-      position:absolute;
-      inset:auto -90px -120px auto;
-      width:240px;
-      height:240px;
-      border-radius:50%;
-      background:radial-gradient(circle, rgba(24,185,86,.08) 0%, rgba(24,185,86,0) 72%);
-      pointer-events:none;
     }
 
     .pricing-grid{
@@ -301,15 +290,13 @@
       text-transform:uppercase;
       background:#edf4fb;
       color:#214a78;
-      box-shadow:inset 0 1px 0 rgba(255,255,255,.85);
     }
 
+    /* Middle card */
     .pricing-tier-deep{
       border:2px solid rgba(31,111,255,.22);
       box-shadow:0 22px 54px rgba(31,111,255,.16);
-      background:
-        radial-gradient(circle at top right, rgba(31,111,255,.10), rgba(31,111,255,0) 34%),
-        linear-gradient(180deg,#ffffff 0%, #f7fbff 100%);
+      background:linear-gradient(180deg,#ffffff 0%, #f7fbff 100%);
       transform:translateY(-8px) scale(1.01);
     }
 
@@ -321,13 +308,11 @@
     .pricing-tier-deep .package-tag{
       background:linear-gradient(135deg,#1f6fff,#1658d8);
       color:#fff;
-      box-shadow:0 8px 18px rgba(31,111,255,.22);
     }
 
+    /* Right card */
     .pricing-tier-protect{
-      background:
-        radial-gradient(circle at top right, rgba(255,157,31,.12), rgba(255,157,31,0) 34%),
-        linear-gradient(180deg,#fff 0%, #fffaf6 100%);
+      background:linear-gradient(180deg,#fff 0%, #fffaf6 100%);
       border:1px solid rgba(255,126,33,.18);
     }
 
@@ -373,6 +358,10 @@
       font-size:.97rem;
     }
 
+    /* =========================================================
+       TICK / CROSS BOXES
+       THESE WERE MADE SMALLER AND CLEANER
+       ========================================================= */
     .feature-stack,
     .list-checks{
       list-style:none;
@@ -381,13 +370,8 @@
       gap:7px;
     }
 
-    .feature-stack{
-      margin:14px 0 0;
-    }
-
-    .list-checks{
-      margin:12px 0 0;
-    }
+    .feature-stack{margin:14px 0 0;}
+    .list-checks{margin:12px 0 0;}
 
     .feature-stack li,
     .list-checks li{
@@ -446,7 +430,6 @@
       color:#10823d;
       font-size:.72rem;
       font-weight:900;
-      box-shadow:inset 0 1px 0 rgba(255,255,255,.65);
       margin-top:1px;
     }
 
@@ -493,7 +476,6 @@
       display:flex;
       align-items:center;
       gap:12px;
-      box-shadow:0 8px 20px rgba(165,72,128,.08);
     }
 
     .klarna-badge{
@@ -509,7 +491,6 @@
       letter-spacing:.01em;
       font-size:1rem;
       flex:0 0 auto;
-      box-shadow:inset 0 1px 0 rgba(255,255,255,.55);
     }
 
     .klarna-box p{
@@ -519,6 +500,9 @@
       line-height:1.45;
     }
 
+    /* =========================================================
+       SALE TAGS
+       ========================================================= */
     .sale-tag{
       position:absolute;
       top:18px;
@@ -543,11 +527,8 @@
     }
 
     .sale-tag.metal{
-      background:
-        linear-gradient(180deg,var(--gold-1) 0%, #f0cf72 18%, var(--gold-2) 55%, var(--gold-3) 100%);
+      background:linear-gradient(180deg,var(--gold-1) 0%, #f0cf72 18%, var(--gold-2) 55%, var(--gold-3) 100%);
       color:#372807;
-      border-top:1px solid rgba(255,255,255,.55);
-      text-shadow:0 1px 0 rgba(255,255,255,.28);
     }
 
     .blue-banner{
@@ -559,7 +540,6 @@
       font-weight:800;
       text-align:center;
       border:1px solid #cfe0ff;
-      box-shadow:inset 0 1px 0 rgba(255,255,255,.7);
     }
 
     .green-banner{
@@ -571,16 +551,16 @@
       font-weight:800;
       text-align:center;
       border:1px solid #bfeccf;
-      box-shadow:inset 0 1px 0 rgba(255,255,255,.7);
     }
 
+    /* =========================================================
+       REVIEWS
+       ========================================================= */
     .review-strip{
       margin-top:28px;
       display:grid;
       grid-template-columns:repeat(3,1fr);
       gap:18px;
-      position:relative;
-      z-index:1;
     }
 
     .review-card{
@@ -590,12 +570,6 @@
       padding:20px;
       box-shadow:var(--shadow-soft);
       text-align:left;
-      transition:transform .2s ease, box-shadow .2s ease;
-    }
-
-    .review-card:hover{
-      transform:translateY(-4px);
-      box-shadow:0 16px 30px rgba(12,31,51,.11);
     }
 
     .review-stars{
@@ -615,6 +589,9 @@
       color:#102844;
     }
 
+    /* =========================================================
+       NOTICE / INFO BOXES
+       ========================================================= */
     .notice{
       background:#fff;
       border:1px solid rgba(12,31,51,.08);
@@ -633,6 +610,9 @@
       padding-left:18px;
     }
 
+    /* =========================================================
+       CONTACT BAND
+       ========================================================= */
     .pricing-contact-band{
       margin-top:22px;
       background:
@@ -646,29 +626,14 @@
       overflow:hidden;
     }
 
-    .pricing-contact-band::after{
-      content:"";
-      position:absolute;
-      inset:auto -90px -90px auto;
-      width:220px;
-      height:220px;
-      border-radius:50%;
-      background:radial-gradient(circle, rgba(255,255,255,.12), rgba(255,255,255,0) 72%);
-      pointer-events:none;
-    }
-
     .pricing-contact-band h2{
       color:#fff;
       margin-bottom:12px;
-      position:relative;
-      z-index:1;
     }
 
     .pricing-contact-band p{
       color:rgba(255,255,255,.9);
       max-width:860px;
-      position:relative;
-      z-index:1;
     }
 
     .bottom-form-wrap{
@@ -677,8 +642,6 @@
       grid-template-columns:1.15fr .85fr;
       gap:24px;
       align-items:start;
-      position:relative;
-      z-index:1;
     }
 
     .bottom-form-card{
@@ -701,6 +664,9 @@
       margin-bottom:18px;
     }
 
+    /* =========================================================
+       FORM
+       ========================================================= */
     .pricing-form{
       display:grid;
       gap:14px;
@@ -725,15 +691,6 @@
       box-shadow:0 4px 12px rgba(12,31,51,.03);
       -webkit-appearance:none;
       appearance:none;
-      transition:border-color .2s ease, box-shadow .2s ease;
-    }
-
-    .pricing-form input:focus,
-    .pricing-form select:focus,
-    .pricing-form textarea:focus{
-      outline:none;
-      border-color:#7faeff;
-      box-shadow:0 0 0 4px rgba(31,111,255,.10);
     }
 
     .pricing-form input,
@@ -756,14 +713,11 @@
       font-size:1rem;
       cursor:pointer;
       box-shadow:0 14px 30px rgba(31,111,255,.28);
-      transition:transform .2s ease, box-shadow .2s ease;
     }
 
-    .pricing-form .submit-btn:hover{
-      transform:translateY(-2px);
-      box-shadow:0 18px 34px rgba(31,111,255,.34);
-    }
-
+    /* =========================================================
+       RIGHT SIDE CONTACT BOX
+       ========================================================= */
     .contact-side-panel{
       background:linear-gradient(180deg,#f8fbff 0%, #eef5fb 100%);
       border:1px solid rgba(17,62,103,.08);
@@ -816,18 +770,15 @@
       font-weight:800;
       padding:0 18px;
       box-shadow:var(--shadow-soft);
-      transition:transform .2s ease, box-shadow .2s ease;
-    }
-
-    .stack-buttons a:hover{
-      transform:translateY(-2px);
-      box-shadow:0 16px 28px rgba(12,31,51,.12);
     }
 
     .stack-buttons .call{background:linear-gradient(135deg,var(--blue-2),#1456d3);color:#fff;}
     .stack-buttons .wa{background:linear-gradient(135deg,#34df72,var(--green-2));color:#fff;}
     .stack-buttons .quote{background:#fff;color:#17446f;border:1px solid #d5e3f0;}
 
+    /* =========================================================
+       FOOTER
+       ========================================================= */
     .footer{
       background:linear-gradient(180deg,#1c2b3d 0%, #172434 100%);
       color:#f3f7fb;
@@ -839,6 +790,9 @@
 
     .mobile-cta-bar{display:none;}
 
+    /* =========================================================
+       MOBILE
+       ========================================================= */
     @media (max-width: 1100px){
       .pricing-grid,.bottom-form-wrap,.review-strip{grid-template-columns:1fr;}
       .pricing-tier-deep{transform:none;}
@@ -904,6 +858,10 @@
 </head>
 <body>
 
+<!-- =========================================================
+     HEADER
+     USUALLY LEAVE THIS ALONE UNLESS YOU WANT TO CHANGE LINKS
+     ========================================================= -->
 <header class="site-header">
   <div class="container nav">
     <a class="brand" href="../index.html">
@@ -951,6 +909,10 @@
       <a href="../carpet-cleaning-quote.html">Instant Quote</a>
     </nav>
 
+    <!-- =========================================================
+         TOP RIGHT BUTTONS
+         CHANGE PHONE NUMBER / WHATSAPP HERE
+         ========================================================= -->
     <div class="nav-cta">
       <a class="btn btn-call" href="tel:07802563213">
         <span class="btn-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.3 21 3 13.7 3 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.24.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></span>
@@ -968,12 +930,20 @@
   </div>
 </header>
 
+<!-- =========================================================
+     HERO SECTION
+     START EDIT HERE IF YOU WANT TO CHANGE THE MAIN MESSAGE
+     ========================================================= -->
 <section class="hero inner-hero">
   <div class="container pricing-hero">
     <div class="hero-grid">
       <div class="hero-copy reveal">
         <span class="kicker">Pricing Section</span>
+
+        <!-- CHANGE MAIN HEADING HERE -->
         <h1>Choose the clean that suits your budget and the result you want</h1>
+
+        <!-- CHANGE HERO TEXT HERE -->
         <p>We offer a lower priced light clean for a quick freshen up, or our full professional deep clean using top tier equipment for the best possible result.</p>
 
         <div class="hero-actions">
@@ -987,53 +957,91 @@
           </a>
         </div>
 
+        <!-- CHANGE SMALL HERO NOTE HERE -->
         <p class="hero-note">Most customers choose the Deep Clean once they see the difference.</p>
+
         <div class="small-link-row"><a href="#contact-form">Get a proper quotation below</a></div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- =========================================================
+     PRICING SECTION
+     THIS IS THE MAIN BIT YOU WILL MOST LIKELY WANT TO EDIT
+     ========================================================= -->
 <section class="section">
   <div class="container">
     <div class="pricing-wrap center">
+
+      <!-- CHANGE SMALL LABEL HERE -->
       <span class="kicker" style="background:var(--soft);color:#1a4d9c">Three clear choices</span>
+
+      <!-- CHANGE PRICING SECTION HEADING HERE -->
       <h2>See exactly what you get for the price</h2>
-      <p class="lead" style="margin-inline:auto;max-width:980px">The equipment and process change from one option to the next. The Light Clean uses a lighter setup. The Deep Clean uses our top tier equipment and a much more complete process. Stain Guard is an optional extra added after cleaning to help protect your carpets.</p>
+
+      <!-- CHANGE INTRO TEXT HERE -->
+      <p class="lead" style="margin-inline:auto;max-width:980px">
+        The equipment and process change from one option to the next. The Light Clean uses a lighter setup. The Deep Clean uses our top tier equipment and a much more complete process. Stain Guard is an optional extra added after cleaning to help protect your carpets.
+      </p>
 
       <div class="pricing-grid">
+
+        <!-- =====================================================
+             CARD 1 = LIGHT CLEAN
+             CHANGE THIS CARD TEXT / PRICE HERE
+             ===================================================== -->
         <article class="pricing-tier">
           <div class="card-body">
+
+            <!-- CHANGE LABEL -->
             <span class="package-tag">Option 1</span>
+
+            <!-- CHANGE NAME -->
             <h3>Light Clean</h3>
+
+            <!-- CHANGE PRICE -->
             <div class="price-line">£30 <span>per room</span></div>
+
+            <!-- CHANGE SHORT INTRO -->
             <p class="tier-intro">A lower priced clean for customers who want a simple freshen up.</p>
 
+            <!-- SMALL TICK / CROSS ROWS -->
             <ul class="feature-stack">
-              <li><span class="feature-bubble no">✕</span><span>Pre vacuum</span></li>
-              <li><span class="feature-bubble no">✕</span><span>Pre spray</span></li>
-              <li><span class="feature-bubble yes">✓</span><span>In tank detergent</span></li>
+               <li><span class="feature-bubble yes">✓</span><span>In tank detergent</span></li>
             </ul>
 
+            <!-- MAIN BULLET POINTS -->
             <ul class="list-checks">
               <li>Hot water extraction only</li>
               <li>Light clean for lower soil levels</li>
               <li>Best for a quick refresh</li>
             </ul>
 
+            <!-- SMALL NOTE BOX -->
             <div class="note-box">Please vacuum the area before we arrive.</div>
+
+            <!-- BOTTOM NOTE -->
             <div class="tier-note">Best for a basic refresh, not a full deep clean.</div>
           </div>
         </article>
 
+        <!-- =====================================================
+             CARD 2 = DEEP CLEAN
+             CHANGE THIS CARD TEXT / PRICE HERE
+             ===================================================== -->
         <article class="pricing-tier pricing-tier-deep">
           <div class="sale-tag small">Most Popular</div>
           <div class="card-body">
+
             <span class="package-tag">Option 2</span>
             <h3>Deep Clean</h3>
+
+            <!-- CHANGE PRICE -->
             <div class="price-line">£75 <span>first room</span></div>
             <div class="sub-price">£45 each additional room</div>
 
+            <!-- CHANGE OFFER BANNER -->
             <div class="green-banner">Free hall and landing when you have your stairs cleaned</div>
 
             <p class="tier-intro">Our full professional clean for customers who want the best possible result.</p>
@@ -1056,6 +1064,7 @@
             <div class="trust-line">Not all carpet cleans are the same. Many lower priced services skip key steps like pre spray and deep agitation.</div>
             <div class="tier-note">You are not just hiring us. You are hiring the equipment and process that make the difference.</div>
 
+            <!-- Klarna box -->
             <div class="klarna-box">
               <div class="klarna-badge">Klarna</div>
               <p>Available on this package. Spread the cost over time if you want the better clean without paying it all at once.</p>
@@ -1063,14 +1072,22 @@
           </div>
         </article>
 
+        <!-- =====================================================
+             CARD 3 = STAIN GUARD
+             CHANGE THIS CARD TEXT / PRICE HERE
+             ===================================================== -->
         <article class="pricing-tier pricing-tier-protect">
           <div class="sale-tag metal">Half Price</div>
           <div class="card-body">
+
             <span class="package-tag">Optional Add On</span>
             <h3>Stain Guard Protection</h3>
+
+            <!-- CHANGE PRICE -->
             <div class="price-line"><span class="old-price-big">£30</span> £15 <span>per room</span></div>
             <div class="sub-price">Added after a Deep Clean</div>
 
+            <!-- CHANGE BANNER -->
             <div class="blue-banner">Limited time offer</div>
 
             <p class="tier-intro">Add stain guard after your Deep Clean to help carpets stay cleaner for longer.</p>
@@ -1095,8 +1112,13 @@
             </div>
           </div>
         </article>
+
       </div>
 
+      <!-- =====================================================
+           REVIEWS
+           CHANGE THESE IF YOU WANT REAL CUSTOMER WORDING
+           ===================================================== -->
       <div class="review-strip">
         <div class="review-card">
           <div class="review-stars">★★★★★</div>
@@ -1118,6 +1140,10 @@
   </div>
 </section>
 
+<!-- =========================================================
+     WHY PRICES ARE DIFFERENT SECTION
+     CHANGE WORDING HERE IF NEEDED
+     ========================================================= -->
 <section class="section alt">
   <div class="container split premium-split">
     <div class="reveal seo-copy">
@@ -1155,12 +1181,17 @@
       </div>
     </div>
 
+    <!-- Leave this image section if your main site CSS styles it -->
     <div class="photo-frame reveal equipment-frame pricing-machine-frame">
       <img src="../assets/img/machine-transparent.webp" alt="Professional carpet cleaning machine">
     </div>
   </div>
 </section>
 
+<!-- =========================================================
+     CONTACT FORM SECTION
+     CHANGE FORM TEXT HERE
+     ========================================================= -->
 <section class="section" id="contact-form">
   <div class="container">
     <div class="pricing-contact-band reveal">
@@ -1222,6 +1253,10 @@
   </div>
 </section>
 
+<!-- =========================================================
+     FOOTER
+     USUALLY LEAVE THIS ALONE
+     ========================================================= -->
 <footer class="footer">
   <div class="container footer-grid">
     <div class="footer-brand">
@@ -1257,6 +1292,10 @@
   <div class="container copy">© The Carpet Cleaning Company. All rights reserved.</div>
 </footer>
 
+<!-- =========================================================
+     MOBILE BOTTOM BUTTONS
+     CHANGE PHONE / WHATSAPP HERE IF NEEDED
+     ========================================================= -->
 <div class="mobile-cta-bar">
   <a class="mobile-cta-call" href="tel:07802563213">
     <span class="btn-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.3 21 3 13.7 3 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.24.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></span>
@@ -1268,6 +1307,8 @@
   </a>
 </div>
 
+<!-- Your main JS file -->
 <script src="../assets/app.js"></script>
+
 </body>
 </html>
