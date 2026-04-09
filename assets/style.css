@@ -905,3 +905,26 @@ button,input,textarea,select{font:inherit}
   .nav-item.open > .dropdown{display:block !important}
 }
 /* === END MENU FIX APRIL 2026 === */
+
+
+/* === MENU CONTRAST FIX APRIL 2026 === */
+.nav-item .dropdown a{
+  color:#18314b !important;
+  background:transparent !important;
+}
+.nav-item .dropdown a:hover,
+.nav-item .dropdown a:focus-visible{
+  color:#0f2235 !important;
+  background:#f3f7fc !important;
+  outline:none;
+}
+@media (max-width:760px){
+  .nav-links > a,
+  .nav-links .nav-item > a{
+    color:#18314b !important;
+  }
+  .nav-item .dropdown a{
+    color:#355066 !important;
+  }
+}
+/* === END MENU CONTRAST FIX APRIL 2026 === */
