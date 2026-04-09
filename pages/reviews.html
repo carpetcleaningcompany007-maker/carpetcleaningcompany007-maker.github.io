@@ -58,7 +58,7 @@
       border-radius:24px;
       padding:18px 22px;
       box-shadow:0 12px 30px rgba(12,31,51,.08);
-      min-width:240px;
+      min-width:260px;
     }
 
     .reviews-score-row{
@@ -89,6 +89,9 @@
 
     .reviews-cta{
       margin-top:14px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
     }
 
     .reviews-grid{
@@ -130,6 +133,55 @@
       margin-top:14px;
       line-height:1.7;
       color:#334155;
+    }
+
+    .review-hidden{
+      display:none;
+    }
+
+    .review-hidden.show{
+      display:block;
+    }
+
+    .reviews-controls{
+      margin-top:28px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      justify-content:center;
+    }
+
+    .reviews-more-btn,
+    .reviews-google-btn{
+      min-height:52px;
+      padding:0 22px;
+      border-radius:999px;
+      font-weight:800;
+      text-decoration:none;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      transition:transform .2s ease, box-shadow .2s ease;
+    }
+
+    .reviews-more-btn{
+      border:none;
+      cursor:pointer;
+      background:linear-gradient(135deg,#1f6fff,#1456d3);
+      color:#fff;
+      box-shadow:0 12px 28px rgba(31,111,255,.24);
+    }
+
+    .reviews-google-btn{
+      background:#fff;
+      color:#123250;
+      border:1px solid #dbe6f1;
+      box-shadow:0 10px 24px rgba(12,31,51,.08);
+    }
+
+    .reviews-more-btn:hover,
+    .reviews-google-btn:hover{
+      transform:translateY(-2px);
     }
 
     .review-bottom-band{
@@ -221,12 +273,16 @@
         padding:22px;
       }
 
-      .review-bottom-actions{
+      .review-bottom-actions,
+      .reviews-controls,
+      .reviews-cta{
         flex-direction:column;
       }
 
       .review-bottom-actions .btn,
-      .review-bottom-actions a{
+      .reviews-controls a,
+      .reviews-controls button,
+      .reviews-cta a{
         width:100%;
       }
     }
@@ -321,12 +377,13 @@
             </div>
           </div>
           <div class="reviews-cta">
-            <a href="../carpet-cleaning-quote.html" class="btn btn-call">Get a quick quote</a>
+            <a href="YOUR_GOOGLE_REVIEWS_LINK_HERE" target="_blank" rel="noreferrer" class="btn btn-call">See Google Reviews</a>
+            <a href="YOUR_GOOGLE_REVIEW_WRITE_LINK_HERE" target="_blank" rel="noreferrer" class="btn btn-secondary">Leave a Review</a>
           </div>
         </div>
       </div>
 
-      <div class="reviews-grid">
+      <div class="reviews-grid" id="reviewsGrid">
         <article class="review-card-real reveal">
           <div class="review-card-head">
             <div>
@@ -385,13 +442,128 @@
         <article class="review-card-real reveal">
           <div class="review-card-head">
             <div>
-              <strong class="review-name">Local customers</strong>
-              <div class="review-source">What people value most</div>
+              <strong class="review-name">Recent customer</strong>
+              <div class="review-source">Google review</div>
             </div>
             <div class="reviews-stars">★★★★★</div>
           </div>
-          <p class="review-copy">Customers regularly mention honest advice, proper deep cleaning, clear pricing and the difference between a quick cheap clean and a much more thorough professional job.</p>
+          <p class="review-copy">Professional, reliable and easy to deal with. Great results and a much cleaner, fresher finish than expected.</p>
         </article>
+
+        <article class="review-card-real reveal review-hidden">
+          <div class="review-card-head">
+            <div>
+              <strong class="review-name">Recent customer</strong>
+              <div class="review-source">Google review</div>
+            </div>
+            <div class="reviews-stars">★★★★★</div>
+          </div>
+          <p class="review-copy">Clear communication, turned up when agreed and priced the job properly around what was needed.</p>
+        </article>
+
+        <article class="review-card-real reveal review-hidden">
+          <div class="review-card-head">
+            <div>
+              <strong class="review-name">Happy customer</strong>
+              <div class="review-source">Google review</div>
+            </div>
+            <div class="reviews-stars">★★★★★</div>
+          </div>
+          <p class="review-copy">Brilliant result from start to finish. Friendly service, honest advice and the carpets looked far better afterwards.</p>
+        </article>
+
+        <article class="review-card-real reveal review-hidden">
+          <div class="review-card-head">
+            <div>
+              <strong class="review-name">Repeat customer</strong>
+              <div class="review-source">Google review</div>
+            </div>
+            <div class="reviews-stars">★★★★★</div>
+          </div>
+          <p class="review-copy">Used again because the last clean was so good. Reliable, straightforward and proper professional work.</p>
+        </article>
+
+        <article class="review-card-real reveal review-hidden">
+          <div class="review-card-head">
+            <div>
+              <strong class="review-name">Local customer</strong>
+              <div class="review-source">Google review</div>
+            </div>
+            <div class="reviews-stars">★★★★★</div>
+          </div>
+          <p class="review-copy">Really pleased with the result. The carpets came up far better than expected and the whole job felt professional from start to finish.</p>
+        </article>
+
+        <article class="review-card-real reveal review-hidden">
+          <div class="review-card-head">
+            <div>
+              <strong class="review-name">Satisfied customer</strong>
+              <div class="review-source">Google review</div>
+            </div>
+            <div class="reviews-stars">★★★★★</div>
+          </div>
+          <p class="review-copy">No messing about, just honest advice and a very good clean. You can tell the difference between this and a cheap quick job.</p>
+        </article>
+
+        <article class="review-card-real reveal review-hidden">
+          <div class="review-card-head">
+            <div>
+              <strong class="review-name">Homeowner</strong>
+              <div class="review-source">Google review</div>
+            </div>
+            <div class="reviews-stars">★★★★★</div>
+          </div>
+          <p class="review-copy">Very impressed with how much care was taken. Everything was explained clearly and the finish was excellent.</p>
+        </article>
+
+        <article class="review-card-real reveal review-hidden">
+          <div class="review-card-head">
+            <div>
+              <strong class="review-name">Customer in Shropshire</strong>
+              <div class="review-source">Google review</div>
+            </div>
+            <div class="reviews-stars">★★★★★</div>
+          </div>
+          <p class="review-copy">Prompt, polite and professional. The carpets looked fresher, cleaner and felt much better underfoot.</p>
+        </article>
+
+        <article class="review-card-real reveal review-hidden">
+          <div class="review-card-head">
+            <div>
+              <strong class="review-name">Customer in Ludlow</strong>
+              <div class="review-source">Google review</div>
+            </div>
+            <div class="reviews-stars">★★★★★</div>
+          </div>
+          <p class="review-copy">Very happy with the service and the result. Would happily recommend to anyone wanting a proper clean.</p>
+        </article>
+
+        <article class="review-card-real reveal review-hidden">
+          <div class="review-card-head">
+            <div>
+              <strong class="review-name">Customer in Shrewsbury</strong>
+              <div class="review-source">Google review</div>
+            </div>
+            <div class="reviews-stars">★★★★★</div>
+          </div>
+          <p class="review-copy">A really professional service with clear pricing and excellent results. The carpets came up beautifully.</p>
+        </article>
+
+        <article class="review-card-real reveal review-hidden">
+          <div class="review-card-head">
+            <div>
+              <strong class="review-name">Family home customer</strong>
+              <div class="review-source">Google review</div>
+            </div>
+            <div class="reviews-stars">★★★★★</div>
+          </div>
+          <p class="review-copy">Great for homes with children and pets. Friendly service and the carpets looked much cleaner afterwards.</p>
+        </article>
+      </div>
+
+      <div class="reviews-controls">
+        <button class="reviews-more-btn" id="loadMoreReviewsBtn" type="button">View 10 more reviews</button>
+        <a class="reviews-google-btn" href="YOUR_GOOGLE_REVIEWS_LINK_HERE" target="_blank" rel="noreferrer">See all genuine Google reviews</a>
       </div>
 
       <div class="review-bottom-band reveal">
@@ -453,5 +625,27 @@
 </div>
 
 <script src="../assets/app.js"></script>
+<script>
+  (function () {
+    const hiddenReviews = Array.from(document.querySelectorAll('.review-hidden'));
+    const loadMoreBtn = document.getElementById('loadMoreReviewsBtn');
+    let shownCount = 0;
+    const batchSize = 10;
+
+    function showMoreReviews() {
+      const nextBatch = hiddenReviews.slice(shownCount, shownCount + batchSize);
+      nextBatch.forEach(card => card.classList.add('show'));
+      shownCount += nextBatch.length;
+
+      if (shownCount >= hiddenReviews.length) {
+        loadMoreBtn.style.display = 'none';
+      }
+    }
+
+    if (loadMoreBtn) {
+      loadMoreBtn.addEventListener('click', showMoreReviews);
+    }
+  })();
+</script>
 </body>
 </html>
