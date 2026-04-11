@@ -3,33 +3,6 @@
   const menu = document.querySelector('.nav-links');
   const header = document.querySelector('.site-header');
 
-
-  const insertPromoBar = () => {
-    if (document.querySelector('.promo-marquee')) return;
-    const header = document.querySelector('.site-header');
-    if (!header) return;
-    const items = [
-      '5 Star rated local service',
-      'Deep Clean from only £45 per additional room',
-      'Free hall and landing when stairs are cleaned',
-      'Fast WhatsApp quotes',
-      'Fully insured professional cleaning'
-    ];
-    const marquee = document.createElement('div');
-    marquee.className = 'promo-marquee';
-    const repeatedItems = items.concat(items).map(text => `<span class="promo-marquee-item"><span class="promo-marquee-dot" aria-hidden="true"></span><span>${text}</span></span>`).join('');
-    marquee.innerHTML = `
-      <div class="container promo-marquee-inner">
-        <div class="promo-marquee-label">Now booking</div>
-        <div class="promo-marquee-viewport" aria-label="Current offers and service highlights">
-          <div class="promo-marquee-track">${repeatedItems}</div>
-        </div>
-      </div>`;
-    header.insertAdjacentElement('afterend', marquee);
-  };
-  insertPromoBar();
-
-
   const closeAllSubmenus = () => {
     document.querySelectorAll('.nav-item.open').forEach(item => {
       item.classList.remove('open');
