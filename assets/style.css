@@ -964,125 +964,140 @@ button,input,textarea,select{font:inherit}
 
 
 
-/* === POPUP OFFER === */
-.offer-popup{
+
+
+
+
+/* === POPUP OFFER V2 === */
+.offer-popup-v2{
   position:fixed;
   inset:0;
-  z-index:4000;
+  z-index:4500;
   display:none;
 }
-.offer-popup.is-open{
-  display:block;
-}
-.offer-popup-backdrop{
+.offer-popup-v2.is-open{ display:block; }
+
+.offer-popup-v2-backdrop{
   position:absolute;
   inset:0;
-  background:rgba(8,19,34,.58);
+  background:
+    radial-gradient(circle at 12% 18%, rgba(245,193,90,.18) 0 2px, transparent 3px),
+    radial-gradient(circle at 82% 15%, rgba(255,255,255,.12) 0 2px, transparent 3px),
+    radial-gradient(circle at 70% 28%, rgba(245,193,90,.14) 0 2px, transparent 3px),
+    radial-gradient(circle at 18% 78%, rgba(255,255,255,.08) 0 2px, transparent 3px),
+    radial-gradient(circle at 90% 72%, rgba(245,193,90,.14) 0 2px, transparent 3px),
+    linear-gradient(rgba(8,19,34,.68), rgba(8,19,34,.68));
   backdrop-filter:blur(2px);
   -webkit-backdrop-filter:blur(2px);
 }
-.offer-popup-panel{
+
+.offer-popup-v2-panel{
   position:absolute;
   left:50%;
   top:50%;
   transform:translate(-50%,-50%);
-  width:min(92vw, 520px);
-  min-height:420px;
-  background:linear-gradient(180deg,#f8fbff 0%, #ffffff 100%);
-  border-radius:10px;
-  box-shadow:0 24px 70px rgba(7,17,31,.34);
-  padding:78px 34px 34px;
+  width:min(92vw, 540px);
+  background:linear-gradient(180deg,#ffffff 0%, #fbfdff 100%);
+  border-radius:18px;
+  box-shadow:0 28px 80px rgba(7,17,31,.36);
+  padding:78px 34px 28px;
   text-align:center;
   overflow:visible;
 }
-.offer-popup-badge{
+
+.offer-popup-v2-sticker{
   position:absolute;
-  left:-22px;
-  top:-22px;
+  left:-16px;
+  top:-18px;
   width:84px;
   height:84px;
-  border-radius:18px;
-  background:linear-gradient(180deg,#ff9f1c 0%, #ff7b00 100%);
+  border-radius:22px;
+  background:linear-gradient(180deg,#f4b11d 0%, #df8d00 100%);
   color:#fff;
   font-weight:900;
-  font-size:.82rem;
-  line-height:1.05;
+  font-size:.8rem;
+  line-height:1.02;
   letter-spacing:.03em;
-  text-transform:uppercase;
   display:flex;
   align-items:center;
   justify-content:center;
   text-align:center;
-  box-shadow:0 12px 30px rgba(255,123,0,.34);
+  box-shadow:0 16px 30px rgba(223,141,0,.32);
   transform:rotate(-14deg);
 }
-.offer-popup-close{
+
+.offer-popup-v2-close{
   position:absolute;
-  right:18px;
-  top:16px;
+  right:16px;
+  top:12px;
   width:34px;
   height:34px;
   border:none;
   border-radius:999px;
-  background:transparent;
-  color:#fff;
-  font-size:32px;
+  background:rgba(17,47,76,.10);
+  color:#4c657e;
+  font-size:28px;
   line-height:1;
   cursor:pointer;
-  z-index:2;
 }
-.offer-popup-ribbon{
+
+.offer-popup-v2-ribbon-wrap{
+  display:flex;
+  justify-content:center;
+  margin-bottom:24px;
+}
+.offer-popup-v2-ribbon{
   display:inline-block;
   position:relative;
-  background:linear-gradient(90deg,#ff6c1b 0%, #ff5b10 100%);
+  background:linear-gradient(90deg,#1b4c7b 0%, #205d96 100%);
   color:#fff;
   font-weight:800;
-  font-size:.92rem;
+  font-size:.9rem;
   letter-spacing:.05em;
   padding:12px 34px;
-  margin-bottom:28px;
 }
-.offer-popup-ribbon::before,
-.offer-popup-ribbon::after{
+.offer-popup-v2-ribbon::before,
+.offer-popup-v2-ribbon::after{
   content:"";
   position:absolute;
   top:0;
-  width:0;height:0;
-  border-top:24px solid transparent;
-  border-bottom:24px solid transparent;
+  width:0; height:0;
+  border-top:22px solid transparent;
+  border-bottom:22px solid transparent;
 }
-.offer-popup-ribbon::before{
+.offer-popup-v2-ribbon::before{
   left:-16px;
-  border-right:16px solid #ff6c1b;
+  border-right:16px solid #1b4c7b;
 }
-.offer-popup-ribbon::after{
+.offer-popup-v2-ribbon::after{
   right:-16px;
-  border-left:16px solid #ff5b10;
+  border-left:16px solid #205d96;
 }
-.offer-popup-title{
+
+.offer-popup-v2-title{
   margin:0;
-  color:#0b0f14;
-  font-size:clamp(2rem, 5vw, 3rem);
-  line-height:1.02;
+  color:#0f1720;
+  font-size:clamp(2rem, 5vw, 3.1rem);
+  line-height:.98;
   font-weight:900;
   letter-spacing:-.04em;
 }
-.offer-popup-offer{
-  margin:12px auto 0;
-  max-width:380px;
-  color:#0b0f14;
-  font-size:clamp(1.2rem, 3.3vw, 1.65rem);
-  line-height:1.15;
+.offer-popup-v2-offer{
+  margin:14px auto 0;
+  max-width:420px;
+  color:#0f1720;
+  font-size:clamp(1.28rem, 3.2vw, 1.8rem);
+  line-height:1.12;
   font-weight:800;
 }
-.offer-popup-text{
+.offer-popup-v2-text{
   margin:16px auto 0;
-  max-width:360px;
-  color:#37485b;
+  max-width:370px;
+  color:#536679;
   font-size:1rem;
   line-height:1.55;
 }
-.offer-popup-button{
+.offer-popup-v2-button{
   display:inline-flex;
   align-items:center;
   justify-content:center;
@@ -1090,55 +1105,62 @@ button,input,textarea,select{font:inherit}
   min-height:58px;
   padding:0 28px;
   margin-top:26px;
-  background:linear-gradient(180deg,#88c400 0%, #77b100 100%);
-  color:#fff;
+  background:linear-gradient(180deg,#f3c45b 0%, #e0aa36 100%);
+  color:#17314c;
   font-weight:900;
-  font-size:1.12rem;
+  font-size:1.08rem;
   letter-spacing:.02em;
   text-decoration:none;
-  box-shadow:0 16px 34px rgba(119,177,0,.26);
+  border-radius:8px;
+  box-shadow:0 16px 34px rgba(224,170,54,.28);
 }
-.offer-popup-button:hover{
-  transform:translateY(-1px);
-}
-.offer-popup-dismiss{
+.offer-popup-v2-button:hover{ transform:translateY(-1px); }
+
+.offer-popup-v2-dismiss{
   display:block;
-  margin:26px auto 0;
+  margin:22px auto 0;
   padding:0;
   border:none;
   background:none;
-  color:#66788d;
+  color:#6e7f92;
   font-size:1rem;
   cursor:pointer;
 }
+
 @media (max-width: 640px){
-  .offer-popup-panel{
-    width:min(94vw, 420px);
-    min-height:auto;
-    padding:68px 22px 28px;
+  .offer-popup-v2-panel{
+    width:min(92vw, 420px);
+    padding:66px 20px 24px;
+    border-radius:16px;
   }
-  .offer-popup-badge{
-    width:74px;height:74px;font-size:.75rem;left:-10px;top:-10px;
+  .offer-popup-v2-sticker{
+    width:72px;
+    height:72px;
+    font-size:.72rem;
+    left:-8px;
+    top:-10px;
   }
-  .offer-popup-ribbon{
-    font-size:.82rem;
+  .offer-popup-v2-ribbon{
+    font-size:.8rem;
     padding:10px 24px;
-    margin-bottom:22px;
   }
-  .offer-popup-ribbon::before,
-  .offer-popup-ribbon::after{
+  .offer-popup-v2-ribbon::before,
+  .offer-popup-v2-ribbon::after{
     border-top:20px solid transparent;
     border-bottom:20px solid transparent;
   }
-  .offer-popup-ribbon::before{ left:-14px; border-right:14px solid #ff6c1b; }
-  .offer-popup-ribbon::after{ right:-14px; border-left:14px solid #ff5b10; }
-  .offer-popup-offer{
-    max-width:300px;
+  .offer-popup-v2-ribbon::before{
+    left:-14px;
+    border-right:14px solid #1b4c7b;
   }
-  .offer-popup-button{
+  .offer-popup-v2-ribbon::after{
+    right:-14px;
+    border-left:14px solid #205d96;
+  }
+  .offer-popup-v2-button{
     min-width:220px;
     min-height:54px;
     font-size:1rem;
   }
 }
-/* === END POPUP OFFER === */
+/* === END POPUP OFFER V2 === */

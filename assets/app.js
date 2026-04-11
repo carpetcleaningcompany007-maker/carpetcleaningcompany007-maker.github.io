@@ -135,12 +135,16 @@ document.addEventListener('click',(e)=>{
 
 
 
+
+
+
 (() => {
-  const popup = document.getElementById('offerPopup');
+  const popup = document.getElementById('offerPopupV2');
   if (!popup) return;
 
-  const closeBtn = popup.querySelector('.offer-popup-close');
-  const dismissBtn = popup.querySelector('.offer-popup-dismiss');
+  const closeBtn = popup.querySelector('.offer-popup-v2-close');
+  const dismissBtn = popup.querySelector('.offer-popup-v2-dismiss');
+  const backdrop = popup.querySelector('.offer-popup-v2-backdrop');
 
   const openPopup = () => {
     popup.classList.add('is-open');
@@ -150,11 +154,11 @@ document.addEventListener('click',(e)=>{
   const closePopup = () => {
     popup.classList.remove('is-open');
     popup.setAttribute('aria-hidden', 'true');
-    try { localStorage.setItem('offerPopupClosed', '1'); } catch(e) {}
+    try { localStorage.setItem('offerPopupV2Closed', '1'); } catch(e) {}
   };
 
   try {
-    if (localStorage.getItem('offerPopupClosed') !== '1') {
+    if (localStorage.getItem('offerPopupV2Closed') !== '1') {
       setTimeout(openPopup, 450);
     }
   } catch(e) {
@@ -163,5 +167,5 @@ document.addEventListener('click',(e)=>{
 
   closeBtn?.addEventListener('click', closePopup);
   dismissBtn?.addEventListener('click', closePopup);
-  popup.querySelector('.offer-popup-backdrop')?.addEventListener('click', closePopup);
+  backdrop?.addEventListener('click', closePopup);
 })();
