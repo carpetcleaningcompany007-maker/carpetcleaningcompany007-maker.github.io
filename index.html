@@ -127,7 +127,16 @@
       .card img{height:220px}
       .section{padding:70px 0}
     }
-  </style>
+  
+  .mobile-hero-quote-section{display:none}
+  @media (max-width:760px){
+    .hero-grid > .hero-card{display:none !important}
+    .mobile-hero-quote-section{display:block;padding:0 0 20px;background:linear-gradient(180deg,rgba(7,17,31,.06) 0%, rgba(7,17,31,0) 100%)}
+    .mobile-hero-quote-section .mobile-hero-card{margin-top:0;padding:18px;border-radius:22px;box-shadow:0 18px 40px rgba(0,0,0,.12)}
+    .hero.premium-hero{padding-bottom:18px !important}
+  }
+
+</style>
 
   <!-- SEO_UPGRADE -->
   <script type="application/ld+json">
@@ -187,18 +196,6 @@
     </nav>
   </div>
 </header>
-
-<div class="offer-fade-strip" aria-label="Special offers">
-  <div class="offer-fade-inner">
-    <span class="offer-fade-label">Special offers</span>
-    <div class="offer-fade-messages" aria-live="polite">
-      <div class="offer-fade-message">Free hall and landing with stairs<small>Available on qualifying bookings.</small></div>
-      <div class="offer-fade-message">Half price stain protection<small>Add protection after your clean for less.</small></div>
-      <div class="offer-fade-message">Fast WhatsApp quotes<small>Send photos for quick advice and pricing.</small></div>
-      <div class="offer-fade-message">Fully insured professional cleaning<small>Trusted local carpet and upholstery specialists.</small></div>
-    </div>
-  </div>
-</div>
 
 <section class="hero premium-hero">
   <div class="container hero-grid">
@@ -266,6 +263,65 @@
         <div class="form-row">
           <label for="message">Message</label>
           <textarea id="message" name="message" rows="4" placeholder="Tell us what you would like cleaned"></textarea>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Get my quote</button>
+      </form>
+
+      <p class="muted-strong" style="margin-top:14px">You can also send photos by WhatsApp for a faster quote.</p>
+    </div>
+  </div>
+</section>
+
+<section class="mobile-hero-quote-section" aria-label="Quick quote form">
+  <div class="container">
+    <div class="hero-card form-glow premium-panel reveal mobile-hero-card">
+      <div class="detail-brand">
+        <img class="detail-logo" src="./assets/img/logo.webp" alt="The Carpet Cleaning Company logo" loading="lazy" width="512" height="512">
+        <div>
+          <strong>Request a fast quote</strong>
+          <span>Professional carpet and upholstery cleaning quotes</span>
+        </div>
+      </div>
+
+      <form class="quote-form" action="./pages/contact.html" method="get">
+        <div class="form-row">
+          <label for="mobile-name">Name</label>
+          <input id="mobile-name" name="name" type="text" placeholder="Your name" required>
+        </div>
+
+        <div class="form-row">
+          <label for="mobile-phone">Phone number</label>
+          <input id="mobile-phone" name="phone" type="tel" placeholder="Your phone number" required>
+        </div>
+
+        <div class="form-row">
+          <label for="mobile-email">Email</label>
+          <input id="mobile-email" name="email" type="email" placeholder="Your email address">
+        </div>
+
+        <div class="form-row">
+          <label for="mobile-area">Postcode or town</label>
+          <input id="mobile-area" name="area" type="text" placeholder="Ludlow, Shrewsbury, postcode etc">
+        </div>
+
+        <div class="form-row">
+          <label for="mobile-service">What would you like cleaned?</label>
+          <select id="mobile-service" name="service">
+            <option value="">Please choose</option>
+            <option>Carpets</option>
+            <option>Upholstery</option>
+            <option>Rugs</option>
+            <option>Stain Removal</option>
+            <option>Hard Floor Cleaning</option>
+            <option>Commercial Cleaning</option>
+            <option>Multiple Services</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label for="mobile-message">Message</label>
+          <textarea id="mobile-message" name="message" rows="4" placeholder="Tell us what you would like cleaned"></textarea>
         </div>
 
         <button class="btn btn-primary" type="submit">Get my quote</button>
