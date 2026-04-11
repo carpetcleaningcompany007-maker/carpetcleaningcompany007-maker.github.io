@@ -1002,29 +1002,31 @@ button,input,textarea,select{font:inherit}
   box-shadow:0 28px 80px rgba(7,17,31,.36);
   padding:78px 34px 28px;
   text-align:center;
-  overflow:visible;
+  
 }
+  overflow: visible;
+
 
 .offer-popup-v2-sticker{
   position:absolute;
-  left:-16px;
-  top:-18px;
-  width:84px;
-  height:84px;
-  border-radius:22px;
-  background:linear-gradient(180deg,#f4b11d 0%, #df8d00 100%);
+  left:-10px;
+  top:-10px;
+  width:90px;
+  height:90px;
+  border-radius:50%;
+  background:radial-gradient(circle,#ffb300 0%, #ff8f00 100%);
   color:#fff;
   font-weight:900;
-  font-size:.8rem;
-  line-height:1.02;
-  letter-spacing:.03em;
+  font-size:.75rem;
   display:flex;
   align-items:center;
   justify-content:center;
   text-align:center;
-  box-shadow:0 16px 30px rgba(223,141,0,.32);
-  transform:rotate(-14deg);
+  box-shadow:0 12px 25px rgba(0,0,0,.3);
+  transform:rotate(-15deg);
+  z-index:10;
 }
+
 
 .offer-popup-v2-close{
   position:absolute;
@@ -1133,13 +1135,28 @@ button,input,textarea,select{font:inherit}
     padding:66px 20px 24px;
     border-radius:16px;
   }
-  .offer-popup-v2-sticker{
-    width:72px;
-    height:72px;
-    font-size:.72rem;
-    left:-8px;
-    top:-10px;
-  }
+  overflow: visible;
+  
+.offer-popup-v2-sticker{
+  position:absolute;
+  left:-10px;
+  top:-10px;
+  width:90px;
+  height:90px;
+  border-radius:50%;
+  background:radial-gradient(circle,#ffb300 0%, #ff8f00 100%);
+  color:#fff;
+  font-weight:900;
+  font-size:.75rem;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  box-shadow:0 12px 25px rgba(0,0,0,.3);
+  transform:rotate(-15deg);
+  z-index:10;
+}
+
   .offer-popup-v2-ribbon{
     font-size:.8rem;
     padding:10px 24px;
