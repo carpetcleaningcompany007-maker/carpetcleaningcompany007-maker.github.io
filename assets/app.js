@@ -132,36 +132,34 @@ document.addEventListener('click',(e)=>{
 
 
 
-
-
-
-
-
-
-
-
-
 (() => {
-  const popup = document.getElementById('offerPopupV3');
-  if (!popup) return;
+  const card = document.getElementById('offerCardFloat');
+  if (!card) return;
 
-  const closeBtn = popup.querySelector('.offer-popup-v3-close');
-  const dismissBtn = popup.querySelector('.offer-popup-v3-dismiss');
-  const backdrop = popup.querySelector('.offer-popup-v3-backdrop');
+  const slides = Array.from(card.querySelectorAll('.offer-card-slide'));
+  const closeBtn = card.querySelector('.offer-card-close');
+  let idx = 0;
 
-  const openPopup = () => {
-    popup.classList.add('is-open');
-    popup.setAttribute('aria-hidden', 'false');
+  const showSlide = (n) => {
+    slides.forEach((slide, i) => slide.classList.toggle('is-active', i === n));
   };
 
-  const closePopup = () => {
-    popup.classList.remove('is-open');
-    popup.setAttribute('aria-hidden', 'true');
-  };
+  if (slides.length > 1) {
+    setInterval(() => {
+      idx = (idx + 1) % slides.length;
+      showSlide(idx);
+    }, 3800);
+  }
 
-  setTimeout(openPopup, 350);
+  closeBtn?.addEventListener('click', (event) => {
+    event.preventDefault();
+    card.style.display = 'none';
+    try { localStorage.setItem('offerCardClosed', '1'); } catch(e) {}
+  });
 
-  closeBtn?.addEventListener('click', closePopup);
-  dismissBtn?.addEventListener('click', closePopup);
-  backdrop?.addEventListener('click', closePopup);
+  try {
+    if (localStorage.getItem('offerCardClosed') === '1') {
+      card.style.display = 'none';
+    }
+  } catch(e) {}
 })();
