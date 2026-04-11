@@ -129,3 +129,37 @@ document.addEventListener('click',(e)=>{
     document.getElementById('promoFloat').style.display='none';
   }
 });
+
+
+
+(() => {
+  const card = document.getElementById('offerCardFloat');
+  if (!card) return;
+
+  const slides = Array.from(card.querySelectorAll('.offer-card-slide'));
+  const closeBtn = card.querySelector('.offer-card-close');
+  let idx = 0;
+
+  const showSlide = (n) => {
+    slides.forEach((slide, i) => slide.classList.toggle('is-active', i === n));
+  };
+
+  if (slides.length > 1) {
+    setInterval(() => {
+      idx = (idx + 1) % slides.length;
+      showSlide(idx);
+    }, 3800);
+  }
+
+  closeBtn?.addEventListener('click', (event) => {
+    event.preventDefault();
+    card.style.display = 'none';
+    try { localStorage.setItem('offerCardClosed', '1'); } catch(e) {}
+  });
+
+  try {
+    if (localStorage.getItem('offerCardClosed') === '1') {
+      card.style.display = 'none';
+    }
+  } catch(e) {}
+})();
