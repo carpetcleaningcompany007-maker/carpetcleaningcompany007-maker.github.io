@@ -138,13 +138,16 @@ document.addEventListener('click',(e)=>{
 
 
 
+
+
+
 (() => {
-  const popup = document.getElementById('offerPopupV2');
+  const popup = document.getElementById('offerPopupV3');
   if (!popup) return;
 
-  const closeBtn = popup.querySelector('.offer-popup-v2-close');
-  const dismissBtn = popup.querySelector('.offer-popup-v2-dismiss');
-  const backdrop = popup.querySelector('.offer-popup-v2-backdrop');
+  const closeBtn = popup.querySelector('.offer-popup-v3-close');
+  const dismissBtn = popup.querySelector('.offer-popup-v3-dismiss');
+  const backdrop = popup.querySelector('.offer-popup-v3-backdrop');
 
   const openPopup = () => {
     popup.classList.add('is-open');
@@ -154,16 +157,9 @@ document.addEventListener('click',(e)=>{
   const closePopup = () => {
     popup.classList.remove('is-open');
     popup.setAttribute('aria-hidden', 'true');
-    try { localStorage.setItem('offerPopupV2Closed', '1'); } catch(e) {}
   };
 
-  try {
-    if (localStorage.getItem('offerPopupV2Closed') !== '1') {
-      setTimeout(openPopup, 450);
-    }
-  } catch(e) {
-    setTimeout(openPopup, 450);
-  }
+  setTimeout(openPopup, 350);
 
   closeBtn?.addEventListener('click', closePopup);
   dismissBtn?.addEventListener('click', closePopup);
