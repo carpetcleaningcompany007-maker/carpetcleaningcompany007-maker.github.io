@@ -274,36 +274,31 @@
 </div>
 <script src="./assets/app.js"></script>
 
-<div class="promo-float" id="promoFloat">
-  <button class="promo-float-close">×</button>
-  <a class="promo-float-link" href="carpet-cleaning-quote.html">
-    <span class="promo-float-kicker">Special offer</span>
-    <div class="promo-float-stage">
-      <span class="promo-float-message is-active">Full professional deep clean package</span>
-      <span class="promo-float-message">Deep Clean: Hall, stairs, landing + 1 room for £120</span>
-      <span class="promo-float-message">Limited time only</span>
-    </div>
-    <span class="promo-float-cta">Tap for a quote →</span>
-  </a>
-</div>
-
-
-<div class="offer-card-float" id="offerCardFloat" aria-live="polite">
-  <button class="offer-card-close" type="button" aria-label="Close special offer">×</button>
-  <div class="offer-card-glow"></div>
-  <div class="offer-card-inner">
-    <div class="offer-card-topline">Limited time deep clean offer</div>
-    <div class="offer-card-stage">
-      <div class="offer-card-slide is-active">
-        <div class="offer-card-title">Deep Clean: Hall, stairs, landing + 1 room for £120</div>
-        <div class="offer-card-text">Protect carpets after your clean and help reduce future soiling.</div>
-      </div>
-      <div class="offer-card-slide">
+<div class="offer-card-slide">
         <div class="offer-card-title">Full professional deep clean package</div>
         <div class="offer-card-text">A strong extra for larger bookings and a better all round result.</div>
       </div>
     </div>
     <a class="offer-card-button" href="carpet-cleaning-quote.html">Get this offer</a>
+  </div>
+</div>
+
+
+<div class="offer-popup" id="offerPopup" aria-hidden="true">
+  <div class="offer-popup-backdrop"></div>
+  <div class="offer-popup-panel" role="dialog" aria-modal="true" aria-labelledby="offerPopupTitle">
+    <button class="offer-popup-close" type="button" aria-label="Close offer">×</button>
+
+    <div class="offer-popup-badge">Special offer</div>
+
+    <div class="offer-popup-ribbon">LIMITED TIME OFFER</div>
+
+    <h2 class="offer-popup-title" id="offerPopupTitle">Deep Clean Package</h2>
+    <p class="offer-popup-offer">Hall, stairs, landing and 1 room for £120</p>
+    <p class="offer-popup-text">Professional deep clean package with a strong one visit offer.</p>
+
+    <a class="offer-popup-button" href="carpet-cleaning-quote.html">GET THIS OFFER</a>
+    <button class="offer-popup-dismiss" type="button">No thanks, continue to site</button>
   </div>
 </div>
 
