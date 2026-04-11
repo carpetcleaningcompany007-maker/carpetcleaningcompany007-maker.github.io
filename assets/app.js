@@ -3,6 +3,30 @@
   const menu = document.querySelector('.nav-links');
   const header = document.querySelector('.site-header');
 
+
+  const insertPromoBar = () => {
+    if (document.querySelector('.promo-marquee')) return;
+    const header = document.querySelector('.site-header');
+    if (!header) return;
+    const items = [
+      '5 Star Rated Service',
+      'From only £45 per room',
+      'Free hall and landing with stairs',
+      'Fast WhatsApp quotes',
+      'Fully insured professional cleaning'
+    ];
+    const marquee = document.createElement('div');
+    marquee.className = 'promo-marquee';
+    const repeated = items.concat(items).map((text, index) => {
+      const sep = index < items.concat(items).length - 1 ? '<span class="promo-marquee-sep" aria-hidden="true">•</span>' : '';
+      return `<span class="promo-marquee-item">${text}</span>${sep}`;
+    }).join('');
+    marquee.innerHTML = `<div class="container promo-marquee-inner"><div class="promo-marquee-track" aria-label="Current offers and service highlights">${repeated}</div></div>`;
+    header.insertAdjacentElement('afterend', marquee);
+  };
+  insertPromoBar();
+
+
   const closeAllSubmenus = () => {
     document.querySelectorAll('.nav-item.open').forEach(item => {
       item.classList.remove('open');

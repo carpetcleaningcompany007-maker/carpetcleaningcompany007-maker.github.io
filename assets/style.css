@@ -928,3 +928,17 @@ button,input,textarea,select{font:inherit}
   }
 }
 /* === END MENU CONTRAST FIX APRIL 2026 === */
+
+
+/* Sitewide promo marquee */
+.promo-marquee{position:sticky;top:0;z-index:49;overflow:hidden;background:linear-gradient(90deg,#0f62fe,#093ea4);color:#fff;border-bottom:1px solid rgba(255,255,255,.12)}
+.promo-marquee-inner{display:flex;align-items:center;min-height:42px}
+.promo-marquee-track{display:flex;align-items:center;gap:34px;white-space:nowrap;will-change:transform;animation:promo-scroll 26s linear infinite;padding-inline:10px;font-size:14px;font-weight:800;letter-spacing:.02em}
+.promo-marquee-item{display:inline-flex;align-items:center;gap:10px;opacity:.98}
+.promo-marquee-sep{opacity:.55}
+@keyframes promo-scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@media (prefers-reduced-motion: reduce){.promo-marquee-track{animation:none}}
+@media (max-width:760px){.promo-marquee{position:relative;top:auto}.promo-marquee-inner{min-height:38px}.promo-marquee-track{gap:24px;font-size:13px;animation-duration:22s}}
+
+/* Mobile nav visibility fix */
+@media (max-width:760px){.nav-links.is-open{display:flex}}
