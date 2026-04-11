@@ -928,3 +928,9 @@ button,input,textarea,select{font:inherit}
   }
 }
 /* === END MENU CONTRAST FIX APRIL 2026 === */
+
+.promo-float{position:fixed;right:20px;bottom:20px;z-index:999;width:300px;}
+.promo-float-link{display:block;background:#0f2741;color:#fff;padding:15px;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,.3);}
+.promo-float-message{display:none;font-weight:700;}
+.promo-float-message.is-active{display:block;}
+.promo-float-close{position:absolute;top:5px;right:8px;background:none;border:none;color:#fff;font-size:18px;}

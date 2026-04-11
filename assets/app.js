@@ -115,3 +115,17 @@
     });
   });
 })();
+
+setInterval(()=>{
+  const msgs=document.querySelectorAll('.promo-float-message');
+  if(!msgs.length) return;
+  let active=[...msgs].findIndex(m=>m.classList.contains('is-active'));
+  msgs[active].classList.remove('is-active');
+  msgs[(active+1)%msgs.length].classList.add('is-active');
+},3000);
+
+document.addEventListener('click',(e)=>{
+  if(e.target.classList.contains('promo-float-close')){
+    document.getElementById('promoFloat').style.display='none';
+  }
+});
