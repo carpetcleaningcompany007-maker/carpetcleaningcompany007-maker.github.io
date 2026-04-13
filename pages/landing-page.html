@@ -183,6 +183,45 @@
       box-shadow: 0 12px 28px rgba(2,6,23,.18);
     }
 
+
+    .lower-bright {
+      background:
+        radial-gradient(900px 380px at 100% 0%, rgba(216,179,106,.16), transparent 45%),
+        radial-gradient(700px 280px at 0% 100%, rgba(32,84,161,.10), transparent 42%),
+        linear-gradient(180deg,#ffffff 0%, #f7fbff 100%);
+    }
+    .lower-tint {
+      background:
+        radial-gradient(700px 300px at 100% 0%, rgba(32,84,161,.10), transparent 45%),
+        linear-gradient(180deg,#f8fbff 0%, #eef5ff 100%);
+    }
+    .soft-card {
+      background: linear-gradient(180deg,#ffffff 0%, #f9fbff 100%);
+      border-color: rgba(31,111,255,.10) !important;
+      box-shadow: 0 18px 40px rgba(8,20,40,.08);
+    }
+    .soft-card:hover { box-shadow: 0 24px 52px rgba(8,20,40,.12); }
+    .section-panel {
+      background:
+        radial-gradient(900px 320px at 100% 0%, rgba(216,179,106,.16), transparent 48%),
+        linear-gradient(180deg,#ffffff 0%, #f7fbff 100%);
+      border:1px solid rgba(31,111,255,.10);
+      box-shadow:0 22px 48px rgba(8,20,40,.08);
+    }
+    .video-frame {
+      border-color: rgba(31,111,255,.12) !important;
+      box-shadow: 0 22px 48px rgba(8,20,40,.10);
+    }
+    .review-shell {
+      background:
+        radial-gradient(900px 360px at 100% 0%, rgba(216,179,106,.20), transparent 46%),
+        linear-gradient(180deg,#fffdf7 0%, #f8fbff 100%);
+    }
+    .mid-cta {
+      background: linear-gradient(135deg,#143a66 0%, #1f6fff 100%);
+      box-shadow: 0 20px 50px rgba(20,58,102,.22);
+    }
+
     @media (prefers-reduced-motion: reduce) {
       [data-anim], #satisfactionBadge { opacity: 1 !important; transform: none !important; animation: none !important; }
       .badge-wrap:before { display:none !important; }
@@ -323,11 +362,6 @@
           </div>
 
           <div class="mt-6 flex flex-wrap items-center gap-4">
-            <div class="inline-flex items-center gap-3 rounded-full luxury-chip px-4 py-2 lift">
-              <span class="inline-flex items-center justify-center h-8 w-8 rounded-full bg-brand-300 text-slate-950 text-sm font-extrabold">✓</span>
-              <span class="text-sm font-semibold">100 percent satisfaction guarantee</span>
-            </div>
-
             <div class="guarantee-panel rounded-2xl px-4 py-3 lift">
               <div class="flex items-center gap-4">
                 <img
@@ -364,20 +398,6 @@
                     class="h-24 w-24 sm:h-32 sm:w-32 object-contain drop-shadow-xl"
                   />
                 </span>
-              </div>
-
-              <div class="guarantee-panel light mt-4 rounded-2xl px-4 py-3">
-                <div class="flex items-center gap-4">
-                  <img
-                    src="https://raw.githubusercontent.com/carpetcleaningcompany007-maker/carpet-cleaning-showcase/main/satisfaction_badge_transparent.png"
-                    alt="100% Satisfaction Guaranteed"
-                    class="guarantee-badge-img shrink-0"
-                  />
-                  <div>
-                    <div class="text-sm font-extrabold text-slate-900">100 percent satisfaction guaranteed</div>
-                    <div class="text-xs text-slate-600 mt-1">A careful, professional clean with clear communication from the start.</div>
-                  </div>
-                </div>
               </div>
 
               <form
@@ -489,18 +509,18 @@
   </section>
 
 
-  <section class="py-10 bg-white text-slate-900">
+  <section class="py-12 lower-bright text-slate-900">
     <div class="mx-auto max-w-6xl px-4">
       <div class="grid md:grid-cols-3 gap-5">
-        <div data-anim="reveal" class="rounded-2xl border border-slate-200 bg-slate-50 p-5 shadow-soft lift">
+        <div data-anim="reveal" class="rounded-2xl border border-slate-200 bg-slate-50 p-5 shadow-soft lift soft-card">
           <div class="text-lg font-extrabold">Professional equipment</div>
           <p class="mt-2 text-sm text-slate-600">Airflex, Enforcer 400, Fusion heat system and a proper professional setup.</p>
         </div>
-        <div data-anim="reveal" class="rounded-2xl border border-slate-200 bg-slate-50 p-5 shadow-soft lift">
+        <div data-anim="reveal" class="rounded-2xl border border-slate-200 bg-slate-50 p-5 shadow-soft lift soft-card">
           <div class="text-lg font-extrabold">Clear options</div>
           <p class="mt-2 text-sm text-slate-600">Honest advice on the right level of clean for the carpet and the result you want.</p>
         </div>
-        <div data-anim="reveal" class="rounded-2xl border border-slate-200 bg-slate-50 p-5 shadow-soft lift">
+        <div data-anim="reveal" class="rounded-2xl border border-slate-200 bg-slate-50 p-5 shadow-soft lift soft-card">
           <div class="text-lg font-extrabold">Domestic and commercial</div>
           <p class="mt-2 text-sm text-slate-600">Homes, rentals, estate agents, hotels, offices and guest accommodation.</p>
         </div>
@@ -508,21 +528,21 @@
     </div>
   </section>
 
-  <section class="py-14 bg-white text-slate-900">
+  <section class="py-14 lower-tint text-slate-900">
     <div class="mx-auto max-w-6xl px-4">
       <h2 data-anim="reveal" class="text-3xl font-extrabold">How the clean works</h2>
       <p data-anim="reveal" class="mt-2 text-sm md:text-base text-slate-600 max-w-xl">
         A simple method used in homes and workplaces so you know what to expect on the day.
       </p>
 
-      <div data-anim="reveal" class="mt-5 rounded-2xl border border-brand-100 bg-brand-50 px-5 py-4 shadow-soft lift">
+      <div data-anim="reveal" class="mt-5 rounded-2xl px-5 py-4 shadow-soft lift section-panel">
         <div class="text-xs font-semibold text-brand-700 uppercase">Best results</div>
         <div class="mt-1 text-lg font-extrabold text-slate-900">Steam cleaning up to 120 degrees</div>
         <div class="mt-1 text-sm text-slate-700">High heat helps break down grease, lift deep soil and leave fibres fresh and residue free.</div>
       </div>
 
       <div class="mt-8 grid md:grid-cols-3 gap-6">
-        <div data-anim="reveal" class="bg-slate-50 rounded-2xl border border-slate-200 shadow-soft p-6 lift">
+        <div data-anim="reveal" class="bg-slate-50 rounded-2xl border border-slate-200 shadow-soft p-6 lift soft-card">
           <div class="text-xs font-semibold text-brand-700 uppercase">Step one</div>
           <div class="mt-1 text-lg font-semibold">Survey and vacuum</div>
           <p class="mt-2 text-sm text-slate-600">
@@ -530,7 +550,7 @@
           </p>
         </div>
 
-        <div data-anim="reveal" class="bg-slate-50 rounded-2xl border border-slate-200 shadow-soft p-6 lift">
+        <div data-anim="reveal" class="bg-slate-50 rounded-2xl border border-slate-200 shadow-soft p-6 lift soft-card">
           <div class="text-xs font-semibold text-brand-700 uppercase">Step two</div>
           <div class="mt-1 text-lg font-semibold">Pre spray and CRB agitation</div>
           <p class="mt-2 text-sm text-slate-600">
@@ -538,7 +558,7 @@
           </p>
         </div>
 
-        <div data-anim="reveal" class="bg-slate-50 rounded-2xl border border-slate-200 shadow-soft p-6 lift">
+        <div data-anim="reveal" class="bg-slate-50 rounded-2xl border border-slate-200 shadow-soft p-6 lift soft-card">
           <div class="text-xs font-semibold text-brand-700 uppercase">Step three</div>
           <div class="mt-1 text-lg font-semibold">120 degree steam rinse and finish</div>
           <p class="mt-2 text-sm text-slate-600">
@@ -549,13 +569,13 @@
     </div>
   </section>
 
-  <section id="videos" class="py-14 bg-white text-slate-900">
+  <section id="videos" class="py-14 lower-bright text-slate-900">
     <div class="mx-auto max-w-6xl px-4">
       <h2 data-anim="reveal" class="text-3xl font-extrabold">Watch the results</h2>
       <p data-anim="reveal" class="mt-2 text-slate-600">A recent clean in action.</p>
 
       <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-items-center">
-        <div data-anim="reveal" class="w-[267px] h-[476px] overflow-hidden rounded-2xl border border-slate-200 shadow-soft bg-black lift">
+        <div data-anim="reveal" class="w-[267px] h-[476px] overflow-hidden rounded-2xl border border-slate-200 shadow-soft bg-black lift video-frame">
           <iframe
             src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F61559013150413%2Fvideos%2F1899520797292791%2F&show_text=false"
             width="267" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
@@ -564,7 +584,7 @@
           ></iframe>
         </div>
 
-        <div data-anim="reveal" class="w-[267px] h-[476px] overflow-hidden rounded-2xl border border-slate-200 shadow-soft bg-black lift">
+        <div data-anim="reveal" class="w-[267px] h-[476px] overflow-hidden rounded-2xl border border-slate-200 shadow-soft bg-black lift video-frame">
           <iframe
             src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F61559013150413%2Fvideos%2F1162016885802464%2F&show_text=false"
             width="267" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
@@ -573,7 +593,7 @@
           ></iframe>
         </div>
 
-        <div data-anim="reveal" class="w-[267px] h-[476px] overflow-hidden rounded-2xl border border-slate-200 shadow-soft bg-black lift">
+        <div data-anim="reveal" class="w-[267px] h-[476px] overflow-hidden rounded-2xl border border-slate-200 shadow-soft bg-black lift video-frame">
           <iframe
             src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F61559013150413%2Fvideos%2F1362198414861523%2F&show_text=false"
             width="267" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
@@ -585,7 +605,19 @@
     </div>
   </section>
 
-  <section id="reviews" class="py-14 bg-brand-50 text-slate-900">
+  <section class="py-10 lower-tint text-slate-900">
+    <div class="mx-auto max-w-6xl px-4">
+      <div data-anim="reveal" class="mid-cta rounded-3xl px-6 py-6 text-white flex flex-col md:flex-row items-start md:items-center justify-between gap-4 lift">
+        <div>
+          <div class="text-xs font-semibold uppercase tracking-[0.18em] text-white/70">Quick quote</div>
+          <div class="mt-2 text-2xl font-extrabold">Send photos on WhatsApp for a fast fixed price.</div>
+        </div>
+        <a href="#heroQuoteForm" class="inline-flex items-center justify-center rounded-full bg-white text-slate-950 px-6 py-3 text-sm font-extrabold shadow-soft lift">Get my quote</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews" class="py-14 review-shell text-slate-900">
     <div class="mx-auto max-w-6xl px-4">
       <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
         <div>
@@ -645,7 +677,7 @@
   </section>
 
 
-  <section class="py-14 bg-white text-slate-900">
+  <section class="py-14 lower-tint text-slate-900">
     <div class="mx-auto max-w-6xl px-4">
       <h2 data-anim="reveal" class="text-3xl font-extrabold">Professional cleaning with honest expectations</h2>
       <p data-anim="reveal" class="mt-2 text-sm md:text-base text-slate-600 max-w-3xl">
@@ -653,19 +685,19 @@
       </p>
 
       <div class="mt-8 grid md:grid-cols-2 xl:grid-cols-4 gap-6">
-        <div data-anim="reveal" class="rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-soft lift">
+        <div data-anim="reveal" class="rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-soft lift soft-card">
           <div class="text-lg font-extrabold">Cleaner appearance</div>
           <p class="mt-2 text-sm text-slate-600">Traffic lanes, dull areas and general soiling are treated properly.</p>
         </div>
-        <div data-anim="reveal" class="rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-soft lift">
+        <div data-anim="reveal" class="rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-soft lift soft-card">
           <div class="text-lg font-extrabold">Fresher feel</div>
           <p class="mt-2 text-sm text-slate-600">Agitation and extraction help improve the overall finish of the carpet.</p>
         </div>
-        <div data-anim="reveal" class="rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-soft lift">
+        <div data-anim="reveal" class="rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-soft lift soft-card">
           <div class="text-lg font-extrabold">Targeted stain treatment</div>
           <p class="mt-2 text-sm text-slate-600">Spots and marks are treated individually where appropriate before the main clean.</p>
         </div>
-        <div data-anim="reveal" class="rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-soft lift">
+        <div data-anim="reveal" class="rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-soft lift soft-card">
           <div class="text-lg font-extrabold">Honest advice</div>
           <p class="mt-2 text-sm text-slate-600">You get realistic guidance on likely results before any work begins.</p>
         </div>
