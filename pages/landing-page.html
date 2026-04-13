@@ -31,12 +31,12 @@
       theme: {
         extend: {
           colors: {
-            brand: { 50:"#fff8eb", 100:"#fff1d1", 300:"#f5c15a", 400:"#e9b241", 500:"#d89a1f", 700:"#9b690d" },
-            ink: { 950:"#08111f", 900:"#0b1424", 800:"#10213a", 700:"#17314c" }
+            brand: { 50:"#faf6ef", 100:"#efe3c9", 300:"#d8b36a", 400:"#c89a4a", 500:"#b78433", 700:"#6f4e1d" },
+            ink: { 950:"#090d13", 900:"#0e1622", 800:"#162231", 700:"#243447" }
           },
           boxShadow: {
-            soft:"0 12px 30px rgba(2,6,23,0.18)",
-            card:"0 24px 70px rgba(2,6,23,0.38)"
+            soft:"0 14px 34px rgba(4,9,20,0.16)",
+            card:"0 28px 80px rgba(4,9,20,0.42)"
           }
         }
       }
@@ -155,6 +155,34 @@
     }
     .reveal-wrap.is-open { max-height: 560px; opacity: 1; transform: translateY(0); }
 
+
+
+    .guarantee-panel {
+      border: 1px solid rgba(216,179,106,.30);
+      background: linear-gradient(135deg, rgba(255,255,255,.10), rgba(255,255,255,.05));
+      box-shadow: 0 16px 40px rgba(2,6,23,.22);
+    }
+    .guarantee-panel.light {
+      background: linear-gradient(180deg, #fffefb 0%, #f9f3e7 100%);
+      border: 1px solid rgba(216,179,106,.35);
+      box-shadow: 0 16px 34px rgba(6,12,24,.10);
+    }
+    .guarantee-badge-img {
+      display:block;
+      width: 96px;
+      height: auto;
+      filter: drop-shadow(0 10px 20px rgba(0,0,0,.18));
+    }
+    .guarantee-badge-img.hero {
+      width: 110px;
+    }
+    .luxury-chip {
+      border: 1px solid rgba(216,179,106,.28);
+      background: linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.06));
+      color: #f7f0e3;
+      box-shadow: 0 12px 28px rgba(2,6,23,.18);
+    }
+
     @media (prefers-reduced-motion: reduce) {
       [data-anim], #satisfactionBadge { opacity: 1 !important; transform: none !important; animation: none !important; }
       .badge-wrap:before { display:none !important; }
@@ -162,14 +190,6 @@
       .shimmer:after { animation: none !important; }
       .reveal-wrap { transition:none !important; max-height:none !important; opacity:1 !important; transform:none !important; }
     }
-
-    .site-shell-premium{background:linear-gradient(180deg,#08111f 0%,#091526 100%);}    
-    .premium-panel{background:linear-gradient(180deg,rgba(255,255,255,.06) 0%,rgba(255,255,255,.03) 100%);border:1px solid rgba(255,255,255,.08);box-shadow:0 24px 70px rgba(2,6,23,.38);} 
-    .section-card{border:1px solid rgba(15,23,42,.08);box-shadow:0 18px 46px rgba(2,6,23,.08);} 
-    .hero-chip{display:inline-flex;align-items:center;gap:.55rem;padding:.78rem 1rem;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);font-size:.78rem;font-weight:800;color:rgba(255,255,255,.94);} 
-    .hero-chip b{color:#f5c15a;} 
-    .premium-divider{height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.16),transparent);} 
-
   </style>
 
   <script>
@@ -211,13 +231,13 @@
   </script>
 </head>
 
-<body class="site-shell-premium bg-ink-900 text-slate-100 overflow-x-hidden">
+<body class="bg-ink-900 text-slate-100 overflow-x-hidden">
 
   <div class="pointer-events-none fixed inset-0 z-[1] opacity-[0.06] mix-blend-overlay"
        style="background-image:url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22400%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%222%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22400%22 height=%22400%22 filter=%22url(%23n)%22 opacity=%220.25%22/%3E%3C/svg%3E');">
   </div>
 
-  <header class="fixed top-0 left-0 right-0 z-50 bg-[#07111f]/88 glass border-b border-white/10 shadow-[0_10px_40px_rgba(0,0,0,.28)]">
+  <header class="fixed top-0 left-0 right-0 z-50 bg-[#0f2741]/90 glass border-b border-white/10">
     <div class="mx-auto max-w-6xl px-4 py-1.5 flex items-center justify-between gap-4">
       <div class="flex items-center gap-3 min-w-0">
         <img
@@ -242,21 +262,29 @@
 
   <section class="relative pt-24 md:pt-28 pb-14 md:pb-20 overflow-hidden overflow-x-clip isolate">
     <div class="absolute inset-0">
-      <div class="absolute inset-0 bg-cover bg-center opacity-[0.42]" style="background-image:url('../assets/img/truckmount-hero.webp')"></div>
-      <div class="absolute inset-0 bg-[linear-gradient(135deg,rgba(4,10,20,.92)_0%,rgba(7,18,33,.82)_42%,rgba(11,24,44,.72)_100%)]"></div>
-      <div id="heroGlow" class="absolute inset-0 bg-[radial-gradient(1100px_640px_at_18%_18%,rgba(245,194,92,0.16),transparent_58%),radial-gradient(900px_500px_at_88%_22%,rgba(31,111,255,0.14),transparent_58%)]"></div>
+      <img
+        id="heroImage"
+        class="absolute inset-0 w-full h-full object-cover opacity-75"
+        src="../assets/img/truckmount-hero.webp"
+        alt="Professional carpet cleaning in Ludlow and Shrewsbury"
+        loading="eager"
+        fetchpriority="high"
+      />
+
+      <div class="absolute inset-0 bg-gradient-to-b from-ink-900/40 via-ink-900/70 to-ink-900"></div>
+      <div id="heroGlow" class="absolute inset-0 bg-[radial-gradient(1200px_700px_at_25%_20%,rgba(245,194,92,0.14),transparent_60%)]"></div>
     </div>
 
     <div class="relative mx-auto max-w-6xl px-4">
       <div class="grid lg:grid-cols-2 gap-10 items-start">
         <div class="pt-2">
           <h1 data-anim="hero-title" class="mt-4 text-4xl md:text-5xl font-extrabold leading-tight">
-            Professional Carpet Cleaning in Ludlow and Shrewsbury
-            <span class="block text-slate-200 mt-2">Proper deep cleaning. Fast quotes. Guaranteed results.</span>
+            Carpet Cleaning in Ludlow and Shrewsbury
+            <span class="block text-slate-200 mt-2">Beautiful carpets. Fast quotes. Guaranteed results.</span>
           </h1>
 
           <p data-anim="hero-copy" class="mt-4 text-base md:text-lg text-slate-200 max-w-xl">
-            Professional carpet and upholstery cleaning using CRB agitation, high heat extraction and a proper fibre safe process for a noticeably better result.
+            CRB agitation lifts embedded soil, then hot water extraction with a neutralising rinse for soft, residue free fibres.
           </p>
 
           <p data-anim="hero-copy" class="mt-3 text-sm md:text-base text-slate-300 max-w-2xl">
@@ -294,20 +322,30 @@
             </a>
           </div>
 
-          <div class="mt-6 inline-flex items-center gap-3 rounded-full bg-white/10 border border-white/15 px-4 py-2 lift">
-            <span class="inline-flex items-center justify-center h-8 w-8 rounded-full bg-brand-300 text-slate-950 text-sm font-extrabold">✓</span>
-            <span class="text-sm font-semibold">100 percent satisfaction guarantee</span>
-          </div>
+          <div class="mt-6 flex flex-wrap items-center gap-4">
+            <div class="inline-flex items-center gap-3 rounded-full luxury-chip px-4 py-2 lift">
+              <span class="inline-flex items-center justify-center h-8 w-8 rounded-full bg-brand-300 text-slate-950 text-sm font-extrabold">✓</span>
+              <span class="text-sm font-semibold">100 percent satisfaction guarantee</span>
+            </div>
 
-          <div class="mt-6 grid sm:grid-cols-3 gap-3 max-w-2xl">
-            <div class="hero-chip"><b>Local</b> Ludlow based</div>
-            <div class="hero-chip"><b>5 Star</b> Google rated</div>
-            <div class="hero-chip"><b>Fast</b> Call or WhatsApp quotes</div>
+            <div class="guarantee-panel rounded-2xl px-4 py-3 lift">
+              <div class="flex items-center gap-4">
+                <img
+                  src="https://raw.githubusercontent.com/carpetcleaningcompany007-maker/carpet-cleaning-showcase/main/satisfaction_badge_transparent.png"
+                  alt="100% Satisfaction Guaranteed"
+                  class="guarantee-badge-img hero shrink-0"
+                />
+                <div>
+                  <div class="text-sm font-extrabold text-white">Satisfaction guaranteed</div>
+                  <div class="text-xs text-slate-200">Professional results carried out with care and attention.</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
         <div class="lg:pt-2">
-          <div data-anim="hero-card" class="relative rounded-[2rem] bg-white text-slate-900 shadow-card border border-white/40 overflow-hidden lift max-w-full">
+          <div data-anim="hero-card" class="relative rounded-3xl bg-white text-slate-900 shadow-card border border-white/40 overflow-hidden lift max-w-full">
             <div class="absolute inset-x-0 top-0 h-24 bg-gradient-to-r from-brand-50 via-white to-brand-50"></div>
             <div class="absolute -top-24 -right-24 h-64 w-64 rounded-full bg-brand-100 blur-3xl opacity-70"></div>
 
@@ -319,12 +357,27 @@
                 </div>
 
                 <span class="badge-wrap shrink-0">
-                  <span id="satisfactionBadge" class="grid place-items-center rounded-full h-24 w-24 sm:h-32 sm:w-32 border border-[#f5c15a]/40 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,.98),rgba(253,244,220,.98))] text-center shadow-[0_20px_60px_rgba(216,154,31,.28)]">
-                    <span class="text-[10px] sm:text-xs font-black uppercase tracking-[0.22em] text-slate-500">Guaranteed</span>
-                    <span class="mt-1 text-3xl sm:text-4xl font-black text-[#9b690d] leading-none">100%</span>
-                    <span class="mt-1 text-[10px] sm:text-[11px] font-extrabold uppercase tracking-[0.18em] text-slate-700">Satisfaction</span>
-                  </span>
+                  <img
+                    id="satisfactionBadge"
+                    src="https://raw.githubusercontent.com/carpetcleaningcompany007-maker/carpet-cleaning-showcase/main/satisfaction_badge_transparent.png"
+                    alt="100% Satisfaction Guaranteed"
+                    class="h-24 w-24 sm:h-32 sm:w-32 object-contain drop-shadow-xl"
+                  />
                 </span>
+              </div>
+
+              <div class="guarantee-panel light mt-4 rounded-2xl px-4 py-3">
+                <div class="flex items-center gap-4">
+                  <img
+                    src="https://raw.githubusercontent.com/carpetcleaningcompany007-maker/carpet-cleaning-showcase/main/satisfaction_badge_transparent.png"
+                    alt="100% Satisfaction Guaranteed"
+                    class="guarantee-badge-img shrink-0"
+                  />
+                  <div>
+                    <div class="text-sm font-extrabold text-slate-900">100 percent satisfaction guaranteed</div>
+                    <div class="text-xs text-slate-600 mt-1">A careful, professional clean with clear communication from the start.</div>
+                  </div>
+                </div>
               </div>
 
               <form
@@ -439,15 +492,15 @@
   <section class="py-10 bg-white text-slate-900">
     <div class="mx-auto max-w-6xl px-4">
       <div class="grid md:grid-cols-3 gap-5">
-        <div data-anim="reveal" class="rounded-[1.4rem] border border-slate-200 bg-white p-5 shadow-soft lift section-card">
+        <div data-anim="reveal" class="rounded-2xl border border-slate-200 bg-slate-50 p-5 shadow-soft lift">
           <div class="text-lg font-extrabold">Professional equipment</div>
           <p class="mt-2 text-sm text-slate-600">Airflex, Enforcer 400, Fusion heat system and a proper professional setup.</p>
         </div>
-        <div data-anim="reveal" class="rounded-[1.4rem] border border-slate-200 bg-white p-5 shadow-soft lift section-card">
+        <div data-anim="reveal" class="rounded-2xl border border-slate-200 bg-slate-50 p-5 shadow-soft lift">
           <div class="text-lg font-extrabold">Clear options</div>
           <p class="mt-2 text-sm text-slate-600">Honest advice on the right level of clean for the carpet and the result you want.</p>
         </div>
-        <div data-anim="reveal" class="rounded-[1.4rem] border border-slate-200 bg-white p-5 shadow-soft lift section-card">
+        <div data-anim="reveal" class="rounded-2xl border border-slate-200 bg-slate-50 p-5 shadow-soft lift">
           <div class="text-lg font-extrabold">Domestic and commercial</div>
           <p class="mt-2 text-sm text-slate-600">Homes, rentals, estate agents, hotels, offices and guest accommodation.</p>
         </div>
@@ -469,7 +522,7 @@
       </div>
 
       <div class="mt-8 grid md:grid-cols-3 gap-6">
-        <div data-anim="reveal" class="bg-white rounded-[1.5rem] border border-slate-200 shadow-soft p-6 lift section-card">
+        <div data-anim="reveal" class="bg-slate-50 rounded-2xl border border-slate-200 shadow-soft p-6 lift">
           <div class="text-xs font-semibold text-brand-700 uppercase">Step one</div>
           <div class="mt-1 text-lg font-semibold">Survey and vacuum</div>
           <p class="mt-2 text-sm text-slate-600">
@@ -477,7 +530,7 @@
           </p>
         </div>
 
-        <div data-anim="reveal" class="bg-white rounded-[1.5rem] border border-slate-200 shadow-soft p-6 lift section-card">
+        <div data-anim="reveal" class="bg-slate-50 rounded-2xl border border-slate-200 shadow-soft p-6 lift">
           <div class="text-xs font-semibold text-brand-700 uppercase">Step two</div>
           <div class="mt-1 text-lg font-semibold">Pre spray and CRB agitation</div>
           <p class="mt-2 text-sm text-slate-600">
@@ -485,7 +538,7 @@
           </p>
         </div>
 
-        <div data-anim="reveal" class="bg-white rounded-[1.5rem] border border-slate-200 shadow-soft p-6 lift section-card">
+        <div data-anim="reveal" class="bg-slate-50 rounded-2xl border border-slate-200 shadow-soft p-6 lift">
           <div class="text-xs font-semibold text-brand-700 uppercase">Step three</div>
           <div class="mt-1 text-lg font-semibold">120 degree steam rinse and finish</div>
           <p class="mt-2 text-sm text-slate-600">
@@ -532,7 +585,7 @@
     </div>
   </section>
 
-  <section id="reviews" class="py-16 bg-[linear-gradient(180deg,#f7fafc_0%,#eef4fa_100%)] text-slate-900">
+  <section id="reviews" class="py-14 bg-brand-50 text-slate-900">
     <div class="mx-auto max-w-6xl px-4">
       <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
         <div>
@@ -600,19 +653,19 @@
       </p>
 
       <div class="mt-8 grid md:grid-cols-2 xl:grid-cols-4 gap-6">
-        <div data-anim="reveal" class="rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-soft lift section-card">
+        <div data-anim="reveal" class="rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-soft lift">
           <div class="text-lg font-extrabold">Cleaner appearance</div>
           <p class="mt-2 text-sm text-slate-600">Traffic lanes, dull areas and general soiling are treated properly.</p>
         </div>
-        <div data-anim="reveal" class="rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-soft lift section-card">
+        <div data-anim="reveal" class="rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-soft lift">
           <div class="text-lg font-extrabold">Fresher feel</div>
           <p class="mt-2 text-sm text-slate-600">Agitation and extraction help improve the overall finish of the carpet.</p>
         </div>
-        <div data-anim="reveal" class="rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-soft lift section-card">
+        <div data-anim="reveal" class="rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-soft lift">
           <div class="text-lg font-extrabold">Targeted stain treatment</div>
           <p class="mt-2 text-sm text-slate-600">Spots and marks are treated individually where appropriate before the main clean.</p>
         </div>
-        <div data-anim="reveal" class="rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-soft lift section-card">
+        <div data-anim="reveal" class="rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-soft lift">
           <div class="text-lg font-extrabold">Honest advice</div>
           <p class="mt-2 text-sm text-slate-600">You get realistic guidance on likely results before any work begins.</p>
         </div>
@@ -640,7 +693,7 @@
   </section>
 
 
-  <section class="py-14 bg-[linear-gradient(180deg,#eef4fa_0%,#ffffff_100%)] text-slate-900">
+  <section class="py-12 bg-brand-50 text-slate-900">
     <div class="mx-auto max-w-6xl px-4">
       <div data-anim="reveal" class="rounded-3xl border border-brand-100 bg-white px-6 py-6 shadow-soft lift">
         <div class="text-xs font-semibold text-brand-700 uppercase">Local coverage</div>
@@ -652,7 +705,7 @@
 
   <section id="quote" class="py-14 bg-ink-900">
     <div class="mx-auto max-w-6xl px-4">
-      <div data-anim="reveal" class="rounded-3xl premium-panel p-6 md:p-8 lift">
+      <div data-anim="reveal" class="rounded-3xl bg-white/5 border border-white/10 p-6 md:p-8 lift">
         <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div>
             <h2 class="text-2xl md:text-3xl font-extrabold">Want a fixed price quote</h2>
@@ -735,7 +788,6 @@
         glow.style.transform = `translate(${x * maxX}px, ${y * maxY}px)`;
       }, { passive: true });
     })();
-
 
     (function () {
       const phone = document.getElementById("phoneField");
