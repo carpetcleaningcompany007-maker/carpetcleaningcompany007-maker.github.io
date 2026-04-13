@@ -162,6 +162,118 @@
       .shimmer:after { animation: none !important; }
       .reveal-wrap { transition:none !important; max-height:none !important; opacity:1 !important; transform:none !important; }
     }
+
+    .hero-shell{
+      position:relative;
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:32px;
+      overflow:hidden;
+      background:
+        linear-gradient(100deg, rgba(8,17,31,.90) 0%, rgba(8,17,31,.74) 42%, rgba(8,17,31,.34) 100%),
+        url('../assets/img/hero-carpet-cleaning.webp') center/cover no-repeat;
+      box-shadow: 0 30px 90px rgba(2,6,23,.42);
+    }
+
+    .hero-shell:before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        radial-gradient(1000px 520px at 18% 12%, rgba(245,194,92,.16), transparent 55%),
+        radial-gradient(900px 460px at 90% 82%, rgba(255,255,255,.06), transparent 45%);
+      pointer-events:none;
+    }
+
+    .hero-chip-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:.75rem;
+      margin-top:1.25rem;
+    }
+
+    .hero-chip{
+      display:inline-flex;
+      align-items:center;
+      gap:.55rem;
+      padding:.72rem 1rem;
+      border-radius:999px;
+      background:rgba(255,255,255,.10);
+      border:1px solid rgba(255,255,255,.14);
+      color:#fff;
+      font-size:.83rem;
+      font-weight:700;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    .hero-chip b{
+      color:#f5c15a;
+      font-weight:800;
+    }
+
+    .hero-side-card{
+      background:linear-gradient(180deg, rgba(255,255,255,.99) 0%, rgba(248,250,252,.98) 100%);
+      border:1px solid rgba(255,255,255,.65);
+      box-shadow:0 28px 80px rgba(2,6,23,.28);
+    }
+
+    .hero-card-topline{
+      display:flex;
+      align-items:center;
+      gap:.8rem;
+      margin-bottom:.35rem;
+    }
+
+    .hero-mini-logo{
+      height:52px;
+      width:52px;
+      object-fit:contain;
+      border-radius:14px;
+      box-shadow:0 10px 24px rgba(2,6,23,.12);
+      background:#fff;
+      padding:.35rem;
+    }
+
+    .trust-card{
+      position:relative;
+      overflow:hidden;
+      border-radius:24px;
+      border:1px solid rgba(148,163,184,.22);
+      background:linear-gradient(180deg,#fff 0%, #f8fafc 100%);
+      box-shadow:0 18px 40px rgba(15,23,42,.08);
+    }
+
+    .trust-card:before{
+      content:"";
+      position:absolute;
+      inset:0 0 auto 0;
+      height:5px;
+      background:linear-gradient(90deg, rgba(216,154,31,.92), rgba(245,194,92,.25));
+    }
+
+    .section-shell{
+      border:1px solid rgba(148,163,184,.18);
+      border-radius:28px;
+      background:linear-gradient(180deg,#fff 0%, #f8fafc 100%);
+      box-shadow:0 18px 50px rgba(15,23,42,.08);
+    }
+
+    .highlight-band{
+      border:1px solid rgba(216,154,31,.18);
+      background:linear-gradient(135deg, #fff8eb 0%, #fff 100%);
+      box-shadow:0 18px 44px rgba(216,154,31,.10);
+    }
+
+    @media (max-width: 1024px){
+      .hero-shell{border-radius:28px;}
+    }
+
+    @media (max-width: 640px){
+      .hero-shell{border-radius:24px;}
+      .hero-chip-row{gap:.55rem;}
+      .hero-chip{font-size:.76rem;padding:.64rem .9rem;}
+    }
+
   </style>
 
   <script>
@@ -213,7 +325,7 @@
     <div class="mx-auto max-w-6xl px-4 py-1.5 flex items-center justify-between gap-4">
       <div class="flex items-center gap-3 min-w-0">
         <img
-          src="https://raw.githubusercontent.com/carpetcleaningcompany007-maker/carpet-cleaning-showcase/main/ChatGPT%20Image%20Feb%204,%202026,%2012_51_48%20AM.png"
+          src="../assets/img/logo.webp"
           class="h-14 sm:h-20 w-auto object-contain shrink-0"
           alt="The Carpet Cleaning Company"
         />
@@ -232,217 +344,205 @@
     </div>
   </header>
 
+  
   <section class="relative pt-24 md:pt-28 pb-14 md:pb-20 overflow-hidden overflow-x-clip isolate">
-    <div class="absolute inset-0">
-      <img
-        id="heroVideo"
-        class="absolute inset-0 w-full h-full object-cover opacity-70"
-        src="../assets/img/hero-carpet-cleaning.webp"
-        alt="Professional carpet cleaning"
-        loading="eager"
-        fetchpriority="high"
-      />
-
-      <div class="absolute inset-0 bg-gradient-to-b from-ink-900/40 via-ink-900/70 to-ink-900"></div>
-      <div id="heroGlow" class="absolute inset-0 bg-[radial-gradient(1200px_700px_at_25%_20%,rgba(245,194,92,0.14),transparent_60%)]"></div>
-    </div>
-
     <div class="relative mx-auto max-w-6xl px-4">
-      <div class="grid lg:grid-cols-2 gap-10 items-start">
-        <div class="pt-2">
-          <h1 data-anim="hero-title" class="mt-4 text-4xl md:text-5xl font-extrabold leading-tight">
-            Carpet Cleaning in Ludlow and Shrewsbury
-            <span class="block text-slate-200 mt-2">Beautiful carpets. Fast quotes. Guaranteed results.</span>
-          </h1>
+      <div class="hero-shell">
+        <div id="heroGlow" class="absolute inset-0"></div>
 
-          <p data-anim="hero-copy" class="mt-4 text-base md:text-lg text-slate-200 max-w-xl">
-            CRB agitation lifts embedded soil, then hot water extraction with a neutralising rinse for soft, residue free fibres.
-          </p>
+        <div class="relative grid lg:grid-cols-[1.08fr_.92fr] gap-10 items-start px-5 py-8 sm:px-8 sm:py-10 lg:px-10 lg:py-12">
+          <div class="pt-1 lg:pt-3">
+            <div class="inline-flex items-center gap-2 rounded-full bg-white/10 border border-white/15 px-4 py-2 text-[11px] sm:text-xs font-extrabold uppercase tracking-[0.12em] text-white/95">
+              Trusted local specialists
+            </div>
 
-          <p data-anim="hero-copy" class="mt-3 text-sm md:text-base text-slate-300 max-w-2xl">
-            We provide professional carpet and upholstery cleaning across Ludlow, Shrewsbury and nearby areas including Craven Arms, Church Stretton and Tenbury Wells.
-          </p>
+            <h1 data-anim="hero-title" class="mt-5 text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.02]">
+              Carpet Cleaning in Ludlow and Shrewsbury
+              <span class="block text-slate-200 mt-3">Beautiful carpets. Fast quotes. Proper professional results.</span>
+            </h1>
 
-          <div data-anim="hero-points" class="mt-5 space-y-2 text-sm text-slate-200">
-            <div class="flex items-start gap-3">
-              <span class="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full bg-brand-300 text-slate-950 font-extrabold">✓</span>
-              <span>CRB agitation lifts embedded soil</span>
+            <p data-anim="hero-copy" class="mt-5 text-base md:text-lg text-slate-200 max-w-2xl">
+              CRB agitation lifts embedded soil, followed by hot water extraction and a neutralising rinse for soft, residue free fibres and a much better overall finish.
+            </p>
+
+            <p data-anim="hero-copy" class="mt-4 text-sm md:text-base text-slate-300 max-w-2xl">
+              We provide professional carpet and upholstery cleaning across Ludlow, Shrewsbury and nearby areas including Craven Arms, Church Stretton and Tenbury Wells.
+            </p>
+
+            <div data-anim="hero-points" class="hero-chip-row">
+              <span class="hero-chip"><b>✓</b> CRB agitation</span>
+              <span class="hero-chip"><b>✓</b> Hot water extraction</span>
+              <span class="hero-chip"><b>✓</b> Fully insured</span>
+              <span class="hero-chip"><b>✓</b> Wool and synthetic safe</span>
             </div>
-            <div class="flex items-start gap-3">
-              <span class="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full bg-brand-300 text-slate-950 font-extrabold">✓</span>
-              <span>Steam cleaning up to 120 degrees for the best results</span>
+
+            <div data-anim="hero-cta" class="mt-7 flex flex-wrap gap-3">
+              <a href="#heroQuoteForm" class="inline-flex items-center justify-center rounded-full bg-brand-300 hover:bg-brand-100 text-slate-950 px-6 py-3 text-sm font-extrabold shadow-soft lift shimmer">
+                Get my quote
+              </a>
+              <a href="#reviews" class="inline-flex items-center justify-center rounded-full bg-white/10 border border-white/15 hover:bg-white/15 px-6 py-3 text-sm font-semibold lift">
+                Read reviews first
+              </a>
+              <a href="tel:07802563213" class="inline-flex items-center justify-center rounded-full bg-white/10 border border-white/15 hover:bg-white/15 px-6 py-3 text-sm font-semibold lift">
+                Call 07802 563213
+              </a>
             </div>
-            <div class="flex items-start gap-3">
-              <span class="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full bg-brand-300 text-slate-950 font-extrabold">✓</span>
-              <span>Fully insured for your peace of mind</span>
-            </div>
-            <div class="flex items-start gap-3">
-              <span class="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full bg-brand-300 text-slate-950 font-extrabold">✓</span>
-              <span>Wool and synthetic safe process</span>
+
+            <div class="mt-7 grid sm:grid-cols-3 gap-3 max-w-3xl">
+              <div class="rounded-2xl bg-white/10 border border-white/12 px-4 py-4 backdrop-blur-md">
+                <div class="text-2xl font-extrabold text-white">5.0</div>
+                <div class="text-xs text-slate-200 mt-1">Google rating</div>
+              </div>
+              <div class="rounded-2xl bg-white/10 border border-white/12 px-4 py-4 backdrop-blur-md">
+                <div class="text-2xl font-extrabold text-white">Fast</div>
+                <div class="text-xs text-slate-200 mt-1">quotes by form or phone</div>
+              </div>
+              <div class="rounded-2xl bg-white/10 border border-white/12 px-4 py-4 backdrop-blur-md">
+                <div class="text-2xl font-extrabold text-white">100%</div>
+                <div class="text-xs text-slate-200 mt-1">satisfaction guarantee</div>
+              </div>
             </div>
           </div>
 
-          <div data-anim="hero-cta" class="mt-6 flex flex-wrap gap-3">
-            <a href="#heroQuoteForm" class="inline-flex items-center justify-center rounded-full bg-brand-300 hover:bg-brand-100 text-slate-950 px-6 py-3 text-sm font-extrabold shadow-soft lift shimmer">
-              Get my quote
-            </a>
-            <a href="#videos" class="inline-flex items-center justify-center rounded-full bg-white/10 border border-white/15 hover:bg-white/15 px-6 py-3 text-sm font-semibold lift">
-              Watch videos
-            </a>
-            <a href="#reviews" class="inline-flex items-center justify-center rounded-full bg-white/10 border border-white/15 hover:bg-white/15 px-6 py-3 text-sm font-semibold lift">
-              Read reviews first
-            </a>
-          </div>
+          <div class="lg:pt-2">
+            <div data-anim="hero-card" class="hero-side-card relative rounded-3xl text-slate-900 overflow-hidden lift max-w-full">
+              <div class="absolute inset-x-0 top-0 h-24 bg-gradient-to-r from-brand-50 via-white to-brand-50"></div>
+              <div class="absolute -top-24 -right-24 h-64 w-64 rounded-full bg-brand-100 blur-3xl opacity-70"></div>
 
-          <div class="mt-6 inline-flex items-center gap-3 rounded-full bg-white/10 border border-white/15 px-4 py-2 lift">
-            <span class="inline-flex items-center justify-center h-8 w-8 rounded-full bg-brand-300 text-slate-950 text-sm font-extrabold">✓</span>
-            <span class="text-sm font-semibold">100 percent satisfaction guarantee</span>
-          </div>
-        </div>
-
-        <div class="lg:pt-2">
-          <div data-anim="hero-card" class="relative rounded-3xl bg-white text-slate-900 shadow-card border border-white/40 overflow-hidden lift max-w-full">
-            <div class="absolute inset-x-0 top-0 h-24 bg-gradient-to-r from-brand-50 via-white to-brand-50"></div>
-            <div class="absolute -top-24 -right-24 h-64 w-64 rounded-full bg-brand-100 blur-3xl opacity-70"></div>
-
-            <div class="relative p-6 md:p-7">
-              <div class="flex items-start justify-between gap-4">
-                <div class="min-w-0">
-                  <div class="text-xl font-extrabold">Instant Quote Request</div>
-                  <p class="mt-1 text-sm text-slate-600">Fast fixed price quote and earliest available dates</p>
+              <div class="relative p-6 md:p-7">
+                <div class="hero-card-topline">
+                  <img src="../assets/img/logo.webp" alt="The Carpet Cleaning Company logo" class="hero-mini-logo" />
+                  <div class="min-w-0">
+                    <div class="text-xl font-extrabold">Instant Quote Request</div>
+                    <p class="mt-1 text-sm text-slate-600">Fast fixed price quote and earliest available dates</p>
+                  </div>
                 </div>
 
-                <span class="badge-wrap shrink-0">
-                  <img
-                    id="satisfactionBadge"
-                    src="https://raw.githubusercontent.com/carpetcleaningcompany007-maker/carpet-cleaning-showcase/main/satisfaction_badge_transparent.png"
-                    alt="100% Satisfaction Guaranteed"
-                    class="h-24 w-24 sm:h-36 sm:w-36 object-contain drop-shadow-xl"
-                  />
-                </span>
-              </div>
+                <div class="mt-4 rounded-2xl border border-brand-100 bg-brand-50 px-4 py-3 text-sm text-slate-700">
+                  Send your details below and we will reply with honest advice, a clear price and our next available dates.
+                </div>
 
-              <form
-                id="heroQuoteForm"
-                class="mt-5"
-                action="https://formspree.io/f/mblnzwpv"
-                method="POST"
-                onsubmit="submitQuote(event, this);"
-              >
-                <input type="hidden" name="_subject" value="New Quote Request - The Carpet Cleaning Company" />
-                <input type="hidden" name="_format" value="plain" />
+                <form
+                  id="heroQuoteForm"
+                  class="mt-5"
+                  action="https://formspree.io/f/mblnzwpv"
+                  method="POST"
+                  onsubmit="submitQuote(event, this);"
+                >
+                  <input type="hidden" name="_subject" value="New Quote Request - The Carpet Cleaning Company" />
+                  <input type="hidden" name="_format" value="plain" />
 
-                <div class="space-y-4">
+                  <div class="space-y-4">
 
-                  <div class="grid sm:grid-cols-2 gap-4">
+                    <div class="grid sm:grid-cols-2 gap-4">
+                      <label class="block">
+                        <span class="text-sm font-semibold text-slate-700">Postcode <span class="text-rose-500">*</span></span>
+                        <input required name="postcode" autocomplete="postal-code"
+                          class="premium-field mt-1 w-full rounded-xl border border-slate-300 px-3 py-2.5 text-sm"
+                          placeholder="e.g. SY8 1AA" />
+                      </label>
+
+                      <label class="block">
+                        <span class="text-sm font-semibold text-slate-700">Rooms or areas</span>
+                        <select name="areas"
+                          class="premium-field mt-1 w-full rounded-xl border border-slate-300 px-3 py-2.5 text-sm bg-white">
+                          <option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option>
+                        </select>
+                      </label>
+                    </div>
+
                     <label class="block">
-                      <span class="text-sm font-semibold text-slate-700">Postcode <span class="text-rose-500">*</span></span>
-                      <input required name="postcode" autocomplete="postal-code"
-                        class="premium-field mt-1 w-full rounded-xl border border-slate-300 px-3 py-2.5 text-sm"
-                        placeholder="e.g. SY8 1AA" />
-                    </label>
-
-                    <label class="block">
-                      <span class="text-sm font-semibold text-slate-700">Rooms or areas</span>
-                      <select name="areas"
+                      <span class="text-sm font-semibold text-slate-700">What do you need <span class="text-rose-500">*</span></span>
+                      <select required name="service"
                         class="premium-field mt-1 w-full rounded-xl border border-slate-300 px-3 py-2.5 text-sm bg-white">
-                        <option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option>
+                        <option value="" selected disabled>Select a service</option>
+                        <option>Carpet cleaning</option>
+                        <option>Upholstery cleaning</option>
+                        <option>Carpets and upholstery</option>
+                        <option>Commercial cleaning</option>
                       </select>
                     </label>
-                  </div>
-
-                  <label class="block">
-                    <span class="text-sm font-semibold text-slate-700">What do you need <span class="text-rose-500">*</span></span>
-                    <select required name="service"
-                      class="premium-field mt-1 w-full rounded-xl border border-slate-300 px-3 py-2.5 text-sm bg-white">
-                      <option value="" selected disabled>Select a service</option>
-                      <option>Carpet cleaning</option>
-                      <option>Upholstery cleaning</option>
-                      <option>Carpets and upholstery</option>
-                      <option>Commercial cleaning</option>
-                    </select>
-                  </label>
-
-                  <label class="block">
-                    <span class="text-sm font-semibold text-slate-700">Full name <span class="text-rose-500">*</span></span>
-                    <input required name="name" autocomplete="name"
-                      class="premium-field mt-1 w-full rounded-xl border border-slate-300 px-3 py-2.5 text-sm"
-                      placeholder="Your name" />
-                  </label>
-
-                  <div class="grid sm:grid-cols-2 gap-4">
-                    <label class="block">
-                      <span class="text-sm font-semibold text-slate-700">Phone <span class="text-rose-500">*</span></span>
-                      <input required id="phoneField" name="phone" inputmode="tel" autocomplete="tel"
-                        class="premium-field mt-1 w-full rounded-xl border border-slate-300 px-3 py-2.5 text-sm"
-                        placeholder="07..." />
-                    </label>
 
                     <label class="block">
-                      <span class="text-sm font-semibold text-slate-700">Email <span class="text-rose-500">*</span></span>
-                      <input required id="emailField" name="email" type="email" autocomplete="email"
+                      <span class="text-sm font-semibold text-slate-700">Full name <span class="text-rose-500">*</span></span>
+                      <input required name="name" autocomplete="name"
                         class="premium-field mt-1 w-full rounded-xl border border-slate-300 px-3 py-2.5 text-sm"
-                        placeholder="you@example.com" />
+                        placeholder="Your name" />
                     </label>
-                  </div>
 
-                  <div id="extraFields" class="reveal-wrap">
-                    <div class="rounded-2xl border border-brand-100 bg-brand-50 px-4 py-4 shadow-soft">
-                      <div class="text-sm font-extrabold text-slate-900">Anything we should know</div>
-                      <div class="text-xs text-slate-700 mt-1">Stains, pets, parking, access, ideal days</div>
+                    <div class="grid sm:grid-cols-2 gap-4">
+                      <label class="block">
+                        <span class="text-sm font-semibold text-slate-700">Phone <span class="text-rose-500">*</span></span>
+                        <input required id="phoneField" name="phone" inputmode="tel" autocomplete="tel"
+                          class="premium-field mt-1 w-full rounded-xl border border-slate-300 px-3 py-2.5 text-sm"
+                          placeholder="07..." />
+                      </label>
 
-                      <textarea name="notes" rows="3"
-                        class="premium-field mt-3 w-full rounded-xl border border-brand-100 bg-white px-3 py-2.5 text-sm"
-                        placeholder="Type here..."></textarea>
+                      <label class="block">
+                        <span class="text-sm font-semibold text-slate-700">Email <span class="text-rose-500">*</span></span>
+                        <input required id="emailField" name="email" type="email" autocomplete="email"
+                          class="premium-field mt-1 w-full rounded-xl border border-slate-300 px-3 py-2.5 text-sm"
+                          placeholder="you@example.com" />
+                      </label>
+                    </div>
 
-                      <div class="mt-4 rounded-xl border border-brand-100 bg-white px-4 py-3">
-                        <div class="text-sm font-extrabold text-slate-900">Buy now pay later with Klarna</div>
-                        <div class="text-xs text-slate-600 mt-1">We can offer Klarna so you can spread the cost over 3 months. Interested?</div>
+                    <div id="extraFields" class="reveal-wrap">
+                      <div class="rounded-2xl border border-brand-100 bg-brand-50 px-4 py-4 shadow-soft">
+                        <div class="text-sm font-extrabold text-slate-900">Anything we should know</div>
+                        <div class="text-xs text-slate-700 mt-1">Stains, pets, parking, access, ideal days</div>
 
-                        <div class="mt-3 flex flex-wrap gap-3">
-                          <label class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-3 py-2 text-xs font-bold text-slate-700">
-                            <input type="radio" name="klarna_interest" value="Yes" class="h-4 w-4" />
-                            Yes
-                          </label>
-                          <label class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-3 py-2 text-xs font-bold text-slate-700">
-                            <input type="radio" name="klarna_interest" value="No" class="h-4 w-4" />
-                            No
-                          </label>
+                        <textarea name="notes" rows="3"
+                          class="premium-field mt-3 w-full rounded-xl border border-brand-100 bg-white px-3 py-2.5 text-sm"
+                          placeholder="Type here..."></textarea>
+
+                        <div class="mt-4 rounded-xl border border-brand-100 bg-white px-4 py-3">
+                          <div class="text-sm font-extrabold text-slate-900">Buy now pay later with Klarna</div>
+                          <div class="text-xs text-slate-600 mt-1">We can offer Klarna so you can spread the cost over 3 months. Interested?</div>
+
+                          <div class="mt-3 flex flex-wrap gap-3">
+                            <label class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-3 py-2 text-xs font-bold text-slate-700">
+                              <input type="radio" name="klarna_interest" value="Yes" class="h-4 w-4" />
+                              Yes
+                            </label>
+                            <label class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-3 py-2 text-xs font-bold text-slate-700">
+                              <input type="radio" name="klarna_interest" value="No" class="h-4 w-4" />
+                              No
+                            </label>
+                          </div>
                         </div>
                       </div>
                     </div>
+
+                    <button id="submitBtn" type="submit"
+                      class="w-full rounded-2xl bg-brand-300 hover:bg-brand-100 text-slate-950 px-4 py-3.5 text-sm font-extrabold shadow-soft lift shimmer">
+                      Get my quote
+                    </button>
+
+                    <p class="text-xs text-slate-500 text-center">We will contact you from 07802 563213. No obligation.</p>
                   </div>
+                </form>
 
-                  <button id="submitBtn" type="submit"
-                    class="w-full rounded-2xl bg-brand-300 hover:bg-brand-100 text-slate-950 px-4 py-3.5 text-sm font-extrabold shadow-soft lift shimmer">
-                    Get my quote
-                  </button>
-
-                  <p class="text-xs text-slate-500 text-center">We will contact you from 07802 563213. No obligation.</p>
-                </div>
-              </form>
-
+              </div>
             </div>
           </div>
-        </div>
 
+        </div>
       </div>
     </div>
   </section>
 
-
   <section class="py-10 bg-white text-slate-900">
     <div class="mx-auto max-w-6xl px-4">
       <div class="grid md:grid-cols-3 gap-5">
-        <div data-anim="reveal" class="rounded-2xl border border-slate-200 bg-slate-50 p-5 shadow-soft lift">
+        <div data-anim="reveal" class="trust-card p-5 lift">
           <div class="text-lg font-extrabold">Professional equipment</div>
           <p class="mt-2 text-sm text-slate-600">Airflex, Enforcer 400, Fusion heat system and a proper professional setup.</p>
         </div>
-        <div data-anim="reveal" class="rounded-2xl border border-slate-200 bg-slate-50 p-5 shadow-soft lift">
+        <div data-anim="reveal" class="trust-card p-5 lift">
           <div class="text-lg font-extrabold">Clear options</div>
           <p class="mt-2 text-sm text-slate-600">Honest advice on the right level of clean for the carpet and the result you want.</p>
         </div>
-        <div data-anim="reveal" class="rounded-2xl border border-slate-200 bg-slate-50 p-5 shadow-soft lift">
+        <div data-anim="reveal" class="trust-card p-5 lift">
           <div class="text-lg font-extrabold">Domestic and commercial</div>
           <p class="mt-2 text-sm text-slate-600">Homes, rentals, estate agents, hotels, offices and guest accommodation.</p>
         </div>
@@ -452,6 +552,7 @@
 
   <section class="py-14 bg-white text-slate-900">
     <div class="mx-auto max-w-6xl px-4">
+      <div class="section-shell p-6 md:p-8">
       <h2 data-anim="reveal" class="text-3xl font-extrabold">How the clean works</h2>
       <p data-anim="reveal" class="mt-2 text-sm md:text-base text-slate-600 max-w-xl">
         A simple method used in homes and workplaces so you know what to expect on the day.
@@ -488,14 +589,17 @@
           </p>
         </div>
       </div>
+      </div>
     </div>
   </section>
 
   <section id="videos" class="py-14 bg-white text-slate-900">
     <div class="mx-auto max-w-6xl px-4">
+      <div class="highlight-band rounded-3xl px-6 py-6 md:px-8 md:py-7 mb-6">
       <h2 data-anim="reveal" class="text-3xl font-extrabold">Watch the results</h2>
       <p data-anim="reveal" class="mt-2 text-slate-600">A recent clean in action.</p>
 
+      </div>
       <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-items-center">
         <div data-anim="reveal" class="w-[267px] h-[476px] overflow-hidden rounded-2xl border border-slate-200 shadow-soft bg-black lift">
           <iframe
@@ -595,19 +699,19 @@
       </p>
 
       <div class="mt-8 grid md:grid-cols-2 xl:grid-cols-4 gap-6">
-        <div data-anim="reveal" class="rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-soft lift">
+        <div data-anim="reveal" class="trust-card p-6 lift">
           <div class="text-lg font-extrabold">Cleaner appearance</div>
           <p class="mt-2 text-sm text-slate-600">Traffic lanes, dull areas and general soiling are treated properly.</p>
         </div>
-        <div data-anim="reveal" class="rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-soft lift">
+        <div data-anim="reveal" class="trust-card p-6 lift">
           <div class="text-lg font-extrabold">Fresher feel</div>
           <p class="mt-2 text-sm text-slate-600">Agitation and extraction help improve the overall finish of the carpet.</p>
         </div>
-        <div data-anim="reveal" class="rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-soft lift">
+        <div data-anim="reveal" class="trust-card p-6 lift">
           <div class="text-lg font-extrabold">Targeted stain treatment</div>
           <p class="mt-2 text-sm text-slate-600">Spots and marks are treated individually where appropriate before the main clean.</p>
         </div>
-        <div data-anim="reveal" class="rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-soft lift">
+        <div data-anim="reveal" class="trust-card p-6 lift">
           <div class="text-lg font-extrabold">Honest advice</div>
           <p class="mt-2 text-sm text-slate-600">You get realistic guidance on likely results before any work begins.</p>
         </div>
@@ -637,7 +741,7 @@
 
   <section class="py-12 bg-brand-50 text-slate-900">
     <div class="mx-auto max-w-6xl px-4">
-      <div data-anim="reveal" class="rounded-3xl border border-brand-100 bg-white px-6 py-6 shadow-soft lift">
+      <div data-anim="reveal" class="highlight-band rounded-3xl px-6 py-6 shadow-soft lift">
         <div class="text-xs font-semibold text-brand-700 uppercase">Local coverage</div>
         <h2 class="mt-2 text-2xl font-extrabold">Local carpet cleaning across Ludlow, Shrewsbury and surrounding areas</h2>
         <p class="mt-2 text-sm md:text-base text-slate-600 max-w-3xl">We cover Ludlow, Shrewsbury and nearby towns for carpet cleaning, upholstery cleaning, stain removal, rug cleaning and commercial cleaning.</p>
