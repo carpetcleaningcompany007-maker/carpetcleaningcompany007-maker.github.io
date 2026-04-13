@@ -237,12 +237,9 @@
       .reveal-wrap { transition:none !important; max-height:none !important; opacity:1 !important; transform:none !important; }
     }
   
-    .selected-highlight{
-      box-shadow:0 0 0 4px rgba(31,111,255,.18) !important;
-      border-color:#1f6fff !important;
-      transition:box-shadow .25s ease,border-color .25s ease;
-    }
-  </style>
+
+    .service-card-photo{ box-shadow: 0 18px 40px rgba(0,0,0,.18); }
+    </style>
 
   <script>
     (function () {
@@ -523,8 +520,64 @@
           <p class="mt-2 text-sm text-slate-600">Homes, rentals, estate agents, hotels, offices and guest accommodation.</p>
         </div>
       </div>
+
+      <p class="mt-8 text-center text-sm text-slate-600">
+        Prefer to browse everything first?
+        <a href="../index.html" class="font-extrabold text-blue-700 underline decoration-2 underline-offset-4 hover:text-blue-800">
+          View our full website here
+        </a>
+      </p>
     </div>
   </section>
+
+
+  <section class="py-14 lower-tint text-slate-900">
+    <div class="mx-auto max-w-6xl px-4">
+      <div class="text-center">
+        <span data-anim="reveal" class="inline-flex items-center rounded-full bg-white/70 px-4 py-2 text-xs font-extrabold uppercase tracking-[0.18em] text-brand-700 shadow-soft">Main services</span>
+        <h2 data-anim="reveal" class="mt-4 text-3xl md:text-5xl font-extrabold tracking-tight">Our cleaning services</h2>
+        <p data-anim="reveal" class="mt-4 text-base md:text-lg text-slate-600 max-w-3xl mx-auto">
+          We offer professional carpet and upholstery cleaning services for homes and commercial properties across Ludlow, Shrewsbury and nearby areas.
+        </p>
+      </div>
+
+      <div class="mt-10 grid md:grid-cols-3 gap-6">
+        <article data-anim="reveal" class="overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-soft lift soft-card">
+          <img src="../assets/img/hero-carpet-cleaning.webp" alt="Professional carpet cleaning" class="h-64 w-full object-cover" loading="eager" fetchpriority="high">
+          <div class="p-7 text-center">
+            <h3 class="text-2xl font-extrabold text-slate-900">Carpet Cleaning</h3>
+            <p class="mt-4 text-base leading-8 text-slate-600">
+              Professional carpet cleaning for homes, rentals, guest accommodation and commercial premises using powerful extraction equipment and tailored cleaning solutions.
+            </p>
+            <a href="#heroQuoteForm" class="mt-6 inline-flex items-center justify-center rounded-full bg-blue-600 px-7 py-3 text-base font-extrabold text-white shadow-soft transition hover:-translate-y-0.5 hover:bg-blue-700" onclick="selectService('Carpet cleaning')">Get quote for this</a>
+          </div>
+        </article>
+
+        <article data-anim="reveal" class="overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-soft lift soft-card">
+          <img src="../assets/img/upholstery-cleaning.webp" alt="Professional upholstery cleaning" class="h-64 w-full object-cover" loading="lazy">
+          <div class="p-7 text-center">
+            <h3 class="text-2xl font-extrabold text-slate-900">Upholstery Cleaning</h3>
+            <p class="mt-4 text-base leading-8 text-slate-600">
+              Sofa, chair and fabric upholstery cleaning with careful fibre assessment, stain treatment and fast drying methods.
+            </p>
+            <a href="#heroQuoteForm" class="mt-6 inline-flex items-center justify-center rounded-full bg-blue-600 px-7 py-3 text-base font-extrabold text-white shadow-soft transition hover:-translate-y-0.5 hover:bg-blue-700" onclick="selectService('Upholstery cleaning')">Get quote for this</a>
+          </div>
+        </article>
+
+        <article data-anim="reveal" class="overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-soft lift soft-card">
+          <img src="../assets/img/rug-cleaning.webp" alt="Professional rug cleaning" class="h-64 w-full object-cover" loading="lazy">
+          <div class="p-7 text-center">
+            <h3 class="text-2xl font-extrabold text-slate-900">Rug Cleaning</h3>
+            <p class="mt-4 text-base leading-8 text-slate-600">
+              Professional rug cleaning for synthetic and delicate rugs using methods chosen for the fibre type, construction and level of soiling.
+            </p>
+            <a href="#heroQuoteForm" class="mt-6 inline-flex items-center justify-center rounded-full bg-blue-600 px-7 py-3 text-base font-extrabold text-white shadow-soft transition hover:-translate-y-0.5 hover:bg-blue-700" onclick="selectService('Rug cleaning')">Get quote for this</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
 
   <section class="py-14 lower-tint text-slate-900">
     <div class="mx-auto max-w-6xl px-4">
@@ -1063,24 +1116,27 @@
 
 <script>
 function selectService(service){
-  const select = document.querySelector('select[name="option"]');
-  if (select) {
-    const wanted = String(service || '').trim().toLowerCase();
-    for (const opt of select.options) {
-      const label = String(opt.value || opt.textContent || '').trim().toLowerCase();
-      if (label === wanted || label.includes(wanted) || wanted.includes(label)) {
-        select.value = opt.value || opt.textContent;
-        break;
-      }
+  const select = document.querySelector('select[name="service"]');
+  if (!select) return;
+
+  const wanted = String(service || '').trim().toLowerCase();
+  for (const opt of select.options) {
+    const label = String(opt.value || opt.textContent || '').trim().toLowerCase();
+    if (label === wanted || label.includes(wanted) || wanted.includes(label)) {
+      select.value = opt.value || opt.textContent;
+      break;
     }
-    select.classList.add('selected-highlight');
-    setTimeout(() => select.classList.remove('selected-highlight'), 1800);
   }
 
-  const target = document.getElementById('contact-form');
-  if (target) {
-    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  const form = document.getElementById('heroQuoteForm');
+  if (form) {
+    form.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
+
+  select.classList.add('ring-4', 'ring-brand-300/40', 'border-brand-500');
+  setTimeout(() => {
+    select.classList.remove('ring-4', 'ring-brand-300/40', 'border-brand-500');
+  }, 1800);
 }
 </script>
 
