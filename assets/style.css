@@ -1138,3 +1138,42 @@ button,input,textarea,select{font:inherit}
   .offer-popup-v3-button{min-width:220px;min-height:54px;font-size:1rem;}
 }
 /* === END POPUP OFFER V3 === */
+
+
+/* === NAV_ORGANISE_REFRESH === */
+.nav-links .nav-quote{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:42px;
+  padding:0 16px;
+  border-radius:999px;
+  background:linear-gradient(135deg,var(--brand),var(--brand2));
+  color:#fff !important;
+  font-weight:800;
+  box-shadow:0 14px 28px rgba(15,98,254,.24);
+}
+.nav-links .nav-quote:hover{
+  color:#fff !important;
+  transform:translateY(-1px);
+}
+.nav-cta .btn-quote,
+.nav-cta a[href$="carpet-cleaning-quote.html"],
+.nav-cta a[href="../carpet-cleaning-quote.html"],
+.nav-cta a[href="../../carpet-cleaning-quote.html"]{
+  display:none !important;
+}
+@media (max-width: 1220px){
+  .nav-links .nav-quote{
+    min-height:40px;
+    padding:0 14px;
+  }
+}
+@media (max-width: 760px){
+  .nav-links .nav-quote{
+    width:100%;
+    justify-content:center;
+    margin-top:8px;
+  }
+}
+/* === END_NAV_ORGANISE_REFRESH === */
