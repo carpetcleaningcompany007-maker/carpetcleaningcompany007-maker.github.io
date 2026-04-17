@@ -17,6 +17,23 @@
   <meta property="og:description" content="Professional carpet cleaning in Shrewsbury with upholstery cleaning, stain removal, rug cleaning, hard floor cleaning and licensed moth treatment across the town and nearby villages.">
   <meta property="og:title" content="Carpet Cleaning, Upholstery and More in Shrewsbury | The Carpet Cleaning Company">
 
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { 50:"#faf6ef", 100:"#efe3c9", 300:"#d8b36a", 400:"#c89a4a", 500:"#b78433", 700:"#6f4e1d" }
+          },
+          boxShadow: {
+            soft:"0 14px 34px rgba(4,9,20,0.16)",
+            card:"0 28px 80px rgba(4,9,20,0.42)"
+          }
+        }
+      }
+    }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -33,41 +50,18 @@
   </script>
 
   <style>
-    .shrew-hero-card{
-      background:linear-gradient(180deg,rgba(255,255,255,.99),rgba(245,249,253,.97));
-      border:1px solid rgba(18,38,58,.08);
-      border-radius:30px;
-      box-shadow:0 28px 60px rgba(8,20,40,.16);
-      padding:28px;
-    }
-    .shrew-hero-card h3{margin:0 0 10px;color:#0f2741;font-size:1.45rem}
-    .shrew-hero-card p{margin:0 0 16px;color:#4d647a;line-height:1.7}
-    .shrew-form-meta{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 16px;padding:0;list-style:none}
-    .shrew-form-meta li{
-      background:#edf5ff;
-      color:#0f5fe6;
-      border:1px solid rgba(15,95,230,.12);
-      border-radius:999px;
-      padding:8px 12px;
-      font-size:.84rem;
-      font-weight:800;
-    }
-    .shrew-hero-form{display:grid;gap:12px}
-    .shrew-hero-form .grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-    .shrew-hero-form label{display:grid;gap:6px}
-    .shrew-hero-form span{font-size:14px;font-weight:700;color:#20364d}
-    .shrew-hero-form input,.shrew-hero-form select,.shrew-hero-form textarea{
-      width:100%;min-height:52px;padding:0 15px;border-radius:16px;
-      border:1.5px solid #d9e5f0;background:#fff;color:#102740;font:inherit;
-      box-shadow:0 4px 12px rgba(12,31,51,.03)
-    }
-    .shrew-hero-form textarea{min-height:112px;padding:14px 15px;resize:vertical}
-    .shrew-hero-form input:focus,.shrew-hero-form select:focus,.shrew-hero-form textarea:focus{
-      outline:none;border-color:#7db0ff;box-shadow:0 0 0 4px rgba(31,111,255,.12)
-    }
-    .shrew-form-actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
-    .shrew-form-note{margin:0;color:#5f7388;font-size:.94rem}
-    .shrew-mini-link{color:#0f5fe6;font-weight:700;text-decoration:none}
+    .shrew-hero-card{position:relative;background:linear-gradient(180deg,rgba(255,255,255,.99),rgba(245,249,253,.97));border:1px solid rgba(18,38,58,.08);border-radius:30px;box-shadow:0 28px 60px rgba(8,20,40,.16);padding:0;overflow:hidden}
+    .lift{transition:transform .18s ease, box-shadow .18s ease}
+    .lift:hover{transform:translateY(-2px)}
+    .premium-field:focus{outline:none;box-shadow:0 0 0 4px rgba(233,178,65,.22);border-color:rgba(216,154,31,.95)}
+    .shimmer{position:relative;overflow:hidden}
+    .shimmer:after{content:"";position:absolute;inset:-40% -60%;transform:rotate(20deg);background:linear-gradient(90deg, transparent, rgba(255,255,255,.25), transparent);animation:shimmer 3.5s infinite;pointer-events:none}
+    @keyframes shimmer{0%{transform:translateX(-40%) rotate(20deg);opacity:0}10%{opacity:1}50%{transform:translateX(40%) rotate(20deg);opacity:0}100%{opacity:0}}
+    .badge-wrap{position:relative;display:inline-grid;place-items:center}
+    .badge-wrap:before{content:"";position:absolute;width:120%;height:120%;border-radius:999px;border:2px solid rgba(233,178,65,.35);opacity:.8}
+    .shrew-card-inner{position:relative;padding:24px 24px 26px}
+    .shrew-card-glow{position:absolute;inset:auto auto 0 0;width:220px;height:220px;background:radial-gradient(circle, rgba(216,179,106,.18) 0%, rgba(216,179,106,0) 70%);pointer-events:none}
+    .shrew-card-top{position:absolute;inset-inline:0;top:0;height:92px;background:linear-gradient(to right,#faf6ef,#fff,#faf6ef)}
 
     .shrew-band{
       background:#fff;
@@ -231,43 +225,104 @@
     </div>
 
     <div class="shrew-hero-card reveal">
-      <h3>Get a fast Shrewsbury quote</h3>
-      <p>Use the form and send the basics over now. This works far better here than another chunky promo box.</p>
-      <ul class="shrew-form-meta">
-        <li>Fast response</li>
-        <li>Phone or WhatsApp</li>
-        <li>Homes and commercial</li>
-      </ul>
-      <form class="shrew-hero-form" action="https://formspree.io/f/mblnzwpv" method="POST">
-        <input type="hidden" name="_subject" value="New Quote Request - Shrewsbury Hero Form">
-        <input type="hidden" name="_format" value="plain">
-        <input type="hidden" name="_page" value="pages/local/shrewsbury.html">
-        <input type="hidden" name="_redirect" value="../../thank-you.html">
-        <div class="grid2">
-          <label><span>Name</span><input required name="name" type="text" placeholder="Your name"></label>
-          <label><span>Phone</span><input required name="phone" type="tel" placeholder="07..."></label>
+      <div class="shrew-card-top"></div>
+      <div class="shrew-card-glow"></div>
+      <div class="shrew-card-inner">
+        <div class="flex items-start justify-between gap-4">
+          <div class="min-w-0">
+            <div class="text-xl font-extrabold text-slate-900">Instant Quote Request</div>
+            <p class="mt-1 text-sm text-slate-600">Fast fixed price quote and earliest available dates</p>
+          </div>
+          <span class="badge-wrap shrink-0">
+            <img
+              src="https://raw.githubusercontent.com/carpetcleaningcompany007-maker/carpet-cleaning-showcase/main/satisfaction_badge_transparent.png"
+              alt="100% Satisfaction Guaranteed"
+              class="h-24 w-24 sm:h-28 sm:w-28 object-contain drop-shadow-xl"
+            />
+          </span>
         </div>
-        <div class="grid2">
-          <label><span>Postcode or area</span><input required name="postcode" type="text" placeholder="Shrewsbury, SY1, SY2..."></label>
-          <label><span>Service</span>
-            <select required name="service">
-              <option value="">Choose a service</option>
-              <option>Carpet cleaning</option>
-              <option>Upholstery cleaning</option>
-              <option>Rug cleaning</option>
-              <option>Stain removal</option>
-              <option>Moth treatment</option>
-              <option>Commercial cleaning</option>
-            </select>
-          </label>
-        </div>
-        <label><span>What needs cleaning?</span><textarea name="message" placeholder="Tell us the rooms, items, stains or anything else useful"></textarea></label>
-        <div class="shrew-form-actions">
-          <button class="btn btn-primary" type="submit">Get my quote</button>
-          <a class="btn btn-secondary" href="https://wa.me/447802563213?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20a%20job%20in%20Shrewsbury." target="_blank" rel="noreferrer">WhatsApp instead</a>
-        </div>
-        <p class="shrew-form-note">Want to compare packages first? <a class="shrew-mini-link" href="../pricing.html">View pricing</a></p>
-      </form>
+
+        <form id="heroQuoteForm" class="mt-5" action="https://formspree.io/f/mblnzwpv" method="POST">
+          <input type="hidden" name="_subject" value="New Quote Request - The Carpet Cleaning Company" />
+          <input type="hidden" name="_format" value="plain" />
+          <input type="hidden" name="_page" value="pages/local/shrewsbury.html" />
+          <input type="hidden" name="_redirect" value="../../thank-you.html" />
+
+          <div class="space-y-4">
+            <div class="grid sm:grid-cols-2 gap-4">
+              <label class="block">
+                <span class="text-sm font-semibold text-slate-700">Postcode <span class="text-rose-500">*</span></span>
+                <input required name="postcode" autocomplete="postal-code" class="premium-field mt-1 w-full rounded-xl border border-slate-300 px-3 py-2.5 text-sm" placeholder="e.g. SY1 1AA" />
+              </label>
+
+              <label class="block">
+                <span class="text-sm font-semibold text-slate-700">Rooms or areas</span>
+                <select name="areas" class="premium-field mt-1 w-full rounded-xl border border-slate-300 px-3 py-2.5 text-sm bg-white">
+                  <option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option>
+                </select>
+              </label>
+            </div>
+
+            <label class="block">
+              <span class="text-sm font-semibold text-slate-700">What do you need <span class="text-rose-500">*</span></span>
+              <select required name="service" class="premium-field mt-1 w-full rounded-xl border border-slate-300 px-3 py-2.5 text-sm bg-white">
+                <option value="" selected disabled>Select a service</option>
+                <option>Carpet cleaning</option>
+                <option>Upholstery cleaning</option>
+                <option>Carpets and upholstery</option>
+                <option>Commercial cleaning</option>
+                <option>Rug cleaning</option>
+              </select>
+            </label>
+
+            <label class="block">
+              <span class="text-sm font-semibold text-slate-700">Full name <span class="text-rose-500">*</span></span>
+              <input required name="name" autocomplete="name" class="premium-field mt-1 w-full rounded-xl border border-slate-300 px-3 py-2.5 text-sm" placeholder="Your name" />
+            </label>
+
+            <div class="grid sm:grid-cols-2 gap-4">
+              <label class="block">
+                <span class="text-sm font-semibold text-slate-700">Phone <span class="text-rose-500">*</span></span>
+                <input required name="phone" inputmode="tel" autocomplete="tel" class="premium-field mt-1 w-full rounded-xl border border-slate-300 px-3 py-2.5 text-sm" placeholder="07..." />
+              </label>
+
+              <label class="block">
+                <span class="text-sm font-semibold text-slate-700">Email <span class="text-rose-500">*</span></span>
+                <input required name="email" type="email" autocomplete="email" class="premium-field mt-1 w-full rounded-xl border border-slate-300 px-3 py-2.5 text-sm" placeholder="you@example.com" />
+              </label>
+            </div>
+
+            <div class="rounded-2xl border border-brand-100 bg-brand-50 px-4 py-4 shadow-soft">
+              <div class="text-sm font-extrabold text-slate-900">Anything we should know</div>
+              <div class="text-xs text-slate-700 mt-1">Stains, pets, parking, access, ideal days</div>
+
+              <textarea name="notes" rows="3" class="premium-field mt-3 w-full rounded-xl border border-brand-100 bg-white px-3 py-2.5 text-sm" placeholder="Type here..."></textarea>
+
+              <div class="mt-4 rounded-xl border border-brand-100 bg-white px-4 py-3">
+                <div class="text-sm font-extrabold text-slate-900">Buy now pay later with Klarna</div>
+                <div class="text-xs text-slate-600 mt-1">We can offer Klarna so you can spread the cost over 3 months. Interested?</div>
+
+                <div class="mt-3 flex flex-wrap gap-3">
+                  <label class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-3 py-2 text-xs font-bold text-slate-700">
+                    <input type="radio" name="klarna_interest" value="Yes" class="h-4 w-4" />
+                    Yes
+                  </label>
+                  <label class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-3 py-2 text-xs font-bold text-slate-700">
+                    <input type="radio" name="klarna_interest" value="No" class="h-4 w-4" />
+                    No
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" class="w-full rounded-2xl bg-brand-300 hover:bg-brand-100 text-slate-950 px-4 py-3.5 text-sm font-extrabold shadow-soft lift shimmer">
+              Get my quote
+            </button>
+
+            <p class="text-xs text-slate-500 text-center">We will contact you from 07802 563213. No obligation.</p>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 </section>
