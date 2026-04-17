@@ -122,10 +122,97 @@
   </div>
 </header>
 
-<section class="local-hero">
-  <div class="container">
-    <h1>Carpet Cleaning in Condover</h1>
-    <p>Professional carpet cleaning in Condover and nearby villages south of Shrewsbury.</p>
+<section class="hero inner-hero area-hero-shared" style="background-image:url('../../assets/img/hero-carpet-cleaning.webp')">
+  <div class="container area-hero-grid">
+    <div class="area-hero-copy reveal">
+      <span class="kicker">Condover</span>
+      <h1>Carpet Cleaning in Condover</h1>
+      <p>Professional carpet cleaning in Condover and nearby villages south of Shrewsbury.</p>
+      <div class="area-hero-actions">
+        <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=Condover" target="_blank" rel="noreferrer">Open Condover map</a>
+        <a class="btn btn-secondary" href="#heroQuoteForm">Get a quote</a>
+      </div>
+    </div>
+
+    <div class="area-quote-card reveal">
+      <div class="area-quote-head">
+        <div>
+          <h3>Instant Quote Request</h3>
+          <p>Fast fixed price quote and earliest available dates</p>
+        </div>
+        <img class="area-badge" src="https://raw.githubusercontent.com/carpetcleaningcompany007-maker/carpet-cleaning-showcase/main/satisfaction_badge_transparent.png" alt="100% Satisfaction Guaranteed" loading="lazy">
+      </div>
+
+      <form id="heroQuoteForm" class="area-quote-form" action="https://formspree.io/f/mblnzwpv" method="POST">
+        <input type="hidden" name="_subject" value="New Quote Request - Condover Hero Form">
+        <input type="hidden" name="_format" value="plain">
+        <input type="hidden" name="_page" value="pages/local/condover.html">
+        <input type="hidden" name="_redirect" value="../../thank-you.html">
+
+        <div class="area-form-grid">
+          <label class="area-field">
+            <span>Postcode <em>*</em></span>
+            <input required name="postcode" autocomplete="postal-code" placeholder="e.g. SY8 1AA">
+          </label>
+          <label class="area-field">
+            <span>Rooms or areas</span>
+            <select name="areas">
+              <option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option>
+            </select>
+          </label>
+        </div>
+
+        <label class="area-field">
+          <span>What do you need <em>*</em></span>
+          <select required name="service">
+            <option value="" selected disabled>Select a service</option>
+            <option>Carpet cleaning</option>
+            <option>Upholstery cleaning</option>
+            <option>Carpets and upholstery</option>
+            <option>Commercial cleaning</option>
+            <option>Rug cleaning</option>
+            <option>Stain removal</option>
+            <option>Moth treatment</option>
+          </select>
+        </label>
+
+        <label class="area-field">
+          <span>Full name <em>*</em></span>
+          <input required name="name" autocomplete="name" placeholder="Your name">
+        </label>
+
+        <div class="area-form-grid">
+          <label class="area-field">
+            <span>Phone <em>*</em></span>
+            <input required name="phone" inputmode="tel" autocomplete="tel" placeholder="07...">
+          </label>
+          <label class="area-field">
+            <span>Email <em>*</em></span>
+            <input required name="email" type="email" autocomplete="email" placeholder="you@example.com">
+          </label>
+        </div>
+
+        <div class="area-extra-box">
+          <h4>Anything we should know</h4>
+          <p>Stains, pets, parking, access, ideal days</p>
+          <label class="area-field" style="margin-top:12px">
+            <textarea name="notes" rows="3" placeholder="Type here..."></textarea>
+          </label>
+
+          <div class="area-extra-box" style="margin-top:12px;background:#fff;border-color:#e6e1d2;box-shadow:none;">
+            <h4>Buy now pay later with Klarna</h4>
+            <p>We can offer Klarna so you can spread the cost over 3 months. Interested?</p>
+            <div class="area-radio-row">
+              <label class="area-radio"><input type="radio" name="klarna_interest" value="Yes"> Yes</label>
+              <label class="area-radio"><input type="radio" name="klarna_interest" value="No"> No</label>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn btn-primary area-submit" type="submit">Get my quote</button>
+        <p class="area-quote-note">We will contact you from 07802 563213. No obligation.</p>
+      </form>
+    </div>
   </div>
 </section>
 
