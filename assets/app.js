@@ -165,3 +165,44 @@ document.addEventListener('click',(e)=>{
   dismissBtn?.addEventListener('click', closePopup);
   backdrop?.addEventListener('click', closePopup);
 })();
+
+
+/* === Uniform location hero form helpers === */
+(function(){
+  function wireLocationForm(form){
+    if(!form || form.dataset.locationHeroWired === '1') return;
+    form.dataset.locationHeroWired = '1';
+    const phone = form.querySelector('.js-location-phone');
+    const email = form.querySelector('.js-location-email');
+    const extra = form.querySelector('.location-extra-fields');
+    const service = form.querySelector('.js-location-service');
+    const submitBtn = form.querySelector('.js-location-submit');
+    function sync(){
+      if(!extra || !phone || !email) return;
+      const open = phone.value.trim().length >= 8 && email.value.trim().length > 0 && email.checkValidity();
+      extra.classList.toggle('is-open', open);
+    }
+    if(phone && email){['input','blur','change'].forEach(evt => { phone.addEventListener(evt, sync); email.addEventListener(evt, sync); }); sync();}
+    form.addEventListener('submit', async function(e){
+      e.preventDefault();
+      const oldText = submitBtn ? submitBtn.textContent : '';
+      if(submitBtn){ submitBtn.disabled = true; submitBtn.textContent = 'Sending...'; }
+      try{
+        const res = await fetch(form.action, { method:'POST', body:new FormData(form), headers:{ 'Accept':'application/json' } });
+        if(!res.ok) throw new Error('Submit failed: ' + res.status);
+        const redirect = form.getAttribute('data-redirect') || form.querySelector('input[name="_redirect"]')?.value || '../../thank-you.html';
+        window.location.href = redirect;
+      }catch(err){
+        alert('Sorry, it did not send. Please try again or call 07802 563213.');
+        if(submitBtn){ submitBtn.disabled = false; submitBtn.textContent = oldText || 'Get my quote'; }
+        console.error(err);
+      }
+    });
+    form.querySelectorAll('[data-select-service]').forEach(el => {
+      el.addEventListener('click', function(){ if(service) service.value = this.getAttribute('data-select-service'); });
+    });
+  }
+  document.addEventListener('DOMContentLoaded', function(){
+    document.querySelectorAll('.location-hero-form').forEach(wireLocationForm);
+  });
+})();

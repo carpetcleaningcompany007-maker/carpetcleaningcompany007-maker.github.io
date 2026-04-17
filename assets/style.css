@@ -1377,3 +1377,46 @@ button,input,textarea,select{font:inherit}
 }
 /* === END HOME_PAGE_TIDY === */
 
+
+
+/* === Uniform location hero + quote form === */
+.location-hero{position:relative;overflow:hidden}
+.location-hero .hero-grid{align-items:start;gap:44px}
+.location-hero .hero-copy{padding-top:8px;max-width:720px}
+.location-hero .hero-copy h1{font-size:clamp(52px,5.6vw,72px);line-height:1.02;margin:18px 0 18px;letter-spacing:-.04em;max-width:760px}
+.location-hero .hero-copy .location-subhead{display:block;color:#e7edf5;margin-top:10px;font-size:clamp(22px,2vw,30px);line-height:1.15;font-weight:800;letter-spacing:-.03em}
+.location-hero .hero-copy p{font-size:18px;max-width:680px;color:#dfe8f2}
+.location-hero-points{display:grid;gap:12px;margin-top:26px;max-width:700px}
+.location-hero-point{display:flex;align-items:flex-start;gap:12px;color:#edf3f8;font-size:15px;font-weight:600}
+.location-hero-point .tick{display:inline-flex;width:26px;height:26px;align-items:center;justify-content:center;border-radius:999px;background:#d8b36a;color:#09111c;font-weight:900;flex:0 0 auto;margin-top:1px}
+.location-hero .hero-actions{margin-top:28px}
+.location-form-card{position:relative;background:rgba(255,255,255,.98);color:#0f2238;padding:26px;border-radius:30px;box-shadow:0 30px 70px rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.58);overflow:hidden;max-width:100%}
+.location-form-card::before{content:'';position:absolute;inset:auto auto 0 -50px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle, rgba(216,179,106,.24), transparent 68%);pointer-events:none}
+.location-form-card::after{content:'';position:absolute;inset:-80px -80px auto auto;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle, rgba(15,98,254,.10), transparent 70%);pointer-events:none}
+.location-form-head{position:relative;display:flex;justify-content:space-between;gap:14px;align-items:flex-start}
+.location-form-head h3{margin:0;font-size:31px;line-height:1.05;color:#0f2238;letter-spacing:-.03em}
+.location-form-head p{margin:6px 0 0;color:#5a6f85;font-size:14px;line-height:1.5}
+.location-form-badge{width:92px;height:92px;object-fit:contain;filter:drop-shadow(0 10px 18px rgba(0,0,0,.12));flex:0 0 auto}
+.location-hero-form{margin-top:20px}
+.location-hero-form .location-grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.location-hero-form .location-field{display:block}
+.location-hero-form .location-label{display:block;margin-bottom:6px;font-size:14px;font-weight:800;color:#20364d}
+.location-hero-form .location-required{color:#e11d48}
+.location-hero-form input,.location-hero-form select,.location-hero-form textarea{width:100%;min-height:50px;padding:0 14px;border-radius:14px;border:1.5px solid #d7e1ec;background:#fff;color:#0f2238;box-shadow:0 4px 12px rgba(8,20,40,.03)}
+.location-hero-form textarea{min-height:108px;padding:13px 14px;resize:vertical}
+.location-hero-form input:focus,.location-hero-form select:focus,.location-hero-form textarea:focus{outline:none;border-color:#7aa8ff;box-shadow:0 0 0 4px rgba(15,98,254,.12)}
+.location-extra-fields{max-height:0;opacity:0;transform:translateY(-6px);overflow:hidden;transition:max-height .35s ease, opacity .25s ease, transform .25s ease}
+.location-extra-fields.is-open{max-height:560px;opacity:1;transform:translateY(0)}
+.location-extra-panel{margin-top:2px;border:1px solid rgba(216,179,106,.35);background:linear-gradient(180deg,#fffdf9 0%,#f8f1e5 100%);border-radius:18px;padding:16px}
+.location-extra-panel h4{margin:0;color:#0f2238;font-size:16px;line-height:1.2}
+.location-extra-panel p{margin:6px 0 0;color:#5b7084;font-size:12px;line-height:1.5}
+.location-klarna-box{margin-top:14px;border:1px solid rgba(15,34,56,.10);background:#fff;border-radius:16px;padding:14px}
+.location-klarna-box h5{margin:0;color:#0f2238;font-size:15px;line-height:1.2}
+.location-klarna-box p{margin:5px 0 0;color:#5b7084;font-size:12px;line-height:1.5}
+.location-klarna-choices{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+.location-klarna-pill{display:inline-flex;align-items:center;gap:8px;border:1px solid #d7e1ec;background:#f8fafc;border-radius:999px;padding:9px 14px;font-size:12px;font-weight:800;color:#24364a}
+.location-form-submit{width:100%;margin-top:2px;background:linear-gradient(135deg,#d8b36a,#c89a4a);color:#09111c;box-shadow:0 14px 32px rgba(200,154,74,.28)}
+.location-form-note{text-align:center;margin:2px 0 0;color:#6a7d90;font-size:12px}
+@media (max-width:980px){.location-hero .hero-copy h1{font-size:clamp(40px,8vw,60px)}.location-form-card{margin-top:6px}}
+@media (max-width:760px){.location-hero .hero-grid{gap:22px}.location-form-head{align-items:flex-start}.location-form-head h3{font-size:28px}.location-hero-form .location-grid-2{grid-template-columns:1fr}.location-form-badge{width:74px;height:74px}.location-hero .hero-copy .location-subhead{font-size:20px}}
+@media (max-width:520px){.location-form-card{padding:20px}.location-hero .hero-copy h1{font-size:36px}.location-hero .hero-copy p{font-size:16px}.location-hero-points{gap:10px}}
