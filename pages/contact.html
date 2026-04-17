@@ -4,25 +4,78 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact Us | The Carpet Cleaning Company</title>
-  <meta name="description" content="Contact The Carpet Cleaning Company for carpet cleaning, upholstery cleaning and stain removal quotes in Ludlow, Shrewsbury and nearby areas.">
-  <meta name="robots" content="index,follow">
-    <link rel="canonical" href="https://www.thecarpetcleaningcrew.co.uk/pages/contact.html">
-  <meta property="og:image" content="https://www.thecarpetcleaningcrew.co.uk/assets/img/hero-carpet-cleaning.webp">
-  <meta name="twitter:image" content="https://www.thecarpetcleaningcrew.co.uk/assets/img/hero-carpet-cleaning.webp">
-  <meta name="twitter:description" content="Contact The Carpet Cleaning Company for carpet cleaning, upholstery cleaning and stain removal quotes in Ludlow, Shrewsbury and nearby areas.">
-  <meta name="twitter:title" content="Contact Us | The Carpet Cleaning Company">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta property="og:url" content="https://www.thecarpetcleaningcrew.co.uk/pages/contact.html">
-  <meta property="og:type" content="article">
-  <meta property="og:description" content="Contact The Carpet Cleaning Company for carpet cleaning, upholstery cleaning and stain removal quotes in Ludlow, Shrewsbury and nearby areas.">
-  <meta property="og:title" content="Contact Us | The Carpet Cleaning Company">
-<link rel="preconnect" href="https://fonts.googleapis.com">
+  <meta name="description" content="Contact The Carpet Cleaning Company for carpet cleaning, upholstery cleaning, rug cleaning and commercial cleaning in Ludlow, Shrewsbury and nearby areas.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/style.css">
+  <style>
+    .contact-hero{
+      position:relative;
+      overflow:hidden;
+      padding:118px 0 76px;
+      background:
+        linear-gradient(90deg, rgba(4,16,30,.94) 0%, rgba(4,16,30,.80) 48%, rgba(4,16,30,.56) 100%),
+        url('../assets/img/hero-carpet-cleaning.webp') center/cover no-repeat;
+      color:#fff;
+    }
+    .contact-wrap{
+      display:grid;
+      grid-template-columns:1fr .96fr;
+      gap:28px;
+      align-items:start;
+    }
+    .contact-panel{
+      background:#fff;
+      border:1px solid rgba(18,38,58,.08);
+      box-shadow:0 26px 70px rgba(8,20,40,.18);
+      border-radius:28px;
+      padding:28px;
+      color:#12263a;
+    }
+    .contact-form{display:grid;gap:14px}
+    .contact-form .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .contact-form label{display:grid;gap:7px}
+    .contact-form span{font-size:14px;font-weight:700;color:#243447}
+    .contact-form input,.contact-form select,.contact-form textarea{
+      width:100%;
+      border:1.5px solid #d7e3f0;
+      background:#fbfdff;
+      border-radius:16px;
+      min-height:54px;
+      padding:0 16px;
+      font:inherit;
+      box-shadow:0 4px 12px rgba(12,31,51,.03);
+    }
+    .contact-form textarea{min-height:136px;padding-top:14px;padding-bottom:14px;resize:vertical}
+    .contact-form input:focus,.contact-form select:focus,.contact-form textarea:focus{
+      outline:none;border-color:#7db0ff;box-shadow:0 0 0 4px rgba(31,111,255,.12)
+    }
+    .contact-cards{display:grid;gap:14px}
+    .contact-card{
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:22px;
+      padding:18px;
+      backdrop-filter:blur(10px);
+    }
+    .contact-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+    .contact-float{position:fixed;right:14px;bottom:14px;display:flex;flex-direction:column;gap:12px;z-index:90}
+    .contact-float a{width:56px;height:56px;border-radius:999px;display:grid;place-items:center;box-shadow:0 22px 40px rgba(0,0,0,.18);font-size:24px}
+    .contact-float .wa{background:#25D366;color:#fff}
+    .contact-float .call{background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff}
+    @media (max-width:980px){
+      .contact-wrap{grid-template-columns:1fr}
+    }
+    @media (max-width:760px){
+      .contact-hero{padding:104px 0 66px}
+      .contact-panel{padding:22px}
+      .contact-form .grid2{grid-template-columns:1fr}
+      .contact-actions .btn{width:100%}
+    }
+  </style>
 </head>
 <body>
-
 <header class="site-header">
   <div class="container nav">
     <a class="brand" href="../index.html">
@@ -67,92 +120,130 @@
       <a href="../pages/about.html">About</a>
       <a href="../pages/reviews.html">Reviews</a>
       <a href="../pages/contact.html">Contact</a>
+      <a href="../carpet-cleaning-quote.html" class="nav-quote">Instant Quote</a>
     </nav>
     <div class="nav-cta">
-      <a class="btn-quote-right" href="../carpet-cleaning-quote.html">Instant Quote</a>
       <a class="btn btn-call" href="tel:07802563213">Call 07802 563213</a>
-      <a class="btn btn-secondary" href="https://wa.me/447802563213" target="_blank" rel="noreferrer">WhatsApp</a>
+      <a class="btn-quote-right" href="../carpet-cleaning-quote.html">Instant Quote</a>
     </div>
   </div>
 </header>
 
-<section class="hero inner-hero" style="background-image:linear-gradient(90deg, rgba(4,16,30,.86) 0%, rgba(4,16,30,.60) 48%, rgba(4,16,30,.24) 100%), url('../assets/img/hero-carpet-cleaning.webp')"><div class="container hero-grid"><div class="hero-copy reveal"><span class="kicker">Get a quote</span><h1>Tell us what needs cleaning and we will price the job around what you actually need.</h1><p>From one room to full house work, from sofa cleaning to hotels and estate agents, we can talk through the options and guide you to the right service.</p></div><div class="hero-card form-glow"><h2>Fast ways to contact us</h2><ul class="quote-points"><li><a href="tel:07802563213">07802 563213</a></li><li><a href="https://wa.me/447802563213" target="_blank" rel="noreferrer">WhatsApp us</a></li><li>Based in Ludlow, Shropshire</li></ul><a class="btn btn-primary" href="tel:07802563213">Call now</a></div></div></section>
-<section class="section"><div class="container split"><div class="contact-panel"><h3 style="margin-top:0">What helps us quote quickly</h3><div class="contact-list"><div>Which rooms or items need cleaning</div><div>Any stains, odours, pet issues or moth activity</div><div>Whether the job is domestic, rental or commercial</div><div>Your area, such as Ludlow, Shrewsbury or a nearby town</div></div></div><div class="seo-copy"><h2>Areas we focus on</h2><p>We mainly focus on Ludlow, Shrewsbury and surrounding towns, including Craven Arms, Tenbury Wells, Leominster, Church Stretton, Bayston Hill, Baschurch, Bicton, Atcham and Pontesbury.</p><p>If your job includes more than one service, such as carpet cleaning plus upholstery cleaning or stain removal, we can normally quote that as one joined up job.</p></div></div></section>
+<section class="contact-hero">
+  <div class="container contact-wrap">
+    <div>
+      <span class="kicker">Contact us</span>
+      <h1 style="margin-top:14px;font-size:clamp(2.2rem,5vw,4rem);line-height:1.02;letter-spacing:-.03em;">Get in touch about your cleaning.</h1>
+      <p style="margin-top:16px;max-width:720px;color:#dbe7f3;font-size:1.05rem;">
+        Use the form, call us directly or send photos on WhatsApp for a faster quote.
+      </p>
+
+      <div class="contact-actions">
+        <a class="btn btn-call" href="tel:07802563213">Call now</a>
+        <a class="btn btn-secondary" href="https://wa.me/447802563213?text=Hi%2C%20I%E2%80%99d%20like%20a%20quote%20please.%20My%20postcode%20is%20____%20and%20I%20need%20____%20cleaned." target="_blank" rel="noreferrer">Send photos on WhatsApp</a>
+      </div>
+
+      <div class="contact-cards" style="margin-top:24px;">
+        <div class="contact-card"><strong>Fast quotes</strong><div style="margin-top:6px;color:#dbe7f3;">Carpet cleaning, upholstery, rugs and commercial work.</div></div>
+        <div class="contact-card"><strong>Local service</strong><div style="margin-top:6px;color:#dbe7f3;">Ludlow, Shrewsbury and nearby areas.</div></div>
+      </div>
+    </div>
+
+    <div class="contact-panel">
+      <div style="font-size:1.5rem;font-weight:800;">Send your enquiry</div>
+      <p style="margin-top:6px;color:#5f7388;">Tell us what needs cleaning and we’ll get back to you.</p>
+
+      <form class="contact-form" action="https://formspree.io/f/mblnzwpv" method="POST" onsubmit="submitContact(event, this)">
+        <input type="hidden" name="_subject" value="New Contact Form Enquiry - Website Contact Page">
+        <input type="hidden" name="_format" value="plain">
+
+        <div class="grid2">
+          <label><span>Name</span><input required name="name" type="text" placeholder="Your name"></label>
+          <label><span>Phone</span><input required name="phone" type="tel" placeholder="07..."></label>
+        </div>
+
+        <div class="grid2">
+          <label><span>Email</span><input name="email" type="email" placeholder="you@example.com"></label>
+          <label><span>Postcode or town</span><input name="area" type="text" placeholder="Ludlow, Shrewsbury, SY8..."></label>
+        </div>
+
+        <label><span>Service</span>
+          <select name="service">
+            <option value="">Choose a service</option>
+            <option>Carpet cleaning</option>
+            <option>Upholstery cleaning</option>
+            <option>Rug cleaning</option>
+            <option>Stain removal</option>
+            <option>Commercial cleaning</option>
+            <option>General enquiry</option>
+          </select>
+        </label>
+
+        <label><span>Message</span>
+          <textarea name="message" placeholder="Tell us what needs cleaning, how many rooms or areas, whether stairs are included, or anything else helpful"></textarea>
+        </label>
+
+        <button id="contactSubmitBtn" class="btn btn-primary" type="submit" style="width:100%;">Send message</button>
+      </form>
+    </div>
+  </div>
+</section>
 
 <footer class="footer">
   <div class="container footer-grid">
     <div>
       <a class="brand footer-brand" href="../index.html">
         <img class="brand-logo" src="../assets/img/logo.webp" alt="The Carpet Cleaning Company logo" loading="lazy" width="512" height="512">
-        <div class="brand-text"><strong>The Carpet Cleaning Company</strong><span>Trusted local carpet and upholstery specialists</span></div>
+        <div class="brand-text">
+          <strong>The Carpet Cleaning Company</strong>
+          <span>Trusted local carpet and upholstery specialists</span>
+        </div>
       </a>
-      <p>The Carpet Cleaning Company is based in Ludlow and covers Ludlow, Shrewsbury and nearby towns for carpet cleaning, upholstery cleaning, stain removal, rug cleaning, hard floor cleaning, licensed moth treatment and commercial work.</p>
+      <p>Professional carpet cleaning across Ludlow, Shrewsbury and nearby areas with honest advice and powerful results.</p>
     </div>
     <div>
-      <h3>Services</h3>
+      <h3>Popular pages</h3>
       <div class="footer-links">
-        <a href="carpet-cleaning.html">Carpet Cleaning</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="upholstery-cleaning.html">Upholstery Cleaning</a>
-        <a href="stain-removal.html">Stain Removal</a>
-        <a href="rug-cleaning.html">Rug Cleaning</a>
-        <a href="hard-floor-cleaning.html">Hard Floor Cleaning</a>
-        <a href="moth-treatment.html">Moth Treatment</a>
+        <a href="../index.html">Home</a>
+        <a href="../pages/pricing.html">Pricing</a>
+        <a href="../pages/carpet-cleaning.html">Carpet Cleaning</a>
+        <a href="../pages/upholstery-cleaning.html">Upholstery Cleaning</a>
+        <a href="../pages/reviews.html">Reviews</a>
       </div>
     </div>
     <div>
       <h3>Contact</h3>
       <div class="footer-links">
         <a href="tel:07802563213">07802 563213</a>
-        <div>Ludlow, Shropshire</div>
-        <div>Klarna available on suitable jobs</div>
-        <a href="../carpet-cleaning-quote.html">Request a Quote</a>
+        <a href="https://wa.me/447802563213?text=Hi%2C%20I%E2%80%99d%20like%20a%20quote%20please.%20My%20postcode%20is%20____%20and%20I%20need%20____%20cleaned." target="_blank" rel="noreferrer">WhatsApp</a>
+        <a href="../carpet-cleaning-quote.html">Instant Quote</a>
       </div>
     </div>
   </div>
-  <div class="container copy">© 2026 The Carpet Cleaning Company. All rights reserved.</div>
+  <div class="container copy">© The Carpet Cleaning Company. All rights reserved.</div>
 </footer>
-<div class="mobile-cta-bar">
-  <a class="mobile-cta-call" href="tel:07802563213">Call now</a>
-  <a class="mobile-cta-wa" href="https://wa.me/447802563213" target="_blank" rel="noreferrer">WhatsApp</a>
+
+<div class="contact-float">
+  <a class="wa" href="https://wa.me/447802563213?text=Hi%2C%20I%E2%80%99d%20like%20a%20quote%20please.%20My%20postcode%20is%20____%20and%20I%20need%20____%20cleaned." target="_blank" rel="noreferrer" aria-label="WhatsApp">💬</a>
+  <a class="call" href="tel:07802563213" aria-label="Call">☎</a>
 </div>
+
 <script src="../assets/app.js"></script>
-
-<div class="offer-card-slide">
-        <div class="offer-card-title">Full professional deep clean package</div>
-        <div class="offer-card-text">A strong extra for larger bookings and a better all round result.</div>
-      </div>
-    </div>
-    <a class="offer-card-button" href="../carpet-cleaning-quote.html">Get this offer</a>
-  </div>
-</div>
-
-
-
-<h2 class="offer-popup-v2-title" id="offerPopupV2Title">Deep Clean Package</h2>
-    <p class="offer-popup-v2-offer">Hall, stairs, landing + 1 room for £120</p>
-    <p class="offer-popup-v2-text">Professional deep clean with powerful results in one visit.</p>
-
-    <a class="offer-popup-v2-button" href="../carpet-cleaning-quote.html">GET THIS OFFER</a>
-    <button class="offer-popup-v2-dismiss" type="button">No thanks, continue to site</button>
-  </div>
-</div>
-
-
-<div class="offer-popup-v3" id="offerPopupV3" aria-hidden="true">
-  <div class="offer-popup-v3-backdrop"></div>
-  <div class="offer-popup-v3-panel" role="dialog" aria-modal="true" aria-labelledby="offerPopupV3Title">
-    <button class="offer-popup-v3-close" type="button" aria-label="Close offer">×</button>
-    <div class="offer-popup-v3-sticker">SPECIAL<br>OFFER</div>
-    <div class="offer-popup-v3-ribbon-wrap">
-      <div class="offer-popup-v3-ribbon">LIMITED TIME OFFER</div>
-    </div>
-    <h2 class="offer-popup-v3-title" id="offerPopupV3Title">Deep Clean Package</h2>
-    <p class="offer-popup-v3-offer">Hall, stairs, landing + 1 room for £120</p>
-    <p class="offer-popup-v3-text">Professional deep clean package with strong value in one visit.</p>
-    <a class="offer-popup-v3-button" href="../carpet-cleaning-quote.html">GET THIS OFFER</a>
-    <button class="offer-popup-v3-dismiss" type="button">No thanks, continue to site</button>
-  </div>
-</div>
-
-</body></html>
+<script>
+async function submitContact(e, form){
+  e.preventDefault();
+  const btn = document.getElementById('contactSubmitBtn');
+  const old = btn ? btn.textContent : '';
+  if (btn){ btn.disabled = true; btn.textContent = 'Sending...'; }
+  try{
+    const res = await fetch(form.action, { method:'POST', body:new FormData(form), headers:{'Accept':'application/json'} });
+    if(!res.ok) throw new Error('Submit failed');
+    window.location.href = '../thank-you.html';
+  } catch(err){
+    alert('Sorry, it did not send. Please try again or call 07802 563213.');
+    if (btn){ btn.disabled = false; btn.textContent = old || 'Send message'; }
+  }
+}
+</script>
+</body>
+</html>
