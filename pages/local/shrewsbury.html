@@ -31,6 +31,137 @@
     "about":"Cleaning services in Shrewsbury"
   }
   </script>
+
+  <style>
+    .shrew-hero-card{
+      background:linear-gradient(180deg,rgba(255,255,255,.99),rgba(245,249,253,.97));
+      border:1px solid rgba(18,38,58,.08);
+      border-radius:30px;
+      box-shadow:0 28px 60px rgba(8,20,40,.16);
+      padding:28px;
+    }
+    .shrew-hero-card h3{margin:0 0 10px;color:#0f2741;font-size:1.45rem}
+    .shrew-hero-card p{margin:0 0 16px;color:#4d647a;line-height:1.7}
+    .shrew-form-meta{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 16px;padding:0;list-style:none}
+    .shrew-form-meta li{
+      background:#edf5ff;
+      color:#0f5fe6;
+      border:1px solid rgba(15,95,230,.12);
+      border-radius:999px;
+      padding:8px 12px;
+      font-size:.84rem;
+      font-weight:800;
+    }
+    .shrew-hero-form{display:grid;gap:12px}
+    .shrew-hero-form .grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+    .shrew-hero-form label{display:grid;gap:6px}
+    .shrew-hero-form span{font-size:14px;font-weight:700;color:#20364d}
+    .shrew-hero-form input,.shrew-hero-form select,.shrew-hero-form textarea{
+      width:100%;min-height:52px;padding:0 15px;border-radius:16px;
+      border:1.5px solid #d9e5f0;background:#fff;color:#102740;font:inherit;
+      box-shadow:0 4px 12px rgba(12,31,51,.03)
+    }
+    .shrew-hero-form textarea{min-height:112px;padding:14px 15px;resize:vertical}
+    .shrew-hero-form input:focus,.shrew-hero-form select:focus,.shrew-hero-form textarea:focus{
+      outline:none;border-color:#7db0ff;box-shadow:0 0 0 4px rgba(31,111,255,.12)
+    }
+    .shrew-form-actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+    .shrew-form-note{margin:0;color:#5f7388;font-size:.94rem}
+    .shrew-mini-link{color:#0f5fe6;font-weight:700;text-decoration:none}
+
+    .shrew-band{
+      background:#fff;
+      border:1px solid rgba(18,38,58,.08);
+      border-radius:34px;
+      box-shadow:0 24px 60px rgba(8,20,40,.08);
+      overflow:hidden;
+    }
+    .shrew-band-top{
+      padding:34px 36px 22px;
+      border-bottom:1px solid rgba(18,38,58,.07);
+      background:linear-gradient(180deg,#ffffff 0%,#f7fafc 100%);
+    }
+    .shrew-band-top p{max-width:900px;margin:0;color:#587084;line-height:1.8;font-size:18px}
+    .shrew-stat-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0}
+    .shrew-stat{
+      padding:28px 30px;
+      border-right:1px solid rgba(18,38,58,.07);
+      background:#fff;
+    }
+    .shrew-stat:last-child{border-right:none}
+    .shrew-stat strong{display:block;font-size:1.1rem;color:#102740;margin-bottom:10px}
+    .shrew-stat p{margin:0;color:#607589;line-height:1.75}
+
+    .shrew-services{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:22px;
+      margin-top:28px;
+    }
+    .shrew-service-card{
+      background:#fff;
+      border:1px solid rgba(18,38,58,.08);
+      border-radius:28px;
+      box-shadow:0 18px 45px rgba(8,20,40,.08);
+      padding:28px;
+      display:flex;
+      flex-direction:column;
+      min-height:100%;
+    }
+    .shrew-service-card span{
+      display:inline-flex;align-self:flex-start;
+      padding:8px 12px;border-radius:999px;
+      background:#eef5ff;color:#0f5fe6;font-size:.82rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;
+      margin-bottom:14px;
+    }
+    .shrew-service-card h3{margin:0 0 12px;font-size:1.65rem;color:#102740}
+    .shrew-service-card p{margin:0 0 18px;color:#5b7084;line-height:1.8;flex:1 1 auto}
+    .shrew-service-card .btn{align-self:flex-start}
+
+    .shrew-process-wrap{
+      background:linear-gradient(135deg,#0b1930,#143860);
+      color:#fff;border-radius:34px;padding:34px;box-shadow:0 24px 60px rgba(8,20,40,.16)
+    }
+    .shrew-process-wrap > p{color:#d7e5f5;max-width:900px}
+    .shrew-process{
+      display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:24px
+    }
+    .shrew-step{
+      background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);border-radius:24px;padding:22px
+    }
+    .shrew-step em{display:inline-flex;width:40px;height:40px;border-radius:50%;align-items:center;justify-content:center;background:#fff;color:#0d5ae0;font-style:normal;font-weight:800;margin-bottom:12px}
+    .shrew-step h3{margin:0 0 10px;font-size:1.1rem;color:#fff}
+    .shrew-step p{margin:0;color:#d6e3f4;line-height:1.75;font-size:.98rem}
+
+    .shrew-coverage{
+      display:grid;grid-template-columns:1.05fr .95fr;gap:24px;align-items:stretch
+    }
+    .shrew-area-card,.shrew-quote-card{
+      border-radius:30px;padding:30px;border:1px solid rgba(18,38,58,.08);box-shadow:0 20px 50px rgba(8,20,40,.08)
+    }
+    .shrew-area-card{background:#fff}
+    .shrew-area-card p,.shrew-quote-card p{color:#5d7387;line-height:1.8}
+    .shrew-area-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:20px}
+    .shrew-area-grid a{
+      display:block;text-decoration:none;background:#f8fafc;border:1px solid rgba(18,38,58,.08);border-radius:18px;
+      padding:15px 16px;font-weight:700;color:#17314c;box-shadow:0 10px 22px rgba(8,20,40,.04)
+    }
+    .shrew-quote-card{background:linear-gradient(180deg,#ffffff 0%,#f3f8ff 100%)}
+    .shrew-quote-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:18px}
+
+    .shrew-links-head{max-width:920px}
+    .shrew-links-head p{color:#5c7184;line-height:1.8}
+
+    @media (max-width:1100px){
+      .shrew-stat-row,.shrew-process,.shrew-coverage{grid-template-columns:1fr}
+      .shrew-stat{border-right:none;border-bottom:1px solid rgba(18,38,58,.07)}
+      .shrew-stat:last-child{border-bottom:none}
+    }
+    @media (max-width:820px){
+      .shrew-services,.shrew-area-grid,.shrew-hero-form .grid2{grid-template-columns:1fr}
+      .shrew-band-top,.shrew-stat,.shrew-process-wrap,.shrew-area-card,.shrew-quote-card,.shrew-service-card,.shrew-hero-card{padding:22px}
+    }
+  </style>
 </head>
 <body>
 
@@ -87,72 +218,55 @@
   </div>
 </header>
 
-<section class="hero inner-hero location-hero" style="background-image:linear-gradient(90deg, rgba(4,16,30,.86) 0%, rgba(4,16,30,.60) 48%, rgba(4,16,30,.24) 100%), url('../../assets/img/truckmount-hero.webp')">
+<section class="hero inner-hero" style="background-image:linear-gradient(90deg, rgba(4,16,30,.86) 0%, rgba(4,16,30,.60) 48%, rgba(4,16,30,.24) 100%), url('../../assets/img/hero-carpet-cleaning.webp')">
   <div class="container hero-grid">
     <div class="hero-copy reveal">
       <span class="kicker">Shrewsbury</span>
-      <h1>Carpet cleaning in Shrewsbury<span class="location-subhead">Professional cleaning for Shrewsbury homes, rentals and businesses.</span></h1>
+      <h1>Carpet cleaning in Shrewsbury</h1>
       <p>Professional carpet cleaning in Shrewsbury for homes, rentals, guest accommodation and local businesses. We also cover upholstery cleaning, stain removal, rug cleaning, hard floor cleaning and licensed moth treatment.</p>
-      <div class="location-hero-points">
-        <div class="location-hero-point"><span class="tick">✓</span><span>CRB agitation lifts embedded soil before hot water extraction.</span></div>
-        <div class="location-hero-point"><span class="tick">✓</span><span>Clear fixed price quotes with fast response by phone or WhatsApp.</span></div>
-        <div class="location-hero-point"><span class="tick">✓</span><span>Domestic and commercial work with fully insured service.</span></div>
-      </div>
-      <div class="map-actions hero-actions">
+      <div class="map-actions">
         <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=Shrewsbury+Shropshire" target="_blank" rel="noreferrer">Open Shrewsbury map</a>
         <a class="btn btn-secondary" href="../../carpet-cleaning-quote.html">Get a quote</a>
       </div>
     </div>
 
-    <div class="location-form-card reveal">
-      <div class="location-form-head">
-        <div>
-          <h3>Instant Quote Request</h3>
-          <p>Fast fixed price quote and earliest available dates</p>
-        </div>
-        <img class="location-form-badge" src="https://raw.githubusercontent.com/carpetcleaningcompany007-maker/carpet-cleaning-showcase/main/satisfaction_badge_transparent.png" alt="100 percent satisfaction guaranteed">
-      </div>
-
-      <form class="location-hero-form" action="https://formspree.io/f/mblnzwpv" method="POST" data-redirect="../../thank-you.html">
-        <input type="hidden" name="_subject" value="New Quote Request - The Carpet Cleaning Company">
+    <div class="shrew-hero-card reveal">
+      <h3>Get a fast Shrewsbury quote</h3>
+      <p>Use the form and send the basics over now. This works far better here than another chunky promo box.</p>
+      <ul class="shrew-form-meta">
+        <li>Fast response</li>
+        <li>Phone or WhatsApp</li>
+        <li>Homes and commercial</li>
+      </ul>
+      <form class="shrew-hero-form" action="https://formspree.io/f/mblnzwpv" method="POST">
+        <input type="hidden" name="_subject" value="New Quote Request - Shrewsbury Hero Form">
         <input type="hidden" name="_format" value="plain">
         <input type="hidden" name="_page" value="pages/local/shrewsbury.html">
         <input type="hidden" name="_redirect" value="../../thank-you.html">
-
-        <div class="form-grid">
-          <div class="location-grid-2">
-            <label class="location-field"><span class="location-label">Postcode <span class="location-required">*</span></span><input required name="postcode" autocomplete="postal-code" placeholder="e.g. SY8 1AA"></label>
-            <label class="location-field"><span class="location-label">Rooms or areas</span><select name="areas"><option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option></select></label>
-          </div>
-
-          <label class="location-field"><span class="location-label">What do you need <span class="location-required">*</span></span><select required name="service" class="js-location-service"><option value="" selected disabled>Select a service</option><option>Carpet cleaning</option><option>Upholstery cleaning</option><option>Carpets and upholstery</option><option>Commercial cleaning</option><option>Rug cleaning</option><option>Stain removal</option><option>Moth treatment</option></select></label>
-
-          <label class="location-field"><span class="location-label">Full name <span class="location-required">*</span></span><input required name="name" autocomplete="name" placeholder="Your name"></label>
-
-          <div class="location-grid-2">
-            <label class="location-field"><span class="location-label">Phone <span class="location-required">*</span></span><input required name="phone" inputmode="tel" autocomplete="tel" class="js-location-phone" placeholder="07..."></label>
-            <label class="location-field"><span class="location-label">Email <span class="location-required">*</span></span><input required name="email" type="email" autocomplete="email" class="js-location-email" placeholder="you@example.com"></label>
-          </div>
-
-          <div class="location-extra-fields">
-            <div class="location-extra-panel">
-              <h4>Anything we should know</h4>
-              <p>Stains, pets, parking, access, ideal days</p>
-              <textarea name="notes" rows="3" placeholder="Type here..."></textarea>
-              <div class="location-klarna-box">
-                <h5>Buy now pay later with Klarna</h5>
-                <p>We can offer Klarna so you can spread the cost over 3 months. Interested?</p>
-                <div class="location-klarna-choices">
-                  <label class="location-klarna-pill"><input type="radio" name="klarna_interest" value="Yes"> Yes</label>
-                  <label class="location-klarna-pill"><input type="radio" name="klarna_interest" value="No"> No</label>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <button class="btn location-form-submit js-location-submit" type="submit">Get my quote</button>
-          <p class="location-form-note">We will contact you from 07802 563213. No obligation.</p>
+        <div class="grid2">
+          <label><span>Name</span><input required name="name" type="text" placeholder="Your name"></label>
+          <label><span>Phone</span><input required name="phone" type="tel" placeholder="07..."></label>
         </div>
+        <div class="grid2">
+          <label><span>Postcode or area</span><input required name="postcode" type="text" placeholder="Shrewsbury, SY1, SY2..."></label>
+          <label><span>Service</span>
+            <select required name="service">
+              <option value="">Choose a service</option>
+              <option>Carpet cleaning</option>
+              <option>Upholstery cleaning</option>
+              <option>Rug cleaning</option>
+              <option>Stain removal</option>
+              <option>Moth treatment</option>
+              <option>Commercial cleaning</option>
+            </select>
+          </label>
+        </div>
+        <label><span>What needs cleaning?</span><textarea name="message" placeholder="Tell us the rooms, items, stains or anything else useful"></textarea></label>
+        <div class="shrew-form-actions">
+          <button class="btn btn-primary" type="submit">Get my quote</button>
+          <a class="btn btn-secondary" href="https://wa.me/447802563213?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20a%20job%20in%20Shrewsbury." target="_blank" rel="noreferrer">WhatsApp instead</a>
+        </div>
+        <p class="shrew-form-note">Want to compare packages first? <a class="shrew-mini-link" href="../pricing.html">View pricing</a></p>
       </form>
     </div>
   </div>
