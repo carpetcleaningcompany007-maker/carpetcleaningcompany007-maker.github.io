@@ -116,13 +116,18 @@
   });
 })();
 
-setInterval(()=>{
-  const msgs=document.querySelectorAll('.promo-float-message');
-  if(!msgs.length) return;
-  let active=[...msgs].findIndex(m=>m.classList.contains('is-active'));
+setInterval(() => {
+  const msgs = document.querySelectorAll('.promo-float-message');
+  if (!msgs.length) return;
+  let active = [...msgs].findIndex(m => m.classList.contains('is-active'));
+  if (active < 0) {
+    msgs[0].classList.add('is-active');
+    return;
+  }
   msgs[active].classList.remove('is-active');
-  msgs[(active+1)%msgs.length].classList.add('is-active');
-},3000);
+  msgs[(active + 1) % msgs.length].classList.add('is-active');
+}, 3000);
+
 
 document.addEventListener('click',(e)=>{
   if(e.target.classList.contains('promo-float-close')){
@@ -159,7 +164,7 @@ document.addEventListener('click',(e)=>{
     popup.setAttribute('aria-hidden', 'true');
   };
 
-  setTimeout(openPopup, 350);
+  setTimeout(openPopup, 1200);
 
   closeBtn?.addEventListener('click', closePopup);
   dismissBtn?.addEventListener('click', closePopup);
