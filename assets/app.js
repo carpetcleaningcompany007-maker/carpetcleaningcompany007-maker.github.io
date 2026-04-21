@@ -116,57 +116,18 @@
   });
 })();
 
-setInterval(() => {
-  const msgs = document.querySelectorAll('.promo-float-message');
-  if (!msgs.length) return;
-  let active = [...msgs].findIndex(m => m.classList.contains('is-active'));
-  if (active < 0) {
-    msgs[0].classList.add('is-active');
-    return;
-  }
-  msgs[active].classList.remove('is-active');
-  msgs[(active + 1) % msgs.length].classList.add('is-active');
-}, 3000);
-
-
-document.addEventListener('click',(e)=>{
-  if(e.target.classList.contains('promo-float-close')){
-    document.getElementById('promoFloat').style.display='none';
-  }
-});
-
-
-
-
-
-
-
-
-
-
-
-
 (() => {
   const popup = document.getElementById('offerPopupV3');
   if (!popup) return;
-
   const closeBtn = popup.querySelector('.offer-popup-v3-close');
   const dismissBtn = popup.querySelector('.offer-popup-v3-dismiss');
   const backdrop = popup.querySelector('.offer-popup-v3-backdrop');
-
-  const openPopup = () => {
-    popup.classList.add('is-open');
-    popup.setAttribute('aria-hidden', 'false');
-  };
-
   const closePopup = () => {
     popup.classList.remove('is-open');
     popup.setAttribute('aria-hidden', 'true');
   };
-
-  setTimeout(openPopup, 1200);
-
   closeBtn?.addEventListener('click', closePopup);
   dismissBtn?.addEventListener('click', closePopup);
   backdrop?.addEventListener('click', closePopup);
 })();
+
