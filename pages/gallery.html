@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Gallery | Before and After Results | The Carpet Cleaning Company</title>
-  <meta name="description" content="A cleaner, tidier gallery of before and after carpet cleaning, upholstery cleaning, stain removal and rug cleaning results from The Carpet Cleaning Company.">
+  <meta name="description" content="Before and after carpet cleaning, upholstery cleaning, stain removal and rug cleaning results from The Carpet Cleaning Company.">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://www.thecarpetcleaningcrew.co.uk/pages/gallery.html">
   <meta property="og:image" content="https://www.thecarpetcleaningcrew.co.uk/assets/img/hero-carpet-cleaning.webp">
@@ -22,16 +22,7 @@
   <link rel="stylesheet" href="../assets/style.css">
   <style>
     .gallery-hero-note{max-width:760px}
-    .gallery-shell{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
-    .gallery-card{background:#fff;border:1px solid rgba(18,38,58,.08);border-radius:24px;box-shadow:0 16px 34px rgba(8,20,40,.08);overflow:hidden;display:flex;flex-direction:column}
-    .gallery-thumb{position:relative;background:#f4f8fc;aspect-ratio:4/3;overflow:hidden}
-    .gallery-thumb img{width:100%;height:100%;object-fit:cover;display:block}
-    .gallery-badge{position:absolute;left:14px;top:14px;display:inline-flex;align-items:center;min-height:34px;padding:0 12px;border-radius:999px;background:rgba(255,255,255,.92);border:1px solid rgba(18,38,58,.08);color:#12304f;font-weight:800;font-size:13px}
-    .gallery-body{padding:12px 14px 14px;display:flex;justify-content:center}
-    .gallery-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:0;justify-content:center;width:100%}
-    .gallery-actions a{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:0 14px;border-radius:14px;font-weight:800;text-decoration:none;min-width:150px}
-    .gallery-open{background:#0f5fe6;color:#fff}
-    .gallery-quote{background:#12304f;color:#fff}
+    .gallery-topbar{display:grid;grid-template-columns:1.08fr .92fr;gap:24px;align-items:center}
     .gallery-panel{background:linear-gradient(180deg,#ffffff 0%,#f7fbff 100%);border:1px solid rgba(18,38,58,.08);border-radius:26px;padding:26px;box-shadow:0 18px 40px rgba(8,20,40,.08)}
     .gallery-panel h3{margin:0 0 10px;color:#12304f;font-size:28px}
     .gallery-panel p{margin:0 0 18px;color:#5f7387;line-height:1.8}
@@ -40,11 +31,20 @@
     .gallery-quick .primary{background:#0f5fe6;color:#fff}
     .gallery-quick .secondary{background:#12304f;color:#fff}
     .gallery-quick .ghost{background:#eef5ff;color:#0f5fe6;border:1px solid rgba(15,95,230,.10)}
+
+    .gallery-wrap{column-count:3;column-gap:20px}
+    .gallery-embed-card{break-inside:avoid;display:block;background:#fff;border:1px solid rgba(18,38,58,.08);border-radius:24px;box-shadow:0 16px 34px rgba(8,20,40,.08);overflow:hidden;margin:0 0 20px}
+    .gallery-embed-frame{padding:10px;background:#fff}
+    .gallery-embed-frame iframe{width:100% !important;border:0;display:block;border-radius:18px;overflow:hidden}
+
     @media (max-width:1100px){
-      .gallery-shell{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .gallery-topbar{grid-template-columns:1fr}
+      .gallery-wrap{column-count:2}
     }
     @media (max-width:760px){
-      .gallery-shell{grid-template-columns:1fr}
+      .gallery-wrap{column-count:1}
+      .gallery-panel{padding:20px}
+      .gallery-panel h3{font-size:24px}
     }
   </style>
 </head>
@@ -108,7 +108,7 @@
     <div class="hero-copy reveal">
       <span class="kicker">Gallery</span>
       <h1>Before and after gallery</h1>
-      <p class="gallery-hero-note">A cleaner, tidier showcase of real carpet cleaning, upholstery cleaning, stain removal and rug cleaning results.</p>
+      <p class="gallery-hero-note">A tidier showcase of your Facebook videos and before and after posts, without the extra headings and card text around them.</p>
       <div class="hero-actions">
         <a class="btn btn-call" href="../carpet-cleaning-quote.html">Get an instant quote</a>
         <a class="btn btn-secondary" href="https://wa.me/447802563213" target="_blank" rel="noreferrer">WhatsApp photos and questions</a>
@@ -116,7 +116,7 @@
     </div>
     <div class="contact-panel reveal gallery-panel">
       <h3>Real customer results</h3>
-      <p>Tap through to Facebook if you want to watch the original reel or post, or go straight to the quote page if you want help with something similar.</p>
+      <p>These are your actual Facebook embeds, laid out more neatly so the page feels cleaner and less cluttered.</p>
       <div class="gallery-quick">
         <a class="primary" href="../carpet-cleaning-quote.html">Get a free quote</a>
         <a class="secondary" href="https://wa.me/447802563213" target="_blank" rel="noreferrer">Send photos on WhatsApp</a>
@@ -128,7 +128,7 @@
 
 <section class="section">
   <div class="container">
-    <div class="gallery-shell">
+    <div class="gallery-wrap">
       
       <article class="gallery-card reveal">
         <div class="gallery-thumb">
