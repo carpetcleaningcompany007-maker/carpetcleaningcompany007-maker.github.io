@@ -4,48 +4,52 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Before and After Gallery | The Carpet Cleaning Company</title>
-  <meta name="description" content="See before and after carpet cleaning, upholstery cleaning, stain removal and rug cleaning results from The Carpet Cleaning Company on Facebook.">
+  <meta name="description" content="See before and after carpet cleaning, upholstery cleaning, stain removal and rug cleaning results from The Carpet Cleaning Company. View more photos and videos on our Facebook page.">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://www.thecarpetcleaningcrew.co.uk/pages/gallery.html">
   <meta property="og:image" content="https://www.thecarpetcleaningcrew.co.uk/assets/img/hero-carpet-cleaning.webp">
   <meta name="twitter:image" content="https://www.thecarpetcleaningcrew.co.uk/assets/img/hero-carpet-cleaning.webp">
-  <meta name="twitter:description" content="See before and after carpet cleaning, upholstery cleaning, stain removal and rug cleaning results from The Carpet Cleaning Company on Facebook.">
+  <meta name="twitter:description" content="See before and after carpet cleaning, upholstery cleaning, stain removal and rug cleaning results from The Carpet Cleaning Company. View more photos and videos on our Facebook page.">
   <meta name="twitter:title" content="Before and After Gallery | The Carpet Cleaning Company">
   <meta name="twitter:card" content="summary_large_image">
   <meta property="og:url" content="https://www.thecarpetcleaningcrew.co.uk/pages/gallery.html">
   <meta property="og:type" content="article">
-  <meta property="og:description" content="See before and after carpet cleaning, upholstery cleaning, stain removal and rug cleaning results from The Carpet Cleaning Company on Facebook.">
+  <meta property="og:description" content="See before and after carpet cleaning, upholstery cleaning, stain removal and rug cleaning results from The Carpet Cleaning Company. View more photos and videos on our Facebook page.">
   <meta property="og:title" content="Before and After Gallery | The Carpet Cleaning Company">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/style.css">
   <style>
-    .gallery-wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:26px;align-items:stretch}
-    .gallery-panel{background:#fff;border:1px solid rgba(18,38,58,.08);border-radius:28px;padding:30px;box-shadow:0 18px 40px rgba(8,20,40,.08)}
-    .gallery-panel h2{margin:0 0 14px;color:#12304f}
+    .gallery-top-wrap{display:grid;grid-template-columns:1.08fr .92fr;gap:24px;align-items:stretch}
+    .gallery-panel{background:linear-gradient(180deg,#ffffff 0%,#f7fbff 100%);border:1px solid rgba(18,38,58,.08);border-radius:28px;padding:30px;box-shadow:0 18px 40px rgba(8,20,40,.08)}
+    .gallery-panel h2{margin:0 0 14px;color:#12304f;font-size:34px;line-height:1.15}
     .gallery-panel p{color:#5f7387;line-height:1.8}
-    .gallery-cta-stack{display:grid;gap:14px;margin-top:24px}
+    .gallery-cta-stack{display:grid;gap:14px;margin-top:22px}
     .gallery-cta{display:flex;align-items:center;justify-content:center;min-height:56px;padding:0 18px;border-radius:18px;font-weight:800;text-decoration:none}
     .gallery-cta.primary{background:#1877f2;color:#fff}
     .gallery-cta.secondary{background:#12304f;color:#fff}
     .gallery-cta.ghost{background:#eef5ff;color:#0f5fe6;border:1px solid rgba(15,95,230,.10)}
-    .gallery-points{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:24px}
-    .gallery-point{background:#f8fbff;border:1px solid rgba(18,38,58,.08);border-radius:18px;padding:18px}
-    .gallery-point strong{display:block;color:#12304f;margin-bottom:6px}
-    .gallery-point span{display:block;color:#5f7387;line-height:1.6}
-    .gallery-showcase{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
-    .gallery-card{position:relative;overflow:hidden;border-radius:24px;min-height:220px;box-shadow:0 18px 40px rgba(8,20,40,.12)}
-    .gallery-card img{width:100%;height:100%;object-fit:cover;display:block}
-    .gallery-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,16,30,.06),rgba(4,16,30,.52))}
-    .gallery-card span{position:absolute;left:16px;bottom:14px;z-index:2;color:#fff;font-weight:800;font-size:16px}
-    .fb-note{margin-top:20px;padding:16px 18px;border-radius:18px;background:#f8fbff;border:1px solid rgba(18,38,58,.08);color:#5f7387}
-    @media (max-width:980px){
-      .gallery-wrap{grid-template-columns:1fr}
+    .gallery-mini-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:22px}
+    .gallery-mini-card{background:#fff;border:1px solid rgba(18,38,58,.08);border-radius:18px;padding:18px}
+    .gallery-mini-card strong{display:block;color:#12304f;margin-bottom:6px}
+    .gallery-mini-card span{display:block;color:#5f7387;line-height:1.6}
+    .gallery-video-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+    .gallery-video-card{background:#fff;border:1px solid rgba(18,38,58,.08);border-radius:24px;box-shadow:0 16px 34px rgba(8,20,40,.08);overflow:hidden}
+    .gallery-video-frame{padding:10px;background:#fff}
+    .gallery-video-frame iframe{width:100%;border:0;display:block;min-height:476px;border-radius:18px;overflow:hidden}
+    .gallery-strip{background:#0f2741;border-radius:28px;padding:28px;color:#fff;box-shadow:0 18px 40px rgba(8,20,40,.12)}
+    .gallery-strip p{color:#dbe8f7;margin:10px 0 0}
+    .gallery-strip .hero-actions{margin-top:22px}
+    @media (max-width:1100px){
+      .gallery-top-wrap{grid-template-columns:1fr}
+      .gallery-video-grid{grid-template-columns:1fr}
     }
     @media (max-width:760px){
-      .gallery-points,.gallery-showcase{grid-template-columns:1fr}
       .gallery-panel{padding:22px}
+      .gallery-panel h2{font-size:28px}
+      .gallery-mini-grid{grid-template-columns:1fr}
+      .gallery-video-frame iframe{min-height:420px}
     }
   </style>
 </head>
@@ -109,17 +113,17 @@
     <div class="hero-copy reveal">
       <span class="kicker">Gallery</span>
       <h1>Before and after results</h1>
-      <p>All our before and after photos and videos are on our Facebook page. Have a look through our recent work, transformations and stain removal results.</p>
+      <p>Here are a few recent videos from our work. We also have many more before and after photos and videos on our Facebook page, so please have a look through them and then come back and send us a message for a quote.</p>
       <div class="hero-actions">
-        <a class="btn btn-call" href="https://www.facebook.com/61559013150413" target="_blank" rel="noreferrer">View Facebook page</a>
+        <a class="btn btn-call" href="https://www.facebook.com/61559013150413" target="_blank" rel="noreferrer">View our Facebook page</a>
         <a class="btn btn-secondary" href="../carpet-cleaning-quote.html">Get a free quote</a>
       </div>
     </div>
-    <div class="contact-panel reveal premium-panel local-cta-panel" style="background:linear-gradient(180deg,#ffffff 0%,#f7fbff 100%);border:1px solid rgba(18,38,58,.08);border-radius:24px;padding:24px;box-shadow:0 18px 40px rgba(8,20,40,.10)">
-      <h3 style="margin:0 0 8px;color:#12304f;font-size:26px">See our latest work</h3>
-      <p style="margin:0 0 18px;color:#5f7387;line-height:1.7">Browse our Facebook page for real customer jobs, before and after results, videos and recent cleaning work.</p>
+    <div class="contact-panel reveal premium-panel" style="background:linear-gradient(180deg,#ffffff 0%,#f7fbff 100%);border:1px solid rgba(18,38,58,.08);border-radius:24px;padding:24px;box-shadow:0 18px 40px rgba(8,20,40,.10)">
+      <h3 style="margin:0 0 8px;color:#12304f;font-size:26px">See more on Facebook</h3>
+      <p style="margin:0 0 18px;color:#5f7387;line-height:1.7">Our Facebook page is where we post lots of before and after photos, stain removals, rug cleaning, upholstery work and recent videos from real jobs.</p>
       <div style="display:grid;gap:12px">
-        <a style="display:flex;align-items:center;justify-content:center;min-height:54px;padding:0 18px;border-radius:16px;font-weight:800;text-decoration:none;background:#1877f2;color:#fff" href="https://www.facebook.com/61559013150413" target="_blank" rel="noreferrer">Open Facebook gallery</a>
+        <a style="display:flex;align-items:center;justify-content:center;min-height:54px;padding:0 18px;border-radius:16px;font-weight:800;text-decoration:none;background:#1877f2;color:#fff" href="https://www.facebook.com/61559013150413" target="_blank" rel="noreferrer">Click here to view our Facebook gallery</a>
         <a style="display:flex;align-items:center;justify-content:center;min-height:54px;padding:0 18px;border-radius:16px;font-weight:800;text-decoration:none;background:#12304f;color:#fff" href="https://www.facebook.com/61559013150413" target="_blank" rel="noreferrer">Like and follow our page</a>
         <a style="display:flex;align-items:center;justify-content:center;min-height:54px;padding:0 18px;border-radius:16px;font-weight:800;text-decoration:none;background:#eef5ff;color:#0f5fe6;border:1px solid rgba(15,95,230,.10)" href="https://wa.me/447802563213" target="_blank" rel="noreferrer">WhatsApp photos and questions</a>
       </div>
@@ -128,59 +132,72 @@
 </section>
 
 <section class="section">
-  <div class="container gallery-wrap">
+  <div class="container gallery-top-wrap">
     <div class="gallery-panel">
-      <h2>Why view our Facebook gallery</h2>
-      <p>That is where we post our real before and after results, cleaning videos and recent jobs. It is the easiest place to see the sort of results we achieve on carpets, upholstery, rugs and stain removal.</p>
-      <div class="gallery-points">
-        <div class="gallery-point">
+      <h2>A few recent videos from our work</h2>
+      <p>These are three videos pulled through from the landing page. They give people a quick look at the sort of results we achieve. If you want to see the full range of before and afters, the best place to do that is our Facebook page.</p>
+      <div class="gallery-mini-grid">
+        <div class="gallery-mini-card">
+          <strong>Carpet cleaning results</strong>
+          <span>See real jobs and transformations from lounges, stairs, hallways and other busy areas.</span>
+        </div>
+        <div class="gallery-mini-card">
+          <strong>Upholstery and stain work</strong>
+          <span>We also post sofas, chairs, stain removals and other jobs on the same page.</span>
+        </div>
+        <div class="gallery-mini-card">
           <strong>Before and after photos</strong>
-          <span>See real cleaning results from recent jobs and the kind of difference a proper clean can make.</span>
+          <span>There are many more photos and videos on Facebook than it makes sense to force into one gallery page.</span>
         </div>
-        <div class="gallery-point">
-          <strong>Videos and reels</strong>
-          <span>Watch cleaning work, stain removal and transformations without the gallery page looking cluttered.</span>
+        <div class="gallery-mini-card">
+          <strong>Next step</strong>
+          <span>Browse the Facebook page, then come back and use the quote form if you want help with something similar.</span>
         </div>
-        <div class="gallery-point">
-          <strong>Latest jobs</strong>
-          <span>Our Facebook page is where the newest work goes first, so it is the best place to keep up with fresh results.</span>
-        </div>
-        <div class="gallery-point">
-          <strong>Real customer work</strong>
-          <span>No stock examples. Just real carpets, rugs, sofas and stain removals from genuine jobs.</span>
-        </div>
-      </div>
-      <div class="fb-note">
-        All our before and after pictures and videos are on our Facebook page. Please have a look, like the page and follow along to see more of our latest work.
       </div>
     </div>
 
-    <div class="gallery-showcase">
-      <a class="gallery-card" href="https://www.facebook.com/61559013150413" target="_blank" rel="noreferrer">
-        <img src="../assets/img/hero-carpet-cleaning.webp" alt="Carpet cleaning results" loading="lazy" width="1600" height="1066">
-        <span>Carpet cleaning results</span>
-      </a>
-      <a class="gallery-card" href="https://www.facebook.com/61559013150413" target="_blank" rel="noreferrer">
-        <img src="../assets/img/stain-removal.webp" alt="Stain removal results" loading="lazy" width="932" height="1400">
-        <span>Advanced stain removal</span>
-      </a>
-      <a class="gallery-card" href="https://www.facebook.com/61559013150413" target="_blank" rel="noreferrer">
-        <img src="../assets/img/upholstery-cleaning.webp" alt="Upholstery cleaning results" loading="lazy" width="932" height="1400">
-        <span>Upholstery cleaning</span>
-      </a>
-      <a class="gallery-card" href="https://www.facebook.com/61559013150413" target="_blank" rel="noreferrer">
-        <img src="../assets/img/rug-cleaning.webp" alt="Rug cleaning results" loading="lazy" width="932" height="1400">
-        <span>Rug cleaning results</span>
-      </a>
+    <div class="gallery-strip">
+      <h2 style="margin:0;color:#fff">Click through to see everything</h2>
+      <p>We have many, many more before and after photos and videos on Facebook. If you want to see the full lot, click through, have a look around, then come back here and fill out the form when you are ready.</p>
+      <div class="hero-actions">
+        <a class="btn btn-secondary" href="https://www.facebook.com/61559013150413" target="_blank" rel="noreferrer">View all before and afters on Facebook</a>
+        <a class="btn btn-ghost" href="../carpet-cleaning-quote.html">Come back and get a quote</a>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="section alt center">
+<section class="section alt">
   <div class="container">
-    <span class="kicker" style="background:var(--brand-soft);color:var(--brand2)">Next step</span>
-    <h2>Seen something similar to what you need?</h2>
-    <p style="max-width:760px;margin:12px auto 0;color:#5f7387">If you have seen a job on our Facebook page that looks similar to yours, send us a message with a few photos and we can point you toward the best option.</p>
+    <div class="gallery-video-grid">
+      
+      <article class="gallery-video-card reveal">
+        <div class="gallery-video-frame">
+          <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F61559013150413%2Fvideos%2F1899520797292791%2F&amp;show_text=false&width=500" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+        </div>
+      </article>
+    
+      <article class="gallery-video-card reveal">
+        <div class="gallery-video-frame">
+          <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F61559013150413%2Fvideos%2F1162016885802464%2F&amp;show_text=false&width=500" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+        </div>
+      </article>
+    
+      <article class="gallery-video-card reveal">
+        <div class="gallery-video-frame">
+          <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F61559013150413%2Fvideos%2F1362198414861523%2F&amp;show_text=false&width=500" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+        </div>
+      </article>
+    
+    </div>
+  </div>
+</section>
+
+<section class="section center">
+  <div class="container">
+    <span class="kicker" style="background:var(--brand-soft);color:var(--brand2)">Ready to ask?</span>
+    <h2>Seen something similar to your carpets or sofa?</h2>
+    <p style="max-width:760px;margin:12px auto 0;color:#5f7387">Have a look through our Facebook page for more results, then send us a few photos and we will point you toward the best option.</p>
     <div class="hero-actions" style="justify-content:center;margin-top:24px">
       <a class="btn btn-call" href="../carpet-cleaning-quote.html">Get an instant quote</a>
       <a class="btn btn-secondary" href="https://wa.me/447802563213" target="_blank" rel="noreferrer">WhatsApp photos</a>
