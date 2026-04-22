@@ -384,8 +384,8 @@
           <a href="./pages/pricing.html">Pricing</a>
           <a href="./pages/special-offers.html">Special Offers</a>
           <a href="./pages/upholstery-cleaning.html">Upholstery Cleaning</a>
-          <a href="./pages/stain-removal.html">Stain Removal</a>
-          <a href="./pages/rug-cleaning.html">Rug Cleaning</a>
+          <a href="./pages/stain-removal.html">Advanced Stain Removal</a>
+          <a href="./pages/rug-cleaning.html">Professional Rug Cleaning</a>
           <a href="./pages/hard-floor-cleaning.html">Hard Floor Cleaning</a>
           <a href="./pages/moth-treatment.html">Moth Treatment</a>
           <a href="./pages/commercial-carpet-cleaning.html">Hotel, Office &amp; Commercial</a>
@@ -478,7 +478,7 @@
 <option>Carpets</option>
 <option>Upholstery</option>
 <option>Rugs</option>
-<option>Stain Removal</option>
+<option>Advanced Stain Removal</option>
 <option>Hard Floor Cleaning</option>
 <option>Commercial Cleaning</option>
 <option>Multiple Services</option>
@@ -528,7 +528,7 @@
 <option>Carpets</option>
 <option>Upholstery</option>
 <option>Rugs</option>
-<option>Stain Removal</option>
+<option>Advanced Stain Removal</option>
 <option>Hard Floor Cleaning</option>
 <option>Commercial Cleaning</option>
 <option>Multiple Services</option>
@@ -665,7 +665,7 @@
 <article class="card reveal">
 <img alt="Professional rug cleaning" height="1400" loading="lazy" src="./assets/img/rug-cleaning.webp" width="932"/>
 <div class="card-body">
-<h3>Rug Cleaning</h3>
+<h3>Professional Rug Cleaning</h3>
 <p>Professional rug cleaning for synthetic and delicate rugs using methods chosen for the fibre type, construction and level of soiling.</p>
 <a class="btn btn-primary" href="pages/rug-cleaning.html">Learn more</a>
 </div>
@@ -673,7 +673,7 @@
 <article class="card reveal">
 <img alt="Professional stain removal" height="1066" loading="lazy" src="./assets/img/stain-removal.webp" width="1600"/>
 <div class="card-body">
-<h3>Stain Removal</h3>
+<h3>Advanced Stain Removal</h3>
 <p>Targeted stain removal for spills, pet accidents, tea, coffee, food stains and other stubborn marks using the right treatment for the fibre and the stain.</p>
 <a class="btn btn-primary" href="pages/stain-removal.html">Learn more</a>
 </div>
@@ -814,8 +814,8 @@
 <a href="pages/carpet-cleaning.html">Carpet Cleaning</a>
 <a href="pages/pricing.html">Pricing</a>
 <a href="pages/upholstery-cleaning.html">Upholstery Cleaning</a>
-<a href="pages/stain-removal.html">Stain Removal</a>
-<a href="pages/rug-cleaning.html">Rug Cleaning</a>
+<a href="pages/stain-removal.html">Advanced Stain Removal</a>
+<a href="pages/rug-cleaning.html">Professional Rug Cleaning</a>
 <a href="pages/hard-floor-cleaning.html">Hard Floor Cleaning</a>
 <a href="pages/moth-treatment.html">Moth Treatment</a>
 </div>
@@ -855,70 +855,5 @@
 <a class="mobile-cta-wa" href="https://wa.me/447802563213" rel="noreferrer" target="_blank">WhatsApp</a>
 </div>
 <script src="./assets/app.js"></script>
-<div class="offer-card-slide">
-<div class="offer-card-title">Full professional deep clean package</div>
-<div class="offer-card-text">A strong extra for larger bookings and a better all round result.</div>
-</div>
-
-<a class="offer-card-button" href="carpet-cleaning-quote.html">Get this offer</a>
-
-
-<h2 class="offer-popup-v2-title" id="offerPopupV2Title">Deep Clean Package</h2>
-<p class="offer-popup-v2-offer">Hall, stairs, landing + 1 room for £120</p>
-<p class="offer-popup-v2-text">Professional deep clean with powerful results in one visit.</p>
-<a class="offer-popup-v2-button" href="carpet-cleaning-quote.html">GET THIS OFFER</a>
-<button class="offer-popup-v2-dismiss" type="button">No thanks, continue to site</button>
-
-
-<div aria-hidden="true" class="offer-popup-v3" id="offerPopupV3">
-<div class="offer-popup-v3-backdrop"></div>
-<div aria-labelledby="offerPopupV3Title" aria-modal="true" class="offer-popup-v3-panel" role="dialog">
-<button aria-label="Close offer" class="offer-popup-v3-close" type="button">×</button>
-<div class="offer-popup-v3-sticker">SPECIAL<br/>OFFER</div>
-<div class="offer-popup-v3-ribbon-wrap">
-<div class="offer-popup-v3-ribbon">LIMITED TIME OFFER</div>
-</div>
-<h2 class="offer-popup-v3-title" id="offerPopupV3Title">Deep Clean Package</h2>
-<p class="offer-popup-v3-offer">Hall, stairs, landing + 1 room for £120</p>
-<p class="offer-popup-v3-text">Professional deep clean package with strong value in one visit.</p>
-<a class="offer-popup-v3-button" href="carpet-cleaning-quote.html">GET THIS OFFER</a>
-<button class="offer-popup-v3-dismiss" type="button">No thanks, continue to site</button>
-</div>
-</div>
-<script>async function submitAnyQuote(e, form) {
-  e.preventDefault();
-  const btn = form.querySelector('button[type="submit"], input[type="submit"]');
-  const oldText = btn ? btn.textContent || btn.value : "";
-
-  if (btn) {
-    btn.disabled = true;
-    if (btn.tagName === 'BUTTON') btn.textContent = 'Sending...';
-    else btn.value = 'Sending...';
-  }
-
-  try {
-    const res = await fetch(form.action, {
-      method: 'POST',
-      body: new FormData(form),
-      headers: { 'Accept': 'application/json' }
-    });
-
-    if (!res.ok) {
-      let msg = '';
-      try { msg = await res.text(); } catch(e) {}
-      throw new Error('Formspree submit failed: ' + res.status + ' ' + msg);
-    }
-
-    window.location.href = './thank-you.html';
-    return;
-  } catch (err) {
-    alert('Sorry, it didn’t send. Please try again, or call 07802 563213.');
-    console.error(err);
-    if (btn) {
-      btn.disabled = false;
-      if (btn.tagName === 'BUTTON') btn.textContent = oldText || 'Send';
-      else btn.value = oldText || 'Send';
-    }
-  }
-}</script></body>
+</body>
 </html>
