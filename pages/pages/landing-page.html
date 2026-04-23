@@ -275,6 +275,26 @@
       }, { passive: false });
     })();
   </script>
+
+<style>
+.hybrid-form-shell{background:#fff;border:1px solid rgba(18,38,58,.08);border-radius:28px;padding:28px;box-shadow:0 22px 48px rgba(8,20,40,.10)}
+.hybrid-form-shell label{display:block}
+.hybrid-form-shell label span{display:block;font-size:14px;font-weight:700;color:#334155;margin-bottom:6px}
+.hybrid-form-shell input,.hybrid-form-shell select,.hybrid-form-shell textarea{
+  width:100%;border:1px solid #cbd5e1;border-radius:14px;padding:12px 14px;font-size:14px;background:#fff;
+}
+.hybrid-form-shell textarea{min-height:120px}
+.hybrid-form-shell input:focus,.hybrid-form-shell select:focus,.hybrid-form-shell textarea:focus{
+  outline:none;box-shadow:0 0 0 4px rgba(233,178,65,.22);border-color:rgba(216,154,31,.95);
+}
+.hybrid-form-shell .grid2,.hybrid-form-shell .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.hybrid-form-shell .btn,.hybrid-form-shell .submit-btn{
+  display:inline-flex;align-items:center;justify-content:center;min-height:54px;border-radius:18px;background:#d8b36a;color:#090d13;
+  font-weight:800;padding:0 18px;text-decoration:none;border:0;box-shadow:0 14px 34px rgba(4,9,20,0.16);width:100%;
+}
+@media (max-width:760px){.hybrid-form-shell .grid2,.hybrid-form-shell .form-row{grid-template-columns:1fr}}
+</style>
+
 </head>
 
 <body class="bg-ink-900 text-slate-100 overflow-x-hidden">
@@ -394,7 +414,7 @@
 
               <form
                 id="heroQuoteForm"
-                class="mt-5"
+                class="mt-5 hybrid-form-shell"
                 action="https://formspree.io/f/mblnzwpv"
                 method="POST"
                 onsubmit="submitQuote(event, this);"
