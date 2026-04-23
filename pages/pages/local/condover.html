@@ -67,6 +67,15 @@
   .local-links{grid-template-columns:1fr;}
 }
 </style>
+
+<style>
+@media (min-width: 1024px){
+  .nav-links{display:flex !important;flex-wrap:wrap;gap:12px;align-items:center}
+  .nav-links .nav-item,.nav-links .dropdown{display:none !important}
+  .nav-links a{white-space:nowrap}
+}
+</style>
+
 </head>
 <body>
 <header class="site-header">
@@ -79,42 +88,22 @@
       </div>
     </a>
     <button class="mobile-toggle" aria-expanded="false">Menu</button>
-    <nav class="nav-links">
-      <a href="../../index.html">Home</a>
-      <div class="nav-item">
-        <a href="../../pages/carpet-cleaning.html">Services</a>
-        <div class="dropdown">
-          <a href="../../pages/carpet-cleaning.html">Carpet Cleaning</a>
-          <a href="../../pages/pricing.html">Pricing</a>
-          <a href="../../pages/special-offers.html">Special Offers</a>
-          <a href="../../pages/upholstery-cleaning.html">Upholstery Cleaning</a>
-          <a href="../../pages/stain-removal.html">Stain Removal</a>
-          <a href="../../pages/rug-cleaning.html">Rug Cleaning</a>
-          <a href="../../pages/hard-floor-cleaning.html">Hard Floor Cleaning</a>
-          <a href="../../pages/moth-treatment.html">Moth Treatment</a>
-          <a href="../../pages/commercial-carpet-cleaning.html">Hotel, Office &amp; Commercial</a>
-        </div>
-      </div>
-      <div class="nav-item">
-        <a href="../../pages/service-areas.html">Areas</a>
-        <div class="dropdown">
-          <a href="../../pages/local/ludlow.html">Ludlow</a>
-          <a href="../../pages/local/shrewsbury.html">Shrewsbury</a>
-          <a href="../../pages/local/craven-arms.html">Craven Arms</a>
-          <a href="../../pages/local/church-stretton.html">Church Stretton</a>
-          <a href="../../pages/local/diddlebury.html">Diddlebury</a>
-          <a href="../../pages/local/meole-brace.html">Meole Brace</a>
-          <a href="../../pages/local/radbrook.html">Radbrook</a>
-          <a href="../../pages/local/belle-vue.html">Belle Vue</a>
-          <a href="../../pages/local/bomere-heath.html">Bomere Heath</a>
-          <a href="../../pages/local/clee-hill.html">Clee Hill</a>
-        </div>
-      </div>
-      <a href="../../pages/about.html">About</a>
-      <a href="../../pages/reviews.html">Reviews</a>
-      <a href="../../pages/contact.html">Contact</a>
-      <a href="../../carpet-cleaning-quote.html" class="nav-quote">Instant Quote</a>
-    </nav>
+    
+<nav class="nav-links">
+  <a href="../../../index.html">Home</a>
+  <a href="../landing-page.html">Landing Page</a>
+  <a href="../carpet-cleaning.html">Carpet Cleaning</a>
+  <a href="../upholstery-cleaning.html">Upholstery</a>
+  <a href="../rug-cleaning.html">Rug Cleaning</a>
+  <a href="../stain-removal.html">Stain Removal</a>
+  <a href="../commercial-carpet-cleaning.html">Commercial</a>
+  <a href="../service-areas.html">Areas</a>
+  <a href="../gallery.html">Gallery</a>
+  <a href="../reviews.html">Reviews</a>
+  <a href="../about.html">About</a>
+  <a href="../contact.html">Contact</a>
+  <a href="../../carpet-cleaning-quote.html" class="nav-quote">Instant Quote</a>
+</nav>
     <div class="nav-cta">
       <a class="btn btn-call" href="tel:07802563213">Call 07802 563213</a>
       <a class="btn-quote-right" href="../../carpet-cleaning-quote.html">Instant Quote</a>

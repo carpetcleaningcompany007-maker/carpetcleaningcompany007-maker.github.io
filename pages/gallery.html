@@ -39,6 +39,15 @@
     @media (max-width:1100px){.gallery-top-wrap{grid-template-columns:1fr} .gallery-video-grid{grid-template-columns:1fr}}
     @media (max-width:760px){.gallery-panel{padding:22px} .gallery-panel h2{font-size:28px} .gallery-mini-grid{grid-template-columns:1fr} .gallery-video-frame iframe{min-height:420px}}
   </style>
+
+<style>
+@media (min-width: 1024px){
+  .nav-links{display:flex !important;flex-wrap:wrap;gap:12px;align-items:center}
+  .nav-links .nav-item,.nav-links .dropdown{display:none !important}
+  .nav-links a{white-space:nowrap}
+}
+</style>
+
 </head>
 <body>
 <header class="site-header">
@@ -51,26 +60,22 @@
       </div>
     </a>
     <button class="mobile-toggle" aria-expanded="false">Menu</button>
-    <nav class="nav-links">
-      <a href="../index.html">Home</a>
-      <div class="nav-item">
-        <a href="../pages/carpet-cleaning.html">Services</a>
-        <div class="dropdown">
-          <a href="../pages/carpet-cleaning.html">Carpet Cleaning</a>
-          <a href="../pages/pricing.html">Pricing</a>
-          <a href="../pages/upholstery-cleaning.html">Upholstery Cleaning</a>
-          <a href="../pages/stain-removal.html">Advanced Stain Removal</a>
-          <a href="../pages/rug-cleaning.html">Professional Rug Cleaning</a>
-          <a href="../pages/hard-floor-cleaning.html">Hard Floor Cleaning</a>
-          <a href="../pages/commercial-carpet-cleaning.html">Hotel, Office &amp; Commercial</a>
-        </div>
-      </div>
-      <a href="../pages/service-areas.html">Areas</a>
-      <a href="../pages/reviews.html">Reviews</a>
-      <a href="../pages/gallery.html">Gallery</a>
-      <a href="../pages/contact.html">Contact</a>
-      <a href="../carpet-cleaning-quote.html" class="nav-quote">Instant Quote</a>
-    </nav>
+    
+<nav class="nav-links">
+  <a href="../index.html">Home</a>
+  <a href="landing-page.html">Landing Page</a>
+  <a href="carpet-cleaning.html">Carpet Cleaning</a>
+  <a href="upholstery-cleaning.html">Upholstery</a>
+  <a href="rug-cleaning.html">Rug Cleaning</a>
+  <a href="stain-removal.html">Stain Removal</a>
+  <a href="commercial-carpet-cleaning.html">Commercial</a>
+  <a href="service-areas.html">Areas</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="reviews.html">Reviews</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="../carpet-cleaning-quote.html" class="nav-quote">Instant Quote</a>
+</nav>
     <div class="nav-cta">
       <a class="btn btn-call" href="tel:07802563213">Call 07802 563213</a>
       <a class="btn-quote-right" href="../carpet-cleaning-quote.html">Instant Quote</a>
