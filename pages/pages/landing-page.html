@@ -295,6 +295,56 @@
 @media (max-width:760px){.hybrid-form-shell .grid2,.hybrid-form-shell .form-row{grid-template-columns:1fr}}
 </style>
 
+
+<style>
+@media (min-width:1024px){
+  .nav-links{
+    display:flex !important;
+    align-items:center;
+    gap:14px;
+    flex-wrap:nowrap;
+  }
+  .nav-links > a,
+  .nav-links > .nav-item > a{
+    white-space:nowrap;
+    font-weight:700;
+  }
+  .nav-links .nav-item{
+    position:relative;
+    display:flex !important;
+    align-items:center;
+  }
+  .nav-links .dropdown{
+    display:none !important;
+    position:absolute;
+    top:calc(100% + 12px);
+    left:0;
+    min-width:240px;
+    background:#fff;
+    border:1px solid rgba(18,38,58,.10);
+    border-radius:18px;
+    box-shadow:0 24px 54px rgba(8,20,40,.18);
+    padding:10px;
+    z-index:9999;
+  }
+  .nav-links .dropdown a{
+    display:block;
+    padding:10px 12px;
+    border-radius:12px;
+    color:#12304f !important;
+    font-weight:700;
+    white-space:nowrap;
+  }
+  .nav-links .dropdown a:hover{
+    background:#f3f8ff;
+    color:#0f5fe6 !important;
+  }
+  .nav-links .nav-item:hover .dropdown{
+    display:block !important;
+  }
+}
+</style>
+
 </head>
 
 <body class="bg-ink-900 text-slate-100 overflow-x-hidden">

@@ -29,6 +29,56 @@
 }
 </style>
 
+
+<style>
+@media (min-width:1024px){
+  .nav-links{
+    display:flex !important;
+    align-items:center;
+    gap:14px;
+    flex-wrap:nowrap;
+  }
+  .nav-links > a,
+  .nav-links > .nav-item > a{
+    white-space:nowrap;
+    font-weight:700;
+  }
+  .nav-links .nav-item{
+    position:relative;
+    display:flex !important;
+    align-items:center;
+  }
+  .nav-links .dropdown{
+    display:none !important;
+    position:absolute;
+    top:calc(100% + 12px);
+    left:0;
+    min-width:240px;
+    background:#fff;
+    border:1px solid rgba(18,38,58,.10);
+    border-radius:18px;
+    box-shadow:0 24px 54px rgba(8,20,40,.18);
+    padding:10px;
+    z-index:9999;
+  }
+  .nav-links .dropdown a{
+    display:block;
+    padding:10px 12px;
+    border-radius:12px;
+    color:#12304f !important;
+    font-weight:700;
+    white-space:nowrap;
+  }
+  .nav-links .dropdown a:hover{
+    background:#f3f8ff;
+    color:#0f5fe6 !important;
+  }
+  .nav-links .nav-item:hover .dropdown{
+    display:block !important;
+  }
+}
+</style>
+
 </head>
 <body>
 <header class="site-header">
@@ -42,21 +92,42 @@
     </a>
     <button class="mobile-toggle" aria-expanded="false">Menu</button>
     
+
 <nav class="nav-links">
   <a href="index.html">Home</a>
   <a href="pages/landing-page.html">Landing Page</a>
-  <a href="pages/carpet-cleaning.html">Carpet Cleaning</a>
-  <a href="pages/upholstery-cleaning.html">Upholstery</a>
-  <a href="pages/rug-cleaning.html">Rug Cleaning</a>
-  <a href="pages/stain-removal.html">Stain Removal</a>
-  <a href="pages/commercial-carpet-cleaning.html">Commercial</a>
-  <a href="pages/service-areas.html">Areas</a>
+
+  <div class="nav-item">
+    <a href="pages/carpet-cleaning.html">Services</a>
+    <div class="dropdown">
+      <a href="pages/carpet-cleaning.html">Carpet Cleaning</a>
+      <a href="pages/upholstery-cleaning.html">Upholstery Cleaning</a>
+      <a href="pages/rug-cleaning.html">Rug Cleaning</a>
+      <a href="pages/stain-removal.html">Advanced Stain Removal</a>
+      <a href="pages/hard-floor-cleaning.html">Hard Floor Cleaning</a>
+      <a href="pages/commercial-carpet-cleaning.html">Commercial Cleaning</a>
+      <a href="pages/pricing.html">Pricing</a>
+    </div>
+  </div>
+
+  <div class="nav-item">
+    <a href="pages/service-areas.html">Areas</a>
+    <div class="dropdown">
+      <a href="pages/service-areas.html">All Areas</a>
+      <a href="pages/local/ludlow.html">Ludlow</a>
+      <a href="pages/local/shrewsbury.html">Shrewsbury</a>
+      <a href="pages/local/craven-arms.html">Craven Arms</a>
+      <a href="pages/local/church-stretton.html">Church Stretton</a>
+    </div>
+  </div>
+
   <a href="pages/gallery.html">Gallery</a>
   <a href="pages/reviews.html">Reviews</a>
   <a href="pages/about.html">About</a>
   <a href="pages/contact.html">Contact</a>
   <a href="carpet-cleaning-quote.html" class="nav-quote">Instant Quote</a>
 </nav>
+
     <div class="nav-cta">
       <a class="btn btn-call" href="tel:07802563213">Call 07802 563213</a>
       <a class="btn-quote-right" href="./carpet-cleaning-quote.html">Instant Quote</a>
