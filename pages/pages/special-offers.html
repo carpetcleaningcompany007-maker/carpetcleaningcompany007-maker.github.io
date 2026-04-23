@@ -238,39 +238,56 @@
 
 
 
-<!-- nav_click_fix_marker -->
 
-<style>
+
+
+<style id="robust-nav-fix">
 @media (min-width:1024px){
-  header, .site-header{
-    overflow: visible !important;
-    z-index: 9999 !important;
+  header, .site-header { overflow: visible !important; z-index: 9999 !important; }
+  .nav, .nav-links { overflow: visible !important; }
+  .nav-links{
+    display:flex !important;
+    align-items:center !important;
+    gap:18px !important;
+    flex-wrap:nowrap !important;
+    position:relative !important;
   }
-  .nav, .nav-links{
-    overflow: visible !important;
+  .nav-links > a,
+  .nav-links > .nav-item > a{
+    white-space:nowrap !important;
+    font-weight:700 !important;
+  }
+  .nav-links > a,
+  .nav-links > .nav-item > a,
+  .nav-links > .nav-quote{
+    pointer-events:auto !important;
+    position:relative !important;
+    z-index:10001 !important;
   }
   .nav-links .nav-item{
-    position: relative !important;
-    padding-bottom: 14px !important;
-    margin-bottom: -14px !important;
+    position:relative !important;
+    display:flex !important;
+    align-items:center !important;
+    padding-bottom:16px !important;
+    margin-bottom:-16px !important;
+    z-index:10002 !important;
   }
   .nav-links .dropdown{
-    display: none !important;
-    position: absolute !important;
-    top: 100% !important;
-    left: 0 !important;
-    margin-top: 0 !important;
-    min-width: 240px !important;
-    background: #fff !important;
-    border: 1px solid rgba(18,38,58,.10) !important;
-    border-radius: 18px !important;
-    box-shadow: 0 24px 54px rgba(8,20,40,.18) !important;
-    padding: 10px !important;
-    z-index: 10000 !important;
-  }
-  .nav-links .nav-item:hover > .dropdown,
-  .nav-links .nav-item:focus-within > .dropdown{
-    display: block !important;
+    display:none !important;
+    position:absolute !important;
+    top:100% !important;
+    left:0 !important;
+    margin-top:0 !important;
+    min-width:260px !important;
+    max-height:70vh !important;
+    overflow:auto !important;
+    background:#fff !important;
+    border:1px solid rgba(18,38,58,.10) !important;
+    border-radius:18px !important;
+    box-shadow:0 24px 54px rgba(8,20,40,.18) !important;
+    padding:10px !important;
+    z-index:10003 !important;
+    pointer-events:auto !important;
   }
   .nav-links .dropdown a{
     display:block !important;
@@ -279,10 +296,15 @@
     color:#12304f !important;
     font-weight:700 !important;
     white-space:nowrap !important;
+    pointer-events:auto !important;
   }
   .nav-links .dropdown a:hover{
     background:#f3f8ff !important;
     color:#0f5fe6 !important;
+  }
+  .nav-links .nav-item:hover > .dropdown,
+  .nav-links .nav-item:focus-within > .dropdown{
+    display:block !important;
   }
 }
 </style>
@@ -301,6 +323,7 @@
     </a>
     <button class="mobile-toggle" aria-expanded="false">Menu</button>
     
+
 
 
 <nav class="nav-links">
@@ -324,10 +347,35 @@
     <a href="../service-areas.html">Areas</a>
     <div class="dropdown">
       <a href="../service-areas.html">All Areas</a>
-      <a href="../local/ludlow.html">Ludlow</a>
-      <a href="../local/shrewsbury.html">Shrewsbury</a>
-      <a href="../local/craven-arms.html">Craven Arms</a>
-      <a href="../local/church-stretton.html">Church Stretton</a>
+      <a href="../local/atcham.html">Atcham</a>
+<a href="../local/baschurch.html">Baschurch</a>
+<a href="../local/battlefield.html">Battlefield</a>
+<a href="../local/bayston-hill.html">Bayston Hill</a>
+<a href="../local/belle-vue.html">Belle Vue</a>
+<a href="../local/bicton.html">Bicton</a>
+<a href="../local/bomere-heath.html">Bomere Heath</a>
+<a href="../local/bridgnorth.html">Bridgnorth</a>
+<a href="../local/church-stretton.html">Church Stretton</a>
+<a href="../local/clee-hill.html">Clee Hill</a>
+<a href="../local/cleobury-mortimer.html">Cleobury Mortimer</a>
+<a href="../local/condover.html">Condover</a>
+<a href="../local/craven-arms.html">Craven Arms</a>
+<a href="../local/diddlebury.html">Diddlebury</a>
+<a href="../local/leominster.html">Leominster</a>
+<a href="../local/ludlow.html">Ludlow</a>
+<a href="../local/meole-brace.html">Meole Brace</a>
+<a href="../local/monkmoor.html">Monkmoor</a>
+<a href="../local/pontesbury.html">Pontesbury</a>
+<a href="../local/radbrook.html">Radbrook</a>
+<a href="../local/shrewsbury-carpet-cleaning.html">Shrewsbury Carpet Cleaning</a>
+<a href="../local/shrewsbury-commercial-carpet-cleaning.html">Shrewsbury Commercial Carpet Cleaning</a>
+<a href="../local/shrewsbury-hard-floor-cleaning.html">Shrewsbury Hard Floor Cleaning</a>
+<a href="../local/shrewsbury-moth-treatment.html">Shrewsbury Moth Treatment</a>
+<a href="../local/shrewsbury-rug-cleaning.html">Shrewsbury Rug Cleaning</a>
+<a href="../local/shrewsbury-stain-removal.html">Shrewsbury Stain Removal</a>
+<a href="../local/shrewsbury-upholstery-cleaning.html">Shrewsbury Upholstery Cleaning</a>
+<a href="../local/shrewsbury.html">Shrewsbury</a>
+<a href="../local/tenbury-wells.html">Tenbury Wells</a>
     </div>
   </div>
 
@@ -337,6 +385,7 @@
   <a href="../contact.html">Contact</a>
   <a href="../../carpet-cleaning-quote.html" class="nav-quote">Instant Quote</a>
 </nav>
+
 
 
     <div class="nav-cta">
