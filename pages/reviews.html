@@ -423,132 +423,80 @@ header,.site-header,.nav{overflow:visible!important}
 @media (min-width:1024px){.mobile-toggle{display:none!important}nav.nav-links,.nav-links{display:flex!important}}
 </style>
 
-<!-- === MOBILE_NAV_ULTIMATE_FIX_20260427 === -->
-<style id="mobile-nav-ultimate-fix">
-  header, .site-header, .navbar { overflow: visible !important; }
-  .mobile-toggle { touch-action: manipulation !important; }
-
-  @media (max-width: 1023px) {
-    body.mobile-nav-open { overflow: hidden !important; }
-    header, .site-header {
-      position: fixed !important;
-      top: 0 !important;
-      left: 0 !important;
-      right: 0 !important;
-      z-index: 2147483000 !important;
-      overflow: visible !important;
-      pointer-events: auto !important;
-    }
-    .mobile-toggle {
-      display: inline-flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-      min-height: 44px !important;
-      min-width: 72px !important;
-      padding: 10px 14px !important;
-      border-radius: 14px !important;
-      border: 1px solid rgba(255,255,255,.45) !important;
-      background: rgba(255,255,255,.16) !important;
-      color: #fff !important;
-      font-weight: 900 !important;
-      line-height: 1 !important;
-      cursor: pointer !important;
-      position: relative !important;
-      z-index: 2147483647 !important;
-      pointer-events: auto !important;
-      user-select: none !important;
-      -webkit-tap-highlight-color: rgba(255,255,255,.25) !important;
-    }
-    nav.nav-links, .nav-links {
-      display: none !important;
-      position: fixed !important;
-      top: 78px !important;
-      left: 10px !important;
-      right: 10px !important;
-      width: auto !important;
-      max-width: none !important;
-      max-height: calc(100dvh - 96px) !important;
-      overflow-y: auto !important;
-      -webkit-overflow-scrolling: touch !important;
-      background: #ffffff !important;
-      color: #12263d !important;
-      border: 1px solid rgba(15,39,65,.12) !important;
-      border-radius: 18px !important;
-      padding: 14px !important;
-      box-shadow: 0 22px 70px rgba(0,0,0,.38) !important;
-      z-index: 2147483600 !important;
-      pointer-events: auto !important;
-      flex-direction: column !important;
-      align-items: stretch !important;
-      gap: 6px !important;
-      opacity: 1 !important;
-      visibility: visible !important;
-      transform: none !important;
-    }
-    nav.nav-links.mobile-open, .nav-links.mobile-open,
-    nav.nav-links.is-open, .nav-links.is-open,
-    nav.nav-links.open, .nav-links.open {
-      display: flex !important;
-    }
-    nav.nav-links *, .nav-links * {
-      pointer-events: auto !important;
-    }
-    nav.nav-links a, .nav-links a,
-    nav.nav-links .nav-item > a, .nav-links .nav-item > a,
-    nav.nav-links .nav-quote, .nav-links .nav-quote {
-      display: block !important;
-      width: 100% !important;
-      color: #12263d !important;
-      background: transparent !important;
-      text-decoration: none !important;
-      padding: 12px 12px !important;
-      border-radius: 12px !important;
-      font-size: 15px !important;
-      line-height: 1.25 !important;
-      white-space: normal !important;
-    }
-    nav.nav-links a:hover, nav.nav-links a:focus,
-    .nav-links a:hover, .nav-links a:focus {
-      background: #eef5ff !important;
-      color: #0f5fe6 !important;
-      outline: none !important;
-    }
-    nav.nav-links .nav-item, .nav-links .nav-item {
-      display: block !important;
-      width: 100% !important;
-      position: static !important;
-    }
-    nav.nav-links .dropdown, .nav-links .dropdown {
-      display: block !important;
-      position: static !important;
-      opacity: 1 !important;
-      visibility: visible !important;
-      transform: none !important;
-      width: 100% !important;
-      min-width: 0 !important;
-      max-height: none !important;
-      overflow: visible !important;
-      background: #f5f8fc !important;
-      border: 0 !important;
-      box-shadow: none !important;
-      border-radius: 14px !important;
-      margin: 4px 0 8px !important;
-      padding: 6px !important;
-    }
-    nav.nav-links .dropdown a, .nav-links .dropdown a {
-      padding: 9px 12px !important;
-      font-size: 14px !important;
-      color: #294761 !important;
-    }
-    .submenu-toggle { display: none !important; }
+<style id="tccc-mobile-menu-click-fix-css">
+@media (max-width: 1023px){
+  header, .site-header { overflow: visible !important; }
+  .mobile-toggle {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: relative !important;
+    z-index: 2147483647 !important;
+    pointer-events: auto !important;
+    touch-action: manipulation !important;
+    cursor: pointer !important;
   }
-
-  @media (min-width: 1024px) {
-    .mobile-toggle { display: none !important; }
-    nav.nav-links, .nav-links { display: flex !important; }
+  nav.nav-links, .nav-links {
+    display: none !important;
+    position: fixed !important;
+    top: 74px !important;
+    left: 12px !important;
+    right: 12px !important;
+    width: auto !important;
+    max-height: calc(100vh - 92px) !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    z-index: 2147483646 !important;
+    pointer-events: auto !important;
+    background: #ffffff !important;
+    color: #102033 !important;
+    border-radius: 18px !important;
+    padding: 14px !important;
+    box-shadow: 0 18px 55px rgba(0,0,0,.38) !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 6px !important;
   }
+  nav.nav-links.mobile-nav-active, .nav-links.mobile-nav-active {
+    display: flex !important;
+  }
+  nav.nav-links.mobile-nav-active a,
+  nav.nav-links.mobile-nav-active .nav-item > a,
+  nav.nav-links.mobile-nav-active .nav-quote {
+    display: block !important;
+    width: 100% !important;
+    color: #102033 !important;
+    background: transparent !important;
+    padding: 12px !important;
+    border-radius: 12px !important;
+    text-decoration: none !important;
+    white-space: normal !important;
+  }
+  nav.nav-links.mobile-nav-active .nav-item {
+    display: block !important;
+    position: static !important;
+    width: 100% !important;
+  }
+  nav.nav-links.mobile-nav-active .dropdown {
+    display: block !important;
+    position: static !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    background: #f4f7fb !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    border-radius: 14px !important;
+    margin: 4px 0 8px !important;
+    padding: 6px !important;
+  }
+}
+@media (min-width: 1024px){
+  .mobile-toggle { display: none !important; }
+}
 </style>
-<!-- === END MOBILE_NAV_ULTIMATE_FIX_20260427 === -->
 </head>
 <body>
 
@@ -561,7 +509,7 @@ header,.site-header,.nav{overflow:visible!important}
         <span>Trusted local carpet and upholstery specialists</span>
       </div>
     </a>
-    <button type="button" class="mobile-toggle" aria-expanded="false">Menu</button>
+    <button type="button" class="mobile-toggle" aria-expanded="false" onclick="return window.__TCCCNavToggle(event,this)">Menu</button>
     
 
 
@@ -923,64 +871,51 @@ header,.site-header,.nav{overflow:visible!important}
     }
   })();
 </script>
-<script id="robust-mobile-nav-fix-v2">
-document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('.mobile-toggle').forEach(function(btn){if(btn.dataset.navFixed==='1')return;btn.dataset.navFixed='1';var header=btn.closest('header')||document;var nav=header.querySelector('nav.nav-links')||document.querySelector('nav.nav-links');if(!nav)return;btn.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();var open=!nav.classList.contains('is-open');nav.classList.toggle('is-open',open);btn.setAttribute('aria-expanded',open?'true':'false');});});document.querySelectorAll('nav.nav-links .nav-item').forEach(function(item){var link=item.querySelector(':scope > a');var drop=item.querySelector(':scope > .dropdown');if(!link||!drop)return;var b=item.querySelector(':scope > .submenu-toggle');if(!b){b=document.createElement('button');b.type='button';b.className='submenu-toggle';b.setAttribute('aria-label','Open submenu');b.innerHTML='▾';link.insertAdjacentElement('afterend',b);}if(b.dataset.subFixed==='1')return;b.dataset.subFixed='1';b.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();item.classList.toggle('open');});});document.addEventListener('click',function(e){document.querySelectorAll('nav.nav-links.is-open').forEach(function(nav){var header=nav.closest('header');if(header&&!header.contains(e.target)){nav.classList.remove('is-open');var btn=header.querySelector('.mobile-toggle');if(btn)btn.setAttribute('aria-expanded','false');}});});});
-</script>
 
-
-<script id="mobile-nav-final-script">
-(function(){function r(f){document.readyState!=='loading'?f():document.addEventListener('DOMContentLoaded',f)}r(function(){document.querySelectorAll('.mobile-toggle').forEach(function(btn){if(btn.dataset.finalMobileNav==='1')return;btn.dataset.finalMobileNav='1';var header=btn.closest('header')||document.querySelector('header')||document;var nav=header.querySelector('nav.nav-links,.nav-links')||document.querySelector('nav.nav-links,.nav-links');if(!nav)return;btn.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();var open=!nav.classList.contains('is-open');nav.classList.toggle('is-open',open);nav.classList.toggle('open',open);document.body.classList.toggle('mobile-nav-open',open);btn.setAttribute('aria-expanded',open?'true':'false')});});document.addEventListener('keydown',function(e){if(e.key==='Escape'){document.querySelectorAll('.nav-links.is-open,.nav-links.open').forEach(function(nav){nav.classList.remove('is-open','open')});document.body.classList.remove('mobile-nav-open');document.querySelectorAll('.mobile-toggle').forEach(function(btn){btn.setAttribute('aria-expanded','false')})}})})})();
-</script>
-
-<!-- === MOBILE_NAV_ULTIMATE_JS_20260427 === -->
-<script id="mobile-nav-ultimate-js">
+<script id="tccc-mobile-menu-click-fix-js">
 (function(){
-  function findMenu(btn){
-    var header = btn.closest('header') || document.querySelector('header');
-    return (header && (header.querySelector('nav.nav-links') || header.querySelector('.nav-links'))) || document.querySelector('nav.nav-links') || document.querySelector('.nav-links');
+  function closeAll(){
+    document.querySelectorAll('nav.nav-links.mobile-nav-active, .nav-links.mobile-nav-active').forEach(function(nav){
+      nav.classList.remove('mobile-nav-active','is-open','open');
+      nav.style.removeProperty('display');
+    });
+    document.querySelectorAll('.mobile-toggle').forEach(function(btn){ btn.setAttribute('aria-expanded','false'); });
+    document.body.classList.remove('mobile-nav-open');
   }
-  function setOpen(btn, menu, open){
-    menu.classList.toggle('mobile-open', open);
-    menu.classList.toggle('is-open', open);
-    menu.classList.toggle('open', open);
-    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-    btn.textContent = open ? 'Close' : 'Menu';
-    document.body.classList.toggle('mobile-nav-open', open);
-  }
-  function toggle(btn){
-    var menu = findMenu(btn);
-    if(!menu) return;
-    setOpen(btn, menu, !menu.classList.contains('mobile-open'));
-  }
-  function prepare(){
+  window.__TCCCNavToggle = function(e, btn){
+    if(e){ e.preventDefault(); e.stopPropagation(); if(e.stopImmediatePropagation) e.stopImmediatePropagation(); }
+    btn = btn || (e && e.currentTarget) || document.querySelector('.mobile-toggle');
+    if(!btn) return false;
+    var header = btn.closest('header') || document;
+    var nav = header.querySelector('nav.nav-links') || document.querySelector('nav.nav-links, .nav-links');
+    if(!nav) return false;
+    var willOpen = !nav.classList.contains('mobile-nav-active');
+    closeAll();
+    if(willOpen){
+      nav.classList.add('mobile-nav-active','is-open','open');
+      nav.style.setProperty('display','flex','important');
+      btn.setAttribute('aria-expanded','true');
+      document.body.classList.add('mobile-nav-open');
+    }
+    return false;
+  };
+  function ready(){
     document.querySelectorAll('.mobile-toggle').forEach(function(btn){
-      btn.type = 'button';
-      btn.style.pointerEvents = 'auto';
-      btn.style.position = 'relative';
-      btn.style.zIndex = '2147483647';
-      if(!btn.hasAttribute('aria-expanded')) btn.setAttribute('aria-expanded','false');
+      btn.setAttribute('type','button');
+      btn.setAttribute('onclick','return window.__TCCCNavToggle(event,this)');
+      btn.addEventListener('click', function(e){ return window.__TCCCNavToggle(e, btn); }, true);
+      btn.addEventListener('touchend', function(e){ return window.__TCCCNavToggle(e, btn); }, true);
     });
+    document.addEventListener('click', function(e){
+      if(!document.body.classList.contains('mobile-nav-open')) return;
+      if(e.target.closest('header')) return;
+      closeAll();
+    }, true);
+    document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeAll(); });
+    window.addEventListener('resize', function(){ if(window.innerWidth >= 1024) closeAll(); });
   }
-  document.addEventListener('DOMContentLoaded', prepare);
-  window.addEventListener('load', prepare);
-  document.addEventListener('click', function(e){
-    var btn = e.target.closest && e.target.closest('.mobile-toggle');
-    if(!btn) return;
-    e.preventDefault();
-    e.stopPropagation();
-    if(e.stopImmediatePropagation) e.stopImmediatePropagation();
-    toggle(btn);
-  }, true);
-  document.addEventListener('keydown', function(e){
-    if(e.key !== 'Escape') return;
-    document.querySelectorAll('nav.nav-links.mobile-open, .nav-links.mobile-open').forEach(function(menu){
-      var header = menu.closest('header') || document;
-      var btn = header.querySelector('.mobile-toggle');
-      if(btn) setOpen(btn, menu, false);
-    });
-  });
+  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', ready); else ready();
 })();
 </script>
-<!-- === END MOBILE_NAV_ULTIMATE_JS_20260427 === -->
 </body>
 </html>
