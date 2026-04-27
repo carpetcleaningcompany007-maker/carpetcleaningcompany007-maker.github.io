@@ -130,100 +130,6 @@
 }
 </style>
 
-
-
-
-<style id="mobile-nav-final-fix">
-header,.site-header,.nav{overflow:visible!important}
-@media (max-width:1023px){
-  .mobile-toggle{display:inline-flex!important;align-items:center!important;justify-content:center!important;min-height:42px!important;padding:9px 14px!important;border-radius:14px!important;border:1px solid rgba(255,255,255,.35)!important;background:rgba(255,255,255,.10)!important;color:#fff!important;font-weight:800!important;position:relative!important;z-index:100002!important;cursor:pointer!important}
-  .nav-links,nav.nav-links{display:none!important;position:fixed!important;top:76px!important;left:12px!important;right:12px!important;width:auto!important;max-height:calc(100vh - 96px)!important;overflow-y:auto!important;-webkit-overflow-scrolling:touch!important;background:#fff!important;color:#14253a!important;border-radius:18px!important;padding:14px!important;box-shadow:0 18px 50px rgba(0,0,0,.35)!important;z-index:100001!important;flex-direction:column!important;align-items:stretch!important;gap:6px!important}
-  .nav-links.is-open,.nav-links.open,nav.nav-links.is-open,nav.nav-links.open{display:flex!important}
-  .nav-links a,.nav-links .nav-item>a,.nav-links .nav-quote{display:block!important;width:100%!important;color:#14253a!important;background:transparent!important;text-decoration:none!important;padding:12px!important;border-radius:12px!important;font-size:15px!important;line-height:1.25!important;white-space:normal!important}
-  .nav-links a:hover,.nav-links a:focus{background:#eef5ff!important;color:#0f5fe6!important}
-  .nav-links .nav-item{display:block!important;width:100%!important;position:static!important}
-  .nav-links .dropdown{display:block!important;position:static!important;opacity:1!important;visibility:visible!important;transform:none!important;width:100%!important;min-width:0!important;max-height:none!important;overflow:visible!important;background:#f5f8fc!important;border:0!important;box-shadow:none!important;border-radius:14px!important;margin:4px 0 8px!important;padding:6px!important}
-  .nav-links .dropdown a{padding:9px 12px!important;font-size:14px!important}
-  .nav-links .submenu-toggle{display:none!important}
-  body.mobile-nav-open{overflow:hidden!important}
-}
-@media (min-width:1024px){.mobile-toggle{display:none!important}nav.nav-links,.nav-links{display:flex!important}}
-</style>
-
-<style id="tccc-mobile-menu-click-fix-css">
-@media (max-width: 1023px){
-  header, .site-header { overflow: visible !important; }
-  .mobile-toggle {
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    position: relative !important;
-    z-index: 2147483647 !important;
-    pointer-events: auto !important;
-    touch-action: manipulation !important;
-    cursor: pointer !important;
-  }
-  nav.nav-links, .nav-links {
-    display: none !important;
-    position: fixed !important;
-    top: 74px !important;
-    left: 12px !important;
-    right: 12px !important;
-    width: auto !important;
-    max-height: calc(100vh - 92px) !important;
-    overflow-y: auto !important;
-    -webkit-overflow-scrolling: touch !important;
-    z-index: 2147483646 !important;
-    pointer-events: auto !important;
-    background: #ffffff !important;
-    color: #102033 !important;
-    border-radius: 18px !important;
-    padding: 14px !important;
-    box-shadow: 0 18px 55px rgba(0,0,0,.38) !important;
-    flex-direction: column !important;
-    align-items: stretch !important;
-    gap: 6px !important;
-  }
-  nav.nav-links.mobile-nav-active, .nav-links.mobile-nav-active {
-    display: flex !important;
-  }
-  nav.nav-links.mobile-nav-active a,
-  nav.nav-links.mobile-nav-active .nav-item > a,
-  nav.nav-links.mobile-nav-active .nav-quote {
-    display: block !important;
-    width: 100% !important;
-    color: #102033 !important;
-    background: transparent !important;
-    padding: 12px !important;
-    border-radius: 12px !important;
-    text-decoration: none !important;
-    white-space: normal !important;
-  }
-  nav.nav-links.mobile-nav-active .nav-item {
-    display: block !important;
-    position: static !important;
-    width: 100% !important;
-  }
-  nav.nav-links.mobile-nav-active .dropdown {
-    display: block !important;
-    position: static !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    transform: none !important;
-    width: 100% !important;
-    min-width: 0 !important;
-    background: #f4f7fb !important;
-    border: 0 !important;
-    box-shadow: none !important;
-    border-radius: 14px !important;
-    margin: 4px 0 8px !important;
-    padding: 6px !important;
-  }
-}
-@media (min-width: 1024px){
-  .mobile-toggle { display: none !important; }
-}
-</style>
 </head>
 <body>
 
@@ -236,7 +142,7 @@ header,.site-header,.nav{overflow:visible!important}
         <span>Trusted local carpet and upholstery specialists</span>
       </div>
     </a>
-    <button type="button" class="mobile-toggle" aria-expanded="false" onclick="return window.__TCCCNavToggle(event,this)">Menu</button>
+    <button class="mobile-toggle" aria-expanded="false">Menu</button>
     
 
 
@@ -358,50 +264,4 @@ header,.site-header,.nav{overflow:visible!important}
   <a class="mobile-cta-wa" href="https://wa.me/447802563213" target="_blank" rel="noreferrer">WhatsApp</a>
 </div>
 <script src="../../assets/app.js"></script>
-
-<script id="tccc-mobile-menu-click-fix-js">
-(function(){
-  function closeAll(){
-    document.querySelectorAll('nav.nav-links.mobile-nav-active, .nav-links.mobile-nav-active').forEach(function(nav){
-      nav.classList.remove('mobile-nav-active','is-open','open');
-      nav.style.removeProperty('display');
-    });
-    document.querySelectorAll('.mobile-toggle').forEach(function(btn){ btn.setAttribute('aria-expanded','false'); });
-    document.body.classList.remove('mobile-nav-open');
-  }
-  window.__TCCCNavToggle = function(e, btn){
-    if(e){ e.preventDefault(); e.stopPropagation(); if(e.stopImmediatePropagation) e.stopImmediatePropagation(); }
-    btn = btn || (e && e.currentTarget) || document.querySelector('.mobile-toggle');
-    if(!btn) return false;
-    var header = btn.closest('header') || document;
-    var nav = header.querySelector('nav.nav-links') || document.querySelector('nav.nav-links, .nav-links');
-    if(!nav) return false;
-    var willOpen = !nav.classList.contains('mobile-nav-active');
-    closeAll();
-    if(willOpen){
-      nav.classList.add('mobile-nav-active','is-open','open');
-      nav.style.setProperty('display','flex','important');
-      btn.setAttribute('aria-expanded','true');
-      document.body.classList.add('mobile-nav-open');
-    }
-    return false;
-  };
-  function ready(){
-    document.querySelectorAll('.mobile-toggle').forEach(function(btn){
-      btn.setAttribute('type','button');
-      btn.setAttribute('onclick','return window.__TCCCNavToggle(event,this)');
-      btn.addEventListener('click', function(e){ return window.__TCCCNavToggle(e, btn); }, true);
-      btn.addEventListener('touchend', function(e){ return window.__TCCCNavToggle(e, btn); }, true);
-    });
-    document.addEventListener('click', function(e){
-      if(!document.body.classList.contains('mobile-nav-open')) return;
-      if(e.target.closest('header')) return;
-      closeAll();
-    }, true);
-    document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeAll(); });
-    window.addEventListener('resize', function(){ if(window.innerWidth >= 1024) closeAll(); });
-  }
-  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', ready); else ready();
-})();
-</script>
 </body></html>
