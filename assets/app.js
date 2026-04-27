@@ -169,3 +169,42 @@ document.addEventListener('click',(e)=>{
   dismissBtn?.addEventListener('click', closePopup);
   backdrop?.addEventListener('click', closePopup);
 })();
+
+/* FORM FIX V1 - native Formspree submit + thank-you redirect */
+(function () {
+  const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mblnzwpv';
+  const THANK_YOU_URL = 'https://www.thecarpetcleaningcrew.co.uk/thank-you.html';
+
+  function addHidden(form, name, value) {
+    let input = form.querySelector('input[name="' + name + '"]');
+    if (!input) {
+      input = document.createElement('input');
+      input.type = 'hidden';
+      input.name = name;
+      form.prepend(input);
+    }
+    input.value = value;
+  }
+
+  function fixForms() {
+    document.querySelectorAll('form').forEach(function (form) {
+      const action = form.getAttribute('action') || '';
+      if (!action.includes('formspree.io')) return;
+
+      form.setAttribute('action', FORMSPREE_ENDPOINT);
+      form.setAttribute('method', 'POST');
+      form.removeAttribute('onsubmit');
+
+      addHidden(form, '_redirect', THANK_YOU_URL);
+      addHidden(form, '_next', THANK_YOU_URL);
+      addHidden(form, '_subject', 'New website enquiry - The Carpet Cleaning Company');
+      addHidden(form, '_format', 'plain');
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', fixForms);
+  } else {
+    fixForms();
+  }
+})();
