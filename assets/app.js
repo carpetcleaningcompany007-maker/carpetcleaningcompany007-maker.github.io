@@ -1,3 +1,19 @@
+// === MOBILE_MENU_BUTTON_INJECT_V1 ===
+(() => {
+  document.querySelectorAll('nav.nav-links').forEach(menu => {
+    const header = menu.closest('header') || document.querySelector('header');
+    if (!header || header.querySelector('.mobile-toggle')) return;
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'mobile-toggle';
+    btn.setAttribute('aria-expanded', 'false');
+    btn.setAttribute('aria-label', 'Open menu');
+    btn.textContent = 'Menu';
+    menu.insertAdjacentElement('beforebegin', btn);
+  });
+})();
+// === END MOBILE_MENU_BUTTON_INJECT_V1 ===
+
 (() => {
   const toggle = document.querySelector('.mobile-toggle');
   const menu = document.querySelector('.nav-links');

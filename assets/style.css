@@ -1377,3 +1377,40 @@ button,input,textarea,select{font:inherit}
 }
 /* === END HOME_PAGE_TIDY === */
 
+
+/* === MOBILE_MENU_VISIBILITY_ONLY_FIX_20260427 === */
+@media (min-width:1024px){
+  .mobile-toggle{display:none !important;}
+}
+
+@media (max-width:1023px){
+  header{overflow:visible !important;}
+  header > div,
+  .site-header .container.nav{position:relative !important;}
+  .mobile-toggle{
+    display:inline-flex !important;align-items:center !important;justify-content:center !important;
+    min-height:42px !important;padding:9px 15px !important;border-radius:999px !important;
+    border:1px solid rgba(255,255,255,.28) !important;background:rgba(255,255,255,.10) !important;
+    color:#ffffff !important;font-weight:800 !important;cursor:pointer !important;margin-left:auto !important;
+    position:relative !important;z-index:10020 !important;
+  }
+  .nav-links{display:none !important;}
+  .nav-links.is-open,
+  .mobile-toggle[aria-expanded="true"] + .nav-links{
+    display:flex !important;flex-direction:column !important;align-items:stretch !important;gap:4px !important;
+    position:absolute !important;top:calc(100% + 10px) !important;right:12px !important;left:auto !important;
+    width:min(300px, calc(100vw - 24px)) !important;max-height:calc(100vh - 95px) !important;overflow:auto !important;
+    background:#ffffff !important;color:#12304f !important;border:1px solid rgba(18,38,58,.12) !important;
+    border-radius:22px !important;padding:14px !important;box-shadow:0 24px 58px rgba(0,0,0,.24) !important;z-index:10010 !important;
+  }
+  .nav-links > a,
+  .nav-links .nav-item > a{
+    color:#12304f !important;opacity:1 !important;display:block !important;padding:12px 14px !important;
+    border-radius:14px !important;font-weight:800 !important;text-decoration:none !important;
+  }
+  .nav-links .nav-item{width:100% !important;display:block !important;}
+  .nav-links .dropdown{position:static !important;box-shadow:none !important;border:0 !important;background:transparent !important;padding:4px 0 6px 12px !important;margin:0 !important;}
+  .nav-item:not(.open) > .dropdown{display:none !important;}
+  .nav-item.open > .dropdown{display:block !important;}
+}
+/* === END MOBILE_MENU_VISIBILITY_ONLY_FIX_20260427 === */
