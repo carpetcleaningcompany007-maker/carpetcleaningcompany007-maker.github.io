@@ -1430,3 +1430,61 @@ button,input,textarea,select{font:inherit}
   .nav-item.open>.dropdown{display:block !important;}
 }
 /* === END MOBILE_MENU_TOP_LAYER_ONLY_FIX_20260427B === */
+
+
+/* SHREWSBURY_VISIBLE_LINKS_START */
+.shrewsbury-home-links {
+  padding: 56px 18px;
+  background: linear-gradient(135deg, #f8fbff 0%, #eef6ff 100%);
+}
+.shrewsbury-home-links__inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid #e3eefb;
+  border-radius: 24px;
+  padding: 28px;
+  box-shadow: 0 16px 40px rgba(15, 35, 60, 0.08);
+}
+.shrewsbury-home-links__eyebrow {
+  margin: 0 0 8px;
+  color: #0f5ea8;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+.shrewsbury-home-links h2 {
+  margin: 0 0 10px;
+  color: #102033;
+  font-size: clamp(26px, 4vw, 40px);
+}
+.shrewsbury-home-links p {
+  margin: 0 0 18px;
+  color: #4b5b6c;
+  line-height: 1.6;
+}
+.shrewsbury-home-links__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+.shrewsbury-home-links__grid a {
+  display: block;
+  padding: 16px;
+  border-radius: 16px;
+  background: #0f5ea8;
+  color: #ffffff !important;
+  text-decoration: none;
+  font-weight: 800;
+  text-align: center;
+}
+.shrewsbury-home-links__grid a:hover {
+  background: #083f73;
+}
+@media (max-width: 800px) {
+  .shrewsbury-home-links__grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* SHREWSBURY_VISIBLE_LINKS_END */
