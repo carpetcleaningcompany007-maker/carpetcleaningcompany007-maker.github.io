@@ -14,7 +14,7 @@
   --gold:#f3b24f;
   --shadow:0 24px 60px rgba(7,17,31,.12);
   --radius:26px;
-  --max:1180px;
+  --max:1440px;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
